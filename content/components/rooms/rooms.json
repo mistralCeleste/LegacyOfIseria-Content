@@ -1,6 +1,6 @@
 {
   "name": "Rooms",
-  "cards":
+  "tiles":
   {
     "type": "Custom_Tile",
     "shape": 0,

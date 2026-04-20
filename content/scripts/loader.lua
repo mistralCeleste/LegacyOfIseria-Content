@@ -1,4 +1,3 @@
-
 BASE_URL = "https://mistralCeleste.github.io/LegacyOfIseria-Content/"
 COMPONENT_REGISTRY = COMPONENT_REGISTRY or {}
 SCRIPT_CACHE = {}
@@ -19,7 +18,6 @@ end
 
 function loadIndex()
     local url = BASE_URL .. "content/index.json"
-
     WebRequest.get(url, function(req)
         if req.is_error then
             print("Error loading index.json: " .. req.error)
@@ -168,10 +166,9 @@ end
 
 
 function buildCardJSON(entry, position)
-    local deckIndex = 1  -- each card is its own deck
-
-    local obj = {
-        Name = "Card",
+    local deckIndex = 1
+    return {
+        Name = "CardCustom",
         Nickname = entry.name,
         Description = "",
         GMNotes = "",
@@ -201,33 +198,43 @@ function buildCardJSON(entry, position)
         },
 
         CardID = deckIndex * 100,
-
-        -- Script injected after spawn
         LuaScript = "",
         LuaScriptState = ""
     }
-
-    return JSON.encode(obj)
 end
 
 
-function spawnCard(entry, position)
-    local json = buildCardJSON(entry, position)
 
-    local obj = spawnObjectJSON(json)
+function spawnCard(entry, position)
+    local objData = buildCardJSON(entry, position)
+
+    local obj = spawnObjectData({data = objData})
     if not obj then
         print("Failed to spawn card: " .. entry.id)
         return
     end
 
-    if entry.script then
-        loadScript(entry.script, function(scriptText)
-            obj.setLuaScript(scriptText)
+if entry.script then
+    loadScript(entry.script, function(scriptText)
+        local guid = obj.getGUID()
+
+        Wait.condition(function()
+            local realObj = getObjectFromGUID(guid)
+            if realObj then
+                print("assigning script to: " .. entry.id)
+                realObj.setLuaScript(scriptText)
+            else
+                print("object disappeared: " .. entry.id)
+            end
+        end, function()
+            return getObjectFromGUID(guid) ~= nil
         end)
-    end
+    end)
+end
 
     return obj
 end
+
 
 
 function loadScript(scriptURL, callback)
@@ -276,7 +283,6 @@ function spawnComponent(componentName, position)
     if comp.tiles and #comp.tiles > 0 then
         spawnComponentTiles(componentName, position)
     end
-
 end
 
 
@@ -297,6 +303,8 @@ function spawnComponentCards(componentName, position)
         spawnCard(entry, pilePos)
     end
 end
+
+
 
 function registerTileSet(basePath, tileBlock, tileList)
     local scale = tileBlock.scale or {x=1, y=1, z=1}
