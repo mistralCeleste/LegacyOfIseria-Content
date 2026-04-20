@@ -102,7 +102,7 @@ function registerComponent(component, componentPath)
     end
 
     if component.tiles then
-        --registerTileSet(basePath, component.tiles, registry.tiles)
+        registerTileSet(basePath, component.tiles, registry.tiles)
     end
 
     if component.assetbundles then
@@ -274,8 +274,9 @@ function spawnComponent(componentName, position)
 
     -- Spawn tiles (future)
     if comp.tiles and #comp.tiles > 0 then
-        --spawnComponentTiles(componentName, position)
+        spawnComponentTiles(componentName, position)
     end
+
 end
 
 
@@ -294,6 +295,119 @@ function spawnComponentCards(componentName, position)
 
     for _, entry in ipairs(comp.cards) do
         spawnCard(entry, pilePos)
+    end
+end
+
+function registerTileSet(basePath, tileBlock, tileList)
+    local scale = tileBlock.scale or {x=1, y=1, z=1}
+
+    local scriptURL = nil
+    if tileBlock.script then
+        scriptURL = resolvePath(basePath, tileBlock.script)
+        if scriptURL and not SCRIPT_CACHE[scriptURL] then
+            loadScript(scriptURL, function(_) end)
+        end
+    end
+
+    for _, tile in ipairs(tileBlock.sets) do
+        local entry = {
+            id = tile.identifier,
+            name = tile.name or tile.identifier,
+            scale = scale,
+            tags = tile.tags or {},
+            face = resolvePath(basePath, tile.face),
+            back = resolvePath(basePath, tile.back),
+            script = scriptURL
+        }
+
+        table.insert(tileList, entry)
+        print("Registered tile: " .. entry.id)
+    end
+end
+
+function buildTileJSON(entry, position)
+    return {
+        Name = "Custom_Tile",
+
+        Transform = {
+            posX = position.x,
+            posY = position.y,
+            posZ = position.z,
+            rotX = 0,
+            rotY = 0,
+            rotZ = 0,
+            scaleX = entry.scale.x,
+            scaleY = entry.scale.y,
+            scaleZ = entry.scale.z
+        },
+
+        Nickname = entry.name,
+        Description = "",
+        GMNotes = "",
+        Tags = entry.tags or {},
+
+        CustomImage = {
+            ImageURL = entry.face,
+            ImageSecondaryURL = entry.back,
+            Width = 1,
+            Height = 1,
+            Type = 0,        -- 0 = square tile
+            Thickness = 0.1,
+            Stackable = true
+        },
+
+        LuaScript = "",
+        LuaScriptState = ""
+    }
+end
+
+function spawnTile(entry, position)
+    print("spawn tile: " .. entry.id)
+
+    local objData = buildTileJSON(entry, position)
+    local obj = spawnObjectData({data = objData})
+
+    if not obj then
+        print("Failed to spawn tile: " .. entry.id)
+        return
+    end
+
+    -- Capture GUID immediately
+    local guid = obj.getGUID()
+
+    if entry.script then
+        loadScript(entry.script, function(scriptText)
+            print("add script to tile: " .. entry.id)
+
+            Wait.condition(function()
+                local realObj = getObjectFromGUID(guid)
+                if realObj then
+                    print("assigning script to tile: " .. entry.id)
+                    realObj.setLuaScript(scriptText)
+                else
+                    print("tile vanished: " .. entry.id)
+                end
+            end, function()
+                return getObjectFromGUID(guid) ~= nil
+            end)
+        end)
+    end
+
+    return obj
+end
+
+function spawnComponentTiles(componentName, position)
+    local comp = COMPONENT_REGISTRY[componentName]
+    if not comp or not comp.tiles then return end
+
+    local pilePos = {
+        x = position.x,
+        y = position.y,
+        z = position.z
+    }
+
+    for _, entry in ipairs(comp.tiles) do
+        spawnTile(entry, pilePos)
     end
 end
 
