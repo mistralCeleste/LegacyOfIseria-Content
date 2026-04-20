@@ -31,7 +31,6 @@
 
       { "identifier": "SML-100", "name": "Encounter Room 100", "face": "images/SML-100_face.jpg", "back": "images/SML-100_back.jpg" },
       { "identifier": "SML-101", "name": "Encounter Room 101", "face": "images/SML-101_face.jpg", "back": "images/SML-101_back.jpg" },
-      { "identifier": "SML-102", "name": "Encounter Room 102", "face": "images/SML-102_face.jpg", "back": "images/SML-102_back.jpg" },
 
       { "identifier": "SML-500", "name": "Puzzle Room 500", "face": "images/SML-503_face.jpg", "back": "images/SML-503_back.jpg" },
       { "identifier": "SML-501", "name": "Puzzle Room 501", "face": "images/SML-504_face.jpg", "back": "images/SML-504_back.jpg" },
