@@ -8,34 +8,34 @@
 
     "sets":
     [
-      { "identifier": "SML-002", "name": "Dungeon Room 002", "face": "SML-002_face.jpg", "back": "SML-002_back.jpg" },
-      { "identifier": "SML-003", "name": "Dungeon Room 003", "face": "SML-003_face.jpg", "back": "SML-003_back.jpg" },
-      { "identifier": "SML-004", "name": "Dungeon Room 004", "face": "SML-004_face.jpg", "back": "SML-004_back.jpg" },
-      { "identifier": "SML-005", "name": "Dungeon Room 005", "face": "SML-005_face.jpg", "back": "SML-005_back.jpg" },
-      { "identifier": "SML-006", "name": "Dungeon Room 006", "face": "SML-006_face.jpg", "back": "SML-006_back.jpg" },
-      { "identifier": "SML-007", "name": "Dungeon Room 007", "face": "SML-007_face.jpg", "back": "SML-007_back.jpg" },
-      { "identifier": "SML-008", "name": "Dungeon Room 008", "face": "SML-008_face.jpg", "back": "SML-008_back.jpg" },
-      { "identifier": "SML-009", "name": "Dungeon Room 009", "face": "SML-009_face.jpg", "back": "SML-009_back.jpg" },
-      { "identifier": "SML-010", "name": "Dungeon Room 010", "face": "SML-010_face.jpg", "back": "SML-010_back.jpg" },
-      { "identifier": "SML-011", "name": "Dungeon Room 011", "face": "SML-011_face.jpg", "back": "SML-011_back.jpg" },
+      { "identifier": "SML-002", "name": "Dungeon Room 002", "face": "images/SML-002_face.jpg", "back": "images/SML-002_back.jpg" },
+      { "identifier": "SML-003", "name": "Dungeon Room 003", "face": "images/SML-003_face.jpg", "back": "images/SML-003_back.jpg" },
+      { "identifier": "SML-004", "name": "Dungeon Room 004", "face": "images/SML-004_face.jpg", "back": "images/SML-004_back.jpg" },
+      { "identifier": "SML-005", "name": "Dungeon Room 005", "face": "images/SML-005_face.jpg", "back": "images/SML-005_back.jpg" },
+      { "identifier": "SML-006", "name": "Dungeon Room 006", "face": "images/SML-006_face.jpg", "back": "images/SML-006_back.jpg" },
+      { "identifier": "SML-007", "name": "Dungeon Room 007", "face": "images/SML-007_face.jpg", "back": "images/SML-007_back.jpg" },
+      { "identifier": "SML-008", "name": "Dungeon Room 008", "face": "images/SML-008_face.jpg", "back": "images/SML-008_back.jpg" },
+      { "identifier": "SML-009", "name": "Dungeon Room 009", "face": "images/SML-009_face.jpg", "back": "images/SML-009_back.jpg" },
+      { "identifier": "SML-010", "name": "Dungeon Room 010", "face": "images/SML-010_face.jpg", "back": "images/SML-010_back.jpg" },
+      { "identifier": "SML-011", "name": "Dungeon Room 011", "face": "images/SML-011_face.jpg", "back": "images/SML-011_back.jpg" },
 
-      { "identifier": "SML-012", "name": "Dungeon Room 012", "face": "SML-012_face.jpg", "back": "SML-012_back.jpg" },
-      { "identifier": "SML-013", "name": "Dungeon Room 013", "face": "SML-013_face.jpg", "back": "SML-013_back.jpg" },
-      { "identifier": "SML-014", "name": "Dungeon Room 014", "face": "SML-014_face.jpg", "back": "SML-014_back.jpg" },
-      { "identifier": "SML-015", "name": "Dungeon Room 015", "face": "SML-015_face.jpg", "back": "SML-015_back.jpg" },
-      { "identifier": "SML-016", "name": "Dungeon Room 016", "face": "SML-016_face.jpg", "back": "SML-016_back.jpg" },
+      { "identifier": "SML-012", "name": "Dungeon Room 012", "face": "images/SML-012_face.jpg", "back": "images/SML-012_back.jpg" },
+      { "identifier": "SML-013", "name": "Dungeon Room 013", "face": "images/SML-013_face.jpg", "back": "images/SML-013_back.jpg" },
+      { "identifier": "SML-014", "name": "Dungeon Room 014", "face": "images/SML-014_face.jpg", "back": "images/SML-014_back.jpg" },
+      { "identifier": "SML-015", "name": "Dungeon Room 015", "face": "images/SML-015_face.jpg", "back": "images/SML-015_back.jpg" },
+      { "identifier": "SML-016", "name": "Dungeon Room 016", "face": "images/SML-016_face.jpg", "back": "images/SML-016_back.jpg" },
 
-      { "identifier": "SML-017", "name": "Dungeon Room 017", "face": "SML-017_face.jpg", "back": "SML-017_back.jpg" },
-      { "identifier": "SML-018", "name": "Dungeon Room 018", "face": "SML-018_face.jpg", "back": "SML-018_back.jpg" },
-      { "identifier": "SML-019", "name": "Dungeon Room 019", "face": "SML-019_face.jpg", "back": "SML-019_back.jpg" },
+      { "identifier": "SML-017", "name": "Dungeon Room 017", "face": "images/SML-017_face.jpg", "back": "images/SML-017_back.jpg" },
+      { "identifier": "SML-018", "name": "Dungeon Room 018", "face": "images/SML-018_face.jpg", "back": "images/SML-018_back.jpg" },
+      { "identifier": "SML-019", "name": "Dungeon Room 019", "face": "images/SML-019_face.jpg", "back": "images/SML-019_back.jpg" },
 
-      { "identifier": "SML-100", "name": "Encounter Room 100", "face": "SML-100_face.jpg", "back": "SML-100_back.jpg" },
-      { "identifier": "SML-101", "name": "Encounter Room 101", "face": "SML-101_face.jpg", "back": "SML-101_back.jpg" },
-      { "identifier": "SML-102", "name": "Encounter Room 102", "face": "SML-102_face.jpg", "back": "SML-102_back.jpg" },
+      { "identifier": "SML-100", "name": "Encounter Room 100", "face": "images/SML-100_face.jpg", "back": "images/SML-100_back.jpg" },
+      { "identifier": "SML-101", "name": "Encounter Room 101", "face": "images/SML-101_face.jpg", "back": "images/SML-101_back.jpg" },
+      { "identifier": "SML-102", "name": "Encounter Room 102", "face": "images/SML-102_face.jpg", "back": "images/SML-102_back.jpg" },
 
-      { "identifier": "SML-500", "name": "Puzzle Room 500", "face": "SML-500_face.jpg", "back": "SML-500_back.jpg" },
-      { "identifier": "SML-501", "name": "Puzzle Room 501", "face": "SML-501_face.jpg", "back": "SML-501_back.jpg" },
-      { "identifier": "SML-502", "name": "Puzzle Room 502", "face": "SML-502_face.jpg", "back": "SML-502_back.jpg" }
+      { "identifier": "SML-500", "name": "Puzzle Room 500", "face": "images/SML-500_face.jpg", "back": "images/SML-500_back.jpg" },
+      { "identifier": "SML-501", "name": "Puzzle Room 501", "face": "images/SML-501_face.jpg", "back": "images/SML-501_back.jpg" },
+      { "identifier": "SML-502", "name": "Puzzle Room 502", "face": "images/SML-502_face.jpg", "back": "images/SML-502_back.jpg" }
     ]
   }
 }
