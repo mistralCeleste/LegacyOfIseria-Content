@@ -4,7 +4,7 @@
   {
     "type": "Custom_Tile",
     "shape": 0,
-    "scale": { "x": 1, "y": 1, "z": 1 },
+    "scale": { "x": 2.1, "y": 1, "z": 2.1 },
 
     "sets":
     [
@@ -33,9 +33,9 @@
       { "identifier": "SML-101", "name": "Encounter Room 101", "face": "images/SML-101_face.jpg", "back": "images/SML-101_back.jpg" },
       { "identifier": "SML-102", "name": "Encounter Room 102", "face": "images/SML-102_face.jpg", "back": "images/SML-102_back.jpg" },
 
-      { "identifier": "SML-500", "name": "Puzzle Room 500", "face": "images/SML-500_face.jpg", "back": "images/SML-500_back.jpg" },
-      { "identifier": "SML-501", "name": "Puzzle Room 501", "face": "images/SML-501_face.jpg", "back": "images/SML-501_back.jpg" },
-      { "identifier": "SML-502", "name": "Puzzle Room 502", "face": "images/SML-502_face.jpg", "back": "images/SML-502_back.jpg" }
+      { "identifier": "SML-500", "name": "Puzzle Room 500", "face": "images/SML-503_face.jpg", "back": "images/SML-503_back.jpg" },
+      { "identifier": "SML-501", "name": "Puzzle Room 501", "face": "images/SML-504_face.jpg", "back": "images/SML-504_back.jpg" },
+      { "identifier": "SML-502", "name": "Puzzle Room 502", "face": "images/SML-505_face.jpg", "back": "images/SML-505_back.jpg" }
     ]
   }
 }

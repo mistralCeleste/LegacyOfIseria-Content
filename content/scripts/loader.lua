@@ -67,6 +67,7 @@ end
 function onAllComponentsLoaded()
     -- Example: spawn Days
     spawnComponent("Days", {x=0, y=3, z=0})
+    spawnComponent("Rooms", {x=0, y=6, z=0})
 
     -- Or spawn everything
     -- for name, _ in pairs(COMPONENT_REGISTRY) do
@@ -342,8 +343,8 @@ function buildTileJSON(entry, position)
             posY = position.y,
             posZ = position.z,
             rotX = 0,
-            rotY = 0,
-            rotZ = 0,
+            rotY = 180,
+            rotZ = 180,
             scaleX = entry.scale.x,
             scaleY = entry.scale.y,
             scaleZ = entry.scale.z
@@ -357,11 +358,14 @@ function buildTileJSON(entry, position)
         CustomImage = {
             ImageURL = entry.face,
             ImageSecondaryURL = entry.back,
-            Width = 1,
-            Height = 1,
-            Type = 0,        -- 0 = square tile
+            ImageScalar = 1,
+            WidthScale = 0,
+            CustomTile = {
+            Type = 0,
             Thickness = 0.1,
-            Stackable = true
+            Stackable = true,
+            Stretch = true
+            }
         },
 
         LuaScript = "",
