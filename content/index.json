@@ -1,0 +1,9 @@
+{
+    "version": "0.1"
+    , "name": "Legacy of Iseria Content"
+    , "description": "A collection of cards and other assets for the Legacy of Iseria card game."
+    , "components":
+    [
+        "components/days/days.json"
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "name": "Days"
+    , "description": "Cards representing the days of the week, with various weather conditions."  
+    , "cards":
+    {
+        "type": "CustomCard"
+        , "shape": 0
+        , "scale": { "x": "1", "y": "1", "z":"1" }
+        ,  "script": "../../scripts/defaultCardBehavior.lua"
+        , "sets":
+        [
+            {
+                "identifier": "DAY-001A"
+                , "name": "Meloncholy Day"
+                , "face": "images/DAY-001A [face].jpg"
+                , "back": "images/DAY [back].png"
+                , "sideways": false
+                , "tags": ["day", "weather"]
+            }
+            ,
+            {
+                "identifier": "DAY-002A"
+                , "name": "Wonderful Day"
+                , "face": "Images/DAY-002A [face].jpg"
+                , "back": "image/DAY [back].png"
+                , "sideways": false
+                , "tags": ["day", "weather"]
+            }
+            ,
+            {
+                "identifier": "DAY-003A"
+                , "name": "Rainy Day"
+                , "face": "Images/DAY-003A [face].jpg"
+                , "back": "image/DAY [back].png"
+                , "sideways": false
+                , "tags": ["day", "weather"]
+            }
+        ]
+    }
+}
