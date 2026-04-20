@@ -1,0 +1,27 @@
+# Ignore Tabletop Simulator local save/cache data
+.tts/
+.tts/*
+
+# If you want to ignore only specific subfolders inside .tts, use:
+# .tts/Saves/
+# .tts/Mods/
+# .tts/Images/
+# .tts/Cache/
+
+# Common Unity / VSCode ignores (optional but recommended)
+Library/
+Temp/
+Obj/
+Build/
+Builds/
+Logs/
+UserSettings/
+
+# VSCode workspace junk
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# OS junk
+.DS_Store
+Thumbs.db

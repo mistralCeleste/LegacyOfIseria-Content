@@ -12,8 +12,8 @@
             {
                 "identifier": "DAY-001A"
                 , "name": "Meloncholy Day"
-                , "face": "images/DAY-001A [face].jpg"
-                , "back": "images/DAY [back].png"
+                , "face": "images/DAY-001A_face.jpg"
+                , "back": "images/DAY_back.png"
                 , "sideways": false
                 , "tags": ["day", "weather"]
             }
@@ -21,8 +21,8 @@
             {
                 "identifier": "DAY-002A"
                 , "name": "Wonderful Day"
-                , "face": "Images/DAY-002A [face].jpg"
-                , "back": "image/DAY [back].png"
+                , "face": "images/DAY-002A_face.jpg"
+                , "back": "images/DAY_back.png"
                 , "sideways": false
                 , "tags": ["day", "weather"]
             }
@@ -30,8 +30,8 @@
             {
                 "identifier": "DAY-003A"
                 , "name": "Rainy Day"
-                , "face": "Images/DAY-003A [face].jpg"
-                , "back": "image/DAY [back].png"
+                , "face": "images/DAY-003A_face.jpg"
+                , "back": "images/DAY_back.png"
                 , "sideways": false
                 , "tags": ["day", "weather"]
             }
