@@ -1,0 +1,28 @@
+{
+  "components": [
+    {
+      "type": "Custom_Tile",
+      "scale": { "x": 0.25, "y": 0.1, "z": 0.5 },
+      "sets": [
+        {
+          "identifier": "ARM-060A",
+          "name": "Pathfinder Cloak",
+          "face": "images/ARM-060A_face.png",
+          "back": "images/ARM-060A_back.png"
+        },
+        {
+          "identifier": "ARM-061A",
+          "name": "Pathfinder Guard",
+          "face": "images/ARM-061A_face.png",
+          "back": "images/ARM-061A_back.png"
+        },
+        {
+          "identifier": "ARM-074A",
+          "name": "Shadowhunter Hoodie",
+          "face": "images/ARM-074A_face.png",
+          "back": "images/ARM-074A_back.png"
+        }
+      ]
+    }
+  ]
+}

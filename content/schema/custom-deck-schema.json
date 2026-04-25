@@ -1,0 +1,17 @@
+{
+  "decks": {
+    "type": "DeckCustom",
+    "scale": { "x": 1, "y": 1, "z": 1 },
+    "sets": [
+        {
+        "identifier": "LootDeck",
+        "name": "Loot Deck",
+        "cardsheet": "images/loot_cardsheet.png",
+        "back": "images/loot_back.png",
+        "numCards": 40,
+        "width": 10,
+        "height": 4
+        }
+    ]
+  }
+}

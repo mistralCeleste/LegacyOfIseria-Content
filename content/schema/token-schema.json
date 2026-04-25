@@ -1,0 +1,15 @@
+{
+  "tokens": {
+    "type": "Custom_Token",
+    "scale": { "x": 1, "y": 1, "z": 1 },
+    "sets": [
+    {
+      "identifier": "DamageToken",
+      "name": "Damage Token",
+      "face": "images/damage_face.png",
+      "back": "images/damage_back.png",
+      "shape": 0
+    }
+  ]
+  }
+}

@@ -1,10 +1,11 @@
 {
     "version": "0.1"
     , "name": "Legacy of Iseria Content"
-    , "description": "A collection of cards and other assets for the Legacy of Iseria card game."
+    , "description": "A collection of cards and other assets for the Legacy of Iseria board game."
     , "components":
     [
         "components/days/days.json"
         , "components/rooms/rooms.json"
+        , "components/heroes/vanguard/vanguard.json"
     ]
 }

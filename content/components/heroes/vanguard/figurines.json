@@ -1,0 +1,23 @@
+{
+  "components": [
+    {
+      "type": "Custom_Model",
+      "scale": { "x": 0.7, "y": 1, "z": 0.7 },
+      "bag": "VanguardHeroBox",
+      "sets": [
+        {
+          "identifier": "FIG-H01A",
+          "name": "Vaerwyn",
+          "mesh": "models/FIG-H01A.obj",
+          "texture": "models/FIG-H01A.jpg"
+        },
+        {
+          "identifier": "FIG-H01B",
+          "name": "Brannok",
+          "mesh": "models/FIG-H01B.obj",
+          "texture": "models/FIG-H01B.jpg"
+        }
+      ]
+    }
+  ]
+}

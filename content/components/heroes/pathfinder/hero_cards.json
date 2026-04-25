@@ -1,0 +1,20 @@
+{
+  "components": [
+    {
+      "type": "CustomCard",
+      "identifier": "HRO-003A",
+      "name": "Miranhwa",
+      "face": "images/HRO-003A_face.jpg",
+      "back": "images/HRO-003A_back.jpg",
+      "bag": "PathfinderHeroBox"
+    },
+    {
+      "type": "CustomCard",
+      "identifier": "HRO-003B",
+      "name": "Haneulrim",
+      "face": "images/HRO-003B_face.jpg",
+      "back": "images/HRO-003B_back.jpg",
+      "bag": "PathfinderHeroBox"
+    }
+  ]
+}

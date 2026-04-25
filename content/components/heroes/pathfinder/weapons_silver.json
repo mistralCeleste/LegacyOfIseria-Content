@@ -1,0 +1,20 @@
+{
+  "components": [
+    {
+      "type": "CustomCard",
+      "identifier": "WPN-021A",
+      "name": "Windwhisper Bow",
+      "face": "images/WPN-021A_face.jpg",
+      "back": "images/WPN-021A_back.jpg",
+      "bag": "PathfinderSilverChest"
+    },
+    {
+      "type": "CustomCard",
+      "identifier": "WPN-022A",
+      "name": "Duskwind Whip",
+      "face": "images/WPN-022A_face.jpg",
+      "back": "images/WPN-022A_back.jpg",
+      "bag": "PathfinderSilverChest"
+    }
+  ]
+}

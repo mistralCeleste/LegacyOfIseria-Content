@@ -1,0 +1,49 @@
+{
+  "class": "Pathfinder",
+  "color": "Green",
+
+  "metadata": {
+    "description": "Ranged precision, mobility, and mark manipulation.",
+    "dice": {
+      "might": 3,
+      "wisdom": 3,
+      "valor": 3
+    },
+    "heroCards": {
+      "type": "CustomCard",
+      "shape": 0,
+      "scale": { "x": 1, "y": 1, "z": 1 }
+    },
+    "abilityCards": {
+      "type": "CustomCard",
+      "shape": 0,
+      "scale": { "x": 0.5, "y": 1, "z": 0.5 }
+    },
+    "weaponCards": {
+      "type": "CustomCard",
+      "shape": 0,
+      "scale": { "x": 0.5, "y": 1, "z": 0.5 }
+    },
+    "armorTiles": {
+      "1x1": { "type": "Custom_Tile", "scale": { "x": 0.25, "y": 0.1, "z": 0.25 } },
+      "1x2": { "type": "Custom_Tile", "scale": { "x": 0.25, "y": 0.1, "z": 0.5 } }
+    },
+    "fateDice": {
+      "type": "Custom_Dice",
+      "shape": "D6",
+      "script": "scripts/fateDie.lua"
+    }
+  },
+
+  "components": [
+    { "include": "pathfinder/bags.json" },
+    { "include": "pathfinder/figurines.json" },
+    { "include": "pathfinder/hero_cards.json" },
+    { "include": "pathfinder/abilities.json" },
+    { "include": "pathfinder/weapons.json" },
+    { "include": "pathfinder/armor_1x1.json" },
+    { "include": "pathfinder/armor_1x2.json" },
+    { "include": "pathfinder/tiles.json" },
+    { "include": "pathfinder/dice.json" }
+  ]
+}

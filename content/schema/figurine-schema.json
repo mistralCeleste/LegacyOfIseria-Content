@@ -1,0 +1,13 @@
+{
+  "figurines": {
+    "type": "Figurine",
+    "scale": { "x": 1, "y": 1, "z": 1 },
+    "sets": [
+        {
+        "identifier": "InitiativeMarker",
+        "name": "Initiative Marker",
+        "color": "Red"
+        }
+    ]
+  }
+}

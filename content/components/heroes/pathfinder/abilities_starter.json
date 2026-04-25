@@ -1,0 +1,20 @@
+{
+  "components": [
+    {
+      "type": "CustomCard",
+      "identifier": "ABL-001A",
+      "name": "Hunter's Mark",
+      "face": "images/ABL-001A_face.jpg",
+      "back": "images/ABL-001A_back.jpg",
+      "bag": "PathfinderStarterChest"
+    },
+    {
+      "type": "CustomCard",
+      "identifier": "ABL-002A",
+      "name": "Combat Expertise",
+      "face": "images/ABL-002A_face.jpg",
+      "back": "images/ABL-002A_back.jpg",
+      "bag": "PathfinderStarterChest"
+    }
+  ]
+}

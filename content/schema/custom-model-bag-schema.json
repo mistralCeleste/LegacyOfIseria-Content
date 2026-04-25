@@ -1,0 +1,43 @@
+{
+  "bags": {
+    "type": "Bag",
+    "scale": { "x": 1, "y": 1, "z": 1 },
+
+    "sets": [
+        {
+          "identifier": "HeroBag",
+          "name": "Hero Bag",
+          "color": "Brown",
+          "script": "scripts/heroBag.lua"
+        }
+    ]
+  }
+  ,
+  "models": {
+    "type": "Custom_Model",
+    "scale": { "x": 1, "y": 1, "z": 1 },
+
+    "sets": [
+        {
+          "identifier": "Bag",
+          "name": "Hero Bag",
+          "mesh": "models/hero_bag.obj",
+          "texture": "models/hero_bag_diffuse.png",
+          "container": {
+            "type": 0,
+            "stackable": true
+          }
+        },
+        {
+          "identifier": "Infinite Bag",
+          "name": "Hero Bag",
+          "mesh": "models/hero_bag.obj",
+          "texture": "models/hero_bag_diffuse.png",
+          "container": {
+              "type": 1,
+              "stackable": true
+            }
+        }
+    ]
+  }
+}

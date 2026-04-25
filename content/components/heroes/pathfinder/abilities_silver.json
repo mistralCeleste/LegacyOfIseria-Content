@@ -1,0 +1,36 @@
+{
+  "components": [
+    {
+      "type": "CustomCard",
+      "identifier": "ABL-007A",
+      "name": "Precision Volley",
+      "face": "images/ABL-007A_face.jpg",
+      "back": "images/ABL-007A_back.jpg",
+      "bag": "PathfinderSilverChest"
+    },
+    {
+      "type": "CustomCard",
+      "identifier": "ABL-008A",
+      "name": "Vortex Shift",
+      "face": "images/ABL-008A_face.jpg",
+      "back": "images/ABL-008A_back.jpg",
+      "bag": "PathfinderSilverChest"
+    },
+    {
+      "type": "CustomCard",
+      "identifier": "ABL-009A",
+      "name": "Pinwheel Revelation",
+      "face": "images/ABL-009A_face.jpg",
+      "back": "images/ABL-009A_back.jpg",
+      "bag": "PathfinderSilverChest"
+    },
+    {
+      "type": "CustomCard",
+      "identifier": "ABL-010A",
+      "name": "Windcutter Strike",
+      "face": "images/ABL-010A_face.jpg",
+      "back": "images/ABL-010A_back.jpg",
+      "bag": "PathfinderSilverChest"
+    }
+  ]
+}

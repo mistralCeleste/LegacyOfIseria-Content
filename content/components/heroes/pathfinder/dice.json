@@ -1,0 +1,18 @@
+{
+  "components": [
+    {
+      "type": "Die_6",
+      "bag": "PathfinderMightDiceBag",
+      "sets": [
+        { "identifier": "PathfinderMightDie", "name": "Pathfinder Might Die", "color": "Green" }
+      ]
+    },
+    {
+      "type": "Custom_Die",
+      "bag": "PathfinderFateDiceBag",
+      "sets": [
+        { "identifier": "PathfinderFateDie", "name": "Pathfinder Fate Die", "faces": "images/fate_die_faces.jpg", "color": "Green" }
+      ]
+    }
+  ]
+}

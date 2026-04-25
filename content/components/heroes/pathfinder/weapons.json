@@ -1,0 +1,8 @@
+{
+  "components": [
+    { "include": "pathfinder/weapons_starter.json" },
+    { "include": "pathfinder/weapons_bronze.json" },
+    { "include": "pathfinder/weapons_silver.json" },
+    { "include": "pathfinder/weapons_gold.json" }
+  ]
+}

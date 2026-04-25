@@ -1,0 +1,446 @@
+{
+  "name": "Vanguard",
+  "color": "Yellow",
+
+  "components": [
+
+    /* -----------------------------------------------------------
+       BAG STRUCTURE (Hero Box → Tier Chests → Dice/Markers)
+    ----------------------------------------------------------- */
+    {
+      "type": "Custom_Model",
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "sets": [
+        {
+          "identifier": "VanguardHeroBox",
+          "name": "Vanguard Hero Box",
+          "mesh": "models/box.obj",
+          "texture": "models/box-vanguard-diffuse.png",
+          "container": { "type": 0 }
+        },
+        {
+          "identifier": "VanguardStarterChest",
+          "name": "Vanguard Starter Chest",
+          "bag": "VanguardHeroBox",
+          "mesh": "models/chest-starter.obj",
+          "texture": "models/chest-starter-vanguard-diffuse.png",
+          "container": { "type": 0 }
+        },
+        {
+          "identifier": "VanguardBronzeChest",
+          "name": "Vanguard Bronze Chest",
+          "bag": "VanguardHeroBox",
+          "mesh": "models/chest-bronze.obj",
+          "texture": "models/chest-bronze-vanguard-diffuse.png",
+          "container": { "type": 0 }
+        },
+        {
+          "identifier": "VanguardSilverChest",
+          "name": "Vanguard Silver Chest",
+          "bag": "VanguardHeroBox",
+          "mesh": "models/chest-silver.obj",
+          "texture": "models/chest-silver-vanguard-diffuse.png",
+          "container": { "type": 0 }
+        },
+        {
+          "identifier": "VanguardGoldChest",
+          "name": "Vanguard Gold Chest",
+          "bag": "VanguardHeroBox",
+          "mesh": "models/chest-gold.obj",
+          "texture": "models/chest-gold-vanguard-diffuse.png",
+          "container": { "type": 0 }
+        }
+      ]
+    },
+
+    /* -----------------------------------------------------------
+       INFINITE BAGS (Dice + Markers)
+    ----------------------------------------------------------- */
+    {
+      "type": "Infinite",
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "bag": "VanguardHeroBox",
+      "sets": [
+        {
+          "identifier": "VanguardMightDiceBag",
+          "name": "Vanguard Might Dice Bag",
+          "color": "Yellow",
+          "script": "scripts/diceBag.lua"
+        },
+        {
+          "identifier": "VanguardFateDiceBag",
+          "name": "Vanguard Fate Dice Bag",
+          "color": "Yellow",
+          "script": "scripts/diceBag.lua"
+        },
+        {
+          "identifier": "VanguardMarkerBag",
+          "name": "Vanguard Marker Bag",
+          "color": "Yellow",
+          "script": "scripts/markerBag.lua"
+        }
+      ]
+    },
+
+    /* -----------------------------------------------------------
+       HERO CARDS (Full Cards)
+    ----------------------------------------------------------- */
+    {
+      "type": "CustomCard",
+      "shape": 0,
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "bag": "VanguardHeroBox",
+      "sets": [
+        {
+          "identifier": "HRO-001A",
+          "name": "Vaerwyn",
+          "face": "images/HRO-001A_face.jpg",
+          "back": "images/HRO-001A_back.jpg"
+        },
+        {
+          "identifier": "HRO-001B",
+          "name": "Brannok",
+          "face": "images/HRO-001B_face.jpg",
+          "back": "images/HRO-001B_back.jpg"
+        }
+      ]
+    },
+
+    /* -----------------------------------------------------------
+       FIGURINES
+    ----------------------------------------------------------- */
+    {
+      "type": "Custom_Model",
+      "scale": { "x": 0.7, "y": 1, "z": 0.7 },
+      "bag": "VanguardHeroBox",
+      "sets": [
+        {
+          "identifier": "FIG-H01A",
+          "name": "Vaerwyn Figurine",
+          "mesh": "models/vanguard-female.obj",
+          "texture": "models/vanguard-female-diffuse.png",
+          "material": { "specular": 0.05, "fresnel": 0.05 }
+        },
+        {
+          "identifier": "FIG-H01B",
+          "name": "Brannok Figurine",
+          "mesh": "models/vanguard-male.obj",
+          "texture": "models/vanguard-male-diffuse.png",
+          "material": { "specular": 0.05, "fresnel": 0.05 }
+        }
+      ]
+    },
+
+    /* -----------------------------------------------------------
+       WEAPONS (Half Cards)
+       Chest assignment based on Rating:
+       Starter → StarterChest
+       Bronze → BronzeChest
+       Silver → SilverChest
+       Gold → GoldChest
+    ----------------------------------------------------------- */
+    {
+      "type": "CustomCard",
+      "shape": 0,
+      "scale": { "x": 0.5, "y": 1, "z": 0.5 },
+      "sets": [
+        /* Starter */
+        {
+          "identifier": "WPN-001A",
+          "name": "Sentinel's Hammer",
+          "face": "images/WPN-001A_face.jpg",
+          "back": "images/WPN-001A_back.jpg",
+          "bag": "VanguardStarterChest"
+        },
+        /* Bronze */
+        {
+          "identifier": "WPN-002A",
+          "name": "Warden's Mace",
+          "face": "images/WPN-002A_face.jpg",
+          "back": "images/WPN-002A_back.jpg",
+          "bag": "VanguardBronzeChest"
+        },
+        {
+          "identifier": "WPN-003A",
+          "name": "Bulwark Lance",
+          "face": "images/WPN-003A_face.jpg",
+          "back": "images/WPN-003A_back.jpg",
+          "bag": "VanguardBronzeChest"
+        },
+        /* Silver */
+        {
+          "identifier": "WPN-004A",
+          "name": "Titanbreaker Maul",
+          "face": "images/WPN-004A_face.jpg",
+          "back": "images/WPN-004A_back.jpg",
+          "bag": "VanguardSilverChest"
+        },
+        {
+          "identifier": "WPN-005A",
+          "name": "Judicator’s Lance",
+          "face": "images/WPN-005A_face.jpg",
+          "back": "images/WPN-005A_back.jpg",
+          "bag": "VanguardSilverChest"
+        },
+        /* Gold */
+        {
+          "identifier": "WPN-006A",
+          "name": "Colossus Warhammer",
+          "face": "images/WPN-006A_face.jpg",
+          "back": "images/WPN-006A_back.jpg",
+          "bag": "VanguardGoldChest"
+        },
+        {
+          "identifier": "WPN-007A",
+          "name": "Imperator Lance",
+          "face": "images/WPN-007A_face.jpg",
+          "back": "images/WPN-007A_back.jpg",
+          "bag": "VanguardGoldChest"
+        }
+      ]
+    },
+
+    /* -----------------------------------------------------------
+       ABILITIES (Half Cards)
+       Vanguard currently has no ability entries in Ability_Data,
+       so we generate placeholders for future expansion.
+    ----------------------------------------------------------- */
+    {
+      "type": "CustomCard",
+      "shape": 0,
+      "scale": { "x": 0.5, "y": 1, "z": 0.5 },
+      "sets": [
+        {
+          "identifier": "ABL-VAN-Placeholder1",
+          "name": "Vanguard Ability Placeholder",
+          "face": "images/placeholder_face.jpg",
+          "back": "images/placeholder_back.jpg",
+          "bag": "VanguardStarterChest"
+        }
+      ]
+    },
+
+    /* -----------------------------------------------------------
+       ARMOR (Tiles)
+       1x1 → scale 0.25,0.1,0.25
+       1x2 → scale 0.25,0.1,0.5
+       Chest assignment based on Rating
+    ----------------------------------------------------------- */
+    {
+      "type": "Custom_Tile",
+      "scale": { "x": 0.25, "y": 0.1, "z": 0.25 },
+      "sets": [
+        /* Starter 1x1 */
+        {
+          "identifier": "ARM-001A",
+          "name": "Vanguard Shield",
+          "face": "images/ARM-001A_face.jpg",
+          "back": "images/ARM-001A_back.jpg",
+          "bag": "VanguardStarterChest"
+        },
+        {
+          "identifier": "ARM-002A",
+          "name": "Vanguard Plate",
+          "face": "images/ARM-002A_face.jpg",
+          "back": "images/ARM-002A_back.jpg",
+          "bag": "VanguardStarterChest"
+        },
+        {
+          "identifier": "ARM-003A",
+          "name": "Vanguard Helm",
+          "face": "images/ARM-003A_face.jpg",
+          "back": "images/ARM-003A_back.jpg",
+          "bag": "VanguardStarterChest"
+        },
+        {
+          "identifier": "ARM-005A",
+          "name": "Vanguard Greaves",
+          "face": "images/ARM-005A_face.jpg",
+          "back": "images/ARM-005A_back.jpg",
+          "bag": "VanguardStarterChest"
+        },
+
+        /* Bronze 1x1 */
+        {
+          "identifier": "ARM-007A",
+          "name": "Sentinel Pauldron",
+          "face": "images/ARM-007A_face.jpg",
+          "back": "images/ARM-007A_back.jpg",
+          "bag": "VanguardBronzeChest"
+        },
+        {
+          "identifier": "ARM-009A",
+          "name": "Sentinel Greaves",
+          "face": "images/ARM-009A_face.jpg",
+          "back": "images/ARM-009A_back.jpg",
+          "bag": "VanguardBronzeChest"
+        },
+
+        /* Silver 1x1 */
+        {
+          "identifier": "ARM-010A",
+          "name": "Dragonscale Shield",
+          "face": "images/ARM-010A_face.jpg",
+          "back": "images/ARM-010A_back.jpg",
+          "bag": "VanguardSilverChest"
+        },
+        {
+          "identifier": "ARM-013A",
+          "name": "Dragonscale Gauntlet",
+          "face": "images/ARM-013A_face.jpg",
+          "back": "images/ARM-013A_back.jpg",
+          "bag": "VanguardSilverChest"
+        },
+        {
+          "identifier": "ARM-014A",
+          "name": "Dragonscale Pauldron",
+          "face": "images/ARM-014A_face.jpg",
+          "back": "images/ARM-014A_back.jpg",
+          "bag": "VanguardSilverChest"
+        },
+        {
+          "identifier": "ARM-015A",
+          "name": "Dragonscale Guard",
+          "face": "images/ARM-015A_face.jpg",
+          "back": "images/ARM-015A_back.jpg",
+          "bag": "VanguardSilverChest"
+        },
+
+        /* Gold 1x1 */
+        {
+          "identifier": "ARM-017A",
+          "name": "Starforged Cuirass",
+          "face": "images/ARM-017A_face.jpg",
+          "back": "images/ARM-017A_back.jpg",
+          "bag": "VanguardGoldChest"
+        },
+        {
+          "identifier": "ARM-018A",
+          "name": "Starforged Helm",
+          "face": "images/ARM-018A_face.jpg",
+          "back": "images/ARM-018A_back.jpg",
+          "bag": "VanguardGoldChest"
+        },
+        {
+          "identifier": "ARM-019A",
+          "name": "Starforged Guard",
+          "face": "images/ARM-019A_face.jpg",
+          "back": "images/ARM-019A_back.jpg",
+          "bag": "VanguardGoldChest"
+        },
+        {
+          "identifier": "ARM-020A",
+          "name": "Starforged Greaves",
+          "face": "images/ARM-020A_face.jpg",
+          "back": "images/ARM-020A_back.jpg",
+          "bag": "VanguardGoldChest"
+        },
+        {
+          "identifier": "ARM-021A",
+          "name": "Starforged Gauntlet",
+          "face": "images/ARM-021A_face.jpg",
+          "back": "images/ARM-021A_back.jpg",
+          "bag": "VanguardGoldChest"
+        },
+        {
+          "identifier": "ARM-022A",
+          "name": "Starforged Pauldron",
+          "face": "images/ARM-022A_face.jpg",
+          "back": "images/ARM-022A_back.jpg",
+          "bag": "VanguardGoldChest"
+        },
+        {
+          "identifier": "ARM-023A",
+          "name": "Starforged Guard",
+          "face": "images/ARM-023A_face.jpg",
+          "back": "images/ARM-023A_back.jpg",
+          "bag": "VanguardGoldChest"
+        }
+      ]
+    },
+
+    /* -----------------------------------------------------------
+       ARMOR 1x2 (Tiles)
+    ----------------------------------------------------------- */
+    {
+      "type": "Custom_Tile",
+      "scale": { "x": 0.25, "y": 0.1, "z": 0.5 },
+      "sets": [
+        /* Starter */
+        {
+          "identifier": "ARM-004A",
+          "name": "Vanguard Pauldron",
+          "face": "images/ARM-004A_face.jpg",
+          "back": "images/ARM-004A_back.jpg",
+          "bag": "VanguardStarterChest"
+        },
+
+        /* Bronze */
+        {
+          "identifier": "ARM-006A",
+          "name": "Sentinel Guard",
+          "face": "images/ARM-006A_face.jpg",
+          "back": "images/ARM-006A_back.jpg",
+          "bag": "VanguardBronzeChest"
+        },
+
+        /* Silver */
+        {
+          "identifier": "ARM-011A",
+          "name": "Dragonscale Suit",
+          "face": "images/ARM-011A_face.jpg",
+          "back": "images/ARM-011A_back.jpg",
+          "bag": "VanguardSilverChest"
+        },
+        {
+          "identifier": "ARM-012A",
+          "name": "Dragonscale Pauldron",
+          "face": "images/ARM-012A_face.jpg",
+          "back": "images/ARM-012A_back.jpg",
+          "bag": "VanguardSilverChest"
+        },
+
+        /* Gold */
+        {
+          "identifier": "ARM-016A",
+          "name": "Starforged Shield",
+          "face": "images/ARM-016A_face.jpg",
+          "back": "images/ARM-016A_back.jpg",
+          "bag": "VanguardGoldChest"
+        }
+      ]
+    },
+
+    /* -----------------------------------------------------------
+       MARKER CUBE
+    ----------------------------------------------------------- */
+    {
+      "type": "BlockSquare",
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "script": "scripts/markerCube.lua",
+      "bag": "VanguardMarkerBag",
+      "sets": [
+        {
+          "identifier": "VanguardMarker",
+          "name": "Vanguard Marker",
+          "color": "Yellow"
+        }
+      ]
+    },
+
+    /* -----------------------------------------------------------
+       FATE DICE (Custom d6)
+    ----------------------------------------------------------- */
+    {
+      "type": "Die_6",
+      "sets": [
+        {
+          "identifier": "VanguardFateDie",
+          "name": "Vanguard Fate Die",
+          "color": "Yellow",
+          "bag": "VanguardFateDiceBag"
+        }
+      ]
+    }
+  ]
+}

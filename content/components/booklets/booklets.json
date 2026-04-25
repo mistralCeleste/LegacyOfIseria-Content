@@ -1,0 +1,27 @@
+{
+  "name": "Booklets",
+
+  "assetbundles": {
+    "type": "Custom_Assetbundle",
+    "scale": { "x": 1, "y": 1, "z": 1 },
+    "script": "scripts/bookletBehavior.lua",
+
+    "sets": [
+      {
+        "identifier": "NPCBooklet",
+        "name": "NPC Booklet",
+        "bundle": "assetbundles/npcbooklet.unity3d"
+      },
+      {
+        "identifier": "LocationBooklet",
+        "name": "Location Booklet",
+        "bundle": "assetbundles/locationbooklet.unity3d"
+      },
+      {
+        "identifier": "EventsBooklet",
+        "name": "Events Booklet",
+        "bundle": "assetbundles/eventsbooklet.unity3d"
+      }
+    ]
+  }
+}

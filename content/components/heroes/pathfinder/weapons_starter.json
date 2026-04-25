@@ -1,0 +1,12 @@
+{
+  "components": [
+    {
+      "type": "CustomCard",
+      "identifier": "WPN-018A",
+      "name": "Stormbranch Bow",
+      "face": "images/WPN-018A_face.jpg",
+      "back": "images/WPN-018A_back.jpg",
+      "bag": "PathfinderStarterChest"
+    }
+  ]
+}

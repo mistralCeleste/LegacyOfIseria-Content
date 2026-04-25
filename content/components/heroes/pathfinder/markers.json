@@ -1,0 +1,11 @@
+{
+  "components": [
+    {
+      "type": "BlockSquare",
+      "identifier": "PathfinderMarker",
+      "name": "Pathfinder Marker",
+      "color": "Green",
+      "bag": "PathfinderMarkerBag"
+    }
+  ]
+}

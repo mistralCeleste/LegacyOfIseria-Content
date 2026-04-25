@@ -1,0 +1,23 @@
+{
+  "name": "AssetBundles",
+
+  "assetbundles": {
+    "type": "Custom_Assetbundle",
+    "scale": { "x": 1, "y": 1, "z": 1 },
+
+    "sets": [
+      {
+        "identifier": "ThreatWheel",
+        "name": "Threat Wheel",
+        "bundle": "assetbundles/threatwheel.unity3d",
+        "script": "scripts/threatWheelBehavior.lua"
+      },
+      {
+        "identifier": "PUZ-001",
+        "name": "Celestial Wheel",
+        "bundle": "assetbundles/celestialwheel.unity3d",
+        "script": "scripts/celestialWheelBehavior.lua"
+      }
+    ]
+  }
+}

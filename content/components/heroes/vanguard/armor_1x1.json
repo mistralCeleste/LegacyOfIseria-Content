@@ -1,0 +1,129 @@
+{
+  "components": [
+    {
+      "type": "Custom_Tile",
+      "scale": { "x": 0.25, "y": 0.1, "z": 0.25 },
+      "sets": [
+        {
+          "identifier": "ARM-001A",
+          "name": "Vanguard Shield",
+          "face": "images/ARM-001A_face.jpg",
+          "back": "images/ARM-001A_back.jpg",
+          "bag": "VanguardStarterChest"
+        },
+        {
+          "identifier": "ARM-002A",
+          "name": "Vanguard Plate",
+          "face": "images/ARM-002A_face.jpg",
+          "back": "images/ARM-002A_back.jpg",
+          "bag": "VanguardStarterChest"
+        },
+        {
+          "identifier": "ARM-003A",
+          "name": "Vanguard Helm",
+          "face": "images/ARM-003A_face.jpg",
+          "back": "images/ARM-003A_back.jpg",
+          "bag": "VanguardStarterChest"
+        },
+        {
+          "identifier": "ARM-005A",
+          "name": "Vanguard Greaves",
+          "face": "images/ARM-005A_face.jpg",
+          "back": "images/ARM-005A_back.jpg",
+          "bag": "VanguardStarterChest"
+        },
+        {
+          "identifier": "ARM-007A",
+          "name": "Sentinel Pauldron",
+          "face": "images/ARM-007A_face.jpg",
+          "back": "images/ARM-007A_back.jpg",
+          "bag": "VanguardBronzeChest"
+        },
+        {
+          "identifier": "ARM-009A",
+          "name": "Sentinel Greaves",
+          "face": "images/ARM-009A_face.jpg",
+          "back": "images/ARM-009A_back.jpg",
+          "bag": "VanguardBronzeChest"
+        },
+        {
+          "identifier": "ARM-010A",
+          "name": "Dragonscale Shield",
+          "face": "images/ARM-010A_face.jpg",
+          "back": "images/ARM-010A_back.jpg",
+          "bag": "VanguardSilverChest"
+        },
+        {
+          "identifier": "ARM-013A",
+          "name": "Dragonscale Gauntlet",
+          "face": "images/ARM-013A_face.jpg",
+          "back": "images/ARM-013A_back.jpg",
+          "bag": "VanguardSilverChest"
+        },
+        {
+          "identifier": "ARM-014A",
+          "name": "Dragonscale Pauldron",
+          "face": "images/ARM-014A_face.jpg",
+          "back": "images/ARM-014A_back.jpg",
+          "bag": "VanguardSilverChest"
+        },
+        {
+          "identifier": "ARM-015A",
+          "name": "Dragonscale Guard",
+          "face": "images/ARM-015A_face.jpg",
+          "back": "images/ARM-015A_back.jpg",
+          "bag": "VanguardSilverChest"
+        },
+        {
+          "identifier": "ARM-017A",
+          "name": "Starforged Cuirass",
+          "face": "images/ARM-017A_face.jpg",
+          "back": "images/ARM-017A_back.jpg",
+          "bag": "VanguardGoldChest"
+        },
+        {
+          "identifier": "ARM-018A",
+          "name": "Starforged Helm",
+          "face": "images/ARM-018A_face.jpg",
+          "back": "images/ARM-018A_back.jpg",
+          "bag": "VanguardGoldChest"
+        },
+        {
+          "identifier": "ARM-019A",
+          "name": "Starforged Guard",
+          "face": "images/ARM-019A_face.jpg",
+          "back": "images/ARM-019A_back.jpg",
+          "bag": "VanguardGoldChest"
+        },
+        {
+          "identifier": "ARM-020A",
+          "name": "Starforged Greaves",
+          "face": "images/ARM-020A_face.jpg",
+          "back": "images/ARM-020A_back.jpg",
+          "bag": "VanguardGoldChest"
+        },
+        {
+          "identifier": "ARM-021A",
+          "name": "Starforged Gauntlet",
+          "face": "images/ARM-021A_face.jpg",
+          "back": "images/ARM-021A_back.jpg",
+          "bag": "VanguardGoldChest"
+        },
+        {
+          "identifier": "ARM-022A",
+          "name": "Starforged Pauldron",
+          "face": "images/ARM-022A_face.jpg",
+          "back": "images/ARM-022A_back.jpg",
+          "bag": "VanguardGoldChest"
+        },
+        {
+          "identifier": "ARM-023A",
+          "name": "Starforged Guard",
+          "face": "images/ARM-023A_face.jpg",
+          "back": "images/ARM-023A_back.jpg",
+          "bag": "VanguardGoldChest"
+        }
+      ]
+    }
+  ]
+}

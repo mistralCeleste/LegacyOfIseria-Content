@@ -1,0 +1,74 @@
+{
+  "components": [
+    {
+      "type": "Custom_Model",
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "sets": [
+        {
+          "identifier": "VanguardHeroBox",
+          "name": "Vanguard Hero Box",
+          "mesh": "models/box.obj",
+          "texture": "models/box-vanguard-diffuse.png",
+          "container": { "type": 0, "stackable": false }
+        },
+        {
+          "identifier": "VanguardStarterChest",
+          "name": "Vanguard Starter Chest",
+          "mesh": "models/chest-starter.obj",
+          "texture": "models/chest-starter-vanguard-diffuse.png",
+          "container": { "type": 0, "stackable": false },
+          "bag": "VanguardHeroBox"
+        },
+        {
+          "identifier": "VanguardBronzeChest",
+          "name": "Vanguard Bronze Chest",
+          "mesh": "models/chest-bronze.obj",
+          "texture": "models/chest-bronze-vanguard-diffuse.png",
+          "container": { "type": 0, "stackable": false },
+          "bag": "VanguardHeroBox"
+        },
+        {
+          "identifier": "VanguardSilverChest",
+          "name": "Vanguard Silver Chest",
+          "mesh": "models/chest-silver.obj",
+          "texture": "models/chest-silver-vanguard-diffuse.png",
+          "container": { "type": 0, "stackable": false },
+          "bag": "VanguardHeroBox"
+        },
+        {
+          "identifier": "VanguardGoldChest",
+          "name": "Vanguard Gold Chest",
+          "mesh": "models/chest-gold.obj",
+          "texture": "models/chest-gold-vanguard-diffuse.png",
+          "container": { "type": 0, "stackable": false },
+          "bag": "VanguardHeroBox"
+        }
+      ]
+    },
+
+    {
+      "type": "Infinite",
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "sets": [
+        {
+          "identifier": "VanguardMightDiceBag",
+          "name": "Vanguard Might Dice Bag",
+          "color": "Yellow",
+          "bag": "VanguardHeroBox"
+        },
+        {
+          "identifier": "VanguardFateDiceBag",
+          "name": "Vanguard Fate Dice Bag",
+          "color": "Yellow",
+          "bag": "VanguardHeroBox"
+        },
+        {
+          "identifier": "VanguardMarkerBag",
+          "name": "Vanguard Marker Bag",
+          "color": "Yellow",
+          "bag": "VanguardHeroBox"
+        }
+      ]
+    }
+  ]
+}

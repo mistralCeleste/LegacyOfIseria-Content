@@ -1,0 +1,36 @@
+{
+  "components": [
+    {
+      "type": "CustomCard",
+      "identifier": "ABL-003A",
+      "name": "Shadow Step",
+      "face": "images/ABL-003A_face.jpg",
+      "back": "images/ABL-003A_back.jpg",
+      "bag": "PathfinderBronzeChest"
+    },
+    {
+      "type": "CustomCard",
+      "identifier": "ABL-004A",
+      "name": "Sniper's Focus",
+      "face": "images/ABL-004A_face.jpg",
+      "back": "images/ABL-004A_back.jpg",
+      "bag": "PathfinderBronzeChest"
+    },
+    {
+      "type": "CustomCard",
+      "identifier": "ABL-005A",
+      "name": "Gale Pierce",
+      "face": "images/ABL-005A_face.jpg",
+      "back": "images/ABL-005A_back.jpg",
+      "bag": "PathfinderBronzeChest"
+    },
+    {
+      "type": "CustomCard",
+      "identifier": "ABL-006A",
+      "name": "Crippling Strike",
+      "face": "images/ABL-006A_face.jpg",
+      "back": "images/ABL-006A_back.jpg",
+      "bag": "PathfinderBronzeChest"
+    }
+  ]
+}

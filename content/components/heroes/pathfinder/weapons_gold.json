@@ -1,0 +1,20 @@
+{
+  "components": [
+    {
+      "type": "CustomCard",
+      "identifier": "WPN-023A",
+      "name": "Skyhunter Bow",
+      "face": "images/WPN-023A_face.jpg",
+      "back": "images/WPN-023A_back.jpg",
+      "bag": "PathfinderGoldChest"
+    },
+    {
+      "type": "CustomCard",
+      "identifier": "WPN-024A",
+      "name": "Stormwheel Chakram",
+      "face": "images/WPN-024A_face.jpg",
+      "back": "images/WPN-024A_back.jpg",
+      "bag": "PathfinderGoldChest"
+    }
+  ]
+}

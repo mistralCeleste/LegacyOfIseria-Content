@@ -1,0 +1,28 @@
+{
+  "components": [
+    {
+      "type": "CustomCard",
+      "identifier": "ABL-011A",
+      "name": "Opportunist's Edge",
+      "face": "images/ABL-011A_face.jpg",
+      "back": "images/ABL-011A_back.jpg",
+      "bag": "PathfinderGoldChest"
+    },
+    {
+      "type": "CustomCard",
+      "identifier": "ABL-012A",
+      "name": "Stormpiercer Flurry",
+      "face": "images/ABL-012A_face.jpg",
+      "back": "images/ABL-012A_back.jpg",
+      "bag": "PathfinderGoldChest"
+    },
+    {
+      "type": "CustomCard",
+      "identifier": "ABL-013A",
+      "name": "Rain of Stardust",
+      "face": "images/ABL-013A_face.jpg",
+      "back": "images/ABL-013A_back.jpg",
+      "bag": "PathfinderGoldChest"
+    }
+  ]
+}

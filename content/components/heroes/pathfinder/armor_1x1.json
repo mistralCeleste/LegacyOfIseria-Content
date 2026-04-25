@@ -1,0 +1,103 @@
+{
+  "components": [
+    {
+      "type": "Custom_Tile",
+      "identifier": "ARM-062A",
+      "name": "Pathfinder Bracer",
+      "scale": { "x": 0.25, "y": 0.1, "z": 0.25 },
+      "face": "images/ARM-062A.png",
+      "back": "images/ARM-062A.png",
+      "bag": "PathfinderStarterChest"
+    },
+    {
+      "type": "Custom_Tile",
+      "identifier": "ARM-063A",
+      "name": "Pathfinder Armplate",
+      "scale": { "x": 0.25, "y": 0.1, "z": 0.25 },
+      "face": "images/ARM-063A.png",
+      "back": "images/ARM-063A.png",
+      "bag": "PathfinderStarterChest"
+    },
+    {
+      "type": "Custom_Tile",
+      "identifier": "ARM-064A",
+      "name": "Scout Wrap",
+      "scale": { "x": 0.25, "y": 0.1, "z": 0.25 },
+      "face": "images/ARM-064A.png",
+      "back": "images/ARM-064A.png",
+      "bag": "PathfinderBronzeChest"
+    },
+    {
+      "type": "Custom_Tile",
+      "identifier": "ARM-065A",
+      "name": "Scout Pauldron",
+      "scale": { "x": 0.25, "y": 0.1, "z": 0.25 },
+      "face": "images/ARM-065A.png",
+      "back": "images/ARM-065A.png",
+      "bag": "PathfinderBronzeChest"
+    },
+    {
+      "type": "Custom_Tile",
+      "identifier": "ARM-066A",
+      "name": "Scout Boots",
+      "scale": { "x": 0.25, "y": 0.1, "z": 0.25 },
+      "face": "images/ARM-066A.png",
+      "back": "images/ARM-066A.png",
+      "bag": "PathfinderBronzeChest"
+    },
+    {
+      "type": "Custom_Tile",
+      "identifier": "ARM-067A",
+      "name": "Scout Bracer",
+      "scale": { "x": 0.25, "y": 0.1, "z": 0.25 },
+      "face": "images/ARM-067A.png",
+      "back": "images/ARM-067A.png",
+      "bag": "PathfinderBronzeChest"
+    },
+    {
+      "type": "Custom_Tile",
+      "identifier": "ARM-069A",
+      "name": "Tracker Hood",
+      "scale": { "x": 0.25, "y": 0.1, "z": 0.25 },
+      "face": "images/ARM-069A.png",
+      "back": "images/ARM-069A.png",
+      "bag": "PathfinderSilverChest"
+    },
+    {
+      "type": "Custom_Tile",
+      "identifier": "ARM-071A",
+      "name": "Tracker Boots",
+      "scale": { "x": 0.25, "y": 0.1, "z": 0.25 },
+      "face": "images/ARM-071A.png",
+      "back": "images/ARM-071A.png",
+      "bag": "PathfinderSilverChest"
+    },
+    {
+      "type": "Custom_Tile",
+      "identifier": "ARM-073A",
+      "name": "Shadowhunter Gauntlet",
+      "scale": { "x": 0.25, "y": 0.1, "z": 0.25 },
+      "face": "images/ARM-073A.png",
+      "back": "images/ARM-073A.png",
+      "bag": "PathfinderGoldChest"
+    },
+    {
+      "type": "Custom_Tile",
+      "identifier": "ARM-076A",
+      "name": "Shadowhunter Boots",
+      "scale": { "x": 0.25, "y": 0.1, "z": 0.25 },
+      "face": "images/ARM-076A.png",
+      "back": "images/ARM-076A.png",
+      "bag": "PathfinderGoldChest"
+    },
+    {
+      "type": "Custom_Tile",
+      "identifier": "ARM-077A",
+      "name": "Shadowhunter Armwrap",
+      "scale": { "x": 0.25, "y": 0.1, "z": 0.25 },
+      "face": "images/ARM-077A.png",
+      "back": "images/ARM-077A.png",
+      "bag": "PathfinderGoldChest"
+    }
+  ]
+}

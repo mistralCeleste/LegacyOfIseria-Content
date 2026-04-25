@@ -1,0 +1,20 @@
+{
+  "components": [
+    {
+      "type": "CustomCard",
+      "identifier": "WPN-019A",
+      "name": "Thorntongue Whip",
+      "face": "images/WPN-019A_face.jpg",
+      "back": "images/WPN-019A_back.jpg",
+      "bag": "PathfinderBronzeChest"
+    },
+    {
+      "type": "CustomCard",
+      "identifier": "WPN-020A",
+      "name": "Moonfang Chakram",
+      "face": "images/WPN-020A_face.jpg",
+      "back": "images/WPN-020A_back.jpg",
+      "bag": "PathfinderBronzeChest"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "blocks": {
+    "type": "BlockSquare",
+    "scale": { "x": 1, "y": 1, "z": 1 },
+
+    "sets": [
+        {
+        "identifier": "RedCube",
+        "name": "Red Cube",
+        "color": "Red",
+        "script": "scripts/redCube.lua"
+        },
+        {
+        "identifier": "BlueSphere",
+        "name": "Blue Sphere",
+        "type": "BlockSphere",
+        "color": "Blue"
+        }
+    ]
+  }
+}

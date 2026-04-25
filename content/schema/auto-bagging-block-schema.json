@@ -1,0 +1,12 @@
+{
+  "name": "Hero",
+  "bag": {
+    "identifier": "HeroBag",
+    "contents": [
+      { "type": "cards", "id": "HERO-001A" },
+      { "type": "cards", "id": "HERO-001B" },
+      { "type": "tiles", "id": "HeroTableau" },
+      { "type": "models", "id": "pathfinder-female" }
+    ]
+  }
+}

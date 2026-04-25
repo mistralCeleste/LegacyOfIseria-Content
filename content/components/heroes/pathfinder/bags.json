@@ -1,0 +1,71 @@
+{
+  "components": [
+    {
+      "type": "Custom_Model",
+      "identifier": "PathfinderHeroBox",
+      "name": "Pathfinder Hero Box",
+      "mesh": "models/box.obj",
+      "texture": "models/box-pathfinder-diffuse.png",
+      "container": { "type": 0, "stackable": false }
+    },
+
+    {
+      "type": "Custom_Model",
+      "identifier": "PathfinderStarterChest",
+      "name": "Pathfinder Starter Chest",
+      "mesh": "models/chest-starter.obj",
+      "texture": "models/chest-starter-pathfinder-diffuse.png",
+      "container": { "type": 0, "stackable": false },
+      "bag": "PathfinderHeroBox"
+    },
+    {
+      "type": "Custom_Model",
+      "identifier": "PathfinderBronzeChest",
+      "name": "Pathfinder Bronze Chest",
+      "mesh": "models/chest-bronze.obj",
+      "texture": "models/chest-bronze-pathfinder-diffuse.png",
+      "container": { "type": 0, "stackable": false },
+      "bag": "PathfinderHeroBox"
+    },
+    {
+      "type": "Custom_Model",
+      "identifier": "PathfinderSilverChest",
+      "name": "Pathfinder Silver Chest",
+      "mesh": "models/chest-silver.obj",
+      "texture": "models/chest-silver-pathfinder-diffuse.png",
+      "container": { "type": 0, "stackable": false },
+      "bag": "PathfinderHeroBox"
+    },
+    {
+      "type": "Custom_Model",
+      "identifier": "PathfinderGoldChest",
+      "name": "Pathfinder Gold Chest",
+      "mesh": "models/chest-gold.obj",
+      "texture": "models/chest-gold-pathfinder-diffuse.png",
+      "container": { "type": 0, "stackable": false },
+      "bag": "PathfinderHeroBox"
+    },
+
+    {
+      "type": "Infinite",
+      "identifier": "PathfinderMightDiceBag",
+      "name": "Pathfinder Might Dice Bag",
+      "color": "Green",
+      "bag": "PathfinderHeroBox"
+    },
+    {
+      "type": "Infinite",
+      "identifier": "PathfinderFateDiceBag",
+      "name": "Pathfinder Fate Dice Bag",
+      "color": "Green",
+      "bag": "PathfinderHeroBox"
+    },
+    {
+      "type": "Infinite",
+      "identifier": "PathfinderMarkerBag",
+      "name": "Pathfinder Marker Bag",
+      "color": "Green",
+      "bag": "PathfinderHeroBox"
+    }
+  ]
+}

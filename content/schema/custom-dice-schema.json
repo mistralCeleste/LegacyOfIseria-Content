@@ -1,0 +1,19 @@
+{
+  "dice": {
+    "type": "Custom_Dice",
+    "sets": [
+        {
+        "identifier": "SkillDie",
+        "name": "Skill Die",
+        "faces": [
+            "images/skill_1.png",
+            "images/skill_2.png",
+            "images/skill_3.png",
+            "images/skill_4.png",
+            "images/skill_5.png",
+            "images/skill_6.png"
+        ]
+        }
+    ]
+   }
+}

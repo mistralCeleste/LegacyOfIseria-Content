@@ -1,0 +1,9 @@
+{
+  "components": [
+    { "include": "pathfinder/abilities_starter.json" },
+    { "include": "pathfinder/abilities_bronze.json" },
+    { "include": "pathfinder/abilities_silver.json" },
+    { "include": "pathfinder/abilities_gold.json" }
+  ]
+}
+

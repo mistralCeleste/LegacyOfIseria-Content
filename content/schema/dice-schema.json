@@ -1,0 +1,12 @@
+{
+  "dice": {
+    "type": "Die_6",
+    "sets": [
+        {
+        "identifier": "HeroDie",
+        "name": "Hero Die",
+        "color": "Blue"
+        }
+    ]
+  }
+}

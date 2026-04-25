@@ -1,0 +1,12 @@
+{
+  "components": [
+    {
+      "type": "Custom_Tile",
+      "identifier": "HeroTableau",
+      "name": "Hero Tableau",
+      "scale": { "x": 2, "y": 1, "z": 2 },
+      "face": "images/HeroTableau.jpg",
+      "back": "images/HeroTableau.jpg"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "boards": {
+    "type": "Custom_Board",
+    "scale": { "x": 5, "y": 1, "z": 5 },
+    "sets": [
+        {
+        "identifier": "MainBoard",
+        "name": "Main Board",
+        "face": "images/board_face.jpg",
+        "back": "images/board_back.jpg"
+        }
+    ]
+  }
+}
