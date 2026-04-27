@@ -1,0 +1,17 @@
+{
+  "type": "CustomCard",
+  "shape": 0,
+  "scale": {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  },
+  "sets": [
+    {
+      "identifier": "FUM-001A",
+      "name": "Chamber of Grime",
+      "face": "images/FUM-001A-face.jpg",
+      "back": "images/FUM-001A-back.jpg"
+    }
+  ]
+}

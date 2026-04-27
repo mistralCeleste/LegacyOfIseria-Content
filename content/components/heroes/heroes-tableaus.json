@@ -1,0 +1,37 @@
+{
+  "name": "Heroe Tableaus",
+
+  "tiles": {
+    "type": "Custom_Tile",
+    "scale": { "x": 2.2, "y": 0.2, "z": 2.2 },
+    "sets": [
+      {
+        "identifier": "HeroTableau",
+        "name": "Vanguard Hero Tableau",
+        "face": "images/HeroTableau.jpg",
+        "back": "images/HeroTableau.jpg",
+        "bag": "VanguardHeroBox"
+      },
+      {
+        "identifier": "HeroTableau",
+        "name": "Pathfinder Hero Tableau",
+        "face": "images/HeroTableau.jpg",
+        "back": "images/HeroTableau.jpg",
+        "bag": "PathfinderHeroBox"
+      },{
+        "identifier": "HeroTableau",
+        "name": "Sage Hero Tableau",
+        "face": "images/HeroTableau.jpg",
+        "back": "images/HeroTableau.jpg",
+        "bag": "SageHeroBox"
+      },
+      {
+        "identifier": "HeroTableau",
+        "name": "Warblade Hero Tableau",
+        "face": "images/HeroTableau.jpg",
+        "back": "images/HeroTableau.jpg",
+        "bag": "WarbladeHeroBox"
+      }
+    ]
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "type": "CustomCard",
+  "shape": 0,
+  "scale": {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  },
+  "sets": [
+    {
+      "identifier": "LOC-000A",
+      "name": "Courier Camp",
+      "face": "images/LOC-000A-face.jpg",
+      "back": "images/LOC-000A-back.jpg",
+      "tags": [
+        "Combat"
+      ]
+    },
+    {
+      "identifier": "LOC-001A",
+      "name": "Lyratha Peninsula",
+      "face": "images/LOC-001A-face.jpg",
+      "back": "images/LOC-001A-back.jpg",
+      "tags": [
+        "Atlas"
+      ]
+    },
+    {
+      "identifier": "LOC-002A",
+      "name": "Thalora",
+      "face": "images/LOC-002A-face.jpg",
+      "back": "images/LOC-002A-back.jpg",
+      "tags": [
+        "Town"
+      ]
+    },
+    {
+      "identifier": "LOC-002B",
+      "name": "Thalora",
+      "face": "images/LOC-002B-face.jpg",
+      "back": "images/LOC-002B-back.jpg",
+      "tags": [
+        "Town"
+      ]
+    },
+    {
+      "identifier": "LOC-003A",
+      "name": "Whirlpool Abyss",
+      "face": "images/LOC-003A-face.jpg",
+      "back": "images/LOC-003A-back.jpg",
+      "tags": [
+        "Grotto"
+      ]
+    },
+    {
+      "identifier": "LOC-006A",
+      "name": "Pinch-Oh Crossroads",
+      "face": "images/LOC-006A-face.jpg",
+      "back": "images/LOC-006A-back.jpg",
+      "tags": [
+        "Town"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "type": "Custom_Tile",
+  "scale": { "x": 12.45, "y": 0.1, "z": 12.45 },
+  "fields":
+  {  
+      "identifier": "DungeonArea"
+    , "name": "Dungeon Area"
+    , "face": "images/dungeon-area.jpg"
+    , "back": "images/dungeon-area.jpg"
+  }
+}

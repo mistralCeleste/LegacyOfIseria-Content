@@ -1,0 +1,14 @@
+{
+    "type": "Custom_Dice",
+    "scale": { "x": 0.85, "y": 0.85, "z": 0.85 },
+
+  "fields":
+    {
+      "type": "Custom_Die",
+      "bag": "{Class}FudgeDiceBag",
+      "identifier": "{Class}FudgeDie",
+      "name": "{Class} Fudge Die",
+      "faces": "images/fudge_die_faces.jpg",
+      "color": "{Color}"
+    }
+}

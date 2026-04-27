@@ -1,0 +1,95 @@
+{
+  "type": "CustomCard",
+  "shape": 0,
+  "scale": {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  },
+  "sets": [
+    {
+      "identifier": "NPC-001A",
+      "name": "Melody",
+      "face": "images/NPC-001A-face.jpg",
+      "back": "images/NPC-001A-back.jpg",
+      "description": "Wandering Merfolk Lorekeeper"
+    },
+    {
+      "identifier": "NPC-001B",
+      "name": "Melody",
+      "face": "images/NPC-001B-face.jpg",
+      "back": "images/NPC-001B-back.jpg",
+      "description": "Wandering Merfolk Lorekeeper"
+    },
+    {
+      "identifier": "NPC-001C",
+      "name": "Melody",
+      "face": "images/NPC-001C-face.jpg",
+      "back": "images/NPC-001C-back.jpg",
+      "description": "Wandering Merfolk Lorekeeper"
+    },
+    {
+      "identifier": "NPC-001D",
+      "name": "Melody",
+      "face": "images/NPC-001D-face.jpg",
+      "back": "images/NPC-001D-back.jpg",
+      "description": "Wandering Merfolk Lorekeeper"
+    },
+    {
+      "identifier": "NPC-002A",
+      "name": "Princess Nerida",
+      "face": "images/NPC-002A-face.jpg",
+      "back": "images/NPC-002A-back.jpg",
+      "description": "Princess of the Merfolk"
+    },
+    {
+      "identifier": "NPC-003A",
+      "name": "Patty Chew",
+      "face": "images/NPC-003A-face.jpg",
+      "back": "images/NPC-003A-back.jpg",
+      "description": "Goblin Pastry Provocateur"
+    },
+    {
+      "identifier": "NPC-003B",
+      "name": "Patty Chew",
+      "face": "images/NPC-003B-face.jpg",
+      "back": "images/NPC-003B-back.jpg",
+      "description": ""
+    },
+    {
+      "identifier": "NPC-004A",
+      "name": "Scone Cold Stevia",
+      "face": "images/NPC-004A-face.jpg",
+      "back": "images/NPC-004A-back.jpg",
+      "description": "Stoic Scone-Slinger and Dessert Duelist"
+    },
+    {
+      "identifier": "NPC-004B",
+      "name": "Scone Cold Stevia",
+      "face": "images/NPC-004B-face.jpg",
+      "back": "images/NPC-004B-back.jpg",
+      "description": ""
+    },
+    {
+      "identifier": "NPC-005A",
+      "name": "Thistle",
+      "face": "images/NPC-005A-face.jpg",
+      "back": "images/NPC-005A-back.jpg",
+      "description": "Wandering Fortune Weaver"
+    },
+    {
+      "identifier": "NPC-006A",
+      "name": "Chef Bobby Filet",
+      "face": "images/NPC-006A-face.jpg",
+      "back": "images/NPC-006A-back.jpg",
+      "description": "Competitive Chef"
+    },
+    {
+      "identifier": "NPC-006B",
+      "name": "Chef Bobby Filet",
+      "face": "images/NPC-006B-face.jpg",
+      "back": "images/NPC-006B-back.jpg",
+      "description": "Competitive Chef"
+    }
+  ]
+}

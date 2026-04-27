@@ -1,40 +1,88 @@
 {
   "name": "Rooms",
-  "tiles":
-  {
-    "type": "Custom_Tile",
-    "shape": 0,
-    "scale": { "x": 2.1, "y": 1, "z": 2.1 },
+  "description": "Represents the various rooms that players can explore.",
+  "components": [
+    {
+      "type": "Custom_Model",
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "sets": [
+        {
+          "identifier": "RoomsRandom5+Box",
+          "name": "Rooms 5+ Box",
+          "mesh": "../boxes/models/box.obj",
+          "texture": "../boxes/images/Box_Rooms-5.jpg",
+          "container": { "type": 0, "stackable": false }
+        },
+        {
+          "identifier": "RoomsRandom10+Box",
+          "name": "Rooms 10+ Box",
+          "mesh": "../boxes/models/box.obj",
+          "texture": "../boxes/images/Box_Rooms-10.jpg",
+          "container": { "type": 0, "stackable": false }
+        },
+        {
+          "identifier": "RoomsRandom15+Box",
+          "name": "Rooms 15+ Box",
+          "mesh": "../boxes/models/box.obj",
+          "texture": "../boxes/images/Box_Rooms-15.jpg",
+          "container": { "type": 0, "stackable": false }
+        },
+        {
+          "identifier": "RoomsEncounterBox",
+          "name": "Rooms Encounter Box",
+          "mesh": "../boxes/models/box.obj",
+          "texture": "../boxes/images/Box_Rooms-Encounter.jpg",
+          "container": { "type": 0, "stackable": false }
+        },
+        {
+          "identifier": "RoomsPuzzleBox",
+          "name": "Rooms Puzzle Box",
+          "mesh": "../boxes/models/box.obj",
+          "texture": "../boxes/images/Box_Rooms-Puzzle.jpg",
+          "container": { "type": 0, "stackable": false }
+        }
+      ]
+    },
+    {
+      "type": "Custom_Tile",
+      "shape": 0,
+      "CustomTile": {
+            "Type": 0,
+            "Thickness": 0.1,
+            "Stackable": true
+            },
+      "scale": { "x": 1.45, "y": 1, "z": 1.45 },
 
-    "sets":
-    [
-      { "identifier": "SML-002", "name": "Dungeon Room 002", "face": "images/SML-002_face.jpg", "back": "images/SML-002_back.jpg" },
-      { "identifier": "SML-003", "name": "Dungeon Room 003", "face": "images/SML-003_face.jpg", "back": "images/SML-003_back.jpg" },
-      { "identifier": "SML-004", "name": "Dungeon Room 004", "face": "images/SML-004_face.jpg", "back": "images/SML-004_back.jpg" },
-      { "identifier": "SML-005", "name": "Dungeon Room 005", "face": "images/SML-005_face.jpg", "back": "images/SML-005_back.jpg" },
-      { "identifier": "SML-006", "name": "Dungeon Room 006", "face": "images/SML-006_face.jpg", "back": "images/SML-006_back.jpg" },
-      { "identifier": "SML-007", "name": "Dungeon Room 007", "face": "images/SML-007_face.jpg", "back": "images/SML-007_back.jpg" },
-      { "identifier": "SML-008", "name": "Dungeon Room 008", "face": "images/SML-008_face.jpg", "back": "images/SML-008_back.jpg" },
-      { "identifier": "SML-009", "name": "Dungeon Room 009", "face": "images/SML-009_face.jpg", "back": "images/SML-009_back.jpg" },
-      { "identifier": "SML-010", "name": "Dungeon Room 010", "face": "images/SML-010_face.jpg", "back": "images/SML-010_back.jpg" },
-      { "identifier": "SML-011", "name": "Dungeon Room 011", "face": "images/SML-011_face.jpg", "back": "images/SML-011_back.jpg" },
+      "sets":
+      [
+        { "identifier": "SML-002", "name": "Dungeon Room 002", "face": "images/SML-002_face.jpg", "back": "images/SML-002_back.jpg", "tags": ["room", "5+"], "bag": "RoomsRandom5+Box" },
+        { "identifier": "SML-003", "name": "Dungeon Room 003", "face": "images/SML-003_face.jpg", "back": "images/SML-003_back.jpg", "tags": ["room", "5+"], "bag": "RoomsRandom5+Box" },
+        { "identifier": "SML-004", "name": "Dungeon Room 004", "face": "images/SML-004_face.jpg", "back": "images/SML-004_back.jpg", "tags": ["room", "5+"], "bag": "RoomsRandom5+Box" },
+        { "identifier": "SML-005", "name": "Dungeon Room 005", "face": "images/SML-005_face.jpg", "back": "images/SML-005_back.jpg", "tags": ["room", "5+"], "bag": "RoomsRandom5+Box" },
+        { "identifier": "SML-006", "name": "Dungeon Room 006", "face": "images/SML-006_face.jpg", "back": "images/SML-006_back.jpg", "tags": ["room", "5+"], "bag": "RoomsRandom5+Box" },
+        { "identifier": "SML-007", "name": "Dungeon Room 007", "face": "images/SML-007_face.jpg", "back": "images/SML-007_back.jpg", "tags": ["room", "5+"], "bag": "RoomsRandom5+Box" },
+        { "identifier": "SML-008", "name": "Dungeon Room 008", "face": "images/SML-008_face.jpg", "back": "images/SML-008_back.jpg", "tags": ["room", "5+"], "bag": "RoomsRandom5+Box" },
+        { "identifier": "SML-009", "name": "Dungeon Room 009", "face": "images/SML-009_face.jpg", "back": "images/SML-009_back.jpg", "tags": ["room", "5+"], "bag": "RoomsRandom5+Box" },
+        { "identifier": "SML-010", "name": "Dungeon Room 010", "face": "images/SML-010_face.jpg", "back": "images/SML-010_back.jpg", "tags": ["room", "5+"], "bag": "RoomsRandom5+Box" },
+        { "identifier": "SML-011", "name": "Dungeon Room 011", "face": "images/SML-011_face.jpg", "back": "images/SML-011_back.jpg", "tags": ["room", "5+"], "bag": "RoomsRandom5+Box" },
 
-      { "identifier": "SML-012", "name": "Dungeon Room 012", "face": "images/SML-012_face.jpg", "back": "images/SML-012_back.jpg" },
-      { "identifier": "SML-013", "name": "Dungeon Room 013", "face": "images/SML-013_face.jpg", "back": "images/SML-013_back.jpg" },
-      { "identifier": "SML-014", "name": "Dungeon Room 014", "face": "images/SML-014_face.jpg", "back": "images/SML-014_back.jpg" },
-      { "identifier": "SML-015", "name": "Dungeon Room 015", "face": "images/SML-015_face.jpg", "back": "images/SML-015_back.jpg" },
-      { "identifier": "SML-016", "name": "Dungeon Room 016", "face": "images/SML-016_face.jpg", "back": "images/SML-016_back.jpg" },
+        { "identifier": "SML-012", "name": "Dungeon Room 012", "face": "images/SML-012_face.jpg", "back": "images/SML-012_back.jpg", "tags": ["room", "10+"], "bag": "RoomsRandom10+Box" },
+        { "identifier": "SML-013", "name": "Dungeon Room 013", "face": "images/SML-013_face.jpg", "back": "images/SML-013_back.jpg", "tags": ["room", "10+"], "bag": "RoomsRandom10+Box" },
+        { "identifier": "SML-014", "name": "Dungeon Room 014", "face": "images/SML-014_face.jpg", "back": "images/SML-014_back.jpg", "tags": ["room", "10+"], "bag": "RoomsRandom10+Box" },
+        { "identifier": "SML-015", "name": "Dungeon Room 015", "face": "images/SML-015_face.jpg", "back": "images/SML-015_back.jpg", "tags": ["room", "10+"], "bag": "RoomsRandom10+Box" },
+        { "identifier": "SML-016", "name": "Dungeon Room 016", "face": "images/SML-016_face.jpg", "back": "images/SML-016_back.jpg", "tags": ["room", "10+"], "bag": "RoomsRandom10+Box" },
 
-      { "identifier": "SML-017", "name": "Dungeon Room 017", "face": "images/SML-017_face.jpg", "back": "images/SML-017_back.jpg" },
-      { "identifier": "SML-018", "name": "Dungeon Room 018", "face": "images/SML-018_face.jpg", "back": "images/SML-018_back.jpg" },
-      { "identifier": "SML-019", "name": "Dungeon Room 019", "face": "images/SML-019_face.jpg", "back": "images/SML-019_back.jpg" },
+        { "identifier": "SML-017", "name": "Dungeon Room 017", "face": "images/SML-017_face.jpg", "back": "images/SML-017_back.jpg", "tags": ["room", "15+"], "bag": "RoomsRandom15Box" },
+        { "identifier": "SML-018", "name": "Dungeon Room 018", "face": "images/SML-018_face.jpg", "back": "images/SML-018_back.jpg", "tags": ["room", "15+"], "bag": "RoomsRandom15Box" },
+        { "identifier": "SML-019", "name": "Dungeon Room 019", "face": "images/SML-019_face.jpg", "back": "images/SML-019_back.jpg", "tags": ["room", "15+"], "bag": "RoomsRandom15Box" },
 
-      { "identifier": "SML-100", "name": "Encounter Room 100", "face": "images/SML-100_face.jpg", "back": "images/SML-100_back.jpg" },
-      { "identifier": "SML-101", "name": "Encounter Room 101", "face": "images/SML-101_face.jpg", "back": "images/SML-101_back.jpg" },
+        { "identifier": "SML-100", "name": "Encounter Room 100", "face": "images/SML-100_face.jpg", "back": "images/SML-100_back.jpg", "tags": ["room", "encounter"], "bag": "RoomsEncounterBox" },
+        { "identifier": "SML-101", "name": "Encounter Room 101", "face": "images/SML-101_face.jpg", "back": "images/SML-101_back.jpg", "tags": ["room", "encounter"], "bag": "RoomsEncounterBox" },
 
-      { "identifier": "SML-500", "name": "Puzzle Room 500", "face": "images/SML-503_face.jpg", "back": "images/SML-503_back.jpg" },
-      { "identifier": "SML-501", "name": "Puzzle Room 501", "face": "images/SML-504_face.jpg", "back": "images/SML-504_back.jpg" },
-      { "identifier": "SML-502", "name": "Puzzle Room 502", "face": "images/SML-505_face.jpg", "back": "images/SML-505_back.jpg" }
-    ]
-  }
+        { "identifier": "SML-500", "name": "Puzzle Room 500", "face": "images/SML-503_face.jpg", "back": "images/SML-503_back.jpg", "tags": ["room", "puzzle"], "bag": "RoomsPuzzleBox" },
+        { "identifier": "SML-501", "name": "Puzzle Room 501", "face": "images/SML-504_face.jpg", "back": "images/SML-504_back.jpg", "tags": ["room", "puzzle"], "bag": "RoomsPuzzleBox" },
+        { "identifier": "SML-502", "name": "Puzzle Room 502", "face": "images/SML-505_face.jpg", "back": "images/SML-505_back.jpg", "tags": ["room", "puzzle"], "bag": "RoomsPuzzleBox" }
+      ]
+    }
+  ]
 }

@@ -1,0 +1,14 @@
+{
+  "type": "CustomCard",
+  "shape": 0,
+  "scale": { "x": 1, "y": 1, "z": 1 },
+  "fields":
+  {  
+       "identifier": "{Full Id}"
+    ,  "name": "{Name}"
+    ,  "face": "images/{Full Id}-face.jpg"
+    ,  "back": "images/{Full Id}-back.jpg"
+    ,  "rooms": "{Rooms}"
+    ,  "connectors": "{Connectors}"
+  }
+}

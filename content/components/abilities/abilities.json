@@ -1,0 +1,818 @@
+{
+  "type": "CustomCard",
+  "shape": 0,
+  "scale": {
+    "x": 0.75,
+    "y": 1,
+    "z": 0.75
+  },
+  "sets": [
+    {
+      "identifier": "ABL-001A",
+      "name": "Hunter's Mark",
+      "face": "images/ABL-001A-face.jpg",
+      "back": "images/ABL-001A-back.jpg",
+      "tags": [
+        "Mark"
+      ],
+      "attribute": "Might",
+      "class": "Pathfinder",
+      "rating": "Starter",
+      "bag": "PathfinderStarterChest"
+    },
+    {
+      "identifier": "ABL-001B",
+      "name": "Master Hunter",
+      "face": "images/ABL-001B-face.jpg",
+      "back": "images/ABL-001B-back.jpg",
+      "tags": [
+        "Mark"
+      ],
+      "attribute": "Might",
+      "class": "Pathfinder",
+      "rating": "Silver",
+      "bag": "PathfinderSilverChest"
+    },
+    {
+      "identifier": "ABL-002A",
+      "name": "Combat Expertise",
+      "face": "images/ABL-002A-face.jpg",
+      "back": "images/ABL-002A-back.jpg",
+      "tags": [
+        "Offense",
+        "Hunter's Mark Amplified"
+      ],
+      "attribute": "Might",
+      "class": "Pathfinder",
+      "rating": "Starter",
+      "bag": "PathfinderStarterChest"
+    },
+    {
+      "identifier": "ABL-003A",
+      "name": "Shadow Step",
+      "face": "images/ABL-003A-face.jpg",
+      "back": "images/ABL-003A-back.jpg",
+      "tags": [
+        "Maneuver",
+        "Hunter's Mark Amplified"
+      ],
+      "attribute": "Valor",
+      "class": "Pathfinder",
+      "rating": "Bronze",
+      "bag": "PathfinderBronzeChest"
+    },
+    {
+      "identifier": "ABL-004A",
+      "name": "Sniper's Focus",
+      "face": "images/ABL-004A-face.jpg",
+      "back": "images/ABL-004A-back.jpg",
+      "tags": [
+        "Offense",
+        "Debuff",
+        "Hunter's Mark Amplified"
+      ],
+      "attribute": "Valor",
+      "class": "Pathfinder",
+      "rating": "Bronze",
+      "bag": "PathfinderBronzeChest"
+    },
+    {
+      "identifier": "ABL-005A",
+      "name": "Gale Pierce",
+      "face": "images/ABL-005A-face.jpg",
+      "back": "images/ABL-005A-back.jpg",
+      "tags": [
+        "Offense"
+      ],
+      "attribute": "Wisdom",
+      "class": "Pathfinder",
+      "rating": "Bronze",
+      "bag": "PathfinderBronzeChest"
+    },
+    {
+      "identifier": "ABL-006A",
+      "name": "Crippling Strike",
+      "face": "images/ABL-006A-face.jpg",
+      "back": "images/ABL-006A-back.jpg",
+      "tags": [
+        "Offense",
+        "Debuff",
+        "Hunter's Mark Amplified"
+      ],
+      "attribute": "Wisdom",
+      "class": "Pathfinder",
+      "rating": "Bronze",
+      "bag": "PathfinderBronzeChest"
+    },
+    {
+      "identifier": "ABL-007A",
+      "name": "Precision Volley",
+      "face": "images/ABL-007A-face.jpg",
+      "back": "images/ABL-007A-back.jpg",
+      "tags": [
+        "Offense",
+        "Maneuver"
+      ],
+      "attribute": "Might",
+      "class": "Pathfinder",
+      "rating": "Silver",
+      "bag": "PathfinderSilverChest"
+    },
+    {
+      "identifier": "ABL-008A",
+      "name": "Vortex Shift",
+      "face": "images/ABL-008A-face.jpg",
+      "back": "images/ABL-008A-back.jpg",
+      "tags": [
+        "Maneuver",
+        "Debuff",
+        "Hunter's Mark Amplified"
+      ],
+      "attribute": "Wisdom",
+      "class": "Pathfinder",
+      "rating": "Silver",
+      "bag": "PathfinderSilverChest"
+    },
+    {
+      "identifier": "ABL-009A",
+      "name": "Pinwheel Revelation",
+      "face": "images/ABL-009A-face.jpg",
+      "back": "images/ABL-009A-back.jpg",
+      "tags": [
+        "Offense",
+        "Mark",
+        "Debuff"
+      ],
+      "attribute": "Wisdom",
+      "class": "Pathfinder",
+      "rating": "Silver",
+      "bag": "PathfinderSilverChest"
+    },
+    {
+      "identifier": "ABL-010A",
+      "name": "Windcutter Strike",
+      "face": "images/ABL-010A-face.jpg",
+      "back": "images/ABL-010A-back.jpg",
+      "tags": [
+        "Offense"
+      ],
+      "attribute": "Wisdom",
+      "class": "Pathfinder",
+      "rating": "Silver",
+      "bag": "PathfinderSilverChest"
+    },
+    {
+      "identifier": "ABL-011A",
+      "name": "Opportunist's Edge",
+      "face": "images/ABL-011A-face.jpg",
+      "back": "images/ABL-011A-back.jpg",
+      "tags": [
+        "Offense",
+        "Hunter's Mark Amplified"
+      ],
+      "attribute": "Might",
+      "class": "Pathfinder",
+      "rating": "Gold",
+      "bag": "PathfinderGoldChest"
+    },
+    {
+      "identifier": "ABL-012A",
+      "name": "Stormpiercer Flurry",
+      "face": "images/ABL-012A-face.jpg",
+      "back": "images/ABL-012A-back.jpg",
+      "tags": [
+        "Offense",
+        "Debuff",
+        "Hunter's Mark Amplified"
+      ],
+      "attribute": "Might",
+      "class": "Pathfinder",
+      "rating": "Gold",
+      "bag": "PathfinderGoldChest"
+    },
+    {
+      "identifier": "ABL-013A",
+      "name": "Rain of Stardust",
+      "face": "images/ABL-013A-face.jpg",
+      "back": "images/ABL-013A-back.jpg",
+      "tags": [
+        "Offense",
+        "Maneuver"
+      ],
+      "attribute": "Might",
+      "class": "Pathfinder",
+      "rating": "Platinum",
+      "bag": "PathfinderGoldChest"
+    },
+    {
+      "identifier": "ABL-014A",
+      "name": "Glyph Proficiency",
+      "face": "images/ABL-014A-face.jpg",
+      "back": "images/ABL-014A-back.jpg",
+      "tags": [
+        "Arcane",
+        "Mark",
+        "Glyph"
+      ],
+      "attribute": "Wisdom",
+      "class": "Sage",
+      "rating": "Starter",
+      "bag": "SageStarterChest"
+    },
+    {
+      "identifier": "ABL-014B",
+      "name": "Glyph Mastery",
+      "face": "images/ABL-014B-face.jpg",
+      "back": "images/ABL-014B-back.jpg",
+      "tags": [
+        "Arcane",
+        "Mark",
+        "Glyph"
+      ],
+      "attribute": "Wisdom",
+      "class": "Sage",
+      "rating": "Silver",
+      "bag": "SageSilverChest"
+    },
+    {
+      "identifier": "ABL-015A",
+      "name": "Starlit Preservation",
+      "face": "images/ABL-015A-face.jpg",
+      "back": "images/ABL-015A-back.jpg",
+      "tags": [
+        "Recovery",
+        "Glyph Amplified"
+      ],
+      "attribute": "Wisdom",
+      "class": "Sage",
+      "rating": "Starter",
+      "bag": "SageStarterChest"
+    },
+    {
+      "identifier": "ABL-016A",
+      "name": "Arcane Ward",
+      "face": "images/ABL-016A-face.jpg",
+      "back": "images/ABL-016A-back.jpg",
+      "tags": [
+        "Defense",
+        "Buff"
+      ],
+      "attribute": "Valor",
+      "class": "Sage",
+      "rating": "Bronze",
+      "bag": "SageBronzeChest"
+    },
+    {
+      "identifier": "ABL-017A",
+      "name": "Bewilder",
+      "face": "images/ABL-017A-face.jpg",
+      "back": "images/ABL-017A-back.jpg",
+      "tags": [
+        "Offense",
+        "Glyph",
+        "Debuff",
+        "Threat Control"
+      ],
+      "attribute": "Wisdom",
+      "class": "Sage",
+      "rating": "Bronze",
+      "bag": "SageBronzeChest"
+    },
+    {
+      "identifier": "ABL-018A",
+      "name": "Echo of the Fallen",
+      "face": "images/ABL-018A-face.jpg",
+      "back": "images/ABL-018A-back.jpg",
+      "tags": [
+        "Recovery",
+        "Valor",
+        "Buff",
+        "Glyph Amplified"
+      ],
+      "attribute": "Valor",
+      "class": "Sage",
+      "rating": "Bronze",
+      "bag": "SageBronzeChest"
+    },
+    {
+      "identifier": "ABL-019A",
+      "name": "Shielding Light",
+      "face": "images/ABL-019A-face.jpg",
+      "back": "images/ABL-019A-back.jpg",
+      "tags": [
+        "Defense",
+        "Buff",
+        "Glyph Amplified"
+      ],
+      "attribute": "Might",
+      "class": "Sage",
+      "rating": "Bronze",
+      "bag": "SageBronzeChest"
+    },
+    {
+      "identifier": "ABL-020A",
+      "name": "Radiant Smite",
+      "face": "images/ABL-020A-face.jpg",
+      "back": "images/ABL-020A-back.jpg",
+      "tags": [
+        "Offense",
+        "Arcane",
+        "Glyph Amplified"
+      ],
+      "attribute": "Might",
+      "class": "Sage",
+      "rating": "Silver",
+      "bag": "SageSilverChest"
+    },
+    {
+      "identifier": "ABL-021A",
+      "name": "Astral Shift",
+      "face": "images/ABL-021A-face.jpg",
+      "back": "images/ABL-021A-back.jpg",
+      "tags": [
+        "Defense",
+        "Maneuver",
+        "Glyph Amplified"
+      ],
+      "attribute": "Valor",
+      "class": "Sage",
+      "rating": "Silver",
+      "bag": "SageSilverChest"
+    },
+    {
+      "identifier": "ABL-022A",
+      "name": "Rune Catalyst",
+      "face": "images/ABL-022A-face.jpg",
+      "back": "images/ABL-022A-back.jpg",
+      "tags": [
+        "Offense",
+        "Arcane",
+        "Glyph Amplified"
+      ],
+      "attribute": "Might",
+      "class": "Sage",
+      "rating": "Silver",
+      "bag": "SageSilverChest"
+    },
+    {
+      "identifier": "ABL-023A",
+      "name": "Celestial Equilibrium",
+      "face": "images/ABL-023A-face.jpg",
+      "back": "images/ABL-023A-back.jpg",
+      "tags": [
+        "Offense",
+        "Arcane",
+        "Glyph Amplified"
+      ],
+      "attribute": "Wisdom",
+      "class": "Sage",
+      "rating": "Silver",
+      "bag": "SageSilverChest"
+    },
+    {
+      "identifier": "ABL-024A",
+      "name": "Starlit Rejuvenation",
+      "face": "images/ABL-024A-face.jpg",
+      "back": "images/ABL-024A-back.jpg",
+      "tags": [
+        "Recovery",
+        "Arcane",
+        "Valor"
+      ],
+      "attribute": "Wisdom",
+      "class": "Sage",
+      "rating": "Gold",
+      "bag": "SageGoldChest"
+    },
+    {
+      "identifier": "ABL-025A",
+      "name": "Ethereal Conduction",
+      "face": "images/ABL-025A-face.jpg",
+      "back": "images/ABL-025A-back.jpg",
+      "tags": [
+        "Offense",
+        "Arcane",
+        "Glyph Amplified"
+      ],
+      "attribute": "Wisdom",
+      "class": "Sage",
+      "rating": "Gold",
+      "bag": "SageGoldChest"
+    },
+    {
+      "identifier": "ABL-026A",
+      "name": "Celestial Restoration",
+      "face": "images/ABL-026A-face.jpg",
+      "back": "images/ABL-026A-back.jpg",
+      "tags": [
+        "Recovery",
+        "Arcane",
+        "Buff"
+      ],
+      "attribute": "Wisdom",
+      "class": "Sage",
+      "rating": "Platinum",
+      "bag": "SageGoldChest"
+    },
+    {
+      "identifier": "ABL-027A",
+      "name": "Aegis Proficiency",
+      "face": "images/ABL-027A-face.jpg",
+      "back": "images/ABL-027A-back.jpg",
+      "tags": [
+        "Defense"
+      ],
+      "attribute": "Valor",
+      "class": "Vanguard",
+      "rating": "Starter",
+      "bag": "VanguardStarterChest"
+    },
+    {
+      "identifier": "ABL-027B",
+      "name": "Aegis Mastery",
+      "face": "images/ABL-027B-face.jpg",
+      "back": "images/ABL-027B-back.jpg",
+      "tags": [
+        "Defense"
+      ],
+      "attribute": "Valor",
+      "class": "Vanguard",
+      "rating": "Silver",
+      "bag": "VanguardSilverChest"
+    },
+    {
+      "identifier": "ABL-028A",
+      "name": "Valiant Stand",
+      "face": "images/ABL-028A-face.jpg",
+      "back": "images/ABL-028A-back.jpg",
+      "tags": [
+        "Offense",
+        "Counter",
+        "Aegis Amplified"
+      ],
+      "attribute": "Might",
+      "class": "Vanguard",
+      "rating": "Starter",
+      "bag": "VanguardStarterChest"
+    },
+    {
+      "identifier": "ABL-029A",
+      "name": "Lure",
+      "face": "images/ABL-029A-face.jpg",
+      "back": "images/ABL-029A-back.jpg",
+      "tags": [
+        "Offense",
+        "Social"
+      ],
+      "attribute": "Wisdom",
+      "class": "Vanguard",
+      "rating": "Bronze",
+      "bag": "VanguardBronzeChest"
+    },
+    {
+      "identifier": "ABL-030A",
+      "name": "Refreshing Resound",
+      "face": "images/ABL-030A-face.jpg",
+      "back": "images/ABL-030A-back.jpg",
+      "tags": [
+        "Recovery",
+        "Aegis Amplified"
+      ],
+      "attribute": "Wisdom",
+      "class": "Vanguard",
+      "rating": "Bronze",
+      "bag": "VanguardBronzeChest"
+    },
+    {
+      "identifier": "ABL-031A",
+      "name": "Tactical Advance",
+      "face": "images/ABL-031A-face.jpg",
+      "back": "images/ABL-031A-back.jpg",
+      "tags": [
+        "Maneuver",
+        "Buff"
+      ],
+      "attribute": "Wisdom",
+      "class": "Vanguard",
+      "rating": "Bronze",
+      "bag": "VanguardBronzeChest"
+    },
+    {
+      "identifier": "ABL-032A",
+      "name": "Warding Strike",
+      "face": "images/ABL-032A-face.jpg",
+      "back": "images/ABL-032A-back.jpg",
+      "tags": [
+        "Offense",
+        "Debuff",
+        "Threat Control",
+        "Aegis Amplified"
+      ],
+      "attribute": "Wisdom",
+      "class": "Vanguard",
+      "rating": "Bronze",
+      "bag": "VanguardBronzeChest"
+    },
+    {
+      "identifier": "ABL-033A",
+      "name": "Riposte Drive",
+      "face": "images/ABL-033A-face.jpg",
+      "back": "images/ABL-033A-back.jpg",
+      "tags": [
+        "Defense",
+        "Counter",
+        "Aegis Amplified"
+      ],
+      "attribute": "Might",
+      "class": "Vanguard",
+      "rating": "Silver",
+      "bag": "VanguardSilverChest"
+    },
+    {
+      "identifier": "ABL-034A",
+      "name": "Line Breaker",
+      "face": "images/ABL-034A-face.jpg",
+      "back": "images/ABL-034A-back.jpg",
+      "tags": [
+        "Offense",
+        "Maneuver"
+      ],
+      "attribute": "Might",
+      "class": "Vanguard",
+      "rating": "Silver",
+      "bag": "VanguardSilverChest"
+    },
+    {
+      "identifier": "ABL-035A",
+      "name": "Battle Standard",
+      "face": "images/ABL-035A-face.jpg",
+      "back": "images/ABL-035A-back.jpg",
+      "tags": [
+        "Maneuver",
+        "Mark",
+        "Buff",
+        "Debuff"
+      ],
+      "attribute": "Wisdom",
+      "class": "Vanguard",
+      "rating": "Silver",
+      "bag": "VanguardSilverChest"
+    },
+    {
+      "identifier": "ABL-036A",
+      "name": "Tactical Insight",
+      "face": "images/ABL-036A-face.jpg",
+      "back": "images/ABL-036A-back.jpg",
+      "tags": [
+        "Maneuver",
+        "Aegis Amplified"
+      ],
+      "attribute": "Wisdom",
+      "class": "Vanguard",
+      "rating": "Silver",
+      "bag": "VanguardSilverChest"
+    },
+    {
+      "identifier": "ABL-037A",
+      "name": "Indomitable Defense",
+      "face": "images/ABL-037A-face.jpg",
+      "back": "images/ABL-037A-back.jpg",
+      "tags": [
+        "Defense",
+        "Maneuver",
+        "Aegis Amplified"
+      ],
+      "attribute": "Valor",
+      "class": "Vanguard",
+      "rating": "Gold",
+      "bag": "VanguardGoldChest"
+    },
+    {
+      "identifier": "ABL-038A",
+      "name": "Steady Resolve",
+      "face": "images/ABL-038A-face.jpg",
+      "back": "images/ABL-038A-back.jpg",
+      "tags": [
+        "Defense"
+      ],
+      "attribute": "Valor",
+      "class": "Vanguard",
+      "rating": "Gold",
+      "bag": "VanguardGoldChest"
+    },
+    {
+      "identifier": "ABL-039A",
+      "name": "Sovereign of the Aegis",
+      "face": "images/ABL-039A-face.jpg",
+      "back": "images/ABL-039A-back.jpg",
+      "tags": [
+        "Defense",
+        "Maneuver",
+        "Aegis Amplified"
+      ],
+      "attribute": "Valor",
+      "class": "Vanguard",
+      "rating": "Platinum",
+      "bag": "VanguardGoldChest"
+    },
+    {
+      "identifier": "ABL-040A",
+      "name": "Dual-Wield Proficiency",
+      "face": "images/ABL-040A-face.jpg",
+      "back": "images/ABL-040A-back.jpg",
+      "tags": [
+        "Offense",
+        "Dual-Wield"
+      ],
+      "attribute": "Might",
+      "class": "Warblade",
+      "rating": "Starter",
+      "bag": "WarbladeStarterChest"
+    },
+    {
+      "identifier": "ABL-040B",
+      "name": "Dual-Wield Mastery",
+      "face": "images/ABL-040B-face.jpg",
+      "back": "images/ABL-040B-back.jpg",
+      "tags": [
+        "Offense",
+        "Maneuver",
+        "Dual-Wield"
+      ],
+      "attribute": "Might",
+      "class": "Warblade",
+      "rating": "Silver",
+      "bag": "WarbladeSilverChest"
+    },
+    {
+      "identifier": "ABL-041A",
+      "name": "Blade Dance",
+      "face": "images/ABL-041A-face.jpg",
+      "back": "images/ABL-041A-back.jpg",
+      "tags": [
+        "Offense",
+        "Maneuver",
+        "Dual-Wield Amplified"
+      ],
+      "attribute": "Valor",
+      "class": "Warblade",
+      "rating": "Starter",
+      "bag": "WarbladeStarterChest"
+    },
+    {
+      "identifier": "ABL-042A",
+      "name": "Cleaving Momentum",
+      "face": "images/ABL-042A-face.jpg",
+      "back": "images/ABL-042A-back.jpg",
+      "tags": [
+        "Offense"
+      ],
+      "attribute": "Might",
+      "class": "Warblade",
+      "rating": "Bronze",
+      "bag": "WarbladeBronzeChest"
+    },
+    {
+      "identifier": "ABL-043A",
+      "name": "Taunt",
+      "face": "images/ABL-043A-face.jpg",
+      "back": "images/ABL-043A-back.jpg",
+      "tags": [
+        "Offense",
+        "Social",
+        "Threat Control"
+      ],
+      "attribute": "Wisdom",
+      "class": "Warblade",
+      "rating": "Bronze",
+      "bag": "WarbladeBronzeChest"
+    },
+    {
+      "identifier": "ABL-044A",
+      "name": "Warborn Ferocity",
+      "face": "images/ABL-044A-face.jpg",
+      "back": "images/ABL-044A-back.jpg",
+      "tags": [
+        "Buff",
+        "Threat Control"
+      ],
+      "attribute": "Wisdom",
+      "class": "Warblade",
+      "rating": "Bronze",
+      "bag": "WarbladeBronzeChest"
+    },
+    {
+      "identifier": "ABL-045A",
+      "name": "Breakthrough Strike",
+      "face": "images/ABL-045A-face.jpg",
+      "back": "images/ABL-045A-back.jpg",
+      "tags": [
+        "Offense",
+        "Buff"
+      ],
+      "attribute": "Might",
+      "class": "Warblade",
+      "rating": "Bronze",
+      "bag": "WarbladeBronzeChest"
+    },
+    {
+      "identifier": "ABL-046A",
+      "name": "Crimson Reckoning",
+      "face": "images/ABL-046A-face.jpg",
+      "back": "images/ABL-046A-back.jpg",
+      "tags": [
+        "Offense",
+        "Counter",
+        "Maneuver",
+        "Threat Control"
+      ],
+      "attribute": "Valor",
+      "class": "Warblade",
+      "rating": "Silver",
+      "bag": "WarbladeSilverChest"
+    },
+    {
+      "identifier": "ABL-047A",
+      "name": "Indomitable Guard",
+      "face": "images/ABL-047A-face.jpg",
+      "back": "images/ABL-047A-back.jpg",
+      "tags": [
+        "Defense",
+        "Buff"
+      ],
+      "attribute": "Valor",
+      "class": "Warblade",
+      "rating": "Silver",
+      "bag": "WarbladeSilverChest"
+    },
+    {
+      "identifier": "ABL-048A",
+      "name": "Severing Strike",
+      "face": "images/ABL-048A-face.jpg",
+      "back": "images/ABL-048A-back.jpg",
+      "tags": [
+        "Offense",
+        "Maneuver"
+      ],
+      "attribute": "Valor",
+      "class": "Warblade",
+      "rating": "Silver",
+      "bag": "WarbladeSilverChest"
+    },
+    {
+      "identifier": "ABL-049A",
+      "name": "Coup de Gr\u00e2ce",
+      "face": "images/ABL-049A-face.jpg",
+      "back": "images/ABL-049A-back.jpg",
+      "tags": [
+        "Offense",
+        "Dual-Wield Amplified"
+      ],
+      "attribute": "Might",
+      "class": "Warblade",
+      "rating": "Silver",
+      "bag": "WarbladeSilverChest"
+    },
+    {
+      "identifier": "ABL-050A",
+      "name": "Twin-Strike",
+      "face": "images/ABL-050A-face.jpg",
+      "back": "images/ABL-050A-back.jpg",
+      "tags": [
+        "Offense",
+        "Dual-Wield Amplified"
+      ],
+      "attribute": "Might",
+      "class": "Warblade",
+      "rating": "Gold",
+      "bag": "WarbladeGoldChest"
+    },
+    {
+      "identifier": "ABL-051A",
+      "name": "Relentless Tempo",
+      "face": "images/ABL-051A-face.jpg",
+      "back": "images/ABL-051A-back.jpg",
+      "tags": [
+        "Buff"
+      ],
+      "attribute": "Might",
+      "class": "Warblade",
+      "rating": "Gold",
+      "bag": "WarbladeGoldChest"
+    },
+    {
+      "identifier": "ABL-052A",
+      "name": "Whirlwind Flourish",
+      "face": "images/ABL-052A-face.jpg",
+      "back": "images/ABL-052A-back.jpg",
+      "tags": [
+        "Offense",
+        "Dual-Wield Amplified"
+      ],
+      "attribute": "Might",
+      "class": "Warblade",
+      "rating": "Platinum",
+      "bag": "WarbladeGoldChest"
+    }
+  ]
+}

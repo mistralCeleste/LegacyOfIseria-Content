@@ -1,0 +1,115 @@
+{
+  "type": "Custom_Tile",
+  "scale": {
+    "x": 0.25,
+    "y": 0.1,
+    "z": 0.5
+  },
+  "sets": [
+    {
+      "identifier": "ARM-004A",
+      "name": "Vanguard Pauldron",
+      "face": "images/ARM-004A-face.jpg",
+      "back": "images/ARM-004A-back.jpg",
+      "bag": "VanguardStarterChest"
+    },
+    {
+      "identifier": "ARM-006A",
+      "name": "Sentinel Guard",
+      "face": "images/ARM-006A-face.jpg",
+      "back": "images/ARM-006A-back.jpg",
+      "bag": "VanguardBronzeChest"
+    },
+    {
+      "identifier": "ARM-011A",
+      "name": "Dragonscale Suit",
+      "face": "images/ARM-011A-face.jpg",
+      "back": "images/ARM-011A-back.jpg",
+      "bag": "VanguardSilverChest"
+    },
+    {
+      "identifier": "ARM-012A",
+      "name": "Dragonscale Pauldron",
+      "face": "images/ARM-012A-face.jpg",
+      "back": "images/ARM-012A-back.jpg",
+      "bag": "VanguardSilverChest"
+    },
+    {
+      "identifier": "ARM-016A",
+      "name": "Starforged Shield",
+      "face": "images/ARM-016A-face.jpg",
+      "back": "images/ARM-016A-back.jpg",
+      "bag": "VanguardGoldChest"
+    },
+    {
+      "identifier": "ARM-024A",
+      "name": "Warblade Guard",
+      "face": "images/ARM-024A-face.jpg",
+      "back": "images/ARM-024A-back.jpg",
+      "bag": "WarbladeStarterChest"
+    },
+    {
+      "identifier": "ARM-035A",
+      "name": "Titantested Armplate",
+      "face": "images/ARM-035A-face.jpg",
+      "back": "images/ARM-035A-back.jpg",
+      "bag": "WarbladeSilverChest"
+    },
+    {
+      "identifier": "ARM-042A",
+      "name": "Sage Robes",
+      "face": "images/ARM-042A-face.jpg",
+      "back": "images/ARM-042A-back.jpg",
+      "bag": "SageStarterChest"
+    },
+    {
+      "identifier": "ARM-044A",
+      "name": "Sage Capelet",
+      "face": "images/ARM-044A-face.jpg",
+      "back": "images/ARM-044A-back.jpg",
+      "bag": "SageStarterChest"
+    },
+    {
+      "identifier": "ARM-050A",
+      "name": "Aurorahue Glove",
+      "face": "images/ARM-050A-face.jpg",
+      "back": "images/ARM-050A-back.jpg",
+      "bag": "SageSilverChest"
+    },
+    {
+      "identifier": "ARM-051A",
+      "name": "Aurorahue Robe",
+      "face": "images/ARM-051A-face.jpg",
+      "back": "images/ARM-051A-back.jpg",
+      "bag": "SageSilverChest"
+    },
+    {
+      "identifier": "ARM-055A",
+      "name": "Starglow Robe",
+      "face": "images/ARM-055A-face.jpg",
+      "back": "images/ARM-055A-back.jpg",
+      "bag": "SageGoldChest"
+    },
+    {
+      "identifier": "ARM-060A",
+      "name": "Pathfinder Cloak",
+      "face": "images/ARM-060A-face.jpg",
+      "back": "images/ARM-060A-back.jpg",
+      "bag": "PathfinderStarterChest"
+    },
+    {
+      "identifier": "ARM-061A",
+      "name": "Pathfinder Guard",
+      "face": "images/ARM-061A-face.jpg",
+      "back": "images/ARM-061A-back.jpg",
+      "bag": "PathfinderStarterChest"
+    },
+    {
+      "identifier": "ARM-074A",
+      "name": "Shadowhunter Hoodie",
+      "face": "images/ARM-074A-face.jpg",
+      "back": "images/ARM-074A-back.jpg",
+      "bag": "PathfinderGoldChest"
+    }
+  ]
+}

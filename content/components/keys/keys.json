@@ -1,0 +1,92 @@
+{
+  "type": "CustomCard",
+  "shape": 0,
+  "scale": {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  },
+  "sets": [
+    {
+      "identifier": "KEY-000A",
+      "name": "Silver Envelope ",
+      "face": "images/KEY-000A-face.jpg",
+      "back": "images/KEY-000A-back.jpg",
+      "tags": [
+        "Quest"
+      ]
+    },
+    {
+      "identifier": "KEY-001A",
+      "name": "Melody's Map",
+      "face": "images/KEY-001A-face.jpg",
+      "back": "images/KEY-001A-back.jpg",
+      "tags": [
+        "Quest"
+      ]
+    },
+    {
+      "identifier": "KEY-002A",
+      "name": "Silver Strands",
+      "face": "images/KEY-002A-face.jpg",
+      "back": "images/KEY-002A-back.jpg",
+      "tags": [
+        "Quest"
+      ]
+    },
+    {
+      "identifier": "KEY-003A",
+      "name": "Silver Lyre",
+      "face": "images/KEY-003A-face.jpg",
+      "back": "images/KEY-003A-back.jpg",
+      "tags": [
+        "Item"
+      ]
+    },
+    {
+      "identifier": "KEY-004A",
+      "name": "Eyes-Cream Scone",
+      "face": "images/KEY-004A-face.jpg",
+      "back": "images/KEY-004A-back.jpg",
+      "tags": [
+        "Item"
+      ]
+    },
+    {
+      "identifier": "KEY-005A",
+      "name": "Boomeringue Pie",
+      "face": "images/KEY-005A-face.jpg",
+      "back": "images/KEY-005A-back.jpg",
+      "tags": [
+        "Item"
+      ]
+    },
+    {
+      "identifier": "KEY-006A",
+      "name": "Collectable Lunch Box",
+      "face": "images/KEY-006A-face.jpg",
+      "back": "images/KEY-006A-back.jpg",
+      "tags": [
+        "Item"
+      ]
+    },
+    {
+      "identifier": "KEY-007A",
+      "name": "Courier Bag",
+      "face": "images/KEY-007A-face.jpg",
+      "back": "images/KEY-007A-back.jpg",
+      "tags": [
+        "Item"
+      ]
+    },
+    {
+      "identifier": "KEY-777A",
+      "name": "Wish",
+      "face": "images/KEY-777A-face.jpg",
+      "back": "images/KEY-777A-back.jpg",
+      "tags": [
+        "Item"
+      ]
+    }
+  ]
+}

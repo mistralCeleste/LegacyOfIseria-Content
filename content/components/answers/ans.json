@@ -1,0 +1,195 @@
+{
+  "name": "Combat Actions",
+  "description": "Cards representing the various combat actions that can occur during battles.",
+  "components": [
+    {
+      "type": "Custom_Model",
+      "scale": { "x": 0.4, "y": 0.4, "z": 0.4 },
+      "sets": [
+        {
+          "identifier": "AnswerBox",
+          "name": "Answer Box",
+          "mesh": "../boxes/models/box.obj",
+          "texture": "../boxes/images/Box_Answers.jpg",
+          "container": { "type": 0, "stackable": false }
+        }
+      ]
+    },
+    {
+      "type": "CustomCard",
+      "shape": 0,
+      "scale": { "x": "1", "y": "1", "z": "1" },
+      "script": "../../scripts/defaultCardBehavior.lua",
+      "sets": [
+        {
+          "identifier": "ANS-001A",
+          "name": "Your answer is 1",
+          "face": "images/ANS-001A-face.jpg",
+          "back": "images/ANS-001A-back.jpg",
+          "bag": "AnswerBox"
+        },
+        {
+          "identifier": "ANS-002A",
+          "name": "Your answer is 2",
+          "face": "images/ANS-002A-face.jpg",
+          "back": "images/ANS-002A-back.jpg",
+          "bag": "AnswerBox"
+        },
+        {
+          "identifier": "ANS-003A",
+          "name": "Your answer is 3",
+          "face": "images/ANS-003A-face.jpg",
+          "back": "images/ANS-003A-back.jpg",
+          "bag": "AnswerBox"
+        },
+        {
+          "identifier": "ANS-004A",
+          "name": "Your answer is 4",
+          "face": "images/ANS-004A-face.jpg",
+          "back": "images/ANS-004A-back.jpg",
+          "bag": "AnswerBox"
+        },
+        {
+          "identifier": "ANS-005A",
+          "name": "Your answer is 5",
+          "face": "images/ANS-005A-face.jpg",
+          "back": "images/ANS-005A-back.jpg",
+          "bag": "AnswerBox"
+        },
+        {
+          "identifier": "ANS-006A",
+          "name": "Your answer is 6",
+          "face": "images/ANS-006A-face.jpg",
+          "back": "images/ANS-006A-back.jpg",
+          "bag": "AnswerBox"
+        },
+        {
+          "identifier": "ANS-007A",
+          "name": "Your answer is 7",
+          "face": "images/ANS-007A-face.jpg",
+          "back": "images/ANS-007A-back.jpg",
+          "bag": "AnswerBox"
+        },
+        {
+          "identifier": "ANS-008A",
+          "name": "Your answer is 8",
+          "face": "images/ANS-008A-face.jpg",
+          "back": "images/ANS-008A-back.jpg",
+          "bag": "AnswerBox"
+        },
+        {
+          "identifier": "ANS-009A",
+          "name": "Your answer is 9",
+          "face": "images/ANS-009A-face.jpg",
+          "back": "images/ANS-009A-back.jpg",
+          "bag": "AnswerBox"
+        },
+        {
+          "identifier": "ANS-010A",
+          "name": "Your answer is 10",
+          "face": "images/ANS-010A-face.jpg",
+          "back": "images/ANS-010A-back.jpg",
+          "bag": "AnswerBox"
+        },
+        {
+          "identifier": "ANS-011A",
+          "name": "Your answer is 11",
+          "face": "images/ANS-011A-face.jpg",
+          "back": "images/ANS-011A-back.jpg",
+          "bag": "AnswerBox"
+        },
+        {
+          "identifier": "ANS-012A",
+          "name": "Your answer is 12",
+          "face": "images/ANS-012A-face.jpg",
+          "back": "images/ANS-012A-back.jpg",
+          "bag": "AnswerBox"
+        },
+        {
+          "identifier": "ANS-013A",
+          "name": "Your answer is 13",
+          "face": "images/ANS-013A-face.jpg",
+          "back": "images/ANS-013A-back.jpg",
+          "bag": "AnswerBox"
+        },
+        {
+          "identifier": "ANS-014A",
+          "name": "Your answer is 14",
+          "face": "images/ANS-014A-face.jpg",
+          "back": "images/ANS-014A-back.jpg",
+          "bag": "AnswerBox"
+        },
+        {
+          "identifier": "ANS-015A",
+          "name": "Your answer is 15",
+          "face": "images/ANS-015A-face.jpg",
+          "back": "images/ANS-015A-back.jpg",
+          "bag": "AnswerBox"
+        },
+        {
+          "identifier": "ANS-016A",
+          "name": "Your answer is 16",
+          "face": "images/ANS-016A-face.jpg",
+          "back": "images/ANS-016A-back.jpg",
+          "bag": "AnswerBox"
+        },
+        {
+          "identifier": "ANS-017A",
+          "name": "Your answer is 17",
+          "face": "images/ANS-017A-face.jpg",
+          "back": "images/ANS-017A-back.jpg",
+          "bag": "AnswerBox"
+        },
+        {
+          "identifier": "ANS-018A",
+          "name": "Your answer is 18",
+          "face": "images/ANS-018A-face.jpg",
+          "back": "images/ANS-018A-back.jpg",
+          "bag": "AnswerBox"
+        },
+        {
+          "identifier": "ANS-019A",
+          "name": "Your answer is 19",
+          "face": "images/ANS-019A-face.jpg",
+          "back": "images/ANS-019A-back.jpg",
+          "bag": "AnswerBox"
+        },
+        {
+          "identifier": "ANS-020A",
+          "name": "Your answer is 20",
+          "face": "images/ANS-020A-face.jpg",
+          "back": "images/ANS-020A-back.jpg",
+          "bag": "AnswerBox"
+        },
+        {
+          "identifier": "ANS-021A",
+          "name": "Your answer is 21",
+          "face": "images/ANS-021A-face.jpg",
+          "back": "images/ANS-021A-back.jpg",
+          "bag": "AnswerBox"
+        },
+        {
+          "identifier": "ANS-022A",
+          "name": "Your answer is 22",
+          "face": "images/ANS-022A-face.jpg",
+          "back": "images/ANS-022A-back.jpg",
+          "bag": "AnswerBox"
+        },
+        {
+          "identifier": "ANS-023A",
+          "name": "Your answer is 23",
+          "face": "images/ANS-023A-face.jpg",
+          "back": "images/ANS-023A-back.jpg",
+          "bag": "AnswerBox"
+        },
+        {
+          "identifier": "ANS-024A",
+          "name": "Your answer is 24",
+          "face": "images/ANS-024A-face.jpg",
+          "back": "images/ANS-024A-back.jpg",
+          "bag": "AnswerBox"
+        }
+      ]
+    }
+  ]
+}

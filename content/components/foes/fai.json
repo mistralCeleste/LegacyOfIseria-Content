@@ -1,0 +1,191 @@
+{
+  "type": "CustomCard",
+  "shape": 0,
+  "scale": {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  },
+  "sets": [
+    {
+      "identifier": "FOE-002A",
+      "name": "Croakshotter",
+      "face": "images/FOE-002A-face.jpg",
+      "back": "images/FOE-002A-back.jpg",
+      "tags": [
+        "Humanoid"
+      ]
+    },
+    {
+      "identifier": "FOE-012A",
+      "name": "Grunt Knight",
+      "face": "images/FOE-012A-face.jpg",
+      "back": "images/FOE-012A-back.jpg",
+      "tags": [
+        "Humanoid"
+      ]
+    },
+    {
+      "identifier": "FOE-003A",
+      "name": "Batty",
+      "face": "images/FOE-003A-face.jpg",
+      "back": "images/FOE-003A-back.jpg",
+      "tags": [
+        "Beast"
+      ]
+    },
+    {
+      "identifier": "FOE-004A",
+      "name": "Wolf",
+      "face": "images/FOE-004A-face.jpg",
+      "back": "images/FOE-004A-back.jpg",
+      "tags": [
+        "Beast"
+      ]
+    },
+    {
+      "identifier": "FOE-005A",
+      "name": "Roarrior",
+      "face": "images/FOE-005A-face.jpg",
+      "back": "images/FOE-005A-back.jpg",
+      "tags": [
+        "Humanoid"
+      ]
+    },
+    {
+      "identifier": "FOE-006A",
+      "name": "Kraken",
+      "face": "images/FOE-006A-face.jpg",
+      "back": "images/FOE-006A-back.jpg",
+      "tags": [
+        "Beast"
+      ]
+    },
+    {
+      "identifier": "FOE-007A",
+      "name": "Tentacle",
+      "face": "images/FOE-007A-face.jpg",
+      "back": "images/FOE-007A-back.jpg",
+      "tags": [
+        "Beast"
+      ]
+    },
+    {
+      "identifier": "FOE-008B",
+      "name": "Tentacle",
+      "face": "images/FOE-008B-face.jpg",
+      "back": "images/FOE-008B-back.jpg",
+      "tags": [
+        "Beast"
+      ]
+    },
+    {
+      "identifier": "FOE-009A",
+      "name": "Jelly",
+      "face": "images/FOE-009A-face.jpg",
+      "back": "images/FOE-009A-back.jpg",
+      "tags": [
+        "Flora"
+      ]
+    },
+    {
+      "identifier": "FOE-010A",
+      "name": "Small Jelly",
+      "face": "images/FOE-010A-face.jpg",
+      "back": "images/FOE-010A-back.jpg",
+      "tags": [
+        "Flora"
+      ]
+    },
+    {
+      "identifier": "FOE-011A",
+      "name": "Giant Jelly",
+      "face": "images/FOE-011A-face.jpg",
+      "back": "images/FOE-011A-back.jpg",
+      "tags": [
+        "Flora"
+      ]
+    },
+    {
+      "identifier": "FOE-012A",
+      "name": "Boggy",
+      "face": "images/FOE-012A-face.jpg",
+      "back": "images/FOE-012A-back.jpg",
+      "tags": [
+        "Humanoid"
+      ]
+    },
+    {
+      "identifier": "FOE-013A",
+      "name": "Pawladin",
+      "face": "images/FOE-013A-face.jpg",
+      "back": "images/FOE-013A-back.jpg",
+      "tags": [
+        "Humanoid"
+      ]
+    },
+    {
+      "identifier": "FOE-014A",
+      "name": "Goblin Archer",
+      "face": "images/FOE-014A-face.jpg",
+      "back": "images/FOE-014A-back.jpg",
+      "tags": [
+        "Humanoid"
+      ]
+    },
+    {
+      "identifier": "FOE-015A",
+      "name": "Goblin Sage",
+      "face": "images/FOE-015A-face.jpg",
+      "back": "images/FOE-015A-back.jpg",
+      "tags": [
+        "Humanoid"
+      ]
+    },
+    {
+      "identifier": "FOE-016A",
+      "name": "Goblin Fighter",
+      "face": "images/FOE-016A-face.jpg",
+      "back": "images/FOE-016A-back.jpg",
+      "tags": [
+        "Humanoid"
+      ]
+    },
+    {
+      "identifier": "FOE-017A",
+      "name": "Goblin Mage",
+      "face": "images/FOE-017A-face.jpg",
+      "back": "images/FOE-017A-back.jpg",
+      "tags": [
+        "Humanoid"
+      ]
+    },
+    {
+      "identifier": "FOE-018A",
+      "name": "Goblin Knight",
+      "face": "images/FOE-018A-face.jpg",
+      "back": "images/FOE-018A-back.jpg",
+      "tags": [
+        "Humanoid"
+      ]
+    },
+    {
+      "identifier": "FOE-019A",
+      "name": "Goblin Warrior",
+      "face": "images/FOE-019A-face.jpg",
+      "back": "images/FOE-019A-back.jpg",
+      "tags": [
+        "Humanoid"
+      ]
+    },
+    {
+      "identifier": "FOE-020A",
+      "name": "Goblin Leader",
+      "face": "images/FOE-020A-face.jpg",
+      "back": "images/FOE-020A-back.jpg",
+      "tags": [
+        "Humanoid"
+      ]
+    }
+  ]
+}

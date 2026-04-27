@@ -3,24 +3,26 @@
 
   "assetbundles": {
     "type": "Custom_Assetbundle",
-    "scale": { "x": 1, "y": 1, "z": 1 },
     "script": "scripts/bookletBehavior.lua",
 
     "sets": [
       {
         "identifier": "NPCBooklet",
         "name": "NPC Booklet",
-        "bundle": "assetbundles/npcbooklet.unity3d"
+        "bundle": "assetbundles/npcbooklet.unity3d",
+        "scale": { "x": 5.75, "y": 0.2, "z": 5.75 }
       },
       {
         "identifier": "LocationBooklet",
         "name": "Location Booklet",
-        "bundle": "assetbundles/locationbooklet.unity3d"
+        "bundle": "assetbundles/locationbooklet.unity3d",
+        "scale": { "x": 8.4, "y": 0.2, "z": 8.4 }
       },
       {
         "identifier": "EventsBooklet",
         "name": "Events Booklet",
-        "bundle": "assetbundles/eventsbooklet.unity3d"
+        "bundle": "assetbundles/eventsbooklet.unity3d",
+        "scale": { "x": 5.75, "y": 0.2, "z": 5.75 }
       }
     ]
   }

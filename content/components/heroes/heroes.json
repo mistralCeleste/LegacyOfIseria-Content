@@ -1,162 +1,75 @@
 {
-  "name": "Heroes",
-
-  "tiles": {
-    "type": "Custom_Tile",
-    "scale": { "x": 2, "y": 1, "z": 2 },
-    "sets": [
-      {
-        "identifier": "HeroTableau",
-        "name": "Hero Tableau",
-        "face": "images/HeroTableau.jpg",
-        "back": "images/HeroTableau.jpg"
-      }
-    ]
+  "type": "CustomCard",
+  "shape": 0,
+  "scale": {
+    "x": 1,
+    "y": 1,
+    "z": 1
   },
-
-  "cards": {
-    "type": "CustomCard",
-    "shape": 0,
-    "scale": { "x": 1, "y": 1, "z": 1 },
-
-    "sets": [
-      {
-        "identifier": "HERO-001A",
-        "name": "Vaerwyn",
-        "face": "images/HERO-001_face.jpg",
-        "back": "images/HERO-001_back.jpg"
-      },
-      {
-        "identifier": "HERO-001B",
-        "name": "Brannok",
-        "face": "images/HERO-002_face.jpg",
-        "back": "images/HERO-002_back.jpg"
-      },
-      {
-        "identifier": "HERO-002A",
-        "name": "Mirathis",
-        "face": "images/HERO-003_face.jpg",
-        "back": "images/HERO-003_back.jpg"
-      },
-      {
-        "identifier": "HERO-002B",
-        "name": "Eryndel",
-        "face": "images/HERO-004_face.jpg",
-        "back": "images/HERO-004_back.jpg"
-      },
-      {
-        "identifier": "HERO-003A",
-        "name": "Miranhwa",
-        "face": "images/HERO-005_face.jpg",
-        "back": "images/HERO-005_back.jpg"
-      },
-      {
-        "identifier": "HERO-003B",
-        "name": "Haneulrim",
-        "face": "images/HERO-006_face.jpg",
-        "back": "images/HERO-006_back.jpg"
-      },
-      {
-        "identifier": "HERO-004A",
-        "name": "Soraya",
-        "face": "images/HERO-007_face.jpg",
-        "back": "images/HERO-007_back.jpg"
-      },
-      {
-        "identifier": "HERO-004B",
-        "name": "Ardeshir",
-        "face": "images/HERO-008_face.jpg",
-        "back": "images/HERO-008_back.jpg"
-      }
-    ]
-  },
-
-  "models": {
-    "type": "Custom_Model",
-    "scale": { "x": 0.7, "y": 1, "z": 0.7 },
-
-    "sets": [
-      {
-        "identifier": "pathfinder-female",
-        "name": "Pathfinder (Female)",
-        "mesh": "models/pathfinder-female.obj",
-        "texture": "models/pathfinder-female-diffuse.png",
-        "material": {
-          "specular": 0.05,
-          "fresnel": 0.05
-        }
-      },
-      {
-        "identifier": "pathfinder-male",
-        "name": "Pathfinder (Male)",
-        "mesh": "models/pathfinder-male.obj",
-        "texture": "models/pathfinder-male-diffuse.png",
-        "material": {
-          "specular": 0.05,
-          "fresnel": 0.05
-        }
-      },
-      {
-        "identifier": "sage-female",
-        "name": "Sage (Female)",
-        "mesh": "models/sage-female.obj",
-        "texture": "models/sage-female-diffuse.png",
-        "material": {
-          "specular": 0.05,
-          "fresnel": 0.05
-        }
-      },
-      {
-        "identifier": "sage-male",
-        "name": "Sage (Male)",
-        "mesh": "models/sage-male.obj",
-        "texture": "models/sage-male-diffuse.png",
-        "material": {
-          "specular": 0.05,
-          "fresnel": 0.05
-        }
-      },
-      {
-        "identifier": "vanguard-male",
-        "name": "Vanguard (Male)",
-        "mesh": "models/vanguard-male.obj",
-        "texture": "models/vanguard-male-diffuse.png",
-        "material": {
-          "specular": 0.05,
-          "fresnel": 0.05
-        }
-      },
-      {
-        "identifier": "vanguard-female",
-        "name": "Vanguard (Female)",
-        "mesh": "models/vanguard_female.obj",
-        "texture": "models/vanguard-female-diffuse.jpg",
-        "material": {
-          "specular": 0.05,
-          "fresnel": 0.05
-        }
-      },
-      {
-        "identifier": "warblade-female",
-        "name": "Warblade (Female)",
-        "mesh": "models/warblade-female.obj",
-        "texture": "models/warblade-female-diffuse.png",
-        "material": {
-          "specular": 0.05,
-          "fresnel": 0.05
-        }
-      },
-      {
-        "identifier": "warblade-male",
-        "name": "Warblade (Male)",
-        "mesh": "models/warblade_male.obj",
-        "texture": "models/warblade-male-diffuse.png",
-        "material": {
-          "specular": 0.05,
-          "fresnel": 0.05
-        }
-      }
-    ]
-  }
+  "sets": [
+    {
+      "identifier": "HRO-001A",
+      "name": "Vaerwyn",
+      "face": "images/HRO-001A-face.jpg",
+      "back": "images/HRO-001A-back.jpg",
+      "class": "Vanguard",
+      "bag": "VanguardHeroBox"
+    },
+    {
+      "identifier": "HRO-001B",
+      "name": "Brannok",
+      "face": "images/HRO-001B-face.jpg",
+      "back": "images/HRO-001B-back.jpg",
+      "class": "Vanguard",
+      "bag": "VanguardHeroBox"
+    },
+    {
+      "identifier": "HRO-002A",
+      "name": "Mirathis",
+      "face": "images/HRO-002A-face.jpg",
+      "back": "images/HRO-002A-back.jpg",
+      "class": "Sage",
+      "bag": "SageHeroBox"
+    },
+    {
+      "identifier": "HRO-002B",
+      "name": "Eryndel",
+      "face": "images/HRO-002B-face.jpg",
+      "back": "images/HRO-002B-back.jpg",
+      "class": "Sage",
+      "bag": "SageHeroBox"
+    },
+    {
+      "identifier": "HRO-003A",
+      "name": "Miranhwa",
+      "face": "images/HRO-003A-face.jpg",
+      "back": "images/HRO-003A-back.jpg",
+      "class": "Pathfinder",
+      "bag": "PathfinderHeroBox"
+    },
+    {
+      "identifier": "HRO-003B",
+      "name": "Haneulrim",
+      "face": "images/HRO-003B-face.jpg",
+      "back": "images/HRO-003B-back.jpg",
+      "class": "Pathfinder",
+      "bag": "PathfinderHeroBox"
+    },
+    {
+      "identifier": "HRO-004A",
+      "name": "Soraya",
+      "face": "images/HRO-004A-face.jpg",
+      "back": "images/HRO-004A-back.jpg",
+      "class": "Warblade",
+      "bag": "WarbladeHeroBox"
+    },
+    {
+      "identifier": "HRO-004B",
+      "name": "Ardeshir",
+      "face": "images/HRO-004B-face.jpg",
+      "back": "images/HRO-004B-back.jpg",
+      "class": "Warblade",
+      "bag": "WarbladeHeroBox"
+    }
+  ]
 }
-

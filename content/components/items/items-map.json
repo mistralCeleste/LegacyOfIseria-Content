@@ -1,0 +1,16 @@
+{
+  "type": "CustomCard",
+  "shape": 0,
+  "scale": { "x": 0.75, "y": 1, "z": 0.75 },
+  "fields":
+  {  
+       "identifier": "{Full Id}"
+    ,  "name": "{Name}"
+    ,  "face": "images/{Full Id}-face.jpg"
+    ,  "back": "images/{Full Id}-back.jpg"
+    ,  "tags": { "split": "{Keywords}", "delimiter": "," }
+    ,  "cost": "{Cost}"
+    ,  "type": "{Type}"
+    ,  "rating": "{Rating}"
+  }
+}

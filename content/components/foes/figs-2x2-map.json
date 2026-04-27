@@ -1,0 +1,13 @@
+{
+  "type": "Custom_Tile",
+  "shape": 0,
+  "Type": 4,
+  "scale": { "x": 0.5, "y": 1, "z": 0.5 },
+  "fields":
+  {  
+       "identifier": "{Full Id}"
+    ,  "name": "{Name}"
+    ,  "face": "images/{Full Id}-face.jpg"
+    ,  "back": "images/{Full Id}-back.jpg"
+  }
+}

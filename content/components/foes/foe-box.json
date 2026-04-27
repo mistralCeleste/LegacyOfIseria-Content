@@ -1,0 +1,26 @@
+{
+    "name": "Foe Box"
+    , "description": "Cards representing the various foes that can be encountered during battles."
+    , "components": [
+        {
+      "type": "Custom_Model",
+      "scale": { "x": 0.4, "y": 0.4, "z": 0.4 },
+      "sets": [
+        {
+          "identifier": "FoesBox",
+          "name": "Foes Box",
+          "mesh": "../boxes/models/box.obj",
+          "texture": "../boxes/images/Box_Foes.jpg",
+          "container": { "type": 0, "stackable": false }
+        },
+        {
+          "identifier": "FoesInactiveBox",
+          "name": "Foe Inactive Box",
+          "mesh": "../boxes/models/box.obj",
+          "texture": "../boxes/images/Box_Foes-inactive.jpg",
+          "container": { "type": 0, "stackable": false }
+        }
+      ]
+    }
+  ]
+}

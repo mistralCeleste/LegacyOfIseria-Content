@@ -1,0 +1,27 @@
+{
+    "name": "Items"
+    , "description": "Cards representing various items that can be found in the game."  
+    , "components": [
+        {
+      "type": "Custom_Model",
+      "scale": { "x": 0.4, "y": 0.4, "z": 0.4 },
+      "sets": [
+        {
+          "identifier": "ItemsBox",
+          "name": "Item Box",
+          "mesh": "../boxes/models/box.obj",
+          "texture": "../boxes/images/Box_Items.jpg",
+          "container": { "type": 0, "stackable": false }
+        },
+        {
+          "identifier": "ItemsInactiveBox",
+          "name": "Item Inactive Box",
+          "mesh": "../boxes/models/box.obj",
+          "texture": "../boxes/images/Box_Items-inactive.jpg",
+          "container": { "type": 0, "stackable": false }
+        },
+        { "include": "items_list.json" }
+      ]
+    }
+  ]
+}

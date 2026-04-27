@@ -1,0 +1,213 @@
+{
+  "components": [
+    {
+      "type": "CustomCard",
+      "shape": 0,
+      "scale": {
+        "x": 0.75,
+        "y": 1,
+        "z": 0.75
+      },
+      "sets": [
+        {
+          "identifier": "ITM-001A",
+          "name": "Fun-sized Health Potion",
+          "face": "images/ITM-001A-face.jpg",
+          "back": "images/ITM-001A-back.jpg",
+          "tags": [
+            "Potion"
+          ],
+          "cost": "4",
+          "type": "Consumable",
+          "rating": "Bronze"
+        },
+        {
+          "identifier": "ITM-002A",
+          "name": "Rusty Key",
+          "face": "images/ITM-002A-face.jpg",
+          "back": "images/ITM-002A-back.jpg",
+          "tags": [
+            "Key",
+            "Tool"
+          ],
+          "cost": "4",
+          "type": "Consumable",
+          "rating": "Bronze"
+        },
+        {
+          "identifier": "ITM-003A",
+          "name": "Bomb",
+          "face": "images/ITM-003A-face.jpg",
+          "back": "images/ITM-003A-back.jpg",
+          "tags": [
+            "Physical",
+            "Explosive"
+          ],
+          "cost": "4",
+          "type": "Consumable",
+          "rating": "Bronze"
+        },
+        {
+          "identifier": "ITM-004A",
+          "name": "Compass",
+          "face": "images/ITM-004A-face.jpg",
+          "back": "images/ITM-004A-back.jpg",
+          "tags": [
+            "Map",
+            "Tool"
+          ],
+          "cost": "6",
+          "type": "Consumable",
+          "rating": "Bronze"
+        },
+        {
+          "identifier": "ITM-008A",
+          "name": "Equipment Voucher",
+          "face": "images/ITM-008A-face.jpg",
+          "back": "images/ITM-008A-back.jpg",
+          "tags": [
+            "Voucher"
+          ],
+          "cost": "4",
+          "type": "Consumable",
+          "rating": "Bronze"
+        },
+        {
+          "identifier": "ITM-100A",
+          "name": "Health Potion",
+          "face": "images/ITM-100A-face.jpg",
+          "back": "images/ITM-100A-back.jpg",
+          "tags": [
+            "Potion"
+          ],
+          "cost": "6",
+          "type": "Consumable",
+          "rating": "Silver"
+        },
+        {
+          "identifier": "ITM-101A",
+          "name": "Might Potion",
+          "face": "images/ITM-101A-face.jpg",
+          "back": "images/ITM-101A-back.jpg",
+          "tags": [
+            "Potion"
+          ],
+          "cost": "6",
+          "type": "Consumable",
+          "rating": "Silver"
+        },
+        {
+          "identifier": "ITM-102A",
+          "name": "Wisdom Potion",
+          "face": "images/ITM-102A-face.jpg",
+          "back": "images/ITM-102A-back.jpg",
+          "tags": [
+            "Potion"
+          ],
+          "cost": "6",
+          "type": "Consumable",
+          "rating": "Silver"
+        },
+        {
+          "identifier": "ITM-103A",
+          "name": "Valor Potion",
+          "face": "images/ITM-103A-face.jpg",
+          "back": "images/ITM-103A-back.jpg",
+          "tags": [
+            "Potion"
+          ],
+          "cost": "6",
+          "type": "Consumable",
+          "rating": "Silver"
+        },
+        {
+          "identifier": "ITM-104A",
+          "name": "Skeleton Key",
+          "face": "images/ITM-104A-face.jpg",
+          "back": "images/ITM-104A-back.jpg",
+          "tags": [
+            "Key",
+            "Tool"
+          ],
+          "cost": "6",
+          "type": "Consumable",
+          "rating": "Silver"
+        },
+        {
+          "identifier": "ITM-105A",
+          "name": "Divination Monocle",
+          "face": "images/ITM-105A-face.jpg",
+          "back": "images/ITM-105A-back.jpg",
+          "tags": [
+            "Arcane",
+            "Tool"
+          ],
+          "cost": "2",
+          "type": "Consumable",
+          "rating": "Silver"
+        },
+        {
+          "identifier": "ITM-106A",
+          "name": "Bottle",
+          "face": "images/ITM-106A-face.jpg",
+          "back": "images/ITM-106A-back.jpg",
+          "tags": [
+            "Container"
+          ],
+          "cost": "6",
+          "type": "Durable",
+          "rating": "Silver"
+        },
+        {
+          "identifier": "ITM-107A",
+          "name": "Map",
+          "face": "images/ITM-107A-face.jpg",
+          "back": "images/ITM-107A-back.jpg",
+          "tags": [
+            "Map",
+            "Tool"
+          ],
+          "cost": "8",
+          "type": "Consumable",
+          "rating": "Silver"
+        },
+        {
+          "identifier": "ITM-108A",
+          "name": "Equipment Voucher",
+          "face": "images/ITM-108A-face.jpg",
+          "back": "images/ITM-108A-back.jpg",
+          "tags": [
+            "Voucher"
+          ],
+          "cost": "6",
+          "type": "Consumable",
+          "rating": "Silver"
+        },
+        {
+          "identifier": "ITM-200A",
+          "name": "Party-sized Health Potion",
+          "face": "images/ITM-200A-face.jpg",
+          "back": "images/ITM-200A-back.jpg",
+          "tags": [
+            "Potion"
+          ],
+          "cost": "8",
+          "type": "Consumable",
+          "rating": "Gold"
+        },
+        {
+          "identifier": "ITM-208A",
+          "name": "Equipment Voucher",
+          "face": "images/ITM-208A-face.jpg",
+          "back": "images/ITM-208A-back.jpg",
+          "tags": [
+            "Voucher"
+          ],
+          "cost": "8",
+          "type": "Consumable",
+          "rating": "Gold"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,593 @@
+{
+  "type": "CustomCard",
+  "shape": 0,
+  "scale": {
+    "x": 0.75,
+    "y": 1,
+    "z": 0.75
+  },
+  "sets": [
+    {
+      "identifier": "WPN-001A",
+      "name": "Sentinel's Hammer",
+      "face": "images/WPN-001A-face.jpg",
+      "back": "images/WPN-001A-back.jpg",
+      "tags": [
+        "Bash",
+        "Physical"
+      ],
+      "cost": "4",
+      "type": "Melee",
+      "rating": "Starter",
+      "class": "Vanguard",
+      "bag": "VanguardStarterChest"
+    },
+    {
+      "identifier": "WPN-002A",
+      "name": "Warden's Mace",
+      "face": "images/WPN-002A-face.jpg",
+      "back": "images/WPN-002A-back.jpg",
+      "tags": [
+        "Bash",
+        "Physical"
+      ],
+      "cost": "6",
+      "type": "Melee",
+      "rating": "Bronze",
+      "class": "Vanguard",
+      "bag": "VanguardBronzeChest"
+    },
+    {
+      "identifier": "WPN-003A",
+      "name": "Bulwark Lance",
+      "face": "images/WPN-003A-face.jpg",
+      "back": "images/WPN-003A-back.jpg",
+      "tags": [
+        "Pierce",
+        "Physical"
+      ],
+      "cost": "6",
+      "type": "Melee",
+      "rating": "Bronze",
+      "class": "Vanguard",
+      "bag": "VanguardBronzeChest"
+    },
+    {
+      "identifier": "WPN-004A",
+      "name": "Titanbreaker Maul",
+      "face": "images/WPN-004A-face.jpg",
+      "back": "images/WPN-004A-back.jpg",
+      "tags": [
+        "Bash",
+        "Physical"
+      ],
+      "cost": "8",
+      "type": "Melee",
+      "rating": "Silver",
+      "class": "Vanguard",
+      "bag": "VanguardSilverChest"
+    },
+    {
+      "identifier": "WPN-005A",
+      "name": "Judicator's Lance",
+      "face": "images/WPN-005A-face.jpg",
+      "back": "images/WPN-005A-back.jpg",
+      "tags": [
+        "Pierce",
+        "Physical"
+      ],
+      "cost": "8",
+      "type": "Melee",
+      "rating": "Silver",
+      "class": "Vanguard",
+      "bag": "VanguardSilverChest"
+    },
+    {
+      "identifier": "WPN-006A",
+      "name": "Colossus Warhammer",
+      "face": "images/WPN-006A-face.jpg",
+      "back": "images/WPN-006A-back.jpg",
+      "tags": [
+        "Bash",
+        "Physical",
+        "Tremor"
+      ],
+      "cost": "12",
+      "type": "Melee",
+      "rating": "Gold",
+      "class": "Vanguard",
+      "bag": "VanguardGoldChest"
+    },
+    {
+      "identifier": "WPN-007A",
+      "name": "Imperator Lance",
+      "face": "images/WPN-007A-face.jpg",
+      "back": "images/WPN-007A-back.jpg",
+      "tags": [
+        "Pierce",
+        "Physical",
+        "Shatter"
+      ],
+      "cost": "12",
+      "type": "Melee",
+      "rating": "Gold",
+      "class": "Vanguard",
+      "bag": "VanguardGoldChest"
+    },
+    {
+      "identifier": "WPN-008A",
+      "name": "Wyrmfang Blade",
+      "face": "images/WPN-008A-face.jpg",
+      "back": "images/WPN-008A-back.jpg",
+      "tags": [
+        "Dual",
+        "Slash",
+        "Physical"
+      ],
+      "cost": "6",
+      "type": "Melee",
+      "rating": "Starter",
+      "class": "Warblade",
+      "bag": "WarbladeStarterChest"
+    },
+    {
+      "identifier": "WPN-009A",
+      "name": "Wyrmclaw Blade",
+      "face": "images/WPN-009A-face.jpg",
+      "back": "images/WPN-009A-back.jpg",
+      "tags": [
+        "Dual",
+        "Slash",
+        "Physical"
+      ],
+      "cost": "6",
+      "type": "Melee",
+      "rating": "Starter",
+      "class": "Warblade",
+      "bag": "WarbladeStarterChest"
+    },
+    {
+      "identifier": "WPN-010A",
+      "name": "Bloodreaver Axe",
+      "face": "images/WPN-010A-face.jpg",
+      "back": "images/WPN-010A-back.jpg",
+      "tags": [
+        "Slash",
+        "Physical"
+      ],
+      "cost": "6",
+      "type": "Melee",
+      "rating": "Bronze",
+      "class": "Warblade",
+      "bag": "WarbladeBronzeChest"
+    },
+    {
+      "identifier": "WPN-011A",
+      "name": "Shadowfang Blade",
+      "face": "images/WPN-011A-face.jpg",
+      "back": "images/WPN-011A-back.jpg",
+      "tags": [
+        "Dual",
+        "Slash",
+        "Physical"
+      ],
+      "cost": "8",
+      "type": "Melee",
+      "rating": "Bronze",
+      "class": "Warblade",
+      "bag": "WarbladeBronzeChest"
+    },
+    {
+      "identifier": "WPN-012A",
+      "name": "Shadowclaw Blade",
+      "face": "images/WPN-012A-face.jpg",
+      "back": "images/WPN-012A-back.jpg",
+      "tags": [
+        "Dual",
+        "Slash",
+        "Physical"
+      ],
+      "cost": "8",
+      "type": "Melee",
+      "rating": "Bronze",
+      "class": "Warblade",
+      "bag": "WarbladeBronzeChest"
+    },
+    {
+      "identifier": "WPN-013A",
+      "name": "Divs Greatsword",
+      "face": "images/WPN-013A-face.jpg",
+      "back": "images/WPN-013A-back.jpg",
+      "tags": [
+        "Slash",
+        "Physical"
+      ],
+      "cost": "8",
+      "type": "Melee",
+      "rating": "Silver",
+      "class": "Warblade",
+      "bag": "WarbladeSilverChest"
+    },
+    {
+      "identifier": "WPN-014A",
+      "name": "Voidfang Blade",
+      "face": "images/WPN-014A-face.jpg",
+      "back": "images/WPN-014A-back.jpg",
+      "tags": [
+        "Dual",
+        "Slash",
+        "Physical"
+      ],
+      "cost": "10",
+      "type": "Melee",
+      "rating": "Silver",
+      "class": "Warblade",
+      "bag": "WarbladeSilverChest"
+    },
+    {
+      "identifier": "WPN-015A",
+      "name": "Voidclaw Blade",
+      "face": "images/WPN-015A-face.jpg",
+      "back": "images/WPN-015A-back.jpg",
+      "tags": [
+        "Dual",
+        "Slash",
+        "Physical"
+      ],
+      "cost": "10",
+      "type": "Melee",
+      "rating": "Silver",
+      "class": "Warblade",
+      "bag": "WarbladeSilverChest"
+    },
+    {
+      "identifier": "WPN-016A",
+      "name": "Doomfang Scythe",
+      "face": "images/WPN-016A-face.jpg",
+      "back": "images/WPN-016A-back.jpg",
+      "tags": [
+        "Dual",
+        "Slash",
+        "Physical"
+      ],
+      "cost": "12",
+      "type": "Melee",
+      "rating": "Gold",
+      "class": "Warblade",
+      "bag": "WarbladeGoldChest"
+    },
+    {
+      "identifier": "WPN-017A",
+      "name": "Doomclaw Scythe",
+      "face": "images/WPN-017A-face.jpg",
+      "back": "images/WPN-017A-back.jpg",
+      "tags": [
+        "Dual",
+        "Slash",
+        "Physical"
+      ],
+      "cost": "12",
+      "type": "Melee",
+      "rating": "Gold",
+      "class": "Warblade",
+      "bag": "WarbladeGoldChest"
+    },
+    {
+      "identifier": "WPN-018A",
+      "name": "Stormbranch Bow",
+      "face": "images/WPN-018A-face.jpg",
+      "back": "images/WPN-018A-back.jpg",
+      "tags": [
+        "Pierce",
+        "Physical"
+      ],
+      "cost": "4",
+      "type": "Ranged",
+      "rating": "Starter",
+      "class": "Pathfinder",
+      "bag": "PathfinderStarterChest"
+    },
+    {
+      "identifier": "WPN-019A",
+      "name": "Thorntongue Whip",
+      "face": "images/WPN-019A-face.jpg",
+      "back": "images/WPN-019A-back.jpg",
+      "tags": [
+        "Slash",
+        "Physical",
+        "Control"
+      ],
+      "cost": "8",
+      "type": "Ranged",
+      "rating": "Bronze",
+      "class": "Pathfinder",
+      "bag": "PathfinderBronzeChest"
+    },
+    {
+      "identifier": "WPN-020A",
+      "name": "Moonfang Chakram",
+      "face": "images/WPN-020A-face.jpg",
+      "back": "images/WPN-020A-back.jpg",
+      "tags": [
+        "Slash",
+        "Physical"
+      ],
+      "cost": "6",
+      "type": "Ranged",
+      "rating": "Bronze",
+      "class": "Pathfinder",
+      "bag": "PathfinderBronzeChest"
+    },
+    {
+      "identifier": "WPN-021A",
+      "name": "Windwhisper Bow",
+      "face": "images/WPN-021A-face.jpg",
+      "back": "images/WPN-021A-back.jpg",
+      "tags": [
+        "Pierce",
+        "Physical"
+      ],
+      "cost": "8",
+      "type": "Ranged",
+      "rating": "Silver",
+      "class": "Pathfinder",
+      "bag": "PathfinderSilverChest"
+    },
+    {
+      "identifier": "WPN-022A",
+      "name": "Duskwind Whip",
+      "face": "images/WPN-022A-face.jpg",
+      "back": "images/WPN-022A-back.jpg",
+      "tags": [
+        "Slash",
+        "Physical",
+        "Greater Control"
+      ],
+      "cost": "10",
+      "type": "Ranged",
+      "rating": "Silver",
+      "class": "Pathfinder",
+      "bag": "PathfinderSilverChest"
+    },
+    {
+      "identifier": "WPN-023A",
+      "name": "Skyhunter Bow",
+      "face": "images/WPN-023A-face.jpg",
+      "back": "images/WPN-023A-back.jpg",
+      "tags": [
+        "Shatter",
+        "Physical"
+      ],
+      "cost": "10",
+      "type": "Ranged",
+      "rating": "Gold",
+      "class": "Pathfinder",
+      "bag": "PathfinderGoldChest"
+    },
+    {
+      "identifier": "WPN-024A",
+      "name": "Stormwheel Chakram",
+      "face": "images/WPN-024A-face.jpg",
+      "back": "images/WPN-024A-back.jpg",
+      "tags": [
+        "Slash",
+        "Physical"
+      ],
+      "cost": "10",
+      "type": "Ranged",
+      "rating": "Gold",
+      "class": "Pathfinder",
+      "bag": "PathfinderGoldChest"
+    },
+    {
+      "identifier": "WPN-029A",
+      "name": "Seer's Whisper Tarot",
+      "face": "images/WPN-029A-face.jpg",
+      "back": "images/WPN-029A-back.jpg",
+      "tags": [
+        "Arcane"
+      ],
+      "cost": "4",
+      "type": "Ranged",
+      "rating": "Starter",
+      "class": "Sage",
+      "bag": "SageStarterChest"
+    },
+    {
+      "identifier": "WPN-030A",
+      "name": "Tome of Light",
+      "face": "images/WPN-030A-face.jpg",
+      "back": "images/WPN-030A-back.jpg",
+      "tags": [
+        "Arcane"
+      ],
+      "cost": "6",
+      "type": "Ranged",
+      "rating": "Bronze",
+      "class": "Sage",
+      "bag": "SageBronzeChest"
+    },
+    {
+      "identifier": "WPN-031A",
+      "name": "Gilded Branch Staff",
+      "face": "images/WPN-031A-face.jpg",
+      "back": "images/WPN-031A-back.jpg",
+      "tags": [
+        "Arcane"
+      ],
+      "cost": "6",
+      "type": "Ranged",
+      "rating": "Bronze",
+      "class": "Sage",
+      "bag": "SageBronzeChest"
+    },
+    {
+      "identifier": "WPN-032A",
+      "name": "Tome of Eternity",
+      "face": "images/WPN-032A-face.jpg",
+      "back": "images/WPN-032A-back.jpg",
+      "tags": [
+        "Arcane",
+        "Lesser Restoration"
+      ],
+      "cost": "8",
+      "type": "Ranged",
+      "rating": "Silver",
+      "class": "Sage",
+      "bag": "SageSilverChest"
+    },
+    {
+      "identifier": "WPN-033A",
+      "name": "Voidveil Orb",
+      "face": "images/WPN-033A-face.jpg",
+      "back": "images/WPN-033A-back.jpg",
+      "tags": [
+        "Arcane",
+        "Control"
+      ],
+      "cost": "8",
+      "type": "Ranged",
+      "rating": "Silver",
+      "class": "Sage",
+      "bag": "SageSilverChest"
+    },
+    {
+      "identifier": "WPN-034A",
+      "name": "Starshard Staff",
+      "face": "images/WPN-034A-face.jpg",
+      "back": "images/WPN-034A-back.jpg",
+      "tags": [
+        "Arcane",
+        "Absorb"
+      ],
+      "cost": "10",
+      "type": "Ranged",
+      "rating": "Gold",
+      "class": "Sage",
+      "bag": "SageGoldChest"
+    },
+    {
+      "identifier": "WPN-035A",
+      "name": "Starwoven Fate Tarot",
+      "face": "images/WPN-035A-face.jpg",
+      "back": "images/WPN-035A-back.jpg",
+      "tags": [
+        "Arcane",
+        "Recharge",
+        "Multi-target"
+      ],
+      "cost": "12",
+      "type": "Ranged",
+      "rating": "Gold",
+      "class": "Sage",
+      "bag": "SageGoldChest"
+    },
+    {
+      "identifier": "WPN-036A",
+      "name": "Damascus Shortsword",
+      "face": "images/WPN-036A-face.jpg",
+      "back": "images/WPN-036A-back.jpg",
+      "tags": [
+        "Slash",
+        "Physical"
+      ],
+      "cost": "6",
+      "type": "Melee",
+      "rating": "Bronze",
+      "class": "Anyone",
+      "bag": "AnyoneBronzeChest"
+    },
+    {
+      "identifier": "WPN-037A",
+      "name": "Willowflare Wand",
+      "face": "images/WPN-037A-face.jpg",
+      "back": "images/WPN-037A-back.jpg",
+      "tags": [
+        "Arcane",
+        "Energy"
+      ],
+      "cost": "6",
+      "type": "Ranged",
+      "rating": "Bronze",
+      "class": "Anyone",
+      "bag": "AnyoneBronzeChest"
+    },
+    {
+      "identifier": "WPN-038A",
+      "name": "Silverleaf Knife",
+      "face": "images/WPN-038A-face.jpg",
+      "back": "images/WPN-038A-back.jpg",
+      "tags": [
+        "Slash",
+        "Physical"
+      ],
+      "cost": "8",
+      "type": "Melee",
+      "rating": "Silver",
+      "class": "Anyone",
+      "bag": "AnyoneSilverChest"
+    },
+    {
+      "identifier": "WPN-039A",
+      "name": "Mooncrest Crossbow",
+      "face": "images/WPN-039A-face.jpg",
+      "back": "images/WPN-039A-back.jpg",
+      "tags": [
+        "Pierce",
+        "Physical"
+      ],
+      "cost": "8",
+      "type": "Ranged",
+      "rating": "Silver",
+      "class": "Anyone",
+      "bag": "AnyoneSilverChest"
+    },
+    {
+      "identifier": "WPN-040A",
+      "name": "Dragonsoul Blade",
+      "face": "images/WPN-040A-face.jpg",
+      "back": "images/WPN-040A-back.jpg",
+      "tags": [
+        "Slash",
+        "Cursed"
+      ],
+      "cost": "8",
+      "type": "Melee",
+      "rating": "Silver",
+      "class": "Anyone",
+      "bag": "AnyoneSilverChest"
+    },
+    {
+      "identifier": "WPN-040B",
+      "name": "Dragonsoul Blade",
+      "face": "images/WPN-040B-face.jpg",
+      "back": "images/WPN-040B-back.jpg",
+      "tags": [
+        "Slash",
+        "Physical",
+        "Tremor"
+      ],
+      "cost": "12",
+      "type": "Melee",
+      "rating": "Gold",
+      "class": "Anyone",
+      "bag": "AnyoneGoldChest"
+    },
+    {
+      "identifier": "WPN-041A",
+      "name": "Starshard Wand",
+      "face": "images/WPN-041A-face.jpg",
+      "back": "images/WPN-041A-back.jpg",
+      "tags": [
+        "Absorb",
+        "Arcane",
+        "Energy"
+      ],
+      "cost": "12",
+      "type": "Ranged",
+      "rating": "Gold",
+      "class": "Anyone",
+      "bag": "AnyoneGoldChest"
+    }
+  ]
+}

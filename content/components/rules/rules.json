@@ -1,0 +1,20 @@
+{
+  "name": "Rules",
+
+  "components": [
+    {
+      "type": "Custom_PDF",
+      "scale": { "x": 1.1, "y": 1, "z": 1.1 },
+      "sets": [
+        {
+          "CustomPDF": {
+            "PDFUrl": "https://steamusercontent-a.akamaihd.net/ugc/10041529484054724092/1276287A5364234E4F26FBD6440730897C6D8CF8/",
+            "PDFPassword": "",
+            "PDFPage": 0,
+            "PDFPageOffset": 0
+          }
+        }
+      ]
+    }
+  ]
+}

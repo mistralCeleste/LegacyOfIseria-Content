@@ -1,0 +1,10 @@
+{
+  "fields":
+  {  
+       "identifier": "{Full Id}"
+    ,  "name": "{Name}"
+    ,  "face": "images/{Full Id}-face.jpg"
+    ,  "back": "images/{Full Id}-back.jpg"
+    , "bag": "AnswerBox"
+  }
+}

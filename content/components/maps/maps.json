@@ -1,0 +1,91 @@
+{
+  "type": "CustomCard",
+  "shape": 0,
+  "scale": {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  },
+  "sets": [
+    {
+      "identifier": "MAP-001A",
+      "name": "Whirlpool Abyss Grotto",
+      "face": "images/MAP-001A-face.jpg",
+      "back": "images/MAP-001A-back.jpg",
+      "rooms": "2",
+      "connectors": "1"
+    },
+    {
+      "identifier": "MAP-001B",
+      "name": "Whirlpool Abyss Grotto",
+      "face": "images/MAP-001B-face.jpg",
+      "back": "images/MAP-001B-back.jpg",
+      "rooms": "7",
+      "connectors": "5"
+    },
+    {
+      "identifier": "MAP-001C",
+      "name": "Whirlpool Abyss Grotto",
+      "face": "images/MAP-001C-face.jpg",
+      "back": "images/MAP-001C-back.jpg",
+      "rooms": "7",
+      "connectors": "5"
+    },
+    {
+      "identifier": "MAP-001D",
+      "name": "Whirlpool Abyss Grotto",
+      "face": "images/MAP-001D-face.jpg",
+      "back": "images/MAP-001D-back.jpg",
+      "rooms": "9",
+      "connectors": "6"
+    },
+    {
+      "identifier": "MAP-002A",
+      "name": "Crescent Moon",
+      "face": "images/MAP-002A-face.jpg",
+      "back": "images/MAP-002A-back.jpg",
+      "rooms": "18",
+      "connectors": "8"
+    },
+    {
+      "identifier": "MAP-003A",
+      "name": "Eagle",
+      "face": "images/MAP-003A-face.jpg",
+      "back": "images/MAP-003A-back.jpg",
+      "rooms": "17",
+      "connectors": "11"
+    },
+    {
+      "identifier": "MAP-004A",
+      "name": "Bat",
+      "face": "images/MAP-004A-face.jpg",
+      "back": "images/MAP-004A-back.jpg",
+      "rooms": "8",
+      "connectors": "5"
+    },
+    {
+      "identifier": "MAP-005A",
+      "name": "Tower",
+      "face": "images/MAP-005A-face.jpg",
+      "back": "images/MAP-005A-back.jpg",
+      "rooms": "27",
+      "connectors": "18"
+    },
+    {
+      "identifier": "MAP-006A",
+      "name": "Dragon",
+      "face": "images/MAP-006A-face.jpg",
+      "back": "images/MAP-006A-back.jpg",
+      "rooms": "17",
+      "connectors": "9"
+    },
+    {
+      "identifier": "MAP-007A",
+      "name": "Skull",
+      "face": "images/MAP-007A-face.jpg",
+      "back": "images/MAP-007A-back.jpg",
+      "rooms": "17",
+      "connectors": "9"
+    }
+  ]
+}

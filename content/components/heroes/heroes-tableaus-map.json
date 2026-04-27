@@ -1,0 +1,13 @@
+{
+  "type": "Custom_Tile",
+  "shape": 0,
+  "scale": { "x": 2.2, "y": 0.2, "z": 2.2 },
+  "fields":
+  {  
+       "identifier": "{Class}Tableau"
+    ,  "name": "{Class} Tableau"
+    ,  "face": "images/HeroTableau.jpg"
+    ,  "back": "images/HeroTableau.jpg"
+    ,  "bag": "{Class}HeroBox"
+  }
+}

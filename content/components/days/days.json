@@ -1,7 +1,27 @@
 {
     "name": "Days"
     , "description": "Cards representing the days of the week, with various weather conditions."  
-    , "cards":
+    , "components": [
+        {
+      "type": "Custom_Model",
+      "scale": { "x": 0.4, "y": 0.4, "z": 0.4 },
+      "sets": [
+        {
+          "identifier": "DaysBox",
+          "name": "Day Box",
+          "mesh": "../boxes/models/box.obj",
+          "texture": "../boxes/images/Box_Days.jpg",
+          "container": { "type": 0, "stackable": false }
+        },
+        {
+          "identifier": "DaysInactiveBox",
+          "name": "Day Inactive Box",
+          "mesh": "../boxes/models/box.obj",
+          "texture": "../boxes/images/Box_Days-inactive.jpg",
+          "container": { "type": 0, "stackable": false }
+        }
+      ]
+    },
     {
         "type": "CustomCard"
         , "shape": 0
@@ -15,7 +35,8 @@
                 , "face": "images/DAY-001A_face.jpg"
                 , "back": "images/DAY_back.jpg"
                 , "sideways": false
-                , "tags": ["day", "weather"]
+                , "tags": ["day", "mood"]
+                , "bag": "DaysBox"
             }
             ,
             {
@@ -24,7 +45,8 @@
                 , "face": "images/DAY-002A_face.jpg"
                 , "back": "images/DAY_back.jpg"
                 , "sideways": false
-                , "tags": ["day", "weather"]
+                , "tags": ["day", "weather", "time"]
+                , "bag": "DaysBox"
             }
             ,
             {
@@ -33,8 +55,82 @@
                 , "face": "images/DAY-003A_face.jpg"
                 , "back": "images/DAY_back.jpg"
                 , "sideways": false
-                , "tags": ["day", "weather"]
+                , "tags": ["day", "weather", "time"]
+                , "bag": "DaysBox"
+            },
+            {
+                "identifier": "DAY-004A"
+                , "name": "A Blustery Day"
+                , "face": "images/DAY-004A_face.jpg"
+                , "back": "images/DAY_back.jpg"
+                , "sideways": false
+                , "tags": ["day", "weather", "time"]
+                , "bag": "DaysBox"
+            },
+            {
+                "identifier": "DAY-005A"
+                , "name": "A Fair Day"
+                , "face": "images/DAY-005A_face.jpg"
+                , "back": "images/DAY_back.jpg"
+                , "sideways": false
+                , "tags": ["day", "weather", "time"]
+                , "bag": "DaysBox"
+            },
+            {
+                "identifier": "DAY-006A"
+                , "name": "Exhilaration"
+                , "face": "images/DAY-006A_face.jpg"
+                , "back": "images/DAY_back.jpg"
+                , "sideways": false
+                , "tags": ["day", "mood"]
+                , "bag": "DaysBox"
+            },
+            {
+                "identifier": "DAY-007A"
+                , "name": "Serenity"
+                , "face": "images/DAY-007A_face.jpg"
+                , "back": "images/DAY_back.jpg"
+                , "sideways": false
+                , "tags": ["day", "mood"]
+                , "bag": "DaysBox"
+            },
+            {
+                "identifier": "DAY-008A"
+                , "name": "Waxing Crescent Moon"
+                , "face": "images/DAY-008A_face.jpg"
+                , "back": "images/DAY_back.jpg"
+                , "sideways": false
+                , "tags": ["day", "celestial", "time"]
+                , "bag": "DaysInactiveBox"
+            },
+            {
+                "identifier": "DAY-009A"
+                , "name": "Smoke on the Horizon"
+                , "face": "images/DAY-009A_face.jpg"
+                , "back": "images/DAY_back.jpg"
+                , "sideways": false
+                , "tags": ["day", "combat", "world"]
+                , "bag": "DaysInactiveBox"
+            },
+            {
+                "identifier": "DAY-010A"
+                , "name": "Determination"
+                , "face": "images/DAY-010A_face.jpg"
+                , "back": "images/DAY_back.jpg"
+                , "sideways": false
+                , "tags": ["day", "mood"]
+                , "bag": "DaysInactiveBox"
+            },
+            {
+                "identifier": "DAY-011A"
+                , "name": "Ready for Adventure"
+                , "face": "images/DAY-011A_face.jpg"
+                , "back": "images/DAY_back.jpg"
+                , "sideways": false
+                , "tags": ["day", "mood"]
+                , "bag": "DaysInactiveBox"
             }
         ]
     }
+  ]
 }

@@ -1,0 +1,12 @@
+{
+  "type": "Custom_Tile",
+  "scale": { "x": 0.25, "y": 0.1, "z": 0.5 },
+  "fields":
+  {  
+      "identifier": "{Full Id}"
+    , "name": "{Name}"
+    , "face": "images/{Full Id}-face.jpg"
+    , "back": "images/{Full Id}-back.jpg"
+    , "bag": "{Class}{Rating}Chest"
+  }
+}
