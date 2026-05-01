@@ -9,14 +9,14 @@
         {
           "identifier": "DaysBox",
           "name": "Day Box",
-          "mesh": "../boxes/models/box.obj",
+          "mesh": "../boxes/models/CardBox-container.obj",
           "texture": "../boxes/images/Box_Days.jpg",
           "container": { "type": 0, "stackable": false }
         },
         {
           "identifier": "DaysInactiveBox",
           "name": "Day Inactive Box",
-          "mesh": "../boxes/models/box.obj",
+          "mesh": "../boxes/models/CardBox-container.obj",
           "texture": "../boxes/images/Box_Days-inactive.jpg",
           "container": { "type": 0, "stackable": false }
         }

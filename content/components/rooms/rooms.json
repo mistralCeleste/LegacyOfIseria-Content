@@ -9,35 +9,35 @@
         {
           "identifier": "RoomsRandom5+Box",
           "name": "Rooms 5+ Box",
-          "mesh": "../boxes/models/box.obj",
+          "mesh": "../boxes/models/CardBox-container.obj",
           "texture": "../boxes/images/Box_Rooms-5.jpg",
           "container": { "type": 0, "stackable": false }
         },
         {
           "identifier": "RoomsRandom10+Box",
           "name": "Rooms 10+ Box",
-          "mesh": "../boxes/models/box.obj",
+          "mesh": "../boxes/models/CardBox-container.obj",
           "texture": "../boxes/images/Box_Rooms-10.jpg",
           "container": { "type": 0, "stackable": false }
         },
         {
           "identifier": "RoomsRandom15+Box",
           "name": "Rooms 15+ Box",
-          "mesh": "../boxes/models/box.obj",
+          "mesh": "../boxes/models/CardBox-container.obj",
           "texture": "../boxes/images/Box_Rooms-15.jpg",
           "container": { "type": 0, "stackable": false }
         },
         {
           "identifier": "RoomsEncounterBox",
           "name": "Rooms Encounter Box",
-          "mesh": "../boxes/models/box.obj",
+          "mesh": "../boxes/models/CardBox-container.obj",
           "texture": "../boxes/images/Box_Rooms-Encounter.jpg",
           "container": { "type": 0, "stackable": false }
         },
         {
           "identifier": "RoomsPuzzleBox",
           "name": "Rooms Puzzle Box",
-          "mesh": "../boxes/models/box.obj",
+          "mesh": "../boxes/models/CardBox-container.obj",
           "texture": "../boxes/images/Box_Rooms-Puzzle.jpg",
           "container": { "type": 0, "stackable": false }
         }

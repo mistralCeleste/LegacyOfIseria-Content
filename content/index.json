@@ -5,7 +5,5 @@
     , "components":
     [
         "components/days/days.json"
-        , "components/rooms/rooms.json"
-        , "components/heroes/vanguard/vanguard.json"
     ]
 }

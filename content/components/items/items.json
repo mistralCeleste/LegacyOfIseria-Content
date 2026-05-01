@@ -9,14 +9,14 @@
         {
           "identifier": "ItemsBox",
           "name": "Item Box",
-          "mesh": "../boxes/models/box.obj",
+          "mesh": "../boxes/models/CardBox-container.obj",
           "texture": "../boxes/images/Box_Items.jpg",
           "container": { "type": 0, "stackable": false }
         },
         {
           "identifier": "ItemsInactiveBox",
           "name": "Item Inactive Box",
-          "mesh": "../boxes/models/box.obj",
+          "mesh": "../boxes/models/CardBox-container.obj",
           "texture": "../boxes/images/Box_Items-inactive.jpg",
           "container": { "type": 0, "stackable": false }
         },

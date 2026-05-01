@@ -9,14 +9,14 @@
         {
           "identifier": "ActBox",
           "name": "Act Box",
-          "mesh": "../boxes/models/box.obj",
+          "mesh": "../boxes/models/CardBox-container.obj",
           "texture": "../boxes/images/Box_ACT.jpg",
           "container": { "type": 0, "stackable": false }
         },
         {
           "identifier": "ActInactiveBox",
           "name": "ACT Inactive Box",
-          "mesh": "../boxes/models/box.obj",
+          "mesh": "../boxes/models/CardBox-container.obj",
           "texture": "../boxes/images/Box_Act-inactive.jpg",
           "container": { "type": 0, "stackable": false }
         }

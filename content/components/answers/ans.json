@@ -9,7 +9,7 @@
         {
           "identifier": "AnswerBox",
           "name": "Answer Box",
-          "mesh": "../boxes/models/box.obj",
+          "mesh": "../boxes/models/CardBox-container.obj",
           "texture": "../boxes/images/Box_Answers.jpg",
           "container": { "type": 0, "stackable": false }
         }

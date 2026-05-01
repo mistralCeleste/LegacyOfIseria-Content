@@ -1,4 +1,11 @@
-BASE_URL = "https://mistralCeleste.github.io/LegacyOfIseria-Content/"
+--[[ Lua code. See documentation: https://api.tabletopsimulator.com/ --]]
+
+-----------------------------------------
+-- Configuration
+-----------------------------------------
+
+BASE_URL = "http://127.0.0.1:5500/"
+--BASE_URL = "https://mistralCeleste.github.io/LegacyOfIseria-Content/"
 COMPONENT_REGISTRY = COMPONENT_REGISTRY or {}
 SCRIPT_CACHE = {}
 
@@ -83,19 +90,19 @@ end
 
 function onAllComponentsLoaded()
     -- Example: spawn Days
-    spawnComponent("Days", {x=0, y=3, z=0})
-    spawnComponent("Rooms", {x=0, y=6, z=0})
+    -- spawnComponent("Days", {x=0, y=3, z=0})
 
     -- Or spawn everything
-    -- for name, _ in pairs(COMPONENT_REGISTRY) do
-    --     spawnComponent(name, {x=0, y=3, z=0})
-    -- end
+    for name, _ in pairs(COMPONENT_REGISTRY) do
+        spawnComponent(name, {x=0, y=3, z=0})
+    end
 end
 
 
 function registerComponent(component, componentPath)
     -- Extract folder path: "components/days/days.json" → "components/days/"
     local basePath = componentPath:match("(.+)/[^/]+$") .. "/"
+    print("Registering component: " .. (component.name or componentPath) .. " | base path: " .. basePath)
 
     -- Create registry entry for this component
     local componentName = component.name or componentPath
@@ -107,6 +114,16 @@ function registerComponent(component, componentPath)
     }
 
     local registry = COMPONENT_REGISTRY[componentName]
+
+    for key, value in pairs(component.components) do
+        print("  key: " .. key .. ": type: " .. tostring(value.type) .. " | " .. (#value.sets))
+        if value.type == "CustomCard" then
+            registerCardSet(basePath, value, registry.cards)
+        end
+        if value.type == "Custom_Model" then
+            registerModelSet(basePath, value, registry.models)
+        end
+    end
 
     if component.assetbundles then
         registerAssetBundleSet(basePath, component.assetbundles, registry.assetbundles)
@@ -124,9 +141,7 @@ function registerComponent(component, componentPath)
         registerBoardSet(basePath, component.boards, registry.boards)
     end
 
-    if component.cards then
-        registerCardSet(basePath, component.cards, registry.cards)
-    end
+
 
     if component.decks then
         registerDeckSet(basePath, component.decks, registry.decks)
@@ -158,6 +173,7 @@ end
 
 function spawnComponent(componentName, position)
     local comp = COMPONENT_REGISTRY[componentName]
+    print("Spawning component: " .. componentName)
 
     if not comp then
         print("Unknown component: " .. componentName)
@@ -177,6 +193,7 @@ function spawnComponent(componentName, position)
         spawnComponentAssetBundles(componentName, position)
     end
     
+    print("Component has bags: " .. tostring(comp.bags ~= nil and #comp.bags or 0))
     if comp.bags and #comp.bags > 0 then
         spawnComponentBags(componentName, position, container)
     end
@@ -189,6 +206,7 @@ function spawnComponent(componentName, position)
         spawnComponentBoards(componentName, position, container)
     end
 
+    print("Component has cards: " .. tostring(comp.cards ~= nil and #comp.cards or 0))
     if comp.cards and #comp.cards > 0 then
         spawnComponentCards(componentName, position)
     end
@@ -340,6 +358,7 @@ end
 
 function spawnCard(entry, position)
     local objData = buildCardJSON(entry, position)
+    print("spawn card: " .. entry.id)
 
     local obj = spawnObjectData({data = objData})
     if not obj then
@@ -371,6 +390,7 @@ end
 
 function spawnComponentCards(componentName, position)
     local comp = COMPONENT_REGISTRY[componentName]
+    print("Spawning cards for component: " .. componentName)
 
     if not comp or not comp.cards then
         return
@@ -573,7 +593,8 @@ function buildModelJSON(entry, position)
             DiffuseURL = entry.texture,
             ColliderURL = entry.collider or "",
             NormalURL = "",
-            Type = 0,
+            TypeIndex = 0,
+            Convex = false,
             MaterialIndex = -1,
             CastShadows = true
         },
@@ -595,7 +616,6 @@ function buildModelJSON(entry, position)
 end
 
 
-
 function spawnModel(entry, position, container)
     print("spawn model: " .. entry.id)
 
@@ -610,24 +630,48 @@ function spawnModel(entry, position, container)
 
     local guid = obj.getGUID()
 
-    -- Wait for model to fully initialize
+    -- Wait for the object AND its custom data to be ready
     Wait.condition(function()
         local realObj = getObjectFromGUID(guid)
-        if realObj then
+        if not realObj then return end
 
-            -- Unlock BEFORE container insertion
-            realObj.setLock(false)
+        -- Only refresh custom models
+        if entry.type == "Custom_Model" or realObj.tag == "Custom_Model" then
+            local ok, custom = pcall(function()
+                return realObj.getCustomObject()
+            end)
 
-            if container then
-                container.putObject(realObj)
+            -- Only refresh when custom data is actually populated
+            if ok and custom and next(custom) ~= nil then
+                realObj.setCustomObject(custom)
             else
-                -- Or place it smoothly on the table
-                realObj.setPositionSmooth(position, false, false)
+                return  -- keep waiting
             end
         end
+
+        -- Unlock BEFORE container insertion
+        realObj.setLock(false)
+
+        if container then
+            container.putObject(realObj)
+        else
+            realObj.setPositionSmooth(position, false, false)
+        end
     end, function()
-        return getObjectFromGUID(guid) ~= nil
+        local realObj = getObjectFromGUID(guid)
+        if not realObj then return false end
+
+        -- Wait until custom object exists AND is populated
+        if entry.type == "Custom_Model" or realObj.tag == "Custom_Model" then
+            local ok, custom = pcall(function()
+                return realObj.getCustomObject()
+            end)
+            return ok and custom and next(custom) ~= nil
+        end
+
+        return true  -- non-custom objects don't need this
     end)
+
 
     -- Assign script (GUID-safe)
     if entry.script then
@@ -645,6 +689,7 @@ function spawnModel(entry, position, container)
 
     return obj
 end
+
 
 
 function spawnComponentModels(componentName, position, container)

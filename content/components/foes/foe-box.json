@@ -9,14 +9,14 @@
         {
           "identifier": "FoesBox",
           "name": "Foes Box",
-          "mesh": "../boxes/models/box.obj",
+          "mesh": "../boxes/models/CardBox-container.obj",
           "texture": "../boxes/images/Box_Foes.jpg",
           "container": { "type": 0, "stackable": false }
         },
         {
           "identifier": "FoesInactiveBox",
           "name": "Foe Inactive Box",
-          "mesh": "../boxes/models/box.obj",
+          "mesh": "../boxes/models/CardBox-container.obj",
           "texture": "../boxes/images/Box_Foes-inactive.jpg",
           "container": { "type": 0, "stackable": false }
         }
