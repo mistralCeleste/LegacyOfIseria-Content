@@ -9,14 +9,28 @@ BASE_URL = "http://127.0.0.1:5500/"
 COMPONENT_REGISTRY = COMPONENT_REGISTRY or {}
 SCRIPT_CACHE = {}
 
-
 LOADER =
 {
-
-    total = 0,
-    loaded = 0,
+    state = "Registering", -- Registering, Spawning, Bagging, Ready
+    registering = { progress = 0, total = 0 },
+    spawning = { progress = 0, total = 0 },
+    bagging = { progress = 0, total = 0 },
     ready = false
 }
+
+
+BAG_QUEUE = {}
+
+function BAG_QUEUE.registerBag(bagId, itemId)
+    if not bagId then
+        error("BAG_QUEUE.registerBag: missing bagId")
+    end
+    table.insert(BAG_QUEUE, { itemId = itemId, bagId = entry.bag })
+end
+
+function BAG_QUEUE.getBag(bagId)
+    return BAG_QUEUE[bagId]
+end
 
 
 SPAWNERS = {
@@ -31,6 +45,21 @@ SPAWNERS = {
     boards = spawnBoard,
     blocks = spawnBlock,
     bags = spawnBag
+}
+
+ComponentType =
+{
+    AssetBundle = "Custom_Assetbundle"
+  , CustomCard = "CardCustom"
+  , CustomDeck = "DeckCustom"
+  , CustomTile = "Custom_Tile"
+  , CustomModel = "Custom_Model"
+  , CustomToken = "Custom_Token"
+  , CustomFigurine = "Custom_Figurine"
+  , Dice = "Custom_Dice"
+  , CustomBoard = "Custom_Board"
+  , Block = "Blocks"
+  , Bag = "Bag"
 }
 
 
@@ -50,8 +79,9 @@ function loadIndex()
 
         local index = JSON.decode(req.text)
 
-        LOADER.total = #index.components
-        LOADER.loaded = 0
+        LOADER.registering.progress = 0
+        LOADER.registering.total = #index.components
+        LOADER.state = "Registering"
         LOADER.ready = false
 
         for _, componentPath in ipairs(index.components) do
@@ -72,39 +102,130 @@ function loadComponent(path)
             registerComponent(component, path)
         end
 
-        LOADER.loaded = LOADER.loaded + 1
-        checkLoaderReady()
+        LOADER.registering.progress = LOADER.registering.progress + 1
+        checkRegisteringReady()
     end)
 end
 
 
-function checkLoaderReady()
-    if LOADER.loaded >= LOADER.total then
+function checkRegisteringReady()
+    print("Registering: " .. LOADER.registering.progress .. "/" .. LOADER.registering.total)
+    if LOADER.registering.progress >= LOADER.registering.total then
         LOADER.ready = true
-        print("All components loaded.")
-
-        onAllComponentsLoaded()
+        print("All components registered.")
+        onAllComponentsRegistered()
     end
 end
 
 
-function onAllComponentsLoaded()
-    -- Example: spawn Days
-    -- spawnComponent("Days", {x=0, y=3, z=0})
+function onAllComponentsRegistered()
+    LOADER.state = "Spawning"
+    LOADER.spawning.progress = 0
 
-    -- Or spawn everything
     for name, _ in pairs(COMPONENT_REGISTRY) do
         spawnComponent(name, {x=0, y=3, z=0})
     end
 end
 
 
+function checkSpawningReady()
+    print("Spawning: " .. LOADER.spawning.progress .. "/" .. LOADER.spawning.total)
+    if LOADER.spawning.progress >= LOADER.spawning.total then
+        LOADER.ready = true
+        print("All components spawned.")
+        onAllComponentsSpawned()
+    end
+end
+
+
+function onAllComponentsSpawned()
+    LOADER.state = "Bagging"
+    LOADER.bagging.progress = 0
+    LOADER.bagging.total = #BAG_QUEUE
+    processBagQueue()
+end
+
+
+function computeBagDepth(bagId)
+    local depth = 0
+    local current = bagId
+
+    while true do
+        local entry = COMPONENT_REGISTRY[current]
+        if not entry or not entry.bag then break end
+        depth = depth + 1
+        current = entry.bag
+    end
+
+    return depth
+end
+
+
+function processBagQueue()
+    table.sort(BAG_QUEUE, function(a, b)
+      return computeBagDepth(a.bagId) < computeBagDepth(b.bagId)
+    end)
+
+    for _, pair in ipairs(LOADER.bagQueue) do
+        local item = COMPONENT_REGISTRY[pair.itemId].object
+        local bag  = COMPONENT_REGISTRY[pair.bagId].object
+
+        if item and bag then
+            putIntoBag(bag, item)
+        else
+            print("Bagging failed for:", pair.itemId, "→", pair.bagId)
+        end
+    end
+end
+
+
+function checkBaggingReady()
+    print("Bagging: " .. LOADER.bagging.progress .. "/" .. LOADER.bagging.total)
+    if LOADER.bagging.progress >= LOADER.bagging.total then
+        LOADER.ready = true
+        print("All components bagged.")
+        onAllComponentsBagged()
+    end
+end
+
+
+function onAllComponentsBagged()
+    LOADER.state = "Ready"
+    print("All bagging complete. Game Loaded.")
+end
+
+
+-- Extract folder path: "components/days/days.json" → "components/days/"
+function getParentFolder(path)
+    return path:match("(.+)/[^/]+$") .. "/"
+end
+
+
+function resolvePath(basePath, relative)
+    relative = relative:gsub("\\", "/")
+    basePath = basePath:gsub("\\", "/")
+    local full = basePath .. relative
+
+    local parts = {}
+    for part in string.gmatch(full, "[^/]+") do
+        if part == ".." then
+            if #parts > 0 then
+                table.remove(parts)
+            end
+        elseif part ~= "." and part ~= "" then
+            table.insert(parts, part)
+        end
+    end
+
+    local normalized = table.concat(parts, "/")
+    return BASE_URL .. "content/" .. normalized
+end
+
+
 function registerComponent(component, componentPath)
-    -- Extract folder path: "components/days/days.json" → "components/days/"
-    local basePath = componentPath:match("(.+)/[^/]+$") .. "/"
+    local basePath = getParentFolder(componentPath)
     print("Registering component: " .. (component.name or componentPath) .. " | base path: " .. basePath)
 
-    -- Create registry entry for this component
     local componentName = component.name or componentPath
     COMPONENT_REGISTRY[componentName] = COMPONENT_REGISTRY[componentName] or {
         cards = {},
@@ -116,55 +237,53 @@ function registerComponent(component, componentPath)
     local registry = COMPONENT_REGISTRY[componentName]
 
     for key, value in pairs(component.components) do
+        LOADER.spawning.total = LOADER.spawning.total + 1
         print("  key: " .. key .. ": type: " .. tostring(value.type) .. " | " .. (#value.sets))
-        if value.type == "CustomCard" then
+
+        if value.type == ComponentType.AssetBundle then
+            registerAssetBundleSet(basePath, component.assetbundles, registry.assetbundles)
+        end
+
+        if value.type == ComponentType.Bag then
+            registerBagSet(basePath, component.bags, registry.bags)
+        end
+
+        if value.type == ComponentType.Block then
+            registerBlockSet(basePath, component.blocks, registry.blocks)
+        end
+
+        if value.type == ComponentType.CustomBoard then
+            registerBoardSet(basePath, component.boards, registry.boards)
+        end
+
+        if value.type == ComponentType.CustomCard then
             registerCardSet(basePath, value, registry.cards)
         end
-        if value.type == "Custom_Model" then
+
+        if value.type == ComponentType.CustomDeck then
+            registerDeckSet(basePath, component.decks, registry.decks)
+        end
+
+        if value.type == ComponentType.Dice then
+            registerDiceSet(basePath, component.dice, registry.dice)
+        end
+
+        if value.type == ComponentType.CustomFigurine then
+            registerFigurineSet(basePath, component.figurines, registry.figurines)
+        end
+
+        if value.type == ComponentType.CustomModel then
             registerModelSet(basePath, value, registry.models)
         end
-    end
 
-    if component.assetbundles then
-        registerAssetBundleSet(basePath, component.assetbundles, registry.assetbundles)
-    end
+        if value.type == ComponentType.CustomTile then
+            registerTileSet(basePath, component.tiles, registry.tiles)
+        end
 
-    if component.bags then
-        registerBagSet(basePath, component.bags, registry.bags)
-    end
+        if value.type == ComponentType.CustomToken then
+            registerTokenSet(basePath, component.tokens, registry.tokens)
+        end
 
-    if component.blocks then
-        registerBlockSet(basePath, component.blocks, registry.blocks)
-    end
-
-    if component.boards then
-        registerBoardSet(basePath, component.boards, registry.boards)
-    end
-
-
-
-    if component.decks then
-        registerDeckSet(basePath, component.decks, registry.decks)
-    end
-
-    if component.dice then
-        registerDiceSet(basePath, component.dice, registry.dice)
-    end
-
-    if component.figurines then
-        registerFigurineSet(basePath, component.figurines, registry.figurines)
-    end
-
-    if component.models then
-        registerModelSet(basePath, component.models, registry.models)
-    end
-
-    if component.tiles then
-        registerTileSet(basePath, component.tiles, registry.tiles)
-    end
-
-    if component.tokens then
-        registerTokenSet(basePath, component.tokens, registry.tokens)
     end
 
     print("Registered component: " .. componentName)
@@ -192,18 +311,17 @@ function spawnComponent(componentName, position)
     if comp.assetbundles and #comp.assetbundles > 0 then
         spawnComponentAssetBundles(componentName, position)
     end
-    
-    print("Component has bags: " .. tostring(comp.bags ~= nil and #comp.bags or 0))
+
     if comp.bags and #comp.bags > 0 then
-        spawnComponentBags(componentName, position, container)
+        spawnComponentBags(componentName, position)
     end
 
     if comp.blocks and #comp.blocks > 0 then
-        spawnComponentBlocks(componentName, position, container)
+        spawnComponentBlocks(componentName, position)
     end
 
     if comp.boards and #comp.boards > 0 then
-        spawnComponentBoards(componentName, position, container)
+        spawnComponentBoards(componentName, position)
     end
 
     print("Component has cards: " .. tostring(comp.cards ~= nil and #comp.cards or 0))
@@ -212,15 +330,15 @@ function spawnComponent(componentName, position)
     end
 
     if comp.decks and #comp.decks > 0 then
-        spawnComponentDecks(componentName, position, container)
+        spawnComponentDecks(componentName, position)
     end
 
     if comp.dice and #comp.dice > 0 then
-        spawnComponentDice(componentName, position, container)
+        spawnComponentDice(componentName, position)
     end
 
     if comp.figurines and #comp.figurines then
-        spawnComponentFigurines(componentName, position, container)
+        spawnComponentFigurines(componentName, position)
     end
 
     if comp.tiles and #comp.tiles > 0 then
@@ -232,30 +350,9 @@ function spawnComponent(componentName, position)
     end
 
     if comp.tokens and #comp.tokens > 0 then
-        spawnComponentTokens(componentName, position, container)
+        spawnComponentTokens(componentName, position)
     end
 
-end
-
-
-function resolvePath(basePath, relative)
-    relative = relative:gsub("\\", "/")
-    basePath = basePath:gsub("\\", "/")
-    local full = basePath .. relative
-
-    local parts = {}
-    for part in string.gmatch(full, "[^/]+") do
-        if part == ".." then
-            if #parts > 0 then
-                table.remove(parts)
-            end
-        elseif part ~= "." and part ~= "" then
-            table.insert(parts, part)
-        end
-    end
-
-    local normalized = table.concat(parts, "/")
-    return BASE_URL .. "content/" .. normalized
 end
 
 
@@ -278,40 +375,92 @@ function loadScript(scriptURL, callback)
 end
 
 
+
+function getBagFromRegistry(id)
+    local entry = COMPONENT_REGISTRY[id]
+    if not entry then
+        print("getBagFromRegistry: No registry entry for " .. tostring(id))
+        return nil
+    end
+
+    if entry.type ~= "bag" then
+        print("getBagFromRegistry: Entry " .. tostring(id) .. " is not a bag")
+        return nil
+    end
+
+    -- If object reference exists, return it
+    if entry.object then
+        return entry.object
+    end
+
+    -- Fallback: try to fetch by GUID
+    if entry.guid then
+        return getObjectFromGUID(entry.guid)
+    end
+
+    print("getBagFromRegistry: Bag " .. tostring(id) .. " has no object or guid")
+    return nil
+end
+
+
+-- Safely insert an object into a bag (normal or Custom_Model_Bag)
+function putIntoBag(container, obj)
+    print("put into bag: " .. container)
+    if not container or not obj then
+        print("putIntoBag: missing bag or object")
+        return
+    end
+
+    local bagGUID = bag.getGUID()
+    local objGUID = obj.getGUID()
+
+    -- Wait until BOTH objects exist in the world
+    Wait.condition(function()
+        local realBag = getObjectFromGUID(bagGUID)
+        local realObj = getObjectFromGUID(objGUID)
+
+        if not realBag or not realObj then
+            return  -- keep waiting
+        end
+
+        -- Unlock before insertion (TTS requirement)
+        realObj.setLock(false)
+
+        -- Insert into bag
+        realBag.putObject(realObj)
+        LOADER.bagging.progress = LOADER.bagging.progress + 1
+        checkBaggingReady()
+
+    end, function()
+        return getObjectFromGUID(bagGUID) ~= nil
+           and getObjectFromGUID(objGUID) ~= nil
+    end)
+end
+
+
 -----------------------------------------
 -- Cards
 -----------------------------------------
 
 
 function registerCardSet(basePath, cardBlock, cardList)
-    local cardType  = cardBlock.type or "CustomCard"
-    local shape     = tonumber(cardBlock.shape) or 0
-    local scale     = cardBlock.scale or {x=1, y=1, z=1}
-
-    local scriptURL = nil
-    if cardBlock.script then
-        scriptURL = resolvePath(basePath, cardBlock.script)
-        if scriptURL and not SCRIPT_CACHE[scriptURL] then
-            loadScript(scriptURL, function(_) end)
-        end
-    end
-
     for _, card in ipairs(cardBlock.sets) do
         local entry = {
             id = card.identifier,
             name = card.name or card.identifier,
-            type = cardType,
-            shape = shape,
-            scale = scale,
+            type = cardBlock.type or "CustomCard",
+            shape = tonumber(cardBlock.shape) or 0,
+            scale = card.scale or cardBlock.scale or {x=1, y=1, z=1},
             sideways = card.sideways or false,
             tags = card.tags or {},
             face = resolvePath(basePath, card.face),
             back = resolvePath(basePath, card.back),
-            script = scriptURL
+            script = registerScript(card.script or cardBlock.script),
+            container = card.container or nil
         }
 
         table.insert(cardList, entry)
-        print("Registered card: " .. entry.id)
+        print("Registered card: " .. entry.id .. "->" .. entry.container)
     end
 end
 
@@ -355,7 +504,6 @@ function buildCardJSON(entry, position)
 end
 
 
-
 function spawnCard(entry, position)
     local objData = buildCardJSON(entry, position)
     print("spawn card: " .. entry.id)
@@ -366,23 +514,28 @@ function spawnCard(entry, position)
         return
     end
 
-    if entry.script then
         loadScript(entry.script, function(scriptText)
         local guid = obj.getGUID()
 
-        Wait.condition(function()
-            local realObj = getObjectFromGUID(guid)
-            if realObj then
+    Wait.condition(function()
+        LOADER.spawning.progress = LOADER.spawning.progress + 1
+        checkSpawningReady()
+
+        local realObj = getObjectFromGUID(guid)
+
+        if realObj then
+            if entry.script then
                 print("assigning script to: " .. entry.id)
                 realObj.setLuaScript(scriptText)
-            else
-                print("object disappeared: " .. entry.id)
             end
-            end, function()
-                return getObjectFromGUID(guid) ~= nil
-            end)
+        else
+            print("object disappeared: " .. entry.id)
+        end
+
+        end, function()
+            return getObjectFromGUID(guid) ~= nil
         end)
-    end
+    end)
 
     return obj
 end
@@ -414,25 +567,15 @@ end
 
 
 function registerTileSet(basePath, tileBlock, tileList)
-    local scale = tileBlock.scale or {x=1, y=1, z=1}
-
-    local scriptURL = nil
-    if tileBlock.script then
-        scriptURL = resolvePath(basePath, tileBlock.script)
-        if scriptURL and not SCRIPT_CACHE[scriptURL] then
-            loadScript(scriptURL, function(_) end)
-        end
-    end
-
     for _, tile in ipairs(tileBlock.sets) do
         local entry = {
             id = tile.identifier,
             name = tile.name or tile.identifier,
-            scale = scale,
+            scale = tileBlock.scale or {x=1, y=1, z=1},
             tags = tile.tags or {},
             face = resolvePath(basePath, tile.face),
             back = resolvePath(basePath, tile.back),
-            script = scriptURL
+            script = registerScript(tile.script or tileBlock.script)
         }
 
         table.insert(tileList, entry)
@@ -492,7 +635,6 @@ function spawnTile(entry, position)
         return
     end
 
-    -- Capture GUID immediately
     local guid = obj.getGUID()
 
     if entry.script then
@@ -538,26 +680,21 @@ end
 -----------------------------------------
 
 function registerModelSet(basePath, modelBlock, modelList)
-    local scale = modelBlock.scale or {x=1, y=1, z=1}
-
-    local scriptURL = nil
-    if modelBlock.script then
-        scriptURL = resolvePath(basePath, modelBlock.script)
-        if scriptURL and not SCRIPT_CACHE[scriptURL] then
-            loadScript(scriptURL, function(_) end)
-        end
-    end
-
     for _, model in ipairs(modelBlock.sets) do
         entry = {
             id = model.identifier,
             name = model.name or model.identifier,
-            scale = scale,
+            scale = modelBlock.scale or {x=1, y=1, z=1},
             tags = model.tags or {},
+            colorDiffuse = model.ColorDiffuse or nil,
             mesh = resolvePath(basePath, model.mesh),
             texture = resolvePath(basePath, model.texture),
+            normal = model.normal and resolvePath(basePath, model.normal) or nil,
             collider = model.collider and resolvePath(basePath, model.collider) or nil,
-            script = scriptURL,
+            script = registerScript(model.script or modelBlock.script),
+            materialIndex = model.MaterialIndex or 0,
+            typeIndex = model.TypeIndex or 0,
+            bag = model.Bag or nil,
             container = model.container or nil
         }
 
@@ -588,35 +725,74 @@ function buildModelJSON(entry, position)
         GMNotes = "",
         Tags = entry.tags or {},
 
+        AltLookAngle = {
+            x = 0,
+            y = 0,
+            z = 0
+        },
+
+        ColorDiffuse = entry.colorDiffuse or {
+            r = 1,
+            g = 1,
+            b = 1,
+            a = 1
+        },
+
+        LayoutGroupSortIndex = 0,
+        Value = 0,
+        Locked = true,
+        Grid = true,
+        Snap = true,
+        IgnoreFoW = false,
+        MeasureMovement = false,
+        DragSelectable = true,
+        Autoraise = true,
+        Sticky = true,
+        Tooltip = true,
+        GridProjection = false,
+        HideWhenFaceDown = false,
+        Hands = false,
+        Number = 0,
+
         CustomMesh = {
             MeshURL = entry.mesh,
             DiffuseURL = entry.texture,
+            NormalURL = entry.normal or "",
             ColliderURL = entry.collider or "",
-            NormalURL = "",
-            TypeIndex = 0,
             Convex = false,
-            MaterialIndex = -1,
+            MaterialIndex = entry.materialIndex or 0,
+            TypeIndex = entry.typeIndex or 0,
+
+            CustomShader = {
+                SpecularColor = {
+                    r = 1,
+                    g = 1,
+                    b = 1
+                },
+                SpecularIntensity = 0,
+                SpecularSharpness = 2,
+                FresnelStrength = 0
+            },
+
             CastShadows = true
         },
 
         LuaScript = "",
-        LuaScriptState = ""
+        LuaScriptState = "",
+        XmlUI = ""
     }
 
-    -- ⭐ Make it a container if requested
-    if entry.container then
-        data.Container = {
-            Type = entry.container.type or 0,
-            Stackable = entry.container.stackable ~= false,
-            DragSelectable = true
-        }
+    if entry.Bag then
+        data.Name = "Custom_Model_Bag"
+        data.Bag = { Order = entry.bag or 0 }
+        BAG_QUEUE.registerBag(entry.bag, entry.id)
     end
 
     return data
 end
 
 
-function spawnModel(entry, position, container)
+function spawnModel(entry, position)
     print("spawn model: " .. entry.id)
 
     local objData = buildModelJSON(entry, position)
@@ -632,6 +808,9 @@ function spawnModel(entry, position, container)
 
     -- Wait for the object AND its custom data to be ready
     Wait.condition(function()
+        LOADER.spawning.progress = LOADER.spawning.progress + 1
+        checkSpawningReady()
+
         local realObj = getObjectFromGUID(guid)
         if not realObj then return end
 
@@ -641,7 +820,6 @@ function spawnModel(entry, position, container)
                 return realObj.getCustomObject()
             end)
 
-            -- Only refresh when custom data is actually populated
             if ok and custom and next(custom) ~= nil then
                 realObj.setCustomObject(custom)
             else
@@ -649,19 +827,10 @@ function spawnModel(entry, position, container)
             end
         end
 
-        -- Unlock BEFORE container insertion
         realObj.setLock(false)
-
-        if container then
-            container.putObject(realObj)
-        else
-            realObj.setPositionSmooth(position, false, false)
-        end
     end, function()
         local realObj = getObjectFromGUID(guid)
         if not realObj then return false end
-
-        -- Wait until custom object exists AND is populated
         if entry.type == "Custom_Model" or realObj.tag == "Custom_Model" then
             local ok, custom = pcall(function()
                 return realObj.getCustomObject()
@@ -669,11 +838,9 @@ function spawnModel(entry, position, container)
             return ok and custom and next(custom) ~= nil
         end
 
-        return true  -- non-custom objects don't need this
+        return true
     end)
 
-
-    -- Assign script (GUID-safe)
     if entry.script then
         loadScript(entry.script, function(scriptText)
             Wait.condition(function()
@@ -692,13 +859,27 @@ end
 
 
 
-function spawnComponentModels(componentName, position, container)
+function spawnComponentModels(componentName, position)
     local comp = COMPONENT_REGISTRY[componentName]
     if not comp or not comp.models then return end
 
     for _, entry in ipairs(comp.models) do
-        spawnModel(entry, position, container)
+        spawnModel(entry, position)
     end
+end
+
+
+function registerScript(script)
+    local scriptURL = nil
+
+    if script then
+        scriptURL = resolvePath(basePath, script)
+        if scriptURL and not SCRIPT_CACHE[scriptURL] then
+            loadScript(scriptURL, function(_) end)
+        end
+    end
+
+    return scriptURL
 end
 
 
@@ -715,23 +896,24 @@ function registerAssetBundleSet(basePath, bundleBlock, bundleList)
             name = bundle.name or bundle.identifier,
             scale = scale,
             tags = bundle.tags or {},
-            bundle = resolvePath(basePath, bundle.bundle),
-            bundle2 = bundle.bundle2 and resolvePath(basePath, bundle.bundle2) or nil,
-            script = bundle.script and resolvePath(basePath, bundle.script) or nil
+            colorDiffuse = bundle.ColorDiffuse or nil,
+            assetbundleURL = resolvePath(basePath, bundle.assetbundleURL),
+            assetbundleSecondaryURL = bundle.assetbundleSecondaryURL and resolvePath(basePath, bundle.assetbundleSecondaryURL) or nil,
+            script = registerScript(bundle.script or bundleBlock.script),
+            materialIndex = bundle.MaterialIndex or 0,
+            typeIndex = bundle.TypeIndex or 0,
+            bag = bundle.Bag or nil,
+            container = bundle.container or nil
         }
 
         table.insert(bundleList, entry)
         print("Registered assetbundle: " .. entry.id)
-
-        if entry.script and not SCRIPT_CACHE[entry.script] then
-            loadScript(entry.script, function(_) end)
-        end
     end
 end
 
 
 function buildAssetBundleJSON(entry, position)
-    return {
+    local data = {
         Name = "Custom_Assetbundle",
 
         Transform = {
@@ -751,25 +933,37 @@ function buildAssetBundleJSON(entry, position)
         GMNotes = "",
         Tags = entry.tags or {},
 
+        ColorDiffuse = entry.colorDiffuse or {
+            r = 1,
+            g = 1,
+            b = 1,
+            a = 1
+        },
+
         CustomAssetbundle = {
             AssetbundleURL = entry.bundle,
             AssetbundleSecondaryURL = entry.bundle2 or "",
-            MaterialIndex = 0,
-            TypeIndex = 0
+            MaterialIndex = entry.materialIndex or 0,
+            TypeIndex = entry.typeIndex or 0,
         },
 
         LuaScript = "",
         LuaScriptState = ""
     }
+
+    if entry.Bag then
+        data.Bag = { Order = entry.bag or 0 }
+        BAG_QUEUE.registerBag(entry.bag, entry.id)
+    end
+
+    return data
 end
 
 
-function spawnAssetBundle(entry, position, container)
+function spawnAssetBundle(entry, position)
     print("spawn assetbundle: " .. entry.id)
 
     local objData = buildAssetBundleJSON(entry, position)
-    objData.Locked = true   -- spawn with no physics
-
     local obj = spawnObjectData({ data = objData })
     if not obj then
         print("Failed to spawn assetbundle: " .. entry.id)
@@ -777,26 +971,6 @@ function spawnAssetBundle(entry, position, container)
     end
 
     local guid = obj.getGUID()
-
-    -- Wait for object to fully initialize
-    Wait.condition(function()
-        local realObj = getObjectFromGUID(guid)
-        if realObj then
-
-            -- Unlock BEFORE container insertion
-            realObj.setLock(false)
-
-            if container then
-                container.putObject(realObj)
-            else
-                realObj.setPositionSmooth(position, false, false)
-            end
-        end
-    end, function()
-        return getObjectFromGUID(guid) ~= nil
-    end)
-
-    -- Assign script (GUID-safe)
     if entry.script then
         loadScript(entry.script, function(scriptText)
             Wait.condition(function()
@@ -814,12 +988,12 @@ function spawnAssetBundle(entry, position, container)
 end
 
 
-function spawnComponentAssetBundles(componentName, position, container)
+function spawnComponentAssetBundles(componentName, position)
     local comp = COMPONENT_REGISTRY[componentName]
     if not comp or not comp.assetbundles then return end
 
     for _, entry in ipairs(comp.assetbundles) do
-        spawnAssetBundle(entry, position, container)
+        spawnAssetBundle(entry, position)
     end
 end
 
@@ -829,23 +1003,14 @@ end
 -----------------------------------------
 
 function registerBagSet(basePath, bagBlock, bagList)
-    local scale = bagBlock.scale or {x=1, y=1, z=1}
-
-    local scriptURL = nil
-    if bagBlock.script then
-        scriptURL = resolvePath(basePath, bagBlock.script)
-        if scriptURL and not SCRIPT_CACHE[scriptURL] then
-            loadScript(scriptURL, function(_) end)
-        end
-    end
-
     for _, bag in ipairs(bagBlock.sets) do
         local entry = {
             id = bag.identifier,
             name = bag.name or bag.identifier,
-            scale = scale,
-            color = bag.color or "Brown",
-            script = bag.script and resolvePath(basePath, bag.script) or scriptURL
+            scale = bagBlock.scale or {x=1, y=1, z=1},
+            colorDiffuse = bag.ColorDiffuse or nil,
+            script = registerScript(bag.script or bagBlock.script),
+            container = bag.container or nil
         }
 
         table.insert(bagList, entry)
@@ -854,16 +1019,35 @@ function registerBagSet(basePath, bagBlock, bagList)
 end
 
 
-function spawnBag(entry, position, container)
-    print("spawn bag: " .. entry.id)
+function buildBagJSON(entry, position)
 
-    -- Spawn the built-in bag
-    local obj = spawnObject({
-        type = "Bag",
+    local data = {
+        type = entry.type,
         position = position,
         rotation = {0, 180, 0},
-        scale = entry.scale
-    })
+        scale = entry.scale,
+        ColorDiffuse = entry.colorDiffuse or {
+            r = 1,
+            g = 1,
+            b = 1,
+            a = 1
+        },
+    }
+
+    if entry.Bag then
+        data.Bag = { Order = entry.bag or 0 }
+        BAG_QUEUE.registerBag(entry.bag, entry.id)
+    end
+
+    return data
+end
+
+
+function spawnBag(entry, position)
+    print("spawn bag: " .. entry.id)
+
+    local objData = buildBagJSON(entry, position)
+    local obj = spawnObjectData({ data = objData })
 
     if not obj then
         print("Failed to spawn bag: " .. entry.id)
@@ -871,29 +1055,8 @@ function spawnBag(entry, position, container)
     end
 
     local guid = obj.getGUID()
+    obj.setColorTint(entry.colorDiffuse)
 
-    -- Lock immediately to prevent physics explosion
-    obj.setLock(true)
-    obj.setColorTint(entry.color)
-
-    -- Wait for the object to fully initialize
-    Wait.condition(function()
-        local realObj = getObjectFromGUID(guid)
-        if realObj then
-            -- Unlock BEFORE putting into container
-            realObj.setLock(false)
-
-            if container then
-                container.putObject(realObj)
-            else
-                realObj.setPositionSmooth(position, false, false)
-            end
-        end
-    end, function()
-        return getObjectFromGUID(guid) ~= nil
-    end)
-
-    -- Assign script (GUID-safe)
     if entry.script then
         loadScript(entry.script, function(scriptText)
             Wait.condition(function()
@@ -915,15 +1078,14 @@ function spawnComponentBag(componentName, position)
     local comp = COMPONENT_REGISTRY[componentName]
     if not comp or not comp.bag then return nil end
 
-    local bagId = comp.bag.identifier
+    local bagId = comp.identifier
     local bagEntry = findEntryInRegistry("bags", bagId)
     if not bagEntry then
         print("Bag not found: " .. bagId)
         return nil
     end
 
-    -- Spawn the bag (built-in or custom)
-    local bagObj = spawnBag(bagEntry, position, nil)
+    local bagObj = spawnBag(bagEntry, position)
     return bagObj
 end
 
@@ -931,7 +1093,6 @@ end
 function spawnComponentBagContents(componentName, bagObj)
     local comp = COMPONENT_REGISTRY[componentName]
     if not comp or not comp.bag or not comp.bag.contents then return end
-
     local bagGUID = bagObj.getGUID()
 
     for _, item in ipairs(comp.bag.contents) do
@@ -948,10 +1109,8 @@ end
 function spawnAndInsertIntoBag(entry, typeName, bagGUID)
     local bagObj = getObjectFromGUID(bagGUID)
     if not bagObj then return end
-
     local position = bagObj.getPosition()
 
-    -- Spawn using the correct spawner
     local spawner = SPAWNERS[typeName]
     if not spawner then
         print("No spawner for type: " .. typeName)
@@ -960,10 +1119,8 @@ function spawnAndInsertIntoBag(entry, typeName, bagGUID)
 
     local obj = spawner(entry, position, nil)
     if not obj then return end
-
     local guid = obj.getGUID()
 
-    -- Wait for object to exist, then insert
     Wait.condition(function()
         local realObj = getObjectFromGUID(guid)
         if realObj then
@@ -981,26 +1138,21 @@ end
 -----------------------------------------
 
 function registerTokenSet(basePath, tokenBlock, tokenList)
-    local scale = tokenBlock.scale or {x=1, y=1, z=1}
-
-    local scriptURL = nil
-    if tokenBlock.script then
-        scriptURL = resolvePath(basePath, tokenBlock.script)
-        if scriptURL and not SCRIPT_CACHE[scriptURL] then
-            loadScript(scriptURL, function(_) end)
-        end
-    end
-
     for _, token in ipairs(tokenBlock.sets) do
         local entry = {
             id = token.identifier,
             name = token.name or token.identifier,
-            scale = scale,
+            scale = tokenBlock.scale or {x=1, y=1, z=1},
             tags = token.tags or {},
+            colorDiffuse = token.ColorDiffuse or nil,
             face = resolvePath(basePath, token.face),
             back = resolvePath(basePath, token.back),
             shape = token.shape or 0,
-            script = token.script and resolvePath(basePath, token.script) or scriptURL
+            script = registerScript(token.script or tokenBlock.script),
+            materialIndex = token.MaterialIndex or 0,
+            typeIndex = token.TypeIndex or 0,
+            bag = token.Bag or nil,
+            container = token.container or nil
         }
 
         table.insert(tokenList, entry)
@@ -1030,11 +1182,20 @@ function buildTokenJSON(entry, position)
         GMNotes = "",
         Tags = entry.tags or {},
 
+        ColorDiffuse = entry.colorDiffuse or {
+            r = 1,
+            g = 1,
+            b = 1,
+            a = 1
+        },
+
         CustomImage = {
             ImageURL = entry.face,
             ImageSecondaryURL = entry.back,
             ImageScalar = 1,
             WidthScale = 1,
+            MaterialIndex = entry.materialIndex or 0,
+            TypeIndex = entry.typeIndex or 0,
             CustomToken = {
                 Thickness = 0.2,
                 MergeDistance = 15,
@@ -1049,25 +1210,14 @@ function buildTokenJSON(entry, position)
 end
 
 
-function spawnToken(entry, position, container)
+function spawnToken(entry, position)
     print("spawn token: " .. entry.id)
-
+-- todo
     local objData = buildTokenJSON(entry, position)
-    objData.Locked = true
-
     local obj = spawnObjectData({data = objData})
     if not obj then return end
 
     local guid = obj.getGUID()
-
-    Wait.condition(function()
-        local realObj = getObjectFromGUID(guid)
-        if realObj then
-            realObj.setLock(false)
-            if container then container.putObject(realObj)
-            else realObj.setPositionSmooth(position, false, false) end
-        end
-    end, function() return getObjectFromGUID(guid) ~= nil end)
 
     if entry.script then
         loadScript(entry.script, function(scriptText)
@@ -1080,12 +1230,12 @@ function spawnToken(entry, position, container)
 end
 
 
-function spawnComponentTokens(componentName, position, container)
+function spawnComponentTokens(componentName, position)
     local comp = COMPONENT_REGISTRY[componentName]
     if not comp or not comp.tokens then return end
 
     for _, entry in ipairs(comp.tokens) do
-        spawnToken(entry, position, container)
+        spawnToken(entry, position)
     end
 end
 
@@ -1095,15 +1245,18 @@ end
 -----------------------------------------
 
 function registerFigurineSet(basePath, figBlock, figList)
-    local scale = figBlock.scale or {x=1, y=1, z=1}
-
     for _, fig in ipairs(figBlock.sets) do
         local entry = {
             id = fig.identifier,
             name = fig.name or fig.identifier,
-            scale = scale,
+            scale = figBlock.scale or {x=1, y=1, z=1},
             color = fig.color or "White",
-            script = fig.script and resolvePath(basePath, fig.script) or nil
+            colorDiffuse = fig.ColorDiffuse or nil,
+            script = registerScript(fig.script or figBlock.script),
+            materialIndex = fig.MaterialIndex or 0,
+            typeIndex = fig.TypeIndex or 0,
+            bag = fig.Bag or nil,
+            container = fig.container or nil
         }
 
         table.insert(figList, entry)
@@ -1112,29 +1265,28 @@ function registerFigurineSet(basePath, figBlock, figList)
 end
 
 
-function spawnFigurine(entry, position, container)
-    print("spawn figurine: " .. entry.id)
-
-    local obj = spawnObject({
+function buildFiguringJSON(entry, position)
+-- todo 
+    local data = {
         type = "Figurine",
         position = position,
-        rotation = {0,180,0},
+        rotation = {0, 180, 0},
         scale = entry.scale
-    })
+    }
 
+    return data
+end
+
+
+function spawnFigurine(entry, position)
+    print("spawn figurine: " .. entry.id)
+
+    local objData = buildFiguringJSON(entry, position)
+    local obj = spawnObjectData({ data = objData })
     if not obj then return end
 
     local guid = obj.getGUID()
     obj.setColorTint(entry.color)
-    obj.setLock(true)
-
-    Wait.frames(function()
-        local realObj = getObjectFromGUID(guid)
-        if realObj then
-            realObj.setLock(false)
-            if container then container.putObject(realObj) end
-        end
-    end, 10)
 
     if entry.script then
         loadScript(entry.script, function(scriptText)
@@ -1162,17 +1314,19 @@ end
 -----------------------------------------
 
 function registerDiceSet(basePath, diceBlock, diceList)
-    local scale = diceBlock.scale or {x=1, y=1, z=1}
-
     for _, die in ipairs(diceBlock.sets) do
         local entry = {
             id = die.identifier,
             name = die.name or die.identifier,
-            scale = scale,
+            scale = diceBlock.scale or {x=1, y=1, z=1},
             type = die.type,
             faces = die.faces,
             color = die.color,
-            script = die.script and resolvePath(basePath, die.script) or nil
+            script = registerScript(die.script or diceBlock.script),
+            materialIndex = die.MaterialIndex or 0,
+            typeIndex = die.TypeIndex or 0,
+            bag = die.Bag or nil,
+            container = die.container or nil
         }
 
         table.insert(diceList, entry)
@@ -1182,7 +1336,7 @@ end
 
 
 function buildDiceJSON(entry, position)
-    return {
+    local data = {
         Name = "Custom_Dice",
 
         Transform = {
@@ -1198,6 +1352,17 @@ function buildDiceJSON(entry, position)
         },
 
         Nickname = entry.name,
+        Description = "",
+        GMNotes = "",
+        Tags = entry.tags or {},
+
+        ColorDiffuse = entry.colorDiffuse or {
+            r = 1,
+            g = 1,
+            b = 1,
+            a = 1
+        },
+
         CustomDice = {
             Type = 0,
             Faces = entry.faces
@@ -1206,16 +1371,17 @@ function buildDiceJSON(entry, position)
         LuaScript = "",
         LuaScriptState = ""
     }
+
+    return data
 end
 
 
-function spawnDice(entry, position, container)
+function spawnDice(entry, position)
     print("spawn die: " .. entry.id)
 
     local obj
     if entry.faces then
         local objData = buildDiceJSON(entry, position)
-        objData.Locked = true
         obj = spawnObjectData({data = objData})
     else
         obj = spawnObject({
@@ -1227,17 +1393,7 @@ function spawnDice(entry, position, container)
     end
 
     if not obj then return end
-
     local guid = obj.getGUID()
-
-    Wait.condition(function()
-        local realObj = getObjectFromGUID(guid)
-        if realObj then
-            realObj.setLock(false)
-            if entry.color then realObj.setColorTint(entry.color) end
-            if container then container.putObject(realObj) end
-        end
-    end, function() return getObjectFromGUID(guid) ~= nil end)
 
     if entry.script then
         loadScript(entry.script, function(scriptText)
@@ -1250,12 +1406,12 @@ function spawnDice(entry, position, container)
 end
 
 
-function spawnComponentDice(componentName, position, container)
+function spawnComponentDice(componentName, position)
     local comp = COMPONENT_REGISTRY[componentName]
     if not comp or not comp.dice then return end
 
     for _, entry in ipairs(comp.dice) do
-        spawnDice(entry, position, container)
+        spawnDice(entry, position)
     end
 end
 
@@ -1265,19 +1421,21 @@ end
 -----------------------------------------
 
 function registerDeckSet(basePath, deckBlock, deckList)
-    local scale = deckBlock.scale or {x=1, y=1, z=1}
-
     for _, deck in ipairs(deckBlock.sets) do
         local entry = {
             id = deck.identifier,
             name = deck.name or deck.identifier,
-            scale = scale,
+            scale = deckBlock.scale or {x=1, y=1, z=1},
             cardsheet = resolvePath(basePath, deck.cardsheet),
             back = resolvePath(basePath, deck.back),
             width = deck.width,
             height = deck.height,
             numCards = deck.numCards,
-            script = deck.script and resolvePath(basePath, deck.script) or nil
+            script = registerScript(deck.script or deckBlock.script),
+            materialIndex = deck.MaterialIndex or 0,
+            typeIndex = deck.TypeIndex or 0,
+            bag = deck.Bag or nil,
+            container = deck.container or nil
         }
 
         table.insert(deckList, entry)
@@ -1287,7 +1445,7 @@ end
 
 
 function buildDeckJSON(entry, position)
-    return {
+    local data = {
         Name = "DeckCustom",
 
         Transform = {
@@ -1303,6 +1461,16 @@ function buildDeckJSON(entry, position)
         },
 
         Nickname = entry.name,
+        Description = "",
+        GMNotes = "",
+        Tags = entry.tags or {},
+
+        ColorDiffuse = entry.colorDiffuse or {
+            r = 1,
+            g = 1,
+            b = 1,
+            a = 1
+        },
 
         CustomDeck = {
             FaceURL = entry.cardsheet,
@@ -1321,28 +1489,18 @@ function buildDeckJSON(entry, position)
         LuaScript = "",
         LuaScriptState = ""
     }
+
+    return data
 end
 
 
-function spawnDeck(entry, position, container)
+function spawnDeck(entry, position)
     print("spawn deck: " .. entry.id)
 
     local objData = buildDeckJSON(entry, position)
-    objData.Locked = true
-
     local obj = spawnObjectData({data = objData})
     if not obj then return end
-
     local guid = obj.getGUID()
-
-    Wait.condition(function()
-        local realObj = getObjectFromGUID(guid)
-        if realObj then
-            realObj.setLock(false)
-            if container then container.putObject(realObj)
-            else realObj.setPositionSmooth(position, false, false) end
-        end
-    end, function() return getObjectFromGUID(guid) ~= nil end)
 
     if entry.script then
         loadScript(entry.script, function(scriptText)
@@ -1355,12 +1513,12 @@ function spawnDeck(entry, position, container)
 end
 
 
-function spawnComponentDecks(componentName, position, container)
+function spawnComponentDecks(componentName, position)
     local comp = COMPONENT_REGISTRY[componentName]
     if not comp or not comp.decks then return end
 
     for _, entry in ipairs(comp.decks) do
-        spawnDeck(entry, position, container)
+        spawnDeck(entry, position)
     end
 end
 
@@ -1370,27 +1528,19 @@ end
 -----------------------------------------
 
 function registerBlockSet(basePath, blockBlock, blockList)
-    local scale = blockBlock.scale or {x=1, y=1, z=1}
-
-    local defaultType = blockBlock.type or "BlockSquare"
-
-    local scriptURL = nil
-    if blockBlock.script then
-        scriptURL = resolvePath(basePath, blockBlock.script)
-        if scriptURL and not SCRIPT_CACHE[scriptURL] then
-            loadScript(scriptURL, function(_) end)
-        end
-    end
-
     for _, block in ipairs(blockBlock.sets) do
         local entry = {
             id = block.identifier,
             name = block.name or block.identifier,
-            scale = scale,
-            type = block.type or defaultType,
+            scale = blockBlock.scale or {x=1, y=1, z=1},
+            type = block.type or blockBlock.type or "BlockSquare",
             color = block.color or "White",
             tags = block.tags or {},
-            script = block.script and resolvePath(basePath, block.script) or scriptURL
+            script = registerScript(block.script or blockBlock.script),
+            materialIndex = block.MaterialIndex or 0,
+            typeIndex = block.TypeIndex or 0,
+            bag = block.Bag or nil,
+            container = block.container or nil
         }
 
         table.insert(blockList, entry)
@@ -1399,7 +1549,7 @@ function registerBlockSet(basePath, blockBlock, blockList)
 end
 
 
-function spawnBlock(entry, position, container)
+function spawnBlock(entry, position)
     print("spawn block: " .. entry.id)
 
     local obj = spawnObject({
@@ -1415,28 +1565,8 @@ function spawnBlock(entry, position, container)
     end
 
     local guid = obj.getGUID()
-
-    -- Lock immediately to prevent physics issues
-    obj.setLock(true)
     obj.setColorTint(entry.color)
 
-    -- Wait for object to fully initialize
-    Wait.condition(function()
-        local realObj = getObjectFromGUID(guid)
-        if realObj then
-            realObj.setLock(false)
-
-            if container then
-                container.putObject(realObj)
-            else
-                realObj.setPositionSmooth(position, false, false)
-            end
-        end
-    end, function()
-        return getObjectFromGUID(guid) ~= nil
-    end)
-
-    -- Script assignment
     if entry.script then
         loadScript(entry.script, function(scriptText)
             Wait.condition(function()
@@ -1454,12 +1584,12 @@ function spawnBlock(entry, position, container)
 end
 
 
-function spawnComponentBlocks(componentName, position, container)
+function spawnComponentBlocks(componentName, position)
     local comp = COMPONENT_REGISTRY[componentName]
     if not comp or not comp.blocks then return end
 
     for _, entry in ipairs(comp.blocks) do
-        spawnBlock(entry, position, container)
+        spawnBlock(entry, position)
     end
 end
 
@@ -1517,25 +1647,13 @@ function buildBoardJSON(entry, position)
 end
 
 
-function spawnBoard(entry, position, container)
+function spawnBoard(entry, position)
     print("spawn board: " .. entry.id)
 
     local objData = buildBoardJSON(entry, position)
-    objData.Locked = true
-
     local obj = spawnObjectData({data = objData})
     if not obj then return end
-
     local guid = obj.getGUID()
-
-    Wait.condition(function()
-        local realObj = getObjectFromGUID(guid)
-        if realObj then
-            realObj.setLock(false)
-            if container then container.putObject(realObj)
-            else realObj.setPositionSmooth(position, false, false) end
-        end
-    end, function() return getObjectFromGUID(guid) ~= nil end)
 
     if entry.script then
         loadScript(entry.script, function(scriptText)
