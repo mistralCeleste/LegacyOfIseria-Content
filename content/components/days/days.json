@@ -11,14 +11,18 @@
           "name": "Day Box",
           "mesh": "../boxes/models/CardBox-container.obj",
           "texture": "../boxes/images/Box_Days.jpg",
-          "container": { "type": 0, "stackable": false }
+          "MaterialIndex": 3,
+          "TypeIndex": 6,
+          "Bag": 0
         },
         {
           "identifier": "DaysInactiveBox",
           "name": "Day Inactive Box",
           "mesh": "../boxes/models/CardBox-container.obj",
           "texture": "../boxes/images/Box_Days-inactive.jpg",
-          "container": { "type": 0, "stackable": false }
+          "MaterialIndex": 3,
+          "TypeIndex": 6,
+          "Bag": 0
         }
       ]
     },
@@ -36,7 +40,7 @@
                 , "back": "images/DAY_back.jpg"
                 , "sideways": false
                 , "tags": ["day", "mood"]
-                , "bag": "DaysBox"
+                , "container": "DaysBox"
             }
             ,
             {
@@ -46,7 +50,7 @@
                 , "back": "images/DAY_back.jpg"
                 , "sideways": false
                 , "tags": ["day", "weather", "time"]
-                , "bag": "DaysBox"
+                , "container": "DaysBox"
             }
             ,
             {
@@ -56,7 +60,7 @@
                 , "back": "images/DAY_back.jpg"
                 , "sideways": false
                 , "tags": ["day", "weather", "time"]
-                , "bag": "DaysBox"
+                , "container": "DaysBox"
             },
             {
                 "identifier": "DAY-004A"
@@ -65,7 +69,7 @@
                 , "back": "images/DAY_back.jpg"
                 , "sideways": false
                 , "tags": ["day", "weather", "time"]
-                , "bag": "DaysBox"
+                , "container": "DaysBox"
             },
             {
                 "identifier": "DAY-005A"
@@ -74,7 +78,7 @@
                 , "back": "images/DAY_back.jpg"
                 , "sideways": false
                 , "tags": ["day", "weather", "time"]
-                , "bag": "DaysBox"
+                , "container": "DaysBox"
             },
             {
                 "identifier": "DAY-006A"
@@ -83,7 +87,7 @@
                 , "back": "images/DAY_back.jpg"
                 , "sideways": false
                 , "tags": ["day", "mood"]
-                , "bag": "DaysBox"
+                , "container": "DaysBox"
             },
             {
                 "identifier": "DAY-007A"
@@ -92,7 +96,7 @@
                 , "back": "images/DAY_back.jpg"
                 , "sideways": false
                 , "tags": ["day", "mood"]
-                , "bag": "DaysBox"
+                , "container": "DaysBox"
             },
             {
                 "identifier": "DAY-008A"
@@ -101,7 +105,7 @@
                 , "back": "images/DAY_back.jpg"
                 , "sideways": false
                 , "tags": ["day", "celestial", "time"]
-                , "bag": "DaysInactiveBox"
+                , "container": "DaysInactiveBox"
             },
             {
                 "identifier": "DAY-009A"
@@ -110,7 +114,7 @@
                 , "back": "images/DAY_back.jpg"
                 , "sideways": false
                 , "tags": ["day", "combat", "world"]
-                , "bag": "DaysInactiveBox"
+                , "container": "DaysInactiveBox"
             },
             {
                 "identifier": "DAY-010A"
@@ -119,7 +123,7 @@
                 , "back": "images/DAY_back.jpg"
                 , "sideways": false
                 , "tags": ["day", "mood"]
-                , "bag": "DaysInactiveBox"
+                , "container": "DaysInactiveBox"
             },
             {
                 "identifier": "DAY-011A"
@@ -128,7 +132,7 @@
                 , "back": "images/DAY_back.jpg"
                 , "sideways": false
                 , "tags": ["day", "mood"]
-                , "bag": "DaysInactiveBox"
+                , "container": "DaysInactiveBox"
             }
         ]
     }
