@@ -1,140 +1,112 @@
 {
-    "name": "Days"
-    , "description": "Cards representing the days of the week, with various weather conditions."  
-    , "components": [
+  "components": [
+    {
+      "set": {
+        "Name": "CardCustom",
+        "back": "images/DAY-back.jpg",
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "items": [
         {
-      "type": "Custom_Model",
-      "scale": { "x": 0.4, "y": 0.4, "z": 0.4 },
-      "sets": [
-        {
-          "identifier": "DaysBox",
-          "name": "Day Box",
-          "mesh": "../boxes/models/CardBox-container.obj",
-          "texture": "../boxes/images/Box_Days.jpg",
-          "MaterialIndex": 3,
-          "TypeIndex": 6,
-          "Bag": 0
+          "identifier": "DAY-001A",
+          "Description": "Melancholy",
+          "face": "images/DAY-001A_face.jpg",
+          "Tags": [
+            "Mood"
+          ]
         },
         {
-          "identifier": "DaysInactiveBox",
-          "name": "Day Inactive Box",
-          "mesh": "../boxes/models/CardBox-container.obj",
-          "texture": "../boxes/images/Box_Days-inactive.jpg",
-          "MaterialIndex": 3,
-          "TypeIndex": 6,
-          "Bag": 0
+          "identifier": "DAY-002A",
+          "Description": "A Wonderful Day",
+          "face": "images/DAY-002A_face.jpg",
+          "Tags": [
+            "Weather",
+            "Time"
+          ]
+        },
+        {
+          "identifier": "DAY-003A",
+          "Description": "A Rainy Day",
+          "face": "images/DAY-003A_face.jpg",
+          "Tags": [
+            "Weather",
+            "Time"
+          ]
+        },
+        {
+          "identifier": "DAY-004A",
+          "Description": "A Blustery Day",
+          "face": "images/DAY-004A_face.jpg",
+          "Tags": [
+            "Weather",
+            "Time"
+          ]
+        },
+        {
+          "identifier": "DAY-005A",
+          "Description": "A Fair Day",
+          "face": "images/DAY-005A_face.jpg",
+          "Tags": [
+            "Weather",
+            "Time"
+          ]
+        },
+        {
+          "identifier": "DAY-006A",
+          "Description": "Exhilaration",
+          "face": "images/DAY-006A_face.jpg",
+          "Tags": [
+            "Mood"
+          ]
+        },
+        {
+          "identifier": "DAY-007A",
+          "Description": "Serenity",
+          "face": "images/DAY-007A_face.jpg",
+          "Tags": [
+            "Mood"
+          ]
+        },
+        {
+          "identifier": "DAY-008A",
+          "Description": "Waxing Crescent Moon",
+          "face": "images/DAY-008A_face.jpg",
+          "Tags": [
+            "Celestial",
+            "Moon",
+            "Time"
+          ]
+        },
+        {
+          "identifier": "DAY-009A",
+          "Description": "Smoke on the Horizon",
+          "face": "images/DAY-009A_face.jpg",
+          "Tags": [
+            "Combat",
+            "World"
+          ]
+        },
+        {
+          "identifier": "DAY-010A",
+          "Description": "Determination",
+          "face": "images/DAY-010A_face.jpg",
+          "Tags": [
+            "Mood"
+          ]
+        },
+        {
+          "identifier": "DAY-011A",
+          "Description": "Ready for adventure",
+          "face": "images/DAY-011A_face.jpg",
+          "Tags": [
+            "Mood"
+          ]
         }
       ]
-    },
-    {
-        "type": "CustomCard"
-        , "shape": 0
-        , "scale": { "x": "1", "y": "1", "z":"1" }
-        ,  "script": "../../scripts/defaultCardBehavior.lua"
-        , "sets":
-        [
-            {
-                "identifier": "DAY-001A"
-                , "name": "Meloncholy Day"
-                , "face": "images/DAY-001A_face.jpg"
-                , "back": "images/DAY_back.jpg"
-                , "sideways": false
-                , "tags": ["day", "mood"]
-                , "container": "DaysBox"
-            }
-            ,
-            {
-                "identifier": "DAY-002A"
-                , "name": "Wonderful Day"
-                , "face": "images/DAY-002A_face.jpg"
-                , "back": "images/DAY_back.jpg"
-                , "sideways": false
-                , "tags": ["day", "weather", "time"]
-                , "container": "DaysBox"
-            }
-            ,
-            {
-                "identifier": "DAY-003A"
-                , "name": "Rainy Day"
-                , "face": "images/DAY-003A_face.jpg"
-                , "back": "images/DAY_back.jpg"
-                , "sideways": false
-                , "tags": ["day", "weather", "time"]
-                , "container": "DaysBox"
-            },
-            {
-                "identifier": "DAY-004A"
-                , "name": "A Blustery Day"
-                , "face": "images/DAY-004A_face.jpg"
-                , "back": "images/DAY_back.jpg"
-                , "sideways": false
-                , "tags": ["day", "weather", "time"]
-                , "container": "DaysBox"
-            },
-            {
-                "identifier": "DAY-005A"
-                , "name": "A Fair Day"
-                , "face": "images/DAY-005A_face.jpg"
-                , "back": "images/DAY_back.jpg"
-                , "sideways": false
-                , "tags": ["day", "weather", "time"]
-                , "container": "DaysBox"
-            },
-            {
-                "identifier": "DAY-006A"
-                , "name": "Exhilaration"
-                , "face": "images/DAY-006A_face.jpg"
-                , "back": "images/DAY_back.jpg"
-                , "sideways": false
-                , "tags": ["day", "mood"]
-                , "container": "DaysBox"
-            },
-            {
-                "identifier": "DAY-007A"
-                , "name": "Serenity"
-                , "face": "images/DAY-007A_face.jpg"
-                , "back": "images/DAY_back.jpg"
-                , "sideways": false
-                , "tags": ["day", "mood"]
-                , "container": "DaysBox"
-            },
-            {
-                "identifier": "DAY-008A"
-                , "name": "Waxing Crescent Moon"
-                , "face": "images/DAY-008A_face.jpg"
-                , "back": "images/DAY_back.jpg"
-                , "sideways": false
-                , "tags": ["day", "celestial", "time"]
-                , "container": "DaysInactiveBox"
-            },
-            {
-                "identifier": "DAY-009A"
-                , "name": "Smoke on the Horizon"
-                , "face": "images/DAY-009A_face.jpg"
-                , "back": "images/DAY_back.jpg"
-                , "sideways": false
-                , "tags": ["day", "combat", "world"]
-                , "container": "DaysInactiveBox"
-            },
-            {
-                "identifier": "DAY-010A"
-                , "name": "Determination"
-                , "face": "images/DAY-010A_face.jpg"
-                , "back": "images/DAY_back.jpg"
-                , "sideways": false
-                , "tags": ["day", "mood"]
-                , "container": "DaysInactiveBox"
-            },
-            {
-                "identifier": "DAY-011A"
-                , "name": "Ready for Adventure"
-                , "face": "images/DAY-011A_face.jpg"
-                , "back": "images/DAY_back.jpg"
-                , "sideways": false
-                , "tags": ["day", "mood"]
-                , "container": "DaysInactiveBox"
-            }
-        ]
     }
   ]
 }

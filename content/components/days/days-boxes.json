@@ -1,0 +1,44 @@
+{
+    "name": "Days"
+    , "description": "Cards representing the days of the week, with various weather conditions."  
+    , "components": [
+        {
+            "Name": "Custom_Model_Bag",
+            "Transform": {
+                "scaleX": 0.4,
+                "scaleY": 0.4,
+                "scaleZ": 0.4
+            },
+            "CustomMesh": {
+                "MeshURL": "../boxes/models/CardBox-container.obj",
+                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/11828394498147544820/D2410C55320F739706AB291C7DED2EBE789FF79A/",
+                "NormalURL": "",
+                "MaterialIndex": 3,
+                "TypeIndex": 6,
+                "SpecularIntensity": 0.2,
+                "SpecularSharpness": 2,
+                "FresnelStrength": 0.4
+            },
+            "Bag":
+            {
+                "Order": 0
+            },
+            "sets": [
+                {
+                    "identifier": "DaysBox",
+                    "name": "Day Box",
+                    "CustomMesh": {
+                        "DiffuseURL": "../boxes/images/Box_Days.jpg"
+                    }
+                },
+                {
+                    "identifier": "DaysInactiveBox",
+                    "name": "Day Inactive Box",
+                    "CustomMesh": {
+                        "DiffuseURL": "../boxes/images/Box_Days-Inactive.jpg"
+                    }
+                }
+            ]
+        }
+    ]
+}
