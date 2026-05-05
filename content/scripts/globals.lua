@@ -4,33 +4,974 @@
 -- Configuration
 -----------------------------------------
 
-BASE_URL = "http://127.0.0.1:5500/content"
+BASE_URL = "http://127.0.0.1:5500/"
+--BASE_URL = "https://mistralCeleste.github.io/LegacyOfIseria-Content/"
+
+local SPAWN_JITTER = 0.5
 
 -----------------------------------------
 -- Event Handlers
 -----------------------------------------
-
 function onLoad()
-    local loader = include(BASE_URL .. "index.json")
-    loader.loadAll()
-
-    self.createButton({
-        label="Spawn Test Grid",
-        click_function="spawnTestGrid",
-        function_owner=self,
-        position={0,1,0},
-        width=2000,
-        height=500,
-        font_size=300
-    })
+    Log.info("############### Loading content index ###############\n")
+    local indexUrl = BASE_URL .. "content/index.json"
+    JSONLoader.read(indexUrl)
 end
 
+
+function fetchAndPrint(url)
+    WebRequest.get(url, function(request)
+        if request.is_error then
+            print("WebRequest error: " .. request.error)
+            return
+        end
+
+        print("Response from " .. url .. ":")
+        print(request.text)
+    end)
+end
+
+
 -----------------------------------------
--- Loader
+-- Book Tracking
 -----------------------------------------
 
-INCLUDE = {}
-REGISTRY = {}
-BUILDER = {}
-SPAWNER = {}
+BOOKS = {}
 
+function registerBook(params)
+    BOOKS[params.name] = params.guid
+    print("Registering book " .. params.name .. " with GUID" .. params.guid)
+end
+
+
+function getBook(params)
+    return getObjectFromGUID(BOOKS[params.name])
+end
+
+
+function printBooks()
+        for name, guid in pairs(BOOKS) do
+        print(name, guid, params.name)
+    end
+end
+
+
+-----------------------------------------
+-- Dungeon Tracking
+-----------------------------------------
+
+DUNGEON_BAG_NAME = "dungeon bag"
+
+
+function registerDungeonObject(params)
+    local object = params.object
+    local origin = params.origin or nil
+    local guid = object.getGUID()
+    object.setVar(DUNGEON_BAG_NAME,  origin)
+    print("register dungeon object: " .. guid .. " from " .. origin .. " to bag " .. DUNGEON_BAG_NAME)
+end
+
+
+function unregisterDungeonObject(object)
+    if object.getVar(DUNGEON_BAG_NAME) then
+        object.setVar(DUNGEON_BAG_NAME, nil)
+        print("unregister dungeon object: " .. object.getGUID())
+    end
+end
+
+
+function cleanupDungeon()
+    print("cleanup dungeon")
+
+    for _, object in ipairs(getAllObjects()) do
+        removeDungeonObject(object)
+    end
+end
+
+
+function removeDungeonObject(object)
+    print("remove object: " .. object.getGUID())
+    local origin = object.getVar(DUNGEON_BAG_NAME)
+
+    if origin then
+        -- Real dungeon item → return to bag
+        local bag = getObjectFromGUID(origin)
+        if bag then
+            bag.putObject(object)
+            print("put in bag: ", object.getGUID(), origin)
+        end
+    else
+        -- Clone or manually spawned → delete
+        --destroyObject(object)
+        print("delete", object.getGUID())
+    end
+end
+
+
+--- ##############################################################################
+--- Content Loader
+--- ##############################################################################
+
+
+local function isRelativePath(path)
+    return type(path) == "string"
+       and not path:match("^https?://")
+       and (path:match("%.png$") or path:match("%.jpg$") or path:match("%.jpeg$")
+         or path:match("%.obj$") or path:match("%.mtl$"))
+end
+
+
+local function getParentFolder(path)
+    return path:match("(.+)/[^/]+$") .. "/"
+end
+
+
+local function resolvePath(basePath, relative)
+    relative = relative:gsub("\\", "/")
+    basePath = basePath:gsub("\\", "/")
+    local full = basePath .. relative
+
+    local parts = {}
+    for part in string.gmatch(full, "[^/]+") do
+        if part == ".." then
+            if #parts > 0 then
+                table.remove(parts)
+            end
+        elseif part ~= "." and part ~= "" then
+            table.insert(parts, part)
+        end
+    end
+
+    local normalized = table.concat(parts, "/")
+    return BASE_URL .. "content/" .. normalized
+end
+
+
+local function resolveAllPaths(basePath, entry)
+    for key, value in pairs(entry) do
+        if type(value) == "table" then
+            resolveAllPaths(basePath, value)
+        elseif isRelativePath(value) then
+            entry[key] = resolvePath(basePath, value)
+        end
+    end
+end
+
+
+local function hasScript(path)
+    return type(path) == "string" and path:match("%S") ~= nil
+end
+
+
+LOADER =
+{
+    state = "Registering", -- Registering, Spawning, Bagging, Ready
+    registering = { progress = 0, total = 0 },
+    spawning = { progress = 0, total = 0 },
+    bagging = { progress = 0, total = 0 },
+    ready = false
+}
+
+
+JSONLoader = {}
+
+
+local function loadComponent(path)
+    local url = BASE_URL .. "content/" .. path
+
+    WebRequest.get(url, function(request)
+        if request.is_error then
+            print("Error loading component: " .. path .. " | " .. request.error)
+        else
+            local root = JSON.decode(request.text)
+            JsonAdapter.registerComponent(path, root)
+        end
+    end)
+end
+
+
+local function loadComponentJson(request)
+    if request.is_error then
+        print("Error: " .. request.error)
+        return
+    end
+
+    local json = JSON.decode(request.text)
+    LOADER.registering.progress = 0
+    LOADER.registering.total = #json.components
+    LOADER.state = "Registering"
+    LOADER.ready = false
+
+    for _, componentPath in ipairs(json.components) do
+        loadComponent(componentPath)
+    end
+end
+
+
+function JSONLoader.read(url)
+    Log.debug("webrequest to: " .. url)
+    WebRequest.get(url, loadComponentJson)
+end
+
+
+function checkRegisteringReady()
+    print("Registering: " .. LOADER.registering.progress .. "/" .. LOADER.registering.total)
+    if LOADER.registering.progress >= LOADER.registering.total then
+        LOADER.ready = true
+        print("All components registered.")
+        onAllComponentsRegistered()
+    end
+end
+
+
+function onAllComponentsRegistered()
+    LOADER.state = "Spawning"
+    LOADER.spawning.progress = 0
+    JsonAdapter.spawnAllComponents()
+end
+
+
+function checkBaggingReady()
+    Log.debug("Bagging: " .. LOADER.bagging.progress .. "/" .. LOADER.bagging.total)
+
+    if LOADER.bagging.progress >= LOADER.bagging.total then
+        Log.info("Everything is inserted into bags.")
+        onBaggingComplete()
+    end
+end
+
+
+local function unlockAllBags()
+    local bags = getRegistryComponentsOfType("Custom_Model_Bag")
+    for id, entry in pairs(bags) do
+        local bagObj = getObjectFromGUID(entry.guid)
+        if bagObj then
+            Log.debug("Unlocking bag: " .. id)
+            bagObj.setLock(false)
+        else
+            Log.warn("Bag not found for id: " .. id)
+        end
+    end
+end
+
+
+function onBaggingComplete()
+    LOADER.state = "Ready"
+    LOADER.ready = true
+
+    unlockAllBags()
+    Log.info("############### Loader READY ###############")
+end
+
+
+local function findRealCardObject(identifier)
+    for _, o in ipairs(getAllObjects()) do
+        if o.getName() == identifier then
+            return o
+        end
+    end
+    return nil
+end
+
+
+local function queueBagInsertion(bagId, entry)
+    Log.debug("start queueBagInsertion")
+    local identifier = entry.identifier
+    local attempts = 0
+    local MAX_ATTEMPTS = 10
+
+    Wait.condition(
+        function()
+            attempts = attempts + 1
+            Log.debug("attempts: " .. attempts .. "/" .. MAX_ATTEMPTS)
+
+            -- Hard fail after too many attempts
+            if attempts > MAX_ATTEMPTS then
+                Log.error("Bag insertion FAILED for " .. identifier .. " after " .. MAX_ATTEMPTS .. " attempts.")
+                LOADER.bagging.progress = LOADER.bagging.progress + 1
+                checkBaggingReady()
+                return true   -- <‑‑ stops the callback permanently
+            end
+
+            local bag = getRegistryComponent(bagId)
+            local bagObj = bag and getObjectFromGUID(bag.guid)
+            local cardObj = findRealCardObject(identifier)
+
+            if bagObj and cardObj then
+                Log.debug("Inserting " .. identifier .. " into " .. bagId)
+                cardObj.setLock(false)
+                bagObj.putObject(cardObj)
+
+                LOADER.bagging.progress = LOADER.bagging.progress + 1
+                checkBaggingReady()
+                return true   -- <‑‑ success, stop callback
+            end
+
+            return false  -- <‑‑ keep waiting
+        end,
+
+        function()
+            -- Condition: bag exists OR we hit timeout
+            local bag = getRegistryComponent(bagId)
+            local bagObj = bag and getObjectFromGUID(bag.guid)
+            local cardObj = findRealCardObject(identifier)
+
+            return bagObj ~= nil and cardObj ~= nil
+        end
+    )
+end
+
+
+-----------------------------------------
+-- Logger
+-----------------------------------------
+Log =
+{
+    level = "DEBUG",
+    levels = { ERROR = 1, WARN = 2, INFO = 3, DEBUG = 4 }
+}
+
+local function shouldLog(requested)
+    return Log.levels[requested] <= Log.levels[Log.level]
+end
+
+
+function Log.error(msg)
+    if shouldLog("ERROR") then print("[ERROR] " .. msg) end
+end
+
+
+function Log.warn(msg)
+    if shouldLog("WARN") then print("[WARN] " .. msg) end
+end
+
+
+function Log.info(msg)
+    if shouldLog("INFO") then print("[INFO] " .. msg) end
+end
+
+
+function Log.debug(msg)
+    if shouldLog("DEBUG") then print("[DEBUG] " .. msg) end
+end
+
+
+local function deepCopy(t)
+    if type(t) ~= "table" then return t end
+    local copy = {}
+    for k, v in pairs(t) do
+        copy[k] = deepCopy(v)
+    end
+    return copy
+end
+
+
+-----------------------------------------
+-- Registry
+-----------------------------------------
+
+Registry =
+{
+    _table = {}
+    , _index = {}
+    , _scripts = {}
+}
+
+-- Can be called from other scripts to get data from the Registry
+-- you will need to JSON.decode(entry) on the caller-side
+function getRegistryComponentJSON(id)
+    local entry = getRegistryComponent(id)
+    if entry then
+        return JSON.encode(entry)
+    end
+    return nil
+end
+
+
+function getRegistry()
+    return Registry
+end
+
+
+function addRegistryComponent(component)
+    addRegistryItem(component.Name, component.Nickname,  component)
+    Log.debug("Registered " .. component.Name .. ": " .. component.Nickname .. "->" .. (component.bag or "None"))
+end
+
+
+function getRegistryComponent(id)
+    return Registry._index[id]
+end
+
+
+function getRegistryComponentByType(typeName, id)
+    local bucket = Registry._table[typeName]
+    return bucket and bucket[id] or nil
+end
+
+
+function getRegistryComponentsOfType(typeName)
+    return Registry._table[typeName] or {}
+end
+
+
+function addRegistryItem(type, key, value)
+    if not Registry._table[type] then
+        Registry._table[type] = {}
+    end
+    Registry._table[type][key] = value
+    Registry._index[key] = value
+end
+
+
+function addRegistryScript(scriptUrl)
+    if not hasScript(scriptUrl) then return "" end
+
+    if Registry._scripts[scriptUrl] == nil then
+        Registry._scripts[scriptUrl] = false
+    end
+
+    return scriptUrl
+end
+
+
+function getRegistryScript(url)
+    return Registry._scripts[url]
+end
+
+function allScriptsLoaded()
+    for _, text in pairs(Registry._scripts) do
+        if text == false then return false end
+    end
+    return true
+end
+
+
+function setRegistryItem(type, key, value)
+    addRegistryItem(type, key, value)
+end
+
+
+function getRegistryItem(type, key)
+    local bucket = Registry._table[type]
+    if not bucket then return nil end
+    return bucket[key]
+end
+
+
+function hasRegistryItem(type, key)
+    local bucket = Registry._table[type]
+    return bucket and bucket[key] ~= nil
+end
+
+
+function eachRegistryItem(type, delegate)
+    local bucket = Registry._table[type]
+    if not bucket then return end
+    for key, data in pairs(bucket) do
+        delegate(key, data)
+    end
+end
+
+
+-----------------------------------------
+-- TTS Objects
+-----------------------------------------
+
+
+local function deepMerge(base, override)
+    for k, v in pairs(override) do
+        if type(v) == "table" and type(base[k]) == "table" then
+            deepMerge(base[k], v)
+        else
+            base[k] = v
+        end
+    end
+    return base
+end
+
+
+local function mergeSetAndItem(block, set)
+    local merged = deepCopy(block)
+    deepMerge(merged, set)
+    return merged
+end
+
+
+TTS_ObjectData = {}
+
+TTS_ObjectData.base =
+{
+    Name = nil,
+    Nickname = nil,
+    Description = "",
+    GMNotes = "",
+    Tags = {},
+    Locked = false,
+    Grid = true,
+    Snap = true,
+    Autoraise = true,
+    Sticky = true,
+    Tooltip = true,
+    LuaScript = "",
+    LuaScriptState = "",
+    XmlUI = "",
+    Transform = {
+        posX = 0,
+        posY = 3,
+        posZ = 0,
+        rotX = 0,
+        rotY = 180,
+        rotZ = 0,
+        scaleX = 1,
+        scaleY = 1,
+        scaleZ = 1
+    }
+}
+
+
+TTS_ObjectData.CardCustom =
+{
+    Name = "CardCustom",
+    CustomDeck =
+    {
+        ["1"] =
+        {
+            Type = 0,
+            NumWidth = 1,
+            NumHeight = 1,
+            BackIsHidden = false,
+            FaceURL = "",
+            BackURL = ""
+        }
+    },
+    SidewaysCard = false,
+    CardID = 100
+}
+
+
+TTS_ObjectData.Custom_Model =
+{
+    Name = "Custom_Model",
+    CustomMesh =
+    {
+        MeshURL = "",
+        DiffuseURL = "",
+        NormalURL = "",
+        ColliderURL = "",
+        Convex = true,
+        MaterialIndex = -1,
+        TypeIndex = 0,
+        CastShadows = true
+    }
+}
+
+
+TTS_ObjectData.Custom_Model_Bag =
+{
+    Name = "Custom_Model_Bag",
+    CustomMesh =
+    {
+        MeshURL = "",
+        DiffuseURL = "",
+        NormalURL = "",
+        ColliderURL = "",
+        Convex = true,
+        MaterialIndex = 3,
+        TypeIndex = 6,
+        CastShadows = true
+    },
+    Bag = { Order = 0 }
+}
+
+
+local ShortcutMap = {
+    CardCustom = {
+        face = { path = {"CustomDeck", "1", "FaceURL"} },
+        back = { path = {"CustomDeck", "1", "BackURL"} }
+    },
+
+    DeckCustom = {
+        face = { path = {"CustomDeck", "1", "FaceURL"} },
+        back = { path = {"CustomDeck", "1", "BackURL"} }
+    },
+
+    Tile = {
+        image = { path = {"CustomImage", "ImageURL"} }
+    },
+
+    Token = {
+        image = { path = {"CustomImage", "ImageURL"} }
+    },
+
+    Board = {
+        image = { path = {"CustomImage", "ImageURL"} }
+    },
+
+    Figurine = {
+        image = { path = {"CustomImage", "ImageURL"} }
+    },
+
+    Model = {
+        image = { path = {"CustomImage", "ImageURL"} }
+    },
+
+    Dice = {
+        image = { path = {"CustomImage", "ImageURL"} }
+    }
+}
+
+
+local NamedColors = {
+    White  = {1.00, 1.00, 1.00},
+    Brown  = {0.59, 0.29, 0.00},
+    Red    = {1.00, 0.00, 0.00},
+    Orange = {1.00, 0.50, 0.00},
+    Yellow = {1.00, 1.00, 0.00},
+    Green  = {0.00, 1.00, 0.00},
+    Teal   = {0.00, 0.50, 0.50},
+    Blue   = {0.00, 0.00, 1.00},
+    Purple = {0.50, 0.00, 0.50},
+    Pink   = {1.00, 0.41, 0.71},
+    Grey   = {0.50, 0.50, 0.50},
+    Black  = {0.00, 0.00, 0.00}
+}
+
+
+local function hexToRGBA(hex)
+    hex = hex:gsub("#", "")
+
+    local r, g, b, a
+
+    if #hex == 6 then
+        r = tonumber(hex:sub(1,2), 16)
+        g = tonumber(hex:sub(3,4), 16)
+        b = tonumber(hex:sub(5,6), 16)
+        a = 255
+    elseif #hex == 8 then
+        r = tonumber(hex:sub(1,2), 16)
+        g = tonumber(hex:sub(3,4), 16)
+        b = tonumber(hex:sub(5,6), 16)
+        a = tonumber(hex:sub(7,8), 16)
+    else
+        return nil
+    end
+
+    return {
+        r = r / 255,
+        g = g / 255,
+        b = b / 255,
+        a = a / 255
+    }
+end
+
+
+local function parseColor(value)
+    if type(value) == "table" then
+        -- Already a color table
+        return {
+            r = value.r or value[1] or 1,
+            g = value.g or value[2] or 1,
+            b = value.b or value[3] or 1,
+            a = value.a or value[4] or 1
+        }
+    end
+
+    if type(value) ~= "string" then
+        return nil
+    end
+
+    -- Named color
+    local named = NamedColors[value]
+    if named then
+        return {
+            r = named[1],
+            g = named[2],
+            b = named[3],
+            a = 1
+        }
+    end
+
+    -- Hex color
+    if value:match("^#?%x%x%x%x%x%x$") or value:match("^#?%x%x%x%x%x%x%x%x$") then
+        return hexToRGBA(value)
+    end
+
+    return nil
+end
+
+
+local function setPath(root, path, value)
+    local t = root
+    for i = 1, #path - 1 do
+        local key = path[i]
+        t[key] = t[key] or {}
+        t = t[key]
+    end
+    t[path[#path]] = value
+end
+
+
+-----------------------------------------
+-- Json Adapters
+-----------------------------------------
+
+
+local function expandTransformShortcuts(entry)
+    if entry.position then
+        entry.Transform = entry.Transform or {}
+        entry.Transform.posX = entry.position.x or entry.Transform.posX
+        entry.Transform.posY = entry.position.y or entry.Transform.posY
+        entry.Transform.posZ = entry.position.z or entry.Transform.posZ
+        entry.position = nil
+    end
+
+    if entry.scale then
+        entry.Transform.scaleX = entry.scale.x or entry.Transform.scaleX
+        entry.Transform.scaleY = entry.scale.y or entry.Transform.scaleY
+        entry.Transform.scaleZ = entry.scale.z or entry.Transform.scaleZ
+        entry.scale = nil
+    end
+
+    if entry.rotation then
+        entry.Transform.rotX = entry.rotation.x or entry.Transform.rotX
+        entry.Transform.rotY = entry.rotation.y or entry.Transform.rotY
+        entry.Transform.rotZ = entry.rotation.z or entry.Transform.rotZ
+        entry.rotation = nil
+    end
+end
+
+
+local function expandShortcuts(entry)
+    local typeName = entry.Name
+    local map = ShortcutMap[typeName]
+
+    if map then
+        for shortcut, info in pairs(map) do
+            if entry[shortcut] then
+                setPath(entry, info.path, entry[shortcut])
+                entry[shortcut] = nil
+            end
+        end
+    end
+
+    -- identifier → Nickname
+    if entry.identifier then
+        entry.Nickname = entry.identifier
+    end
+
+    -- color → ColorDiffuse
+    if entry.color then
+        local rgba = parseColor(entry.color)
+        if rgba then
+            entry.ColorDiffuse = rgba
+        end
+        entry.color = nil
+    end
+
+    -- position → Transform
+    expandTransformShortcuts(entry)
+end
+
+
+JsonAdapter = {}
+
+
+local function loadIncludeSync(path)
+    local url = BASE_URL .. "content/" .. path
+    local req = WebRequest.getSync(url)
+    if req.is_error then
+        Log.error("Include load error: " .. path .. " | " .. req.error)
+        return { components = {} }
+    end
+    return JSON.decode(req.text)
+end
+
+
+local function expandIncludesAsync(components, basePath, callback)
+    local result = {}
+    local pending = 0
+
+    local function add(c)
+        table.insert(result, c)
+    end
+
+    local function process(entry)
+        if entry.include then
+            pending = pending + 1
+            local includePath = basePath .. entry.include
+            local url = BASE_URL .. "content/" .. includePath
+
+            WebRequest.get(url, function(req)
+                if not req.is_error then
+                    local data = JSON.decode(req.text)
+                    expandIncludesAsync(data.components or {}, basePath, function(sub)
+                        for _, c in ipairs(sub) do add(c) end
+                        pending = pending - 1
+                        if pending == 0 then callback(result) end
+                    end)
+                else
+                    Log.error("Include load error: " .. includePath)
+                    pending = pending - 1
+                    if pending == 0 then callback(result) end
+                end
+            end)
+        else
+            add(entry)
+        end
+    end
+
+    for _, entry in ipairs(components) do
+        process(entry)
+    end
+
+    if pending == 0 then
+        callback(result)
+    end
+end
+
+
+function JsonAdapter.registerComponent(path, root)
+    local basePath = getParentFolder(path)
+
+    expandIncludesAsync(root.components, basePath, function(expanded)
+        for _, component in ipairs(expanded) do
+            JsonAdapter.registerComponentSet(basePath, component)
+        end
+
+        for url, state in pairs(Registry._scripts) do
+            if state == false then
+                WebRequest.get(url, function(req)
+                    if not req.is_error then
+                        Registry._scripts[url] = req.text
+                    else
+                        Registry._scripts[url] = ""
+                        Log.error("Script load error: " .. url)
+                    end
+                end)
+            end
+        end
+
+        Wait.condition(
+            function()
+                LOADER.registering.progress = LOADER.registering.progress + 1
+                checkRegisteringReady()
+            end,
+            function()
+                for _, text in pairs(Registry._scripts) do
+                    if text == false then return false end
+                end
+                return true
+            end
+        )
+    end)
+end
+
+
+function JsonAdapter.registerComponentSet(basePath, component)
+    if not component.set then
+        Log.error("registerComponentSet: missing 'set' field: " .. JSON.encode(component))
+        return
+    end
+
+    if not component.set.Name then
+        Log.error("registerComponentSet: missing set.Name: " .. JSON.encode(component))
+        return
+    end
+
+    if not component.items then
+        Log.error("registerComponentSet: missing 'items' array: " .. JSON.encode(component))
+        return
+    end
+
+    local componentType = component.set.Name
+    local template = deepCopy(TTS_ObjectData.base)
+    deepMerge(template, TTS_ObjectData[componentType] or {})
+
+    for _, item in ipairs(component.items) do
+        local merged = mergeSetAndItem(component.set, item)
+        local entry = deepCopy(template)
+        deepMerge(entry, merged)
+        resolveAllPaths(basePath, entry)
+        expandShortcuts(entry)
+
+        if entry.script then
+            entry.script = resolvePath(basePath, entry.script)
+            addRegistryScript(entry.script)
+        end
+
+        addRegistryComponent(entry)
+    end
+end
+
+
+function JsonAdapter.spawnComponent(entry)
+    local obj = spawnObjectData({
+        data = entry,
+        callback_function = function(obj)
+            if entry.bag then
+                queueBagInsertion(entry.bag, entry)
+            end
+        end
+    })
+
+    if not obj then
+        Log.error("spawnComponent: failed to spawn " .. tostring(entry.identifier))
+        return nil
+    end
+
+    obj.setLock(true)
+    entry.guid = obj.getGUID()
+
+    if hasScript(entry.script) then
+        local scriptText = getRegistryScript(entry.script)
+        if scriptText then
+            obj.setLuaScript(scriptText)
+        end
+    end
+
+    addRegistryComponent(entry)
+
+    Log.debug("Spawned " .. tostring(entry.identifier) .. " with GUID " .. tostring(entry.guid))
+    return obj
+end
+
+
+function JsonAdapter.spawnById(id, position, rotation)
+    local entry = getRegistryComponent(id)
+    if not entry then
+        Log.error("Unknown component id: " .. tostring(id))
+    end
+    return JsonAdapter.spawnComponent(entry)
+end
+
+
+function JsonAdapter.spawnAllComponents()
+    -- Spawn bags first
+    for id, entry in pairs(Registry._index) do
+        if entry.Name == "Custom_Model_Bag" or entry.Bag then
+            JsonAdapter.spawnComponent(entry)
+        end
+    end
+
+    -- Spawn everything else
+    for id, entry in pairs(Registry._index) do
+        if entry.Name ~= "Custom_Model_Bag" and not entry.Bag then
+            JsonAdapter.spawnComponent(entry)
+        end
+    end
+end
+
+
+function JsonAdapter.spawnAllComponentsByType(typeName)
+    local components = getRegistryComponentsOfType(typeName)
+
+    if not next(components) then
+        Log.error("No components of type " .. typeName .. " are registered.")
+        return
+    end
+
+    for id, entry in pairs(components) do
+        JsonAdapter.spawnComponent(entry)
+    end
+end

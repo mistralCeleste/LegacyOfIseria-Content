@@ -1,0 +1,124 @@
+{
+  "components": [
+    {
+      "set": {
+        "Name": "CardCustom",
+        "back": "images/DAY-back.jpg",
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        },
+        "script": "../../scripts/defaultCardBehavior.lua"
+      },
+      "items": [
+        {
+          "identifier": "DAY-001A",
+          "Description": "Melancholy",
+          "face": "images/DAY-001A_face.jpg",
+          "Tags": [
+            "Mood"
+          ],
+          "bag": "DaysBox"
+        },
+        {
+          "identifier": "DAY-002A",
+          "Description": "A Wonderful Day",
+          "face": "images/DAY-002A_face.jpg",
+          "Tags": [
+            "Weather",
+            "Time"
+          ],
+          "bag": "DaysBox"
+        },
+        {
+          "identifier": "DAY-003A",
+          "Description": "A Rainy Day",
+          "face": "images/DAY-003A_face.jpg",
+          "Tags": [
+            "Weather",
+            "Time"
+          ],
+          "bag": "DaysBox"
+        },
+        {
+          "identifier": "DAY-004A",
+          "Description": "A Blustery Day",
+          "face": "images/DAY-004A_face.jpg",
+          "Tags": [
+            "Weather",
+            "Time"
+          ],
+          "bag": "DaysBox"
+        },
+        {
+          "identifier": "DAY-005A",
+          "Description": "A Fair Day",
+          "face": "images/DAY-005A_face.jpg",
+          "Tags": [
+            "Weather",
+            "Time"
+          ],
+          "bag": "DaysBox"
+        },
+        {
+          "identifier": "DAY-006A",
+          "Description": "Exhilaration",
+          "face": "images/DAY-006A_face.jpg",
+          "Tags": [
+            "Mood"
+          ],
+          "bag": "DaysBox"
+        },
+        {
+          "identifier": "DAY-007A",
+          "Description": "Serenity",
+          "face": "images/DAY-007A_face.jpg",
+          "Tags": [
+            "Mood"
+          ],
+          "bag": "DaysBox"
+        },
+        {
+          "identifier": "DAY-008A",
+          "Description": "Waxing Crescent Moon",
+          "face": "images/DAY-008A_face.jpg",
+          "Tags": [
+            "Celestial",
+            "Moon",
+            "Time"
+          ],
+          "bag": "DaysInactiveBox"
+        },
+        {
+          "identifier": "DAY-009A",
+          "Description": "Smoke on the Horizon",
+          "face": "images/DAY-009A_face.jpg",
+          "Tags": [
+            "Combat",
+            "World"
+          ],
+          "bag": "DaysInactiveBox"
+        },
+        {
+          "identifier": "DAY-010A",
+          "Description": "Determination",
+          "face": "images/DAY-010A_face.jpg",
+          "Tags": [
+            "Mood"
+          ],
+          "bag": "DaysInactiveBox"
+        },
+        {
+          "identifier": "DAY-011A",
+          "Description": "Ready for adventure",
+          "face": "images/DAY-011A_face.jpg",
+          "Tags": [
+            "Mood"
+          ],
+          "bag": "DaysInactiveBox"
+        }
+      ]
+    }
+  ]
+}

@@ -10,5 +10,6 @@
     , "Description": "${Name}"
     , "face": "images/${Full Id}_face.jpg"
     , "Tags": { "split": "${Keywords}", "delimiter": "," }
+    , "bag": "${Box}"
   }
 }
