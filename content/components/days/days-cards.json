@@ -9,6 +9,11 @@
           "y": 1,
           "z": 1
         },
+        "position": {
+          "x": 0,
+          "y": 3,
+          "z": 0
+        },
         "script": "../../scripts/defaultCardBehavior.lua"
       },
       "items": [

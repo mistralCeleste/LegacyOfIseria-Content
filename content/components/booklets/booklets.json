@@ -1,29 +1,37 @@
 {
   "name": "Booklets",
 
-  "assetbundles": {
-    "type": "Custom_Assetbundle",
-    "script": "scripts/bookletBehavior.lua",
-
-    "sets": [
-      {
-        "identifier": "NPCBooklet",
-        "name": "NPC Booklet",
-        "bundle": "assetbundles/npcbooklet.unity3d",
-        "scale": { "x": 5.75, "y": 0.2, "z": 5.75 }
+  "components": [
+    {
+      "set": {
+        "Name": "Custom_Assetbundle",
+        "script": "../../scripts/bookletBehavior.lua",
+        "rotation": {
+          "x": 0,
+          "y": 180,
+          "z": 0
+        }
       },
-      {
-        "identifier": "LocationBooklet",
-        "name": "Location Booklet",
-        "bundle": "assetbundles/locationbooklet.unity3d",
-        "scale": { "x": 8.4, "y": 0.2, "z": 8.4 }
-      },
-      {
-        "identifier": "EventsBooklet",
-        "name": "Events Booklet",
-        "bundle": "assetbundles/eventsbooklet.unity3d",
-        "scale": { "x": 5.75, "y": 0.2, "z": 5.75 }
-      }
-    ]
-  }
+      "items": [
+        {
+          "identifier": "NPC",
+          "Nickname": "NPC Booklet",
+          "bundle": "assetbundles/npcbooklet.unity3d",
+          "scale": { "x": 5.75, "y": 0.2, "z": 5.75 }
+        },
+        {
+          "identifier": "LOC",
+          "Nickname": "Location Booklet",
+          "bundle": "assetbundles/locationbooklet.unity3d",
+          "scale": { "x": 8.4, "y": 0.2, "z": 8.4 }
+        },
+        {
+          "identifier": "EVT",
+          "Nickname": "Events Booklet",
+          "bundle": "assetbundles/eventsbooklet.unity3d",
+          "scale": { "x": 5.75, "y": 0.2, "z": 5.75 }
+        }
+      ]
+    }
+  ]
 }

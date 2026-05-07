@@ -7,11 +7,11 @@
 BASE_URL = "http://127.0.0.1:5500/"
 --BASE_URL = "https://mistralCeleste.github.io/LegacyOfIseria-Content/"
 
-local SPAWN_JITTER = 0.5
 
 -----------------------------------------
 -- Event Handlers
 -----------------------------------------
+
 function onLoad()
     Log.info("############### Loading content index ###############\n")
     local indexUrl = BASE_URL .. "content/index.json"
@@ -22,37 +22,12 @@ end
 function fetchAndPrint(url)
     WebRequest.get(url, function(request)
         if request.is_error then
-            print("WebRequest error: " .. request.error)
+            Log.error("WebRequest error: " .. request.error)
             return
         end
 
-        print("Response from " .. url .. ":")
-        print(request.text)
+        Log.debug("Response from " .. url .. ": " .. request.text)
     end)
-end
-
-
------------------------------------------
--- Book Tracking
------------------------------------------
-
-BOOKS = {}
-
-function registerBook(params)
-    BOOKS[params.name] = params.guid
-    print("Registering book " .. params.name .. " with GUID" .. params.guid)
-end
-
-
-function getBook(params)
-    return getObjectFromGUID(BOOKS[params.name])
-end
-
-
-function printBooks()
-        for name, guid in pairs(BOOKS) do
-        print(name, guid, params.name)
-    end
 end
 
 
@@ -242,7 +217,7 @@ end
 
 
 local function unlockAllBags()
-    local bags = getRegistryComponentsOfType("Custom_Model_Bag")
+    local bags = Registry.getComponentsOfType("Custom_Model_Bag")
     for id, entry in pairs(bags) do
         local bagObj = getObjectFromGUID(entry.guid)
         if bagObj then
@@ -293,7 +268,7 @@ local function queueBagInsertion(bagId, entry)
                 return true   -- <‑‑ stops the callback permanently
             end
 
-            local bag = getRegistryComponent(bagId)
+            local bag = Registry.getComponent(bagId)
             local bagObj = bag and getObjectFromGUID(bag.guid)
             local cardObj = findRealCardObject(identifier)
 
@@ -312,7 +287,7 @@ local function queueBagInsertion(bagId, entry)
 
         function()
             -- Condition: bag exists OR we hit timeout
-            local bag = getRegistryComponent(bagId)
+            local bag = Registry.getComponent(bagId)
             local bagObj = bag and getObjectFromGUID(bag.guid)
             local cardObj = findRealCardObject(identifier)
 
@@ -372,17 +347,26 @@ end
 
 Registry =
 {
-    _table = {}
-    , _index = {}
+    _types = {}
+    , _keys = {}
     , _scripts = {}
 }
 
 -- Can be called from other scripts to get data from the Registry
 -- you will need to JSON.decode(entry) on the caller-side
 function getRegistryComponentJSON(id)
-    local entry = getRegistryComponent(id)
+    local entry = Registry.getComponent(id)
     if entry then
         return JSON.encode(entry)
+    end
+    return nil
+end
+
+
+function getRegistryComponentGUID(id)
+    local entry = Registry.getComponent(id)
+    if entry then
+        return entry.getGUID()
     end
     return nil
 end
@@ -393,38 +377,38 @@ function getRegistry()
 end
 
 
-function addRegistryComponent(component)
-    addRegistryItem(component.Name, component.Nickname,  component)
+function Registry.addComponent(component)
+    Registry.addItem(component.Name, component.Nickname,  component)
     Log.debug("Registered " .. component.Name .. ": " .. component.Nickname .. "->" .. (component.bag or "None"))
 end
 
 
-function getRegistryComponent(id)
-    return Registry._index[id]
+function Registry.getComponent(id)
+    return Registry._keys[id]
 end
 
 
-function getRegistryComponentByType(typeName, id)
-    local bucket = Registry._table[typeName]
+function Registry.getComponentByType(typeName, id)
+    local bucket = Registry._types[typeName]
     return bucket and bucket[id] or nil
 end
 
 
-function getRegistryComponentsOfType(typeName)
-    return Registry._table[typeName] or {}
+function Registry.getComponentsOfType(typeName)
+    return Registry._types[typeName] or {}
 end
 
 
-function addRegistryItem(type, key, value)
-    if not Registry._table[type] then
-        Registry._table[type] = {}
+function Registry.addItem(type, key, value)
+    if not Registry._types[type] then
+        Registry._types[type] = {}
     end
-    Registry._table[type][key] = value
-    Registry._index[key] = value
+    Registry._types[type][key] = value
+    Registry._keys[key] = value
 end
 
 
-function addRegistryScript(scriptUrl)
+function Registry.addScript(scriptUrl)
     if not hasScript(scriptUrl) then return "" end
 
     if Registry._scripts[scriptUrl] == nil then
@@ -435,9 +419,10 @@ function addRegistryScript(scriptUrl)
 end
 
 
-function getRegistryScript(url)
+function Registry.getScript(url)
     return Registry._scripts[url]
 end
+
 
 function allScriptsLoaded()
     for _, text in pairs(Registry._scripts) do
@@ -447,26 +432,26 @@ function allScriptsLoaded()
 end
 
 
-function setRegistryItem(type, key, value)
-    addRegistryItem(type, key, value)
+function Registry.setItem(type, key, value)
+    Registry.addItem(type, key, value)
 end
 
 
-function getRegistryItem(type, key)
-    local bucket = Registry._table[type]
+function Registry.getItem(type, key)
+    local bucket = Registry._types[type]
     if not bucket then return nil end
     return bucket[key]
 end
 
 
-function hasRegistryItem(type, key)
-    local bucket = Registry._table[type]
+function Registry.hasItem(type, key)
+    local bucket = Registry._types[type]
     return bucket and bucket[key] ~= nil
 end
 
 
-function eachRegistryItem(type, delegate)
-    local bucket = Registry._table[type]
+function Registry.eachItem(type, delegate)
+    local bucket = Registry._types[type]
     if not bucket then return end
     for key, data in pairs(bucket) do
         delegate(key, data)
@@ -897,10 +882,10 @@ function JsonAdapter.registerComponentSet(basePath, component)
 
         if entry.script then
             entry.script = resolvePath(basePath, entry.script)
-            addRegistryScript(entry.script)
+            Registry.addScript(entry.script)
         end
 
-        addRegistryComponent(entry)
+        Registry.addComponent(entry)
     end
 end
 
@@ -924,13 +909,13 @@ function JsonAdapter.spawnComponent(entry)
     entry.guid = obj.getGUID()
 
     if hasScript(entry.script) then
-        local scriptText = getRegistryScript(entry.script)
+        local scriptText = Registry.getScript(entry.script)
         if scriptText then
             obj.setLuaScript(scriptText)
         end
     end
 
-    addRegistryComponent(entry)
+    Registry.addComponent(entry)
 
     Log.debug("Spawned " .. tostring(entry.identifier) .. " with GUID " .. tostring(entry.guid))
     return obj
@@ -938,7 +923,7 @@ end
 
 
 function JsonAdapter.spawnById(id, position, rotation)
-    local entry = getRegistryComponent(id)
+    local entry = Registry.getComponent(id)
     if not entry then
         Log.error("Unknown component id: " .. tostring(id))
     end
@@ -948,14 +933,14 @@ end
 
 function JsonAdapter.spawnAllComponents()
     -- Spawn bags first
-    for id, entry in pairs(Registry._index) do
+    for id, entry in pairs(Registry._keys) do
         if entry.Name == "Custom_Model_Bag" or entry.Bag then
             JsonAdapter.spawnComponent(entry)
         end
     end
 
     -- Spawn everything else
-    for id, entry in pairs(Registry._index) do
+    for id, entry in pairs(Registry._keys) do
         if entry.Name ~= "Custom_Model_Bag" and not entry.Bag then
             JsonAdapter.spawnComponent(entry)
         end
@@ -963,15 +948,3 @@ function JsonAdapter.spawnAllComponents()
 end
 
 
-function JsonAdapter.spawnAllComponentsByType(typeName)
-    local components = getRegistryComponentsOfType(typeName)
-
-    if not next(components) then
-        Log.error("No components of type " .. typeName .. " are registered.")
-        return
-    end
-
-    for id, entry in pairs(components) do
-        JsonAdapter.spawnComponent(entry)
-    end
-end

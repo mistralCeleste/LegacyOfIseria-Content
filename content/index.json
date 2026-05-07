@@ -5,5 +5,7 @@
     , "components":
     [
         "components/days/days.json"
+        , "components/locations/locations.json"
+        , "components/npcs/npcs.json"
     ]
 }

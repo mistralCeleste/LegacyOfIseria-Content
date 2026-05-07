@@ -1,6 +1,6 @@
 {
-    "name": "Days"
-    , "description": "Cards representing the days of the week, with various weather conditions."  
+    "name": "Location Boxes"
+    , "description": "Boxes to store the location cards in."  
     , "components": [
         {
             "set": {
@@ -17,6 +17,7 @@
                 },
                 "CustomMesh": {
                     "MeshURL": "../boxes/models/CardBox-container.obj",
+                    "DiffuseURL": "",
                     "NormalURL": "",
                     "MaterialIndex": 3,
                     "TypeIndex": 6,
@@ -27,27 +28,27 @@
             },
             "items": [
                 {
-                    "identifier": "DaysBox",
-                    "name": "Day Box",
+                    "identifier": "LOCBox",
+                    "name": "LOC Box",
                     "CustomMesh": {
-                        "DiffuseURL": "../boxes/images/Box_Days.jpg"
+                        "DiffuseURL": "../boxes/images/Box_Locations.jpg"
                     },
                     "position": {
                         "x": -3,
                         "y": 3,
-                        "z": 0
+                        "z": 3
                     }
                 },
                 {
-                    "identifier": "DaysInactiveBox",
-                    "name": "Day Inactive Box",
+                    "identifier": "LOCInactiveBox",
+                    "name": "LOC Inactive Box",
                     "CustomMesh": {
-                        "DiffuseURL": "../boxes/images/Box_Days-Inactive.jpg"
+                        "DiffuseURL": "../boxes/images/Box_Locations-inactive.jpg"
                     },
                     "position": {
                         "x": 3,
                         "y": 3,
-                        "z": 0
+                        "z": 3
                     }
                 }
             ]

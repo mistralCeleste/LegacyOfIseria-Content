@@ -1,0 +1,82 @@
+{
+  "components": [
+    {
+      "set": {
+        "Name": "CardCustom",
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        },
+        "position": {
+          "x": 0,
+          "y": 3,
+          "z": 3
+        },
+        "script": "../../scripts/narrativeCardBehavior.lua"
+      },
+      "items": [
+        {
+          "identifier": "LOC-000A",
+          "Description": "Courier Camp",
+          "face": "images/LOC-000A-face.jpg",
+          "back": "images/LOC-000A-back.jpg",
+          "tags": [
+            "Combat"
+          ],
+          "bag": "LOCBox"
+        },
+        {
+          "identifier": "LOC-001A",
+          "Description": "Lyratha Peninsula",
+          "face": "images/LOC-001A-face.jpg",
+          "back": "images/LOC-001A-back.jpg",
+          "tags": [
+            "Atlas"
+          ],
+          "bag": "LOCBox"
+        },
+        {
+          "identifier": "LOC-002A",
+          "Description": "Thalora",
+          "face": "images/LOC-002A-face.jpg",
+          "back": "images/LOC-002A-back.jpg",
+          "tags": [
+            "Town"
+          ],
+          "bag": "LOCBox"
+        },
+        {
+          "identifier": "LOC-002B",
+          "Description": "Thalora",
+          "face": "images/LOC-002B-face.jpg",
+          "back": "images/LOC-002B-back.jpg",
+          "tags": [
+            "Town"
+          ],
+          "bag": "LOCInactiveBox"
+        },
+        {
+          "identifier": "LOC-003A",
+          "Description": "Whirlpool Abyss",
+          "face": "images/LOC-003A-face.jpg",
+          "back": "images/LOC-003A-back.jpg",
+          "tags": [
+            "Grotto"
+          ],
+          "bag": "LOCBox"
+        },
+        {
+          "identifier": "LOC-006A",
+          "Description": "Pinch-Oh Crossroads",
+          "face": "images/LOC-006A-face.jpg",
+          "back": "images/LOC-006A-back.jpg",
+          "tags": [
+            "Town"
+          ],
+          "bag": "LOCBox"
+        }
+      ]
+    }
+  ]
+}

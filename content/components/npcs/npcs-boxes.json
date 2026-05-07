@@ -1,6 +1,6 @@
 {
-    "name": "Days"
-    , "description": "Cards representing the days of the week, with various weather conditions."  
+    "name": "NPC Boxes"
+    , "description": "Boxes to store the NPC cards in."  
     , "components": [
         {
             "set": {
@@ -27,27 +27,27 @@
             },
             "items": [
                 {
-                    "identifier": "DaysBox",
-                    "name": "Day Box",
+                    "identifier": "NPCBox",
+                    "name": "NPC Box",
                     "CustomMesh": {
-                        "DiffuseURL": "../boxes/images/Box_Days.jpg"
+                        "DiffuseURL": "../boxes/images/Box_NPCs.jpg"
                     },
                     "position": {
                         "x": -3,
                         "y": 3,
-                        "z": 0
+                        "z": 6
                     }
                 },
                 {
-                    "identifier": "DaysInactiveBox",
-                    "name": "Day Inactive Box",
+                    "identifier": "NPCInactiveBox",
+                    "name": "NPC Inactive Box",
                     "CustomMesh": {
-                        "DiffuseURL": "../boxes/images/Box_Days-Inactive.jpg"
+                        "DiffuseURL": "../boxes/images/Box_NPCs-inactive.jpg"
                     },
                     "position": {
                         "x": 3,
                         "y": 3,
-                        "z": 0
+                        "z": 6
                     }
                 }
             ]

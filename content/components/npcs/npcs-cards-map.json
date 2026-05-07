@@ -1,0 +1,17 @@
+{
+  "set": {
+    "Name": "CardCustom",
+    "scale": { "x": 1, "y": 1, "z": 1 },
+    "position": { "x": 0, "y": 3, "z": 6 },
+    "script": "../../scripts/narrativeCardBehavior.lua"
+  },
+  "fields":
+  {  
+       "identifier": "${Full Id}"
+    ,  "Description": "${Name}"
+    ,  "face": "images/${Full Id}-face.jpg"
+    ,  "back": "images/${Full Id}-back.jpg"
+    ,  "description": "${Description}"
+    , "bag": "${Box}"
+  }
+}
