@@ -1,0 +1,42 @@
+{
+  "components": [
+    {
+      "set": {
+        "Name": "Custom_Model_Bag",
+        "scale": { "x": 1, "y": 1, "z": 1 }
+      },
+      "items": [
+        {
+          "identifier": "RoomsRandom5+Box",
+          "Description": "Rooms 5+ Box",
+          "mesh": "../boxes/models/CardBox-container.obj",
+          "texture": "../boxes/images/Box_Rooms-5.jpg"
+        },
+        {
+          "identifier": "RoomsRandom10+Box",
+          "Description": "Rooms 10+ Box",
+          "mesh": "../boxes/models/CardBox-container.obj",
+          "texture": "../boxes/images/Box_Rooms-10.jpg"
+        },
+        {
+          "identifier": "RoomsRandom15+Box",
+          "Description": "Rooms 15+ Box",
+          "mesh": "../boxes/models/CardBox-container.obj",
+          "texture": "../boxes/images/Box_Rooms-15.jpg"
+        },
+        {
+          "identifier": "RoomsEncounterBox",
+          "Description": "Rooms Encounter Box",
+          "mesh": "../boxes/models/CardBox-container.obj",
+          "texture": "../boxes/images/Box_Rooms-Encounter.jpg"
+        },
+        {
+          "identifier": "RoomsPuzzleBox",
+          "Description": "Rooms Puzzle Box",
+          "mesh": "../boxes/models/CardBox-container.obj",
+          "texture": "../boxes/images/Box_Rooms-Puzzle.jpg"
+        }
+      ]
+    }
+  ]
+}

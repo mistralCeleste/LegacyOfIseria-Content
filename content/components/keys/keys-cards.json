@@ -1,0 +1,106 @@
+{
+  "components": [
+    {
+      "set": {
+        "Name": "CardCustom",
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "items": [
+        {
+          "identifier": "KEY-000A",
+          "Description": "Silver Envelope ",
+          "face": "images/KEY-000A-face.jpg",
+          "back": "images/KEY-000A-back.jpg",
+          "tags": [
+            "Quest"
+          ],
+          "bag": "KeysBox"
+        },
+        {
+          "identifier": "KEY-001A",
+          "Description": "Melody's Map",
+          "face": "images/KEY-001A-face.jpg",
+          "back": "images/KEY-001A-back.jpg",
+          "tags": [
+            "Quest"
+          ],
+          "bag": "KeysBox"
+        },
+        {
+          "identifier": "KEY-002A",
+          "Description": "Silver Strands",
+          "face": "images/KEY-002A-face.jpg",
+          "back": "images/KEY-002A-back.jpg",
+          "tags": [
+            "Quest"
+          ],
+          "bag": "KeysBox"
+        },
+        {
+          "identifier": "KEY-003A",
+          "Description": "Silver Lyre",
+          "face": "images/KEY-003A-face.jpg",
+          "back": "images/KEY-003A-back.jpg",
+          "tags": [
+            "Item"
+          ],
+          "bag": "KeysBox"
+        },
+        {
+          "identifier": "KEY-004A",
+          "Description": "Eyes-Cream Scone",
+          "face": "images/KEY-004A-face.jpg",
+          "back": "images/KEY-004A-back.jpg",
+          "tags": [
+            "Item"
+          ],
+          "bag": "KeysBox"
+        },
+        {
+          "identifier": "KEY-005A",
+          "Description": "Boomeringue Pie",
+          "face": "images/KEY-005A-face.jpg",
+          "back": "images/KEY-005A-back.jpg",
+          "tags": [
+            "Item"
+          ],
+          "bag": "KeysBox"
+        },
+        {
+          "identifier": "KEY-006A",
+          "Description": "Collectable Lunch Box",
+          "face": "images/KEY-006A-face.jpg",
+          "back": "images/KEY-006A-back.jpg",
+          "tags": [
+            "Item"
+          ],
+          "bag": "KeysBox"
+        },
+        {
+          "identifier": "KEY-007A",
+          "Description": "Courier Bag",
+          "face": "images/KEY-007A-face.jpg",
+          "back": "images/KEY-007A-back.jpg",
+          "tags": [
+            "Item"
+          ],
+          "bag": "KeysBox"
+        },
+        {
+          "identifier": "KEY-777A",
+          "Description": "Wish",
+          "face": "images/KEY-777A-face.jpg",
+          "back": "images/KEY-777A-back.jpg",
+          "tags": [
+            "Item"
+          ],
+          "bag": "KeysBox"
+        }
+      ]
+    }
+  ]
+}

@@ -1,13 +1,14 @@
 {
-    "type": "Custom_Dice",
-    "scale": { "x": 0.85, "y": 0.85, "z": 0.85 },
-
+  "set": {
+      "type": "Custom_Dice",
+      "scale": { "x": 0.85, "y": 0.85, "z": 0.85 }
+  },
   "fields":
     {
       "type": "Die_6",
-      "bag": "{Class}MightDiceBag",
-      "identifier": "{Class}MightDie",
-      "name": "{Class} Might Die",
-      "color": "{Color}"
+      "bag": "${Class}MightDiceBag",
+      "identifier": "${Class}MightDie",
+      "Description": "${Class} Might Die",
+      "color": "${Color}"
     }
 }

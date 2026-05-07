@@ -1,0 +1,24 @@
+{
+    "components": [
+    {
+      "set": {
+        "Name": "Custom_Model_Bag",
+        "mesh": "../boxes/models/CardBox-container.obj",
+        "scale": { "x": 0.4, "y": 0.4, "z": 0.4 }
+      },
+      "items": [
+        {
+          "identifier": "KeysBox",
+          "Description": "Key Box",
+          "texture": "../boxes/images/Box_Keys.jpg"
+        },
+        {
+          "identifier": "KeysInactiveBox",
+          "Description": "Key Inactive Box",
+          "texture": "../boxes/images/Box_Keys-inactive.jpg"
+        },
+        { "include": "Keys-cards.json" }
+      ]
+    }
+  ]
+}

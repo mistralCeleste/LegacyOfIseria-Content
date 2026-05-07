@@ -598,7 +598,25 @@ local ShortcutMap = {
     },
 
     Model = {
-        image = { path = {"CustomImage", "ImageURL"} }
+        texture = { path = {"CustomMesh", "DiffuseURL"} },
+        normal = { path = {"CustomMesh", "NormalURL"} },
+        mesh = { path = {"CustomMesh", "MeshURL"} },
+        collider = { path = {"CustomMesh", "ColliderURL"} },
+    },
+
+    Custom_Model = {
+        texture = { path = {"CustomMesh", "DiffuseURL"} },
+        normal = { path = {"CustomMesh", "NormalURL"} },
+        mesh = { path = {"CustomMesh", "MeshURL"} },
+        collider = { path = {"CustomMesh", "ColliderURL"} },
+        typeIndex = { path = {"CustomMesh", "TypeIndex"} },
+    },
+
+    Custom_Model_Bag = {
+        texture = { path = {"CustomMesh", "DiffuseURL"} },
+        normal = { path = {"CustomMesh", "NormalURL"} },
+        mesh = { path = {"CustomMesh", "MeshURL"} },
+        collider = { path = {"CustomMesh", "ColliderURL"} },
     },
 
     Dice = {

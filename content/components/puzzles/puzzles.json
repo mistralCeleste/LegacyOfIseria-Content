@@ -1,24 +1,26 @@
 {
-  "name": "AssetBundles",
-
-  "assetbundles": {
-    "type": "Custom_Assetbundle",
-
-    "sets": [
-      {
-        "identifier": "ThreatWheel",
-        "name": "Threat Wheel",
-        "bundle": "assetbundles/threatwheel.unity3d",
-        "script": "scripts/threatWheelBehavior.lua",
-        "scale": { "x": 4.98, "y": 0.2, "z": 4.98 }
+  "name": "Puzzles",
+  "components": [
+    {
+      "set": {
+        "Name": "Custom_Assetbundle"
       },
-      {
-        "identifier": "PUZ-001",
-        "name": "Celestial Wheel",
-        "bundle": "assetbundles/celestialwheel.unity3d",
-        "script": "scripts/celestialWheelBehavior.lua",
-        "scale": { "x": 5, "y": 0.2, "z": 5 }
-      }
-    ]
-  }
+      "items": [
+        {
+          "identifier": "ThreatWheel",
+          "Description": "Threat Wheel",
+          "bundle": "assetbundles/threatwheel.unity3d",
+          "script": "scripts/threatWheelBehavior.lua",
+          "scale": { "x": 4.98, "y": 0.2, "z": 4.98 }
+        },
+        {
+          "identifier": "PUZ-001",
+          "Description": "Celestial Wheel",
+          "bundle": "assetbundles/celestialwheel.unity3d",
+          "script": "scripts/celestialWheelBehavior.lua",
+          "scale": { "x": 5, "y": 0.2, "z": 5 }
+        }
+      ]
+    }
+  ]
 }

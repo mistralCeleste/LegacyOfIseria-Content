@@ -1,11 +1,9 @@
 {
-  "type": "Custom_Dice",
-  "scale": {
-    "x": 0.85,
-    "y": 0.85,
-    "z": 0.85
+  "set": {
+    "type": "Custom_Dice",
+    "scale": { "x": 0.85, "y": 0.85, "z": 0.85 }
   },
-  "sets": [
+  "items": [
     {
       "type": "Custom_Die",
       "bag": "VanguardFudgeDiceBag",

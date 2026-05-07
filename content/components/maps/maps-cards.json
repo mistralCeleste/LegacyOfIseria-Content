@@ -1,0 +1,106 @@
+{
+  "components": [
+    {
+      "set": {
+        "Name": "CardCustom",
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "items": [
+        {
+          "identifier": "MAP-001A",
+          "Description": "Whirlpool Abyss Grotto",
+          "face": "images/MAP-001A-face.jpg",
+          "back": "images/MAP-001A-back.jpg",
+          "rooms": "2",
+          "connectors": "1",
+          "bag": "MapBox"
+        },
+        {
+          "identifier": "MAP-001B",
+          "Description": "Whirlpool Abyss Grotto",
+          "face": "images/MAP-001B-face.jpg",
+          "back": "images/MAP-001B-back.jpg",
+          "rooms": "7",
+          "connectors": "5",
+          "bag": "MapInactiveBox"
+        },
+        {
+          "identifier": "MAP-001C",
+          "Description": "Whirlpool Abyss Grotto",
+          "face": "images/MAP-001C-face.jpg",
+          "back": "images/MAP-001C-back.jpg",
+          "rooms": "7",
+          "connectors": "5",
+          "bag": "MapInactiveBox"
+        },
+        {
+          "identifier": "MAP-001D",
+          "Description": "Whirlpool Abyss Grotto",
+          "face": "images/MAP-001D-face.jpg",
+          "back": "images/MAP-001D-back.jpg",
+          "rooms": "9",
+          "connectors": "6",
+          "bag": "MapInactiveBox"
+        },
+        {
+          "identifier": "MAP-002A",
+          "Description": "Crescent Moon",
+          "face": "images/MAP-002A-face.jpg",
+          "back": "images/MAP-002A-back.jpg",
+          "rooms": "18",
+          "connectors": "8",
+          "bag": "MapBox"
+        },
+        {
+          "identifier": "MAP-003A",
+          "Description": "Eagle",
+          "face": "images/MAP-003A-face.jpg",
+          "back": "images/MAP-003A-back.jpg",
+          "rooms": "17",
+          "connectors": "11",
+          "bag": "MapBox"
+        },
+        {
+          "identifier": "MAP-004A",
+          "Description": "Bat",
+          "face": "images/MAP-004A-face.jpg",
+          "back": "images/MAP-004A-back.jpg",
+          "rooms": "8",
+          "connectors": "5",
+          "bag": "MapBox"
+        },
+        {
+          "identifier": "MAP-005A",
+          "Description": "Tower",
+          "face": "images/MAP-005A-face.jpg",
+          "back": "images/MAP-005A-back.jpg",
+          "rooms": "27",
+          "connectors": "18",
+          "bag": "MapBox"
+        },
+        {
+          "identifier": "MAP-006A",
+          "Description": "Dragon",
+          "face": "images/MAP-006A-face.jpg",
+          "back": "images/MAP-006A-back.jpg",
+          "rooms": "17",
+          "connectors": "9",
+          "bag": "MapBox"
+        },
+        {
+          "identifier": "MAP-007A",
+          "Description": "Skull",
+          "face": "images/MAP-007A-face.jpg",
+          "back": "images/MAP-007A-back.jpg",
+          "rooms": "17",
+          "connectors": "9",
+          "bag": "MapBox"
+        }
+      ]
+    }
+  ]
+}

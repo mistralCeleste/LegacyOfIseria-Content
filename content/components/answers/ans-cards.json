@@ -1,7 +1,7 @@
 {
   "components": [
     {
-      "Set": {
+      "set": {
         "Name": "CardCustom",
         "scale": {
           "x": 1,

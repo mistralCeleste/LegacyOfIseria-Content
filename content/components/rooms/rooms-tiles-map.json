@@ -1,0 +1,21 @@
+{
+  "set": {
+    "Name": "Custom_Tile"
+    , "scale": { "x": 1.45, "y": 1, "z": 1.45 }
+    ,  "Type": "0"
+    , "CustomTile": {
+        "Type": 0,
+        "Thickness": 0.1,
+        "Stackable": true
+      }
+  },
+  "fields":
+  {  
+       "identifier": "${Full Id}"
+    ,  "Description": "${Name}"
+    ,  "face": "images/${FullIdRef}-face.jpg"
+    ,  "back": "images/${FullIdRef}-back.jpg"
+    ,  "size": "${MapSize}"
+    ,  "bag": "Rooms${Name}${MapSize}Box"
+  }
+}

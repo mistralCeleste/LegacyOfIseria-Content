@@ -1,0 +1,214 @@
+{
+  "components": [
+    {
+      "set": {
+        "Name": "Custom_Tile",
+        "scale": {
+          "x": 1.45,
+          "y": 1,
+          "z": 1.45
+        },
+        "Type": "0",
+        "CustomTile": {
+          "Type": 0,
+          "Thickness": 0.1,
+          "Stackable": true
+        }
+      },
+      "items": [
+        {
+          "identifier": "Entrance",
+          "Description": "Entrance",
+          "face": "images/SML-000A-face.jpg",
+          "back": "images/SML-000A-back.jpg",
+          "size": "1+",
+          "bag": "RoomsEntrance1+Box"
+        },
+        {
+          "identifier": "",
+          "Description": "Random",
+          "face": "images/SML-001A-face.jpg",
+          "back": "images/SML-001A-back.jpg",
+          "size": "5+",
+          "bag": "RoomsRandom5+Box"
+        },
+        {
+          "identifier": "",
+          "Description": "Random",
+          "face": "images/SML-002A-face.jpg",
+          "back": "images/SML-002A-back.jpg",
+          "size": "5+",
+          "bag": "RoomsRandom5+Box"
+        },
+        {
+          "identifier": "",
+          "Description": "Random",
+          "face": "images/SML-003A-face.jpg",
+          "back": "images/SML-003A-back.jpg",
+          "size": "5+",
+          "bag": "RoomsRandom5+Box"
+        },
+        {
+          "identifier": "",
+          "Description": "Random",
+          "face": "images/SML-004A-face.jpg",
+          "back": "images/SML-004A-back.jpg",
+          "size": "5+",
+          "bag": "RoomsRandom5+Box"
+        },
+        {
+          "identifier": "",
+          "Description": "Random",
+          "face": "images/SML-005A-face.jpg",
+          "back": "images/SML-005A-back.jpg",
+          "size": "5+",
+          "bag": "RoomsRandom5+Box"
+        },
+        {
+          "identifier": "",
+          "Description": "Random",
+          "face": "images/SML-006A-face.jpg",
+          "back": "images/SML-006A-back.jpg",
+          "size": "5+",
+          "bag": "RoomsRandom5+Box"
+        },
+        {
+          "identifier": "",
+          "Description": "Random",
+          "face": "images/SML-007A-face.jpg",
+          "back": "images/SML-007A-back.jpg",
+          "size": "5+",
+          "bag": "RoomsRandom5+Box"
+        },
+        {
+          "identifier": "",
+          "Description": "Random",
+          "face": "images/SML-008A-face.jpg",
+          "back": "images/SML-008A-back.jpg",
+          "size": "5+",
+          "bag": "RoomsRandom5+Box"
+        },
+        {
+          "identifier": "",
+          "Description": "Random",
+          "face": "images/SML-009A-face.jpg",
+          "back": "images/SML-009A-back.jpg",
+          "size": "5+",
+          "bag": "RoomsRandom5+Box"
+        },
+        {
+          "identifier": "",
+          "Description": "Random",
+          "face": "images/SML-010A-face.jpg",
+          "back": "images/SML-010A-back.jpg",
+          "size": "5+",
+          "bag": "RoomsRandom5+Box"
+        },
+        {
+          "identifier": "",
+          "Description": "Random",
+          "face": "images/SML-011A-face.jpg",
+          "back": "images/SML-011A-back.jpg",
+          "size": "10+",
+          "bag": "RoomsRandom10+Box"
+        },
+        {
+          "identifier": "",
+          "Description": "Random",
+          "face": "images/SML-012A-face.jpg",
+          "back": "images/SML-012A-back.jpg",
+          "size": "10+",
+          "bag": "RoomsRandom10+Box"
+        },
+        {
+          "identifier": "",
+          "Description": "Random",
+          "face": "images/SML-013A-face.jpg",
+          "back": "images/SML-013A-back.jpg",
+          "size": "10+",
+          "bag": "RoomsRandom10+Box"
+        },
+        {
+          "identifier": "",
+          "Description": "Random",
+          "face": "images/SML-014A-face.jpg",
+          "back": "images/SML-014A-back.jpg",
+          "size": "10+",
+          "bag": "RoomsRandom10+Box"
+        },
+        {
+          "identifier": "",
+          "Description": "Random",
+          "face": "images/SML-015A-face.jpg",
+          "back": "images/SML-015A-back.jpg",
+          "size": "10+",
+          "bag": "RoomsRandom10+Box"
+        },
+        {
+          "identifier": "",
+          "Description": "Random",
+          "face": "images/SML-016A-face.jpg",
+          "back": "images/SML-016A-back.jpg",
+          "size": "15+",
+          "bag": "RoomsRandom15+Box"
+        },
+        {
+          "identifier": "",
+          "Description": "Random",
+          "face": "images/SML-017A-face.jpg",
+          "back": "images/SML-017A-back.jpg",
+          "size": "15+",
+          "bag": "RoomsRandom15+Box"
+        },
+        {
+          "identifier": "",
+          "Description": "Random",
+          "face": "images/SML-018A-face.jpg",
+          "back": "images/SML-018A-back.jpg",
+          "size": "15+",
+          "bag": "RoomsRandom15+Box"
+        },
+        {
+          "identifier": "SML-100A",
+          "Description": "Encounter",
+          "face": "images/SML-100A-face.jpg",
+          "back": "images/SML-100A-back.jpg",
+          "size": "",
+          "bag": "RoomsEncounterBox"
+        },
+        {
+          "identifier": "SML-101A",
+          "Description": "Encounter",
+          "face": "images/SML-101A-face.jpg",
+          "back": "images/SML-101A-back.jpg",
+          "size": "",
+          "bag": "RoomsEncounterBox"
+        },
+        {
+          "identifier": "SML-503A",
+          "Description": "Puzzle",
+          "face": "images/SML-503A-face.jpg",
+          "back": "images/SML-503A-back.jpg",
+          "size": "",
+          "bag": "RoomsPuzzleBox"
+        },
+        {
+          "identifier": "SML-504A",
+          "Description": "Puzzle",
+          "face": "images/SML-504A-face.jpg",
+          "back": "images/SML-504A-back.jpg",
+          "size": "",
+          "bag": "RoomsPuzzleBox"
+        },
+        {
+          "identifier": "SML-505A",
+          "Description": "Puzzle",
+          "face": "images/SML-505A-face.jpg",
+          "back": "images/SML-505A-back.jpg",
+          "size": "",
+          "bag": "RoomsPuzzleBox"
+        }
+      ]
+    }
+  ]
+}

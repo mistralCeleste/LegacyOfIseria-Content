@@ -1,8 +1,7 @@
 {
   "set": {
     "Name": "CardCustom",
-    "scale": { "x": 0.75, "y": 1, "z": 0.75 },
-    "position": { "x": 0, "y": 3, "z": -3 }
+    "scale": { "x": 0.75, "y": 1, "z": 0.75 }
   },
   "fields":
   {  
@@ -11,9 +10,9 @@
     ,  "face": "images/${Full Id}-face.jpg"
     ,  "back": "images/${Full Id}-back.jpg"
     ,  "tags": { "split": "${Keywords}", "delimiter": "," }
-    ,  "attribute": "${Attribute}"
-    ,  "class": "${Class}"
+    ,  "cost": "${Cost}"
+    ,  "type": "${Type}"
     ,  "rating": "${Rating}"
-    ,  "bag": "${Class}${Rating}Chest"
+    ,  "box": "${Box}"
   }
 }

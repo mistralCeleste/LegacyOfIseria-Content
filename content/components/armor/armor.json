@@ -1,0 +1,6 @@
+{
+  "components": [
+    { "include": "armor-1x1.json" }
+    , { "include": "armor-1x2.json" }
+  ]
+}

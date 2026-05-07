@@ -1,26 +1,23 @@
 {
-    "name": "Items"
-    , "description": "Cards representing various items that can be found in the game."  
-    , "components": [
-        {
-      "type": "Custom_Model",
-      "scale": { "x": 0.4, "y": 0.4, "z": 0.4 },
-      "sets": [
+    "components": [
+    {
+      "set": {
+        "Name": "Custom_Model_Bag",
+        "mesh": "../boxes/models/CardBox-container.obj",
+        "scale": { "x": 0.4, "y": 0.4, "z": 0.4 }
+      },
+      "items": [
         {
           "identifier": "ItemsBox",
-          "name": "Item Box",
-          "mesh": "../boxes/models/CardBox-container.obj",
-          "texture": "../boxes/images/Box_Items.jpg",
-          "container": { "type": 0, "stackable": false }
+          "Description": "Item Box",
+          "texture": "../boxes/images/Box_Items.jpg"
         },
         {
           "identifier": "ItemsInactiveBox",
-          "name": "Item Inactive Box",
-          "mesh": "../boxes/models/CardBox-container.obj",
-          "texture": "../boxes/images/Box_Items-inactive.jpg",
-          "container": { "type": 0, "stackable": false }
+          "Description": "Item Inactive Box",
+          "texture": "../boxes/images/Box_Items-inactive.jpg"
         },
-        { "include": "items_list.json" }
+        { "include": "items-cards.json" }
       ]
     }
   ]

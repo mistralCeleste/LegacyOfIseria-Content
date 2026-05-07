@@ -1,15 +1,12 @@
 {
-  "type": "CustomCard",
-  "shape": 0,
-  "scale": {
-    "x": 0.75,
-    "y": 1,
-    "z": 0.75
+  "set": {
+    "Name": "CustomCard",
+    "scale": { "x": 0.75, "y": 1, "z": 0.75 }
   },
-  "sets": [
+  "items": [
     {
       "identifier": "WPN-001A",
-      "name": "Sentinel's Hammer",
+      "Description": "Sentinel's Hammer",
       "face": "images/WPN-001A-face.jpg",
       "back": "images/WPN-001A-back.jpg",
       "tags": [
@@ -24,7 +21,7 @@
     },
     {
       "identifier": "WPN-002A",
-      "name": "Warden's Mace",
+      "Description": "Warden's Mace",
       "face": "images/WPN-002A-face.jpg",
       "back": "images/WPN-002A-back.jpg",
       "tags": [
@@ -39,7 +36,7 @@
     },
     {
       "identifier": "WPN-003A",
-      "name": "Bulwark Lance",
+      "Description": "Bulwark Lance",
       "face": "images/WPN-003A-face.jpg",
       "back": "images/WPN-003A-back.jpg",
       "tags": [
@@ -54,7 +51,7 @@
     },
     {
       "identifier": "WPN-004A",
-      "name": "Titanbreaker Maul",
+      "Description": "Titanbreaker Maul",
       "face": "images/WPN-004A-face.jpg",
       "back": "images/WPN-004A-back.jpg",
       "tags": [
@@ -69,7 +66,7 @@
     },
     {
       "identifier": "WPN-005A",
-      "name": "Judicator's Lance",
+      "Description": "Judicator's Lance",
       "face": "images/WPN-005A-face.jpg",
       "back": "images/WPN-005A-back.jpg",
       "tags": [
@@ -84,7 +81,7 @@
     },
     {
       "identifier": "WPN-006A",
-      "name": "Colossus Warhammer",
+      "Description": "Colossus Warhammer",
       "face": "images/WPN-006A-face.jpg",
       "back": "images/WPN-006A-back.jpg",
       "tags": [
@@ -100,7 +97,7 @@
     },
     {
       "identifier": "WPN-007A",
-      "name": "Imperator Lance",
+      "Description": "Imperator Lance",
       "face": "images/WPN-007A-face.jpg",
       "back": "images/WPN-007A-back.jpg",
       "tags": [
@@ -116,7 +113,7 @@
     },
     {
       "identifier": "WPN-008A",
-      "name": "Wyrmfang Blade",
+      "Description": "Wyrmfang Blade",
       "face": "images/WPN-008A-face.jpg",
       "back": "images/WPN-008A-back.jpg",
       "tags": [
@@ -132,7 +129,7 @@
     },
     {
       "identifier": "WPN-009A",
-      "name": "Wyrmclaw Blade",
+      "Description": "Wyrmclaw Blade",
       "face": "images/WPN-009A-face.jpg",
       "back": "images/WPN-009A-back.jpg",
       "tags": [
@@ -148,7 +145,7 @@
     },
     {
       "identifier": "WPN-010A",
-      "name": "Bloodreaver Axe",
+      "Description": "Bloodreaver Axe",
       "face": "images/WPN-010A-face.jpg",
       "back": "images/WPN-010A-back.jpg",
       "tags": [
@@ -163,7 +160,7 @@
     },
     {
       "identifier": "WPN-011A",
-      "name": "Shadowfang Blade",
+      "Description": "Shadowfang Blade",
       "face": "images/WPN-011A-face.jpg",
       "back": "images/WPN-011A-back.jpg",
       "tags": [
@@ -179,7 +176,7 @@
     },
     {
       "identifier": "WPN-012A",
-      "name": "Shadowclaw Blade",
+      "Description": "Shadowclaw Blade",
       "face": "images/WPN-012A-face.jpg",
       "back": "images/WPN-012A-back.jpg",
       "tags": [
@@ -195,7 +192,7 @@
     },
     {
       "identifier": "WPN-013A",
-      "name": "Divs Greatsword",
+      "Description": "Divs Greatsword",
       "face": "images/WPN-013A-face.jpg",
       "back": "images/WPN-013A-back.jpg",
       "tags": [
@@ -210,7 +207,7 @@
     },
     {
       "identifier": "WPN-014A",
-      "name": "Voidfang Blade",
+      "Description": "Voidfang Blade",
       "face": "images/WPN-014A-face.jpg",
       "back": "images/WPN-014A-back.jpg",
       "tags": [
@@ -226,7 +223,7 @@
     },
     {
       "identifier": "WPN-015A",
-      "name": "Voidclaw Blade",
+      "Description": "Voidclaw Blade",
       "face": "images/WPN-015A-face.jpg",
       "back": "images/WPN-015A-back.jpg",
       "tags": [
@@ -242,7 +239,7 @@
     },
     {
       "identifier": "WPN-016A",
-      "name": "Doomfang Scythe",
+      "Description": "Doomfang Scythe",
       "face": "images/WPN-016A-face.jpg",
       "back": "images/WPN-016A-back.jpg",
       "tags": [
@@ -258,7 +255,7 @@
     },
     {
       "identifier": "WPN-017A",
-      "name": "Doomclaw Scythe",
+      "Description": "Doomclaw Scythe",
       "face": "images/WPN-017A-face.jpg",
       "back": "images/WPN-017A-back.jpg",
       "tags": [
@@ -274,7 +271,7 @@
     },
     {
       "identifier": "WPN-018A",
-      "name": "Stormbranch Bow",
+      "Description": "Stormbranch Bow",
       "face": "images/WPN-018A-face.jpg",
       "back": "images/WPN-018A-back.jpg",
       "tags": [
@@ -289,7 +286,7 @@
     },
     {
       "identifier": "WPN-019A",
-      "name": "Thorntongue Whip",
+      "Description": "Thorntongue Whip",
       "face": "images/WPN-019A-face.jpg",
       "back": "images/WPN-019A-back.jpg",
       "tags": [
@@ -305,7 +302,7 @@
     },
     {
       "identifier": "WPN-020A",
-      "name": "Moonfang Chakram",
+      "Description": "Moonfang Chakram",
       "face": "images/WPN-020A-face.jpg",
       "back": "images/WPN-020A-back.jpg",
       "tags": [
@@ -320,7 +317,7 @@
     },
     {
       "identifier": "WPN-021A",
-      "name": "Windwhisper Bow",
+      "Description": "Windwhisper Bow",
       "face": "images/WPN-021A-face.jpg",
       "back": "images/WPN-021A-back.jpg",
       "tags": [
@@ -335,7 +332,7 @@
     },
     {
       "identifier": "WPN-022A",
-      "name": "Duskwind Whip",
+      "Description": "Duskwind Whip",
       "face": "images/WPN-022A-face.jpg",
       "back": "images/WPN-022A-back.jpg",
       "tags": [
@@ -351,7 +348,7 @@
     },
     {
       "identifier": "WPN-023A",
-      "name": "Skyhunter Bow",
+      "Description": "Skyhunter Bow",
       "face": "images/WPN-023A-face.jpg",
       "back": "images/WPN-023A-back.jpg",
       "tags": [
@@ -366,7 +363,7 @@
     },
     {
       "identifier": "WPN-024A",
-      "name": "Stormwheel Chakram",
+      "Description": "Stormwheel Chakram",
       "face": "images/WPN-024A-face.jpg",
       "back": "images/WPN-024A-back.jpg",
       "tags": [
@@ -381,7 +378,7 @@
     },
     {
       "identifier": "WPN-029A",
-      "name": "Seer's Whisper Tarot",
+      "Description": "Seer's Whisper Tarot",
       "face": "images/WPN-029A-face.jpg",
       "back": "images/WPN-029A-back.jpg",
       "tags": [
@@ -395,7 +392,7 @@
     },
     {
       "identifier": "WPN-030A",
-      "name": "Tome of Light",
+      "Description": "Tome of Light",
       "face": "images/WPN-030A-face.jpg",
       "back": "images/WPN-030A-back.jpg",
       "tags": [
@@ -409,7 +406,7 @@
     },
     {
       "identifier": "WPN-031A",
-      "name": "Gilded Branch Staff",
+      "Description": "Gilded Branch Staff",
       "face": "images/WPN-031A-face.jpg",
       "back": "images/WPN-031A-back.jpg",
       "tags": [
@@ -423,7 +420,7 @@
     },
     {
       "identifier": "WPN-032A",
-      "name": "Tome of Eternity",
+      "Description": "Tome of Eternity",
       "face": "images/WPN-032A-face.jpg",
       "back": "images/WPN-032A-back.jpg",
       "tags": [
@@ -438,7 +435,7 @@
     },
     {
       "identifier": "WPN-033A",
-      "name": "Voidveil Orb",
+      "Description": "Voidveil Orb",
       "face": "images/WPN-033A-face.jpg",
       "back": "images/WPN-033A-back.jpg",
       "tags": [
@@ -453,7 +450,7 @@
     },
     {
       "identifier": "WPN-034A",
-      "name": "Starshard Staff",
+      "Description": "Starshard Staff",
       "face": "images/WPN-034A-face.jpg",
       "back": "images/WPN-034A-back.jpg",
       "tags": [
@@ -468,7 +465,7 @@
     },
     {
       "identifier": "WPN-035A",
-      "name": "Starwoven Fate Tarot",
+      "Description": "Starwoven Fate Tarot",
       "face": "images/WPN-035A-face.jpg",
       "back": "images/WPN-035A-back.jpg",
       "tags": [
@@ -484,7 +481,7 @@
     },
     {
       "identifier": "WPN-036A",
-      "name": "Damascus Shortsword",
+      "Description": "Damascus Shortsword",
       "face": "images/WPN-036A-face.jpg",
       "back": "images/WPN-036A-back.jpg",
       "tags": [
@@ -499,7 +496,7 @@
     },
     {
       "identifier": "WPN-037A",
-      "name": "Willowflare Wand",
+      "Description": "Willowflare Wand",
       "face": "images/WPN-037A-face.jpg",
       "back": "images/WPN-037A-back.jpg",
       "tags": [
@@ -514,7 +511,7 @@
     },
     {
       "identifier": "WPN-038A",
-      "name": "Silverleaf Knife",
+      "Description": "Silverleaf Knife",
       "face": "images/WPN-038A-face.jpg",
       "back": "images/WPN-038A-back.jpg",
       "tags": [
@@ -529,7 +526,7 @@
     },
     {
       "identifier": "WPN-039A",
-      "name": "Mooncrest Crossbow",
+      "Description": "Mooncrest Crossbow",
       "face": "images/WPN-039A-face.jpg",
       "back": "images/WPN-039A-back.jpg",
       "tags": [
@@ -544,7 +541,7 @@
     },
     {
       "identifier": "WPN-040A",
-      "name": "Dragonsoul Blade",
+      "Description": "Dragonsoul Blade",
       "face": "images/WPN-040A-face.jpg",
       "back": "images/WPN-040A-back.jpg",
       "tags": [
@@ -559,7 +556,7 @@
     },
     {
       "identifier": "WPN-040B",
-      "name": "Dragonsoul Blade",
+      "Description": "Dragonsoul Blade",
       "face": "images/WPN-040B-face.jpg",
       "back": "images/WPN-040B-back.jpg",
       "tags": [
@@ -575,7 +572,7 @@
     },
     {
       "identifier": "WPN-041A",
-      "name": "Starshard Wand",
+      "Description": "Starshard Wand",
       "face": "images/WPN-041A-face.jpg",
       "back": "images/WPN-041A-back.jpg",
       "tags": [
