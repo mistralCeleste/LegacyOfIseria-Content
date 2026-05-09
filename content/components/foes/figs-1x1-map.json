@@ -1,14 +1,24 @@
 {
   "set": {
     "Name": "Custom_Tile",
-    "Type": 4,
-    "scale": { "x": 0.25, "y": 0.2, "z": 0.25 }
+    "scale": { "x": 0.35, "y": 0.2, "z": 0.35 },
+    "CustomImage": {
+      "ImageScalar": 1,
+      "WidthScale": 0,
+      "CustomTile": {
+        "Type": 2,
+        "Thickness": 0.1,
+        "Stackable": true,
+        "Stretch": true
+      }
+    }
+    , "bag": "FoesBox"
   },
   "fields":
   {  
-       "identifier": "${Full Id}"
+       "identifier": "${Figure}"
     ,  "Description": "${Name}"
-    ,  "face": "images/${Full Id}-face.jpg"
-    ,  "back": "images/${Full Id}-back.jpg"
+    ,  "face": "images/${Figure}-face.jpg"
+    ,  "back": "images/${Figure}-back.jpg"
   }
 }

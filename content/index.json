@@ -4,11 +4,6 @@
     , "description": "A collection of cards and other assets for the Legacy of Iseria board game."
     , "components":
     [
-        "components/days/days.json"
-        , "components/locations/locations.json"
-        , "components/npcs/npcs.json"
-        , "components/answers/ans.json"
-        , "components/combat-actions/act.json"
-        , "components/items/items.json"
+        "components/foes/foes.json"
     ]
 }

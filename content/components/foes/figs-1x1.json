@@ -3,169 +3,179 @@
     {
       "set": {
         "Name": "Custom_Tile",
-        "Type": 4,
         "scale": {
-          "x": 0.25,
+          "x": 0.35,
           "y": 0.2,
-          "z": 0.25
+          "z": 0.35
+        },
+        "CustomImage": {
+          "ImageScalar": 1,
+          "WidthScale": 0,
+          "CustomTile": {
+            "Type": 2,
+            "Thickness": 0.1,
+            "Stackable": true,
+            "Stretch": true
+          }
         }
+        , "bag": "FoesBox"
       },
       "items": [
         {
-          "identifier": "FOE-001A",
+          "identifier": "FIG-001",
           "Description": "Croakshotter",
-          "face": "images/FOE-001A-face.jpg",
-          "back": "images/FOE-001A-back.jpg"
+          "face": "images/FIG-001-face.jpg",
+          "back": "images/FIG-001-back.jpg"
         },
         {
-          "identifier": "FOE-001B",
+          "identifier": "FIG-001",
           "Description": "Croakshotter",
-          "face": "images/FOE-001B-face.jpg",
-          "back": "images/FOE-001B-back.jpg"
+          "face": "images/FIG-001-face.jpg",
+          "back": "images/FIG-001-back.jpg"
         },
         {
-          "identifier": "FOE-002A",
+          "identifier": "FIG-002",
           "Description": "Grunt Knight",
-          "face": "images/FOE-002A-face.jpg",
-          "back": "images/FOE-002A-back.jpg"
+          "face": "images/FIG-002-face.jpg",
+          "back": "images/FIG-002-back.jpg"
         },
         {
-          "identifier": "FOE-003A",
+          "identifier": "FIG-003",
           "Description": "Batty",
-          "face": "images/FOE-003A-face.jpg",
-          "back": "images/FOE-003A-back.jpg"
+          "face": "images/FIG-003-face.jpg",
+          "back": "images/FIG-003-back.jpg"
         },
         {
-          "identifier": "FOE-003B",
+          "identifier": "FIG-003",
           "Description": "Batty",
-          "face": "images/FOE-003B-face.jpg",
-          "back": "images/FOE-003B-back.jpg"
+          "face": "images/FIG-003-face.jpg",
+          "back": "images/FIG-003-back.jpg"
         },
         {
-          "identifier": "FOE-003A",
+          "identifier": "FIG-003",
           "Description": "Batty",
-          "face": "images/FOE-003A-face.jpg",
-          "back": "images/FOE-003A-back.jpg"
+          "face": "images/FIG-003-face.jpg",
+          "back": "images/FIG-003-back.jpg"
         },
         {
-          "identifier": "FOE-003B",
+          "identifier": "FIG-003",
           "Description": "Batty",
-          "face": "images/FOE-003B-face.jpg",
-          "back": "images/FOE-003B-back.jpg"
+          "face": "images/FIG-003-face.jpg",
+          "back": "images/FIG-003-back.jpg"
         },
         {
-          "identifier": "FOE-004A",
+          "identifier": "FIG-004",
           "Description": "Wolf",
-          "face": "images/FOE-004A-face.jpg",
-          "back": "images/FOE-004A-back.jpg"
+          "face": "images/FIG-004-face.jpg",
+          "back": "images/FIG-004-back.jpg"
         },
         {
-          "identifier": "FOE-004B",
+          "identifier": "FIG-004",
           "Description": "Wolf",
-          "face": "images/FOE-004B-face.jpg",
-          "back": "images/FOE-004B-back.jpg"
+          "face": "images/FIG-004-face.jpg",
+          "back": "images/FIG-004-back.jpg"
         },
         {
-          "identifier": "FOE-005A",
+          "identifier": "FIG-005",
           "Description": "Roarrior",
-          "face": "images/FOE-005A-face.jpg",
-          "back": "images/FOE-005A-back.jpg"
+          "face": "images/FIG-005-face.jpg",
+          "back": "images/FIG-005-back.jpg"
         },
         {
-          "identifier": "FOE-005B",
+          "identifier": "FIG-005",
           "Description": "Roarrior",
-          "face": "images/FOE-005B-face.jpg",
-          "back": "images/FOE-005B-back.jpg"
+          "face": "images/FIG-005-face.jpg",
+          "back": "images/FIG-005-back.jpg"
         },
         {
-          "identifier": "FOE-007A",
+          "identifier": "FIG-007",
           "Description": "Tentacle",
-          "face": "images/FOE-007A-face.jpg",
-          "back": "images/FOE-007A-back.jpg"
+          "face": "images/FIG-007-face.jpg",
+          "back": "images/FIG-007-back.jpg"
         },
         {
-          "identifier": "FOE-007A",
+          "identifier": "FIG-007",
           "Description": "Tentacle",
-          "face": "images/FOE-007A-face.jpg",
-          "back": "images/FOE-007A-back.jpg"
+          "face": "images/FIG-007-face.jpg",
+          "back": "images/FIG-007-back.jpg"
         },
         {
-          "identifier": "FOE-008B",
+          "identifier": "FIG-008",
           "Description": "Tentacle",
-          "face": "images/FOE-008B-face.jpg",
-          "back": "images/FOE-008B-back.jpg"
+          "face": "images/FIG-008-face.jpg",
+          "back": "images/FIG-008-back.jpg"
         },
         {
-          "identifier": "FOE-008B",
+          "identifier": "FIG-008",
           "Description": "Tentacle",
-          "face": "images/FOE-008B-face.jpg",
-          "back": "images/FOE-008B-back.jpg"
+          "face": "images/FIG-008-face.jpg",
+          "back": "images/FIG-008-back.jpg"
         },
         {
-          "identifier": "FOE-009A",
+          "identifier": "FIG-009",
           "Description": "Jelly",
-          "face": "images/FOE-009A-face.jpg",
-          "back": "images/FOE-009A-back.jpg"
+          "face": "images/FIG-009-face.jpg",
+          "back": "images/FIG-009-back.jpg"
         },
         {
-          "identifier": "FOE-010A",
+          "identifier": "FIG-010",
           "Description": "Small Jelly",
-          "face": "images/FOE-010A-face.jpg",
-          "back": "images/FOE-010A-back.jpg"
+          "face": "images/FIG-010-face.jpg",
+          "back": "images/FIG-010-back.jpg"
         },
         {
-          "identifier": "FOE-012A",
+          "identifier": "FIG-012",
           "Description": "Boggy",
-          "face": "images/FOE-012A-face.jpg",
-          "back": "images/FOE-012A-back.jpg"
+          "face": "images/FIG-012-face.jpg",
+          "back": "images/FIG-012-back.jpg"
         },
         {
-          "identifier": "FOE-013A",
+          "identifier": "FIG-013",
           "Description": "Pawladin",
-          "face": "images/FOE-013A-face.jpg",
-          "back": "images/FOE-013A-back.jpg"
+          "face": "images/FIG-013-face.jpg",
+          "back": "images/FIG-013-back.jpg"
         },
         {
-          "identifier": "FOE-014A",
+          "identifier": "FIG-014",
           "Description": "Goblin Archer",
-          "face": "images/FOE-014A-face.jpg",
-          "back": "images/FOE-014A-back.jpg"
+          "face": "images/FIG-014-face.jpg",
+          "back": "images/FIG-014-back.jpg"
         },
         {
-          "identifier": "FOE-015A",
+          "identifier": "FIG-015",
           "Description": "Goblin Sage",
-          "face": "images/FOE-015A-face.jpg",
-          "back": "images/FOE-015A-back.jpg"
+          "face": "images/FIG-015-face.jpg",
+          "back": "images/FIG-015-back.jpg"
         },
         {
-          "identifier": "FOE-016A",
+          "identifier": "FIG-016",
           "Description": "Goblin Fighter",
-          "face": "images/FOE-016A-face.jpg",
-          "back": "images/FOE-016A-back.jpg"
+          "face": "images/FIG-016-face.jpg",
+          "back": "images/FIG-016-back.jpg"
         },
         {
-          "identifier": "FOE-017A",
+          "identifier": "FIG-017",
           "Description": "Goblin Mage",
-          "face": "images/FOE-017A-face.jpg",
-          "back": "images/FOE-017A-back.jpg"
+          "face": "images/FIG-017-face.jpg",
+          "back": "images/FIG-017-back.jpg"
         },
         {
-          "identifier": "FOE-018A",
+          "identifier": "FIG-018",
           "Description": "Goblin Knight",
-          "face": "images/FOE-018A-face.jpg",
-          "back": "images/FOE-018A-back.jpg"
+          "face": "images/FIG-018-face.jpg",
+          "back": "images/FIG-018-back.jpg"
         },
         {
-          "identifier": "FOE-019A",
+          "identifier": "FIG-019",
           "Description": "Goblin Warrior",
-          "face": "images/FOE-019A-face.jpg",
-          "back": "images/FOE-019A-back.jpg"
+          "face": "images/FIG-019-face.jpg",
+          "back": "images/FIG-019-back.jpg"
         },
         {
-          "identifier": "FOE-020A",
+          "identifier": "FIG-020",
           "Description": "Goblin Leader",
-          "face": "images/FOE-020A-face.jpg",
-          "back": "images/FOE-020A-back.jpg"
+          "face": "images/FIG-020-face.jpg",
+          "back": "images/FIG-020-back.jpg"
         }
       ]
     }

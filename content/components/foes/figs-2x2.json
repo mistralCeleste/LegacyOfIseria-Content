@@ -3,25 +3,35 @@
     {
       "set": {
         "Name": "Custom_Tile",
-        "Type": 4,
         "scale": {
-          "x": 0.5,
+          "x": 0.75,
           "y": 0.2,
-          "z": 0.5
+          "z": 0.75
+        },
+        "CustomImage": {
+          "ImageScalar": 1,
+          "WidthScale": 0,
+          "CustomTile": {
+            "Type": 2,
+            "Thickness": 0.1,
+            "Stackable": true,
+            "Stretch": true
+          }
         }
+        , "bag": "FoesBox"
       },
       "items": [
         {
-          "identifier": "FOE-006A",
+          "identifier": "FIG-006",
           "Description": "Kraken",
-          "face": "images/FOE-006A-face.jpg",
-          "back": "images/FOE-006A-back.jpg"
+          "face": "images/FIG-006-face.jpg",
+          "back": "images/FIG-006-back.jpg"
         },
         {
-          "identifier": "FOE-011A",
+          "identifier": "FIG-011",
           "Description": "Giant Jelly",
-          "face": "images/FOE-011A-face.jpg",
-          "back": "images/FOE-011A-back.jpg"
+          "face": "images/FIG-011-face.jpg",
+          "back": "images/FIG-011-back.jpg"
         }
       ]
     }

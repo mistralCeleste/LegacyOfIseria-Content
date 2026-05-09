@@ -271,18 +271,33 @@ local function queueBagInsertion(bagId, entry)
             local bag = Registry.getComponent(bagId)
             local bagObj = bag and getObjectFromGUID(bag.guid)
             local cardObj = findRealCardObject(identifier)
+            local BAG_UNLOCK_DELAY = 2
 
             if bagObj and cardObj then
                 Log.debug("Inserting " .. identifier .. " into " .. bagId)
                 cardObj.setLock(false)
-                bagObj.putObject(cardObj)
 
-                LOADER.bagging.progress = LOADER.bagging.progress + 1
-                checkBaggingReady()
-                return true   -- <‑‑ success, stop callback
+                -- Wait a frame or two so physics settles
+                Wait.frames(function()
+                    -- Double-check objects still exist
+                    local b = getObjectFromGUID(bagObj.getGUID())
+                    local c = getObjectFromGUID(cardObj.getGUID())
+
+                    if not b or not c then
+                        Log.warn("Bagging failed after unlock delay for " .. identifier)
+                        return
+                    end
+
+                    b.putObject(c)
+                    LOADER.bagging.progress = LOADER.bagging.progress + 1
+                    checkBaggingReady()
+
+                    Log.debug("Bagging complete for " .. identifier)
+                end, BAG_UNLOCK_DELAY)
+                return true
             end
 
-            return false  -- <‑‑ keep waiting
+            return false  -- <‑‑ keep waiting for item to exist
         end,
 
         function()
@@ -290,7 +305,6 @@ local function queueBagInsertion(bagId, entry)
             local bag = Registry.getComponent(bagId)
             local bagObj = bag and getObjectFromGUID(bag.guid)
             local cardObj = findRealCardObject(identifier)
-
             return bagObj ~= nil and cardObj ~= nil
         end
     )
@@ -583,6 +597,11 @@ local AliasMap = {
 
     Tile = {
         image = { path = {"CustomImage", "ImageURL"} }
+    },
+
+    Custom_Tile = {
+        face = { path = {"CustomImage", "ImageURL"} },
+        back = { path = {"CustomImage", "ImageSecondaryURL"} }
     },
 
     Token = {
@@ -950,7 +969,7 @@ function JsonAdapter.registerComponentSet(basePath, component)
 end
 
 
-function JsonAdapter.spawnComponent(entry)
+function JsonAdapter.Component(entry)
     local obj = spawnObjectData({
         data = entry,
         callback_function = function(obj)
