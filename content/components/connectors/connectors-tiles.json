@@ -1,0 +1,155 @@
+{
+  "components": [
+    {
+      "set": {
+        "Name": "Custom_Tile",
+        "scale": {
+          "x": 0.38,
+          "y": 1,
+          "z": 0.38
+        },
+        "Type": "0",
+        "back": "images/connector_back.jpg",
+        "CustomTile": {
+          "Type": 0,
+          "Thickness": 0.1,
+          "Stackable": true
+        }
+      },
+      "items": [
+        {
+          "identifier": "barred",
+          "Description": "barred",
+          "face": "images/connector-barred_face.jpg",
+          "bag": "ConnectorBag"
+        },
+        {
+          "identifier": "hall",
+          "Description": "hall",
+          "face": "images/connector-hall_face.jpg",
+          "bag": "ConnectorBag"
+        },
+        {
+          "identifier": "locked",
+          "Description": "locked",
+          "face": "images/connector-locked_face.jpg",
+          "bag": "ConnectorBag"
+        },
+        {
+          "identifier": "wall",
+          "Description": "wall",
+          "face": "images/connector-wall_face.jpg",
+          "bag": "ConnectorBag"
+        },
+        {
+          "identifier": "barred",
+          "Description": "barred",
+          "face": "images/connector-barred_face.jpg",
+          "bag": "ConnectorBag"
+        },
+        {
+          "identifier": "barred",
+          "Description": "barred",
+          "face": "images/connector-barred_face.jpg",
+          "bag": "ConnectorBag"
+        },
+        {
+          "identifier": "barred",
+          "Description": "barred",
+          "face": "images/connector-barred_face.jpg",
+          "bag": "ConnectorBag"
+        },
+        {
+          "identifier": "hall",
+          "Description": "hall",
+          "face": "images/connector-hall_face.jpg",
+          "bag": "ConnectorBag"
+        },
+        {
+          "identifier": "hall",
+          "Description": "hall",
+          "face": "images/connector-hall_face.jpg",
+          "bag": "ConnectorBag"
+        },
+        {
+          "identifier": "hall",
+          "Description": "hall",
+          "face": "images/connector-hall_face.jpg",
+          "bag": "ConnectorBag"
+        },
+        {
+          "identifier": "hall",
+          "Description": "hall",
+          "face": "images/connector-hall_face.jpg",
+          "bag": "ConnectorBag"
+        },
+        {
+          "identifier": "hall",
+          "Description": "hall",
+          "face": "images/connector-hall_face.jpg",
+          "bag": "ConnectorBag"
+        },
+        {
+          "identifier": "hall",
+          "Description": "hall",
+          "face": "images/connector-hall_face.jpg",
+          "bag": "ConnectorBag"
+        },
+        {
+          "identifier": "hall",
+          "Description": "hall",
+          "face": "images/connector-hall_face.jpg",
+          "bag": "ConnectorBag"
+        },
+        {
+          "identifier": "hall",
+          "Description": "hall",
+          "face": "images/connector-hall_face.jpg",
+          "bag": "ConnectorBag"
+        },
+        {
+          "identifier": "hall",
+          "Description": "hall",
+          "face": "images/connector-hall_face.jpg",
+          "bag": "ConnectorBag"
+        },
+        {
+          "identifier": "locked",
+          "Description": "locked",
+          "face": "images/connector-locked_face.jpg",
+          "bag": "ConnectorBag"
+        },
+        {
+          "identifier": "locked",
+          "Description": "locked",
+          "face": "images/connector-locked_face.jpg",
+          "bag": "ConnectorBag"
+        },
+        {
+          "identifier": "locked",
+          "Description": "locked",
+          "face": "images/connector-locked_face.jpg",
+          "bag": "ConnectorBag"
+        },
+        {
+          "identifier": "wall",
+          "Description": "wall",
+          "face": "images/connector-wall_face.jpg",
+          "bag": "ConnectorBag"
+        },
+        {
+          "identifier": "wall",
+          "Description": "wall",
+          "face": "images/connector-wall_face.jpg",
+          "bag": "ConnectorBag"
+        },
+        {
+          "identifier": "wall",
+          "Description": "wall",
+          "face": "images/connector-wall_face.jpg",
+          "bag": "ConnectorBag"
+        }
+      ]
+    }
+  ]
+}

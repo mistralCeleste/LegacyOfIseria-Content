@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "set": {
+        "Name": "CardCustom",
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "items": [
+        {
+          "identifier": "MOD-301A",
+          "Description": "Dulled",
+          "face": "images/MOD-301A-face.jpg",
+          "back": "images/MOD-301A-back.jpg"
+        },
+        {
+          "identifier": "MOD-302A",
+          "Description": "Cleaving",
+          "face": "images/MOD-302A-face.jpg",
+          "back": "images/MOD-302A-back.jpg"
+        },
+        {
+          "identifier": "MOD-303A",
+          "Description": "Heroic",
+          "face": "images/MOD-303A-face.jpg",
+          "back": "images/MOD-303A-back.jpg"
+        },
+        {
+          "identifier": "MOD-304A",
+          "Description": "Cursed",
+          "face": "images/MOD-304A-face.jpg",
+          "back": "images/MOD-304A-back.jpg"
+        }
+      ]
+    }
+  ]
+}

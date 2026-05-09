@@ -1,0 +1,19 @@
+{
+  "fields":
+    {
+      "Name": "Custom_Model_Bag",
+      "identifier": "${Class}HeroBox",
+      "Description": "${Class} Hero Box",
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "rotation": {"x": 0, "y": 270, "z": 0 },
+      "CustomMesh": {
+        "MeshURL": "../boxes/models/CardBox-container.obj",
+        "DiffuseURL": "models/box-${Class}-diffuse.png",
+        "MaterialIndex": 3,
+        "TypeIndex": 6,
+        "SpecularIntensity": 0.2,
+        "SpecularSharpness": 2,
+        "FresnelStrength": 0.4
+      }
+    }
+}

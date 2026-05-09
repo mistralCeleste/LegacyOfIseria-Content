@@ -1,0 +1,28 @@
+{
+  "components": [
+    {
+      "set": {
+        "Name": "CardCustom",
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "items": [
+        {
+          "identifier": "MOD-101A",
+          "Description": "Armored",
+          "face": "images/MOD-101A-face.jpg",
+          "back": "images/MOD-101A-back.jpg"
+        },
+        {
+          "identifier": "MOD-102A",
+          "Description": "Hardy",
+          "face": "images/MOD-102A-face.jpg",
+          "back": "images/MOD-102A-back.jpg"
+        }
+      ]
+    }
+  ]
+}

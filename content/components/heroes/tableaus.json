@@ -1,0 +1,72 @@
+{
+  "components": [
+    {
+      "set": {
+        "Name": "Custom_Tile",
+        "scale": {
+          "x": 2.2,
+          "y": 0.2,
+          "z": 2.2
+        }
+      },
+      "items": [
+        {
+          "identifier": "VanguardTableau",
+          "Description": "Vanguard Tableau",
+          "face": "images/HeroTableau.jpg",
+          "back": "images/HeroTableau.jpg",
+          "bag": "VanguardHeroBox"
+        },
+        {
+          "identifier": "VanguardTableau",
+          "Description": "Vanguard Tableau",
+          "face": "images/HeroTableau.jpg",
+          "back": "images/HeroTableau.jpg",
+          "bag": "VanguardHeroBox"
+        },
+        {
+          "identifier": "SageTableau",
+          "Description": "Sage Tableau",
+          "face": "images/HeroTableau.jpg",
+          "back": "images/HeroTableau.jpg",
+          "bag": "SageHeroBox"
+        },
+        {
+          "identifier": "SageTableau",
+          "Description": "Sage Tableau",
+          "face": "images/HeroTableau.jpg",
+          "back": "images/HeroTableau.jpg",
+          "bag": "SageHeroBox"
+        },
+        {
+          "identifier": "PathfinderTableau",
+          "Description": "Pathfinder Tableau",
+          "face": "images/HeroTableau.jpg",
+          "back": "images/HeroTableau.jpg",
+          "bag": "PathfinderHeroBox"
+        },
+        {
+          "identifier": "PathfinderTableau",
+          "Description": "Pathfinder Tableau",
+          "face": "images/HeroTableau.jpg",
+          "back": "images/HeroTableau.jpg",
+          "bag": "PathfinderHeroBox"
+        },
+        {
+          "identifier": "WarbladeTableau",
+          "Description": "Warblade Tableau",
+          "face": "images/HeroTableau.jpg",
+          "back": "images/HeroTableau.jpg",
+          "bag": "WarbladeHeroBox"
+        },
+        {
+          "identifier": "WarbladeTableau",
+          "Description": "Warblade Tableau",
+          "face": "images/HeroTableau.jpg",
+          "back": "images/HeroTableau.jpg",
+          "bag": "WarbladeHeroBox"
+        }
+      ]
+    }
+  ]
+}

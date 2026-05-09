@@ -1,0 +1,64 @@
+{
+  "components": [
+    {
+      "set": {
+        "Name": "Infinite",
+        "scale": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        }
+      },
+      "items": [
+        {
+          "identifier": "VanguardMarkerBag",
+          "Description": "Vanguard Marker Bag",
+          "color": "#FFFEAF",
+          "bag": "VanguardHeroBox"
+        },
+        {
+          "identifier": "VanguardMarkerBag",
+          "Description": "Vanguard Marker Bag",
+          "color": "#FFFEAF",
+          "bag": "VanguardHeroBox"
+        },
+        {
+          "identifier": "SageMarkerBag",
+          "Description": "Sage Marker Bag",
+          "color": "#D99CFF",
+          "bag": "SageHeroBox"
+        },
+        {
+          "identifier": "SageMarkerBag",
+          "Description": "Sage Marker Bag",
+          "color": "#D99CFF",
+          "bag": "SageHeroBox"
+        },
+        {
+          "identifier": "PathfinderMarkerBag",
+          "Description": "Pathfinder Marker Bag",
+          "color": "#9FD39D",
+          "bag": "PathfinderHeroBox"
+        },
+        {
+          "identifier": "PathfinderMarkerBag",
+          "Description": "Pathfinder Marker Bag",
+          "color": "#9FD39D",
+          "bag": "PathfinderHeroBox"
+        },
+        {
+          "identifier": "WarbladeMarkerBag",
+          "Description": "Warblade Marker Bag",
+          "color": "#FCCFC2",
+          "bag": "WarbladeHeroBox"
+        },
+        {
+          "identifier": "WarbladeMarkerBag",
+          "Description": "Warblade Marker Bag",
+          "color": "#FCCFC2",
+          "bag": "WarbladeHeroBox"
+        }
+      ]
+    }
+  ]
+}

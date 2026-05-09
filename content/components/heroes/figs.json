@@ -1,0 +1,112 @@
+{
+  "components": [
+    {
+      "set": {
+        "Name": "Custom_Model",
+        "scale": {
+          "x": 0.8,
+          "y": 0.8,
+          "z": 0.8
+        }
+      },
+      "items": [
+        {
+          "identifier": "FIG-H01A",
+          "Description": "Vaerwyn",
+          "mesh": "models/Vanguard-female.obj",
+          "texture": "models/Vanguard-female-diffuse.jpg",
+          "material": {
+            "specular": 0.05,
+            "fresnel": 0.05
+          },
+          "class": "Vanguard",
+          "bag": "VanguardHeroBox"
+        },
+        {
+          "identifier": "FIG-H01B",
+          "Description": "Brannok",
+          "mesh": "models/Vanguard-male.obj",
+          "texture": "models/Vanguard-male-diffuse.jpg",
+          "material": {
+            "specular": 0.05,
+            "fresnel": 0.05
+          },
+          "class": "Vanguard",
+          "bag": "VanguardHeroBox"
+        },
+        {
+          "identifier": "FIG-H02A",
+          "Description": "Mirathis",
+          "mesh": "models/Sage-female.obj",
+          "texture": "models/Sage-female-diffuse.jpg",
+          "material": {
+            "specular": 0.05,
+            "fresnel": 0.05
+          },
+          "class": "Sage",
+          "bag": "SageHeroBox"
+        },
+        {
+          "identifier": "FIG-H02B",
+          "Description": "Eryndel",
+          "mesh": "models/Sage-male.obj",
+          "texture": "models/Sage-male-diffuse.jpg",
+          "material": {
+            "specular": 0.05,
+            "fresnel": 0.05
+          },
+          "class": "Sage",
+          "bag": "SageHeroBox"
+        },
+        {
+          "identifier": "FIG-H03A",
+          "Description": "Miranhwa",
+          "mesh": "models/Pathfinder-female.obj",
+          "texture": "models/Pathfinder-female-diffuse.jpg",
+          "material": {
+            "specular": 0.05,
+            "fresnel": 0.05
+          },
+          "class": "Pathfinder",
+          "bag": "PathfinderHeroBox"
+        },
+        {
+          "identifier": "FIG-H03B",
+          "Description": "Haneulrim",
+          "mesh": "models/Pathfinder-male.obj",
+          "texture": "models/Pathfinder-male-diffuse.jpg",
+          "material": {
+            "specular": 0.05,
+            "fresnel": 0.05
+          },
+          "class": "Pathfinder",
+          "bag": "PathfinderHeroBox"
+        },
+        {
+          "identifier": "FIG-H04A",
+          "Description": "Soraya",
+          "mesh": "models/Warblade-female.obj",
+          "texture": "models/Warblade-female-diffuse.jpg",
+          "material": {
+            "specular": 0.05,
+            "fresnel": 0.05
+          },
+          "class": "Warblade",
+          "bag": "WarbladeHeroBox"
+        },
+        {
+          "identifier": "FIG-H04B",
+          "Description": "Ardeshir",
+          "mesh": "models/Warblade-male.obj",
+          "texture": "models/Warblade-male-diffuse.jpg",
+          "material": {
+            "specular": 0.05,
+            "fresnel": 0.05
+          },
+          "class": "Warblade",
+          "bag": "WarbladeHeroBox"
+        }
+      ]
+    }
+  ]
+}

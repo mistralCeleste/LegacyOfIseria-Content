@@ -1,0 +1,20 @@
+{
+  "set": {
+    "Name": "Custom_Tile"
+    , "scale": { "x": 0.38, "y": 1, "z": 0.38 }
+    ,  "Type": "0"
+    , "CustomTile": {
+        "Type": 0,
+        "Thickness": 0.1,
+        "Stackable": true
+      }
+  },
+  "fields":
+  {  
+       "identifier": "${Back}"
+    ,  "Description": "${Back}"
+    ,  "back": "images/${Back}_back.jpg"
+    ,  "face": "images/${Type}-${Reward}_face.jpg"
+    ,  "bag": "${Back}Bag"
+  }
+}

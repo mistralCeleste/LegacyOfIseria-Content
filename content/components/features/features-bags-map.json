@@ -1,0 +1,11 @@
+{
+  "set": {
+    "Name": "Bag"
+    , "scale": { "x": 0.6, "y": 1, "z": 0.6 }
+  },
+  "fields":
+  {  
+       "identifier": "${Back}Bag"
+    ,  "Description": "${Back} Bag"
+  }
+}

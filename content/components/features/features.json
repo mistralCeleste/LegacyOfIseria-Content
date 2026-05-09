@@ -1,0 +1,6 @@
+{
+  "components": [
+      { "include": "features-bags.json" }
+    , { "include": "features-tiles.json" }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "components": [
+    {
+      "set": {
+        "Name": "BlockSquare",
+        "scale": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        }
+      },
+      "items": [
+        {
+          "identifier": "VanguardMarker",
+          "Description": "Vanguard Marker",
+          "color": "#FFFEAF",
+          "bag": "VanguardMarkerBag"
+        },
+        {
+          "identifier": "VanguardMarker",
+          "Description": "Vanguard Marker",
+          "color": "#FFFEAF",
+          "bag": "VanguardMarkerBag"
+        },
+        {
+          "identifier": "SageMarker",
+          "Description": "Sage Marker",
+          "color": "#D99CFF",
+          "bag": "SageMarkerBag"
+        },
+        {
+          "identifier": "SageMarker",
+          "Description": "Sage Marker",
+          "color": "#D99CFF",
+          "bag": "SageMarkerBag"
+        },
+        {
+          "identifier": "PathfinderMarker",
+          "Description": "Pathfinder Marker",
+          "color": "#9FD39D",
+          "bag": "PathfinderMarkerBag"
+        },
+        {
+          "identifier": "PathfinderMarker",
+          "Description": "Pathfinder Marker",
+          "color": "#9FD39D",
+          "bag": "PathfinderMarkerBag"
+        },
+        {
+          "identifier": "WarbladeMarker",
+          "Description": "Warblade Marker",
+          "color": "#FCCFC2",
+          "bag": "WarbladeMarkerBag"
+        },
+        {
+          "identifier": "WarbladeMarker",
+          "Description": "Warblade Marker",
+          "color": "#FCCFC2",
+          "bag": "WarbladeMarkerBag"
+        }
+      ]
+    }
+  ]
+}

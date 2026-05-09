@@ -1,7 +1,7 @@
 {
   "set": {
     "Name": "Custom_Tile",
-    "scale": { "x": 0.25, "y": 0.1, "z": 0.25 }
+    "scale": { "x": 0.4, "y": 1, "z": 0.4 }
   },
   "fields":
   {  

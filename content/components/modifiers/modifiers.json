@@ -1,0 +1,9 @@
+{
+  "components": [
+      { "include": "modifier-boxes.json" }
+    , { "include": "modifier-base-cards.json" }
+    , { "include": "modifier-fai-cards.json" }
+    , { "include": "modifier-foe-cards.json" }
+    , { "include": "modifier-weapons-cards.json" }
+  ]
+}

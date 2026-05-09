@@ -6,10 +6,10 @@
   "fields":
     {
       "type": "Custom_Die",
-      "bag": "${Class}FudgeDiceBag",
-      "identifier": "${Class}FudgeDie",
-      "Description": "${Class} Fudge Die",
+      "identifier": "${Class}WisdomDie",
+      "Description": "${Class} Wisdom Die",
       "faces": "images/fudge_die_faces.jpg",
-      "color": "${Color}"
+      "color": "${Color}",
+      "bag": "${Class}WisdomDiceBag"
     }
 }

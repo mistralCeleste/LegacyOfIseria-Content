@@ -1,0 +1,24 @@
+{
+    "components": [
+    {
+      "set": {
+        "Name": "Custom_Model_Bag",
+        "scale": { "x": 0.4, "y": 0.4, "z": 0.4 }
+      },
+      "items": [
+        {
+          "identifier": "FoesBox",
+          "name": "Foes Box",
+          "mesh": "../boxes/models/CardBox-container.obj",
+          "texture": "../boxes/images/Box_Foes.jpg"
+        },
+        {
+          "identifier": "FoesInactiveBox",
+          "name": "Foe Inactive Box",
+          "mesh": "../boxes/models/CardBox-container.obj",
+          "texture": "../boxes/images/Box_Foes-inactive.jpg"
+        }
+      ]
+    }
+  ]
+}

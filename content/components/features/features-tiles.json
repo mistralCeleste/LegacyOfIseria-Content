@@ -1,0 +1,526 @@
+{
+  "components": [
+    {
+      "set": {
+        "Name": "Custom_Tile",
+        "scale": {
+          "x": 0.38,
+          "y": 1,
+          "z": 0.38
+        },
+        "Type": "0",
+        "CustomTile": {
+          "Type": 0,
+          "Thickness": 0.1,
+          "Stackable": true
+        }
+      },
+      "items": [
+        {
+          "identifier": "column",
+          "Description": "column",
+          "back": "images/column_back.jpg",
+          "face": "images/Column-Armor_face.jpg",
+          "bag": "columnBag"
+        },
+        {
+          "identifier": "column",
+          "Description": "column",
+          "back": "images/column_back.jpg",
+          "face": "images/Column-Armor_face.jpg",
+          "bag": "columnBag"
+        },
+        {
+          "identifier": "column",
+          "Description": "column",
+          "back": "images/column_back.jpg",
+          "face": "images/Column-Coin_face.jpg",
+          "bag": "columnBag"
+        },
+        {
+          "identifier": "column",
+          "Description": "column",
+          "back": "images/column_back.jpg",
+          "face": "images/Column-Coin_face.jpg",
+          "bag": "columnBag"
+        },
+        {
+          "identifier": "column",
+          "Description": "column",
+          "back": "images/column_back.jpg",
+          "face": "images/Column-Coin_face.jpg",
+          "bag": "columnBag"
+        },
+        {
+          "identifier": "column",
+          "Description": "column",
+          "back": "images/column_back.jpg",
+          "face": "images/Column-Item_face.jpg",
+          "bag": "columnBag"
+        },
+        {
+          "identifier": "column",
+          "Description": "column",
+          "back": "images/column_back.jpg",
+          "face": "images/Column-Item_face.jpg",
+          "bag": "columnBag"
+        },
+        {
+          "identifier": "column",
+          "Description": "column",
+          "back": "images/column_back.jpg",
+          "face": "images/Column-No_face.jpg",
+          "bag": "columnBag"
+        },
+        {
+          "identifier": "column",
+          "Description": "column",
+          "back": "images/column_back.jpg",
+          "face": "images/Column-No_face.jpg",
+          "bag": "columnBag"
+        },
+        {
+          "identifier": "column",
+          "Description": "column",
+          "back": "images/column_back.jpg",
+          "face": "images/Column-No_face.jpg",
+          "bag": "columnBag"
+        },
+        {
+          "identifier": "column",
+          "Description": "column",
+          "back": "images/column_back.jpg",
+          "face": "images/Column-No_face.jpg",
+          "bag": "columnBag"
+        },
+        {
+          "identifier": "column",
+          "Description": "column",
+          "back": "images/column_back.jpg",
+          "face": "images/Column-No_face.jpg",
+          "bag": "columnBag"
+        },
+        {
+          "identifier": "column",
+          "Description": "column",
+          "back": "images/column_back.jpg",
+          "face": "images/Column-No_face.jpg",
+          "bag": "columnBag"
+        },
+        {
+          "identifier": "column",
+          "Description": "column",
+          "back": "images/column_back.jpg",
+          "face": "images/Column-No_face.jpg",
+          "bag": "columnBag"
+        },
+        {
+          "identifier": "column",
+          "Description": "column",
+          "back": "images/column_back.jpg",
+          "face": "images/Column-No_face.jpg",
+          "bag": "columnBag"
+        },
+        {
+          "identifier": "column",
+          "Description": "column",
+          "back": "images/column_back.jpg",
+          "face": "images/Column-No_face.jpg",
+          "bag": "columnBag"
+        },
+        {
+          "identifier": "column",
+          "Description": "column",
+          "back": "images/column_back.jpg",
+          "face": "images/Column-No_face.jpg",
+          "bag": "columnBag"
+        },
+        {
+          "identifier": "column",
+          "Description": "column",
+          "back": "images/column_back.jpg",
+          "face": "images/Column-No_face.jpg",
+          "bag": "columnBag"
+        },
+        {
+          "identifier": "column",
+          "Description": "column",
+          "back": "images/column_back.jpg",
+          "face": "images/Column-Mob_face.jpg",
+          "bag": "columnBag"
+        },
+        {
+          "identifier": "column",
+          "Description": "column",
+          "back": "images/column_back.jpg",
+          "face": "images/Column-Brute_face.jpg",
+          "bag": "columnBag"
+        },
+        {
+          "identifier": "column",
+          "Description": "column",
+          "back": "images/column_back.jpg",
+          "face": "images/Column-Portal_face.jpg",
+          "bag": "columnBag"
+        },
+        {
+          "identifier": "column",
+          "Description": "column",
+          "back": "images/column_back.jpg",
+          "face": "images/Column-Weapon_face.jpg",
+          "bag": "columnBag"
+        },
+        {
+          "identifier": "column",
+          "Description": "column",
+          "back": "images/column_back.jpg",
+          "face": "images/Column-Weapon_face.jpg",
+          "bag": "columnBag"
+        },
+        {
+          "identifier": "crate",
+          "Description": "crate",
+          "back": "images/crate_back.jpg",
+          "face": "images/Loot-Armor_face.jpg",
+          "bag": "crateBag"
+        },
+        {
+          "identifier": "crate",
+          "Description": "crate",
+          "back": "images/crate_back.jpg",
+          "face": "images/Loot-Armor_face.jpg",
+          "bag": "crateBag"
+        },
+        {
+          "identifier": "crate",
+          "Description": "crate",
+          "back": "images/crate_back.jpg",
+          "face": "images/Loot-Weapon_face.jpg",
+          "bag": "crateBag"
+        },
+        {
+          "identifier": "crate",
+          "Description": "crate",
+          "back": "images/crate_back.jpg",
+          "face": "images/Loot-Weapon_face.jpg",
+          "bag": "crateBag"
+        },
+        {
+          "identifier": "crate",
+          "Description": "crate",
+          "back": "images/crate_back.jpg",
+          "face": "images/Loot-Item_face.jpg",
+          "bag": "crateBag"
+        },
+        {
+          "identifier": "crate",
+          "Description": "crate",
+          "back": "images/crate_back.jpg",
+          "face": "images/Loot-Item_face.jpg",
+          "bag": "crateBag"
+        },
+        {
+          "identifier": "crate",
+          "Description": "crate",
+          "back": "images/crate_back.jpg",
+          "face": "images/Loot-Item_face.jpg",
+          "bag": "crateBag"
+        },
+        {
+          "identifier": "crate",
+          "Description": "crate",
+          "back": "images/crate_back.jpg",
+          "face": "images/Loot-Coin_face.jpg",
+          "bag": "crateBag"
+        },
+        {
+          "identifier": "crate",
+          "Description": "crate",
+          "back": "images/crate_back.jpg",
+          "face": "images/Loot-Coin_face.jpg",
+          "bag": "crateBag"
+        },
+        {
+          "identifier": "crate",
+          "Description": "crate",
+          "back": "images/crate_back.jpg",
+          "face": "images/Loot-Coin_face.jpg",
+          "bag": "crateBag"
+        },
+        {
+          "identifier": "crate",
+          "Description": "crate",
+          "back": "images/crate_back.jpg",
+          "face": "images/Loot-No_face.jpg",
+          "bag": "crateBag"
+        },
+        {
+          "identifier": "crate",
+          "Description": "crate",
+          "back": "images/crate_back.jpg",
+          "face": "images/Loot-No_face.jpg",
+          "bag": "crateBag"
+        },
+        {
+          "identifier": "crate",
+          "Description": "crate",
+          "back": "images/crate_back.jpg",
+          "face": "images/Loot-No_face.jpg",
+          "bag": "crateBag"
+        },
+        {
+          "identifier": "crate",
+          "Description": "crate",
+          "back": "images/crate_back.jpg",
+          "face": "images/Loot-No_face.jpg",
+          "bag": "crateBag"
+        },
+        {
+          "identifier": "chest-brown",
+          "Description": "chest-brown",
+          "back": "images/chest-brown_back.jpg",
+          "face": "images/Loot-Armor_face.jpg",
+          "bag": "chest-brownBag"
+        },
+        {
+          "identifier": "chest-brown",
+          "Description": "chest-brown",
+          "back": "images/chest-brown_back.jpg",
+          "face": "images/Loot-Armor_face.jpg",
+          "bag": "chest-brownBag"
+        },
+        {
+          "identifier": "chest-brown",
+          "Description": "chest-brown",
+          "back": "images/chest-brown_back.jpg",
+          "face": "images/Loot-Armor_face.jpg",
+          "bag": "chest-brownBag"
+        },
+        {
+          "identifier": "chest-brown",
+          "Description": "chest-brown",
+          "back": "images/chest-brown_back.jpg",
+          "face": "images/Loot-Coin_face.jpg",
+          "bag": "chest-brownBag"
+        },
+        {
+          "identifier": "chest-brown",
+          "Description": "chest-brown",
+          "back": "images/chest-brown_back.jpg",
+          "face": "images/Loot-Coin_face.jpg",
+          "bag": "chest-brownBag"
+        },
+        {
+          "identifier": "chest-brown",
+          "Description": "chest-brown",
+          "back": "images/chest-brown_back.jpg",
+          "face": "images/Loot-Coin_face.jpg",
+          "bag": "chest-brownBag"
+        },
+        {
+          "identifier": "chest-brown",
+          "Description": "chest-brown",
+          "back": "images/chest-brown_back.jpg",
+          "face": "images/Loot-Item_face.jpg",
+          "bag": "chest-brownBag"
+        },
+        {
+          "identifier": "chest-brown",
+          "Description": "chest-brown",
+          "back": "images/chest-brown_back.jpg",
+          "face": "images/Loot-Item_face.jpg",
+          "bag": "chest-brownBag"
+        },
+        {
+          "identifier": "chest-brown",
+          "Description": "chest-brown",
+          "back": "images/chest-brown_back.jpg",
+          "face": "images/Loot-Item_face.jpg",
+          "bag": "chest-brownBag"
+        },
+        {
+          "identifier": "chest-brown",
+          "Description": "chest-brown",
+          "back": "images/chest-brown_back.jpg",
+          "face": "images/Loot-Item_face.jpg",
+          "bag": "chest-brownBag"
+        },
+        {
+          "identifier": "chest-brown",
+          "Description": "chest-brown",
+          "back": "images/chest-brown_back.jpg",
+          "face": "images/Loot-Item_face.jpg",
+          "bag": "chest-brownBag"
+        },
+        {
+          "identifier": "chest-brown",
+          "Description": "chest-brown",
+          "back": "images/chest-brown_back.jpg",
+          "face": "images/Loot-Weapon_face.jpg",
+          "bag": "chest-brownBag"
+        },
+        {
+          "identifier": "chest-brown",
+          "Description": "chest-brown",
+          "back": "images/chest-brown_back.jpg",
+          "face": "images/Loot-Weapon_face.jpg",
+          "bag": "chest-brownBag"
+        },
+        {
+          "identifier": "chest-brown",
+          "Description": "chest-brown",
+          "back": "images/chest-brown_back.jpg",
+          "face": "images/Loot-Weapon_face.jpg",
+          "bag": "chest-brownBag"
+        },
+        {
+          "identifier": "chest-brown",
+          "Description": "chest-brown",
+          "back": "images/chest-brown_back.jpg",
+          "face": "images/Loot-Mob_face.jpg",
+          "bag": "chest-brownBag"
+        },
+        {
+          "identifier": "chest-brown",
+          "Description": "chest-brown",
+          "back": "images/chest-brown_back.jpg",
+          "face": "images/Loot-Brute_face.jpg",
+          "bag": "chest-brownBag"
+        },
+        {
+          "identifier": "chest-brown",
+          "Description": "chest-brown",
+          "back": "images/chest-brown_back.jpg",
+          "face": "images/Loot-Equipment_face.jpg",
+          "bag": "chest-brownBag"
+        },
+        {
+          "identifier": "chest-brown",
+          "Description": "chest-brown",
+          "back": "images/chest-brown_back.jpg",
+          "face": "images/Loot-Equipment_face.jpg",
+          "bag": "chest-brownBag"
+        },
+        {
+          "identifier": "chest-brown",
+          "Description": "chest-brown",
+          "back": "images/chest-brown_back.jpg",
+          "face": "images/Loot-Equipment_face.jpg",
+          "bag": "chest-brownBag"
+        },
+        {
+          "identifier": "chest-blue",
+          "Description": "chest-blue",
+          "back": "images/chest-blue_back.jpg",
+          "face": "images/Loot-Armor_face.jpg",
+          "bag": "chest-blueBag"
+        },
+        {
+          "identifier": "chest-blue",
+          "Description": "chest-blue",
+          "back": "images/chest-blue_back.jpg",
+          "face": "images/Loot-Armor_face.jpg",
+          "bag": "chest-blueBag"
+        },
+        {
+          "identifier": "chest-blue",
+          "Description": "chest-blue",
+          "back": "images/chest-blue_back.jpg",
+          "face": "images/Loot-Armor_face.jpg",
+          "bag": "chest-blueBag"
+        },
+        {
+          "identifier": "chest-blue",
+          "Description": "chest-blue",
+          "back": "images/chest-blue_back.jpg",
+          "face": "images/Loot-Coin_face.jpg",
+          "bag": "chest-blueBag"
+        },
+        {
+          "identifier": "chest-blue",
+          "Description": "chest-blue",
+          "back": "images/chest-blue_back.jpg",
+          "face": "images/Loot-Coin_face.jpg",
+          "bag": "chest-blueBag"
+        },
+        {
+          "identifier": "chest-blue",
+          "Description": "chest-blue",
+          "back": "images/chest-blue_back.jpg",
+          "face": "images/Loot-Coin_face.jpg",
+          "bag": "chest-blueBag"
+        },
+        {
+          "identifier": "chest-blue",
+          "Description": "chest-blue",
+          "back": "images/chest-blue_back.jpg",
+          "face": "images/Loot-Item_face.jpg",
+          "bag": "chest-blueBag"
+        },
+        {
+          "identifier": "chest-blue",
+          "Description": "chest-blue",
+          "back": "images/chest-blue_back.jpg",
+          "face": "images/Loot-Item_face.jpg",
+          "bag": "chest-blueBag"
+        },
+        {
+          "identifier": "chest-blue",
+          "Description": "chest-blue",
+          "back": "images/chest-blue_back.jpg",
+          "face": "images/Loot-Weapon_face.jpg",
+          "bag": "chest-blueBag"
+        },
+        {
+          "identifier": "chest-blue",
+          "Description": "chest-blue",
+          "back": "images/chest-blue_back.jpg",
+          "face": "images/Loot-Weapon_face.jpg",
+          "bag": "chest-blueBag"
+        },
+        {
+          "identifier": "chest-blue",
+          "Description": "chest-blue",
+          "back": "images/chest-blue_back.jpg",
+          "face": "images/Loot-Weapon_face.jpg",
+          "bag": "chest-blueBag"
+        },
+        {
+          "identifier": "chest-blue",
+          "Description": "chest-blue",
+          "back": "images/chest-blue_back.jpg",
+          "face": "images/Loot-Equipment_face.jpg",
+          "bag": "chest-blueBag"
+        },
+        {
+          "identifier": "chest-blue",
+          "Description": "chest-blue",
+          "back": "images/chest-blue_back.jpg",
+          "face": "images/Loot-Equipment_face.jpg",
+          "bag": "chest-blueBag"
+        },
+        {
+          "identifier": "chest-blue",
+          "Description": "chest-blue",
+          "back": "images/chest-blue_back.jpg",
+          "face": "images/Loot-Equipment_face.jpg",
+          "bag": "chest-blueBag"
+        },
+        {
+          "identifier": "chest-blue",
+          "Description": "chest-blue",
+          "back": "images/chest-blue_back.jpg",
+          "face": "images/Loot-Equipment_face.jpg",
+          "bag": "chest-blueBag"
+        },
+        {
+          "identifier": "chest-blue",
+          "Description": "chest-blue",
+          "back": "images/chest-blue_back.jpg",
+          "face": "images/Loot-Mob_face.jpg",
+          "bag": "chest-blueBag"
+        }
+      ]
+    }
+  ]
+}

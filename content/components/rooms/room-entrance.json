@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "set": {
+        "Name": "Custom_Tile",
+        "scale": {
+          "x": 0.73,
+          "y": 1,
+          "z": 0.73
+        },
+        "Type": "0",
+        "CustomTile": {
+          "Type": 0,
+          "Thickness": 0.1,
+          "Stackable": true
+        }
+      },
+      "items": [
+        {
+          "identifier": "Entrance",
+          "Description": "Entrance",
+          "face": "images/SML-000A-face.jpg",
+          "back": "images/SML-000A-back.jpg",
+          "size": "1+",
+          "bag": "RoomsEntrance1+Box"
+        }
+      ]
+    }
+  ]
+}

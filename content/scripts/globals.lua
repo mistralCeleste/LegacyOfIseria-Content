@@ -570,7 +570,7 @@ TTS_ObjectData.Custom_Model_Bag =
 }
 
 
-local ShortcutMap = {
+local AliasMap = {
     CardCustom = {
         face = { path = {"CustomDeck", "1", "FaceURL"} },
         back = { path = {"CustomDeck", "1", "BackURL"} }
@@ -720,7 +720,20 @@ end
 -----------------------------------------
 
 
-local function expandTransformShortcuts(entry)
+local function expandColorAliases(entry)
+        -- color → ColorDiffuse
+    if entry.color then
+        local rgba = parseColor(entry.color)
+        if rgba then
+            entry.ColorDiffuse = rgba
+        end
+        entry.color = nil
+    end
+end
+
+
+local function expandTransformAliases(entry)
+    -- position → Transform
     if entry.position then
         entry.Transform = entry.Transform or {}
         entry.Transform.posX = entry.position.x or entry.Transform.posX
@@ -745,15 +758,52 @@ local function expandTransformShortcuts(entry)
 end
 
 
-local function expandShortcuts(entry)
+local function expandSnapPointAliases(entry)
+     -- Expand snappoints aliases into TTS snap point format
+    if type(entry.snappoints) == "table" and entry.snappoints.cols then
+        local sp = entry.snappoints
+        local cols = sp.cols
+        local rows = sp.rows
+        local gridX = sp.gridX or 0.1
+        local gridZ = sp.gridZ or 0.1
+        local offsetX = sp.offsetX or 0
+        local offsetZ = sp.offsetZ or 0
+        local y = sp.y or 0.1
+
+        entry.SnapPoints = {}
+
+        -- Compute starting positions so grid is centered
+        local startX = offsetX - ((cols - 1) * gridX) / 2
+        local startZ = offsetZ - ((rows - 1) * gridZ) / 2
+
+        for rowIndex = 0, rows - 1 do
+            for colIndex = 0, cols - 1 do
+                table.insert(entry.SnapPoints, {
+                    position = {
+                        x = startX + colIndex * gridX,
+                        y = y,
+                        z = startZ + rowIndex * gridZ
+                    },
+                    rotation = { x = 0, y = 0, z = 0 },
+                    rotation_snap = false
+                })
+            end
+        end
+
+        entry.snappoints = nil -- remove alias
+    end
+end
+
+
+local function expandAliases(entry)
     local typeName = entry.Name
-    local map = ShortcutMap[typeName]
+    local map = AliasMap[typeName]
 
     if map then
-        for shortcut, info in pairs(map) do
-            if entry[shortcut] then
-                setPath(entry, info.path, entry[shortcut])
-                entry[shortcut] = nil
+        for alias, info in pairs(map) do
+            if entry[alias] then
+                setPath(entry, info.path, entry[alias])
+                entry[alias] = nil
             end
         end
     end
@@ -763,17 +813,9 @@ local function expandShortcuts(entry)
         entry.Nickname = entry.identifier
     end
 
-    -- color → ColorDiffuse
-    if entry.color then
-        local rgba = parseColor(entry.color)
-        if rgba then
-            entry.ColorDiffuse = rgba
-        end
-        entry.color = nil
-    end
-
-    -- position → Transform
-    expandTransformShortcuts(entry)
+    expandColorAliases(entry)
+    expandTransformAliases(entry)
+    expandSnapPointAliases(entry)
 end
 
 
@@ -896,7 +938,7 @@ function JsonAdapter.registerComponentSet(basePath, component)
         local entry = deepCopy(template)
         deepMerge(entry, merged)
         resolveAllPaths(basePath, entry)
-        expandShortcuts(entry)
+        expandAliases(entry)
 
         if entry.script then
             entry.script = resolvePath(basePath, entry.script)
@@ -931,6 +973,10 @@ function JsonAdapter.spawnComponent(entry)
         if scriptText then
             obj.setLuaScript(scriptText)
         end
+    end
+
+    if entry.SnapPoints then
+        obj.setSnapPoints(entry.SnapPoints)
     end
 
     Registry.addComponent(entry)

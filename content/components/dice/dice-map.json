@@ -1,11 +1,11 @@
 {
   "set": {
-      "type": "Custom_Dice",
+      "Name": "Custom_Dice",
+      "type": "Die_6",
       "scale": { "x": 0.85, "y": 0.85, "z": 0.85 }
   },
   "fields":
     {
-      "type": "Die_6",
       "bag": "${Class}MightDiceBag",
       "identifier": "${Class}MightDie",
       "Description": "${Class} Might Die",

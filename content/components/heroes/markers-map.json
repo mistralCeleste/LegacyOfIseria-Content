@@ -1,0 +1,13 @@
+{
+  "set": {
+      "Name": "BlockSquare",
+      "scale": { "x": 0.275, "y": 0.275, "z": 0.275 }
+  },
+  "fields":
+  {  
+       "identifier": "${Class}Marker"
+    ,  "Description": "${Class} Marker"
+    ,  "color": "${Color}"
+    ,  "bag": "${Class}MarkerBag"
+  }
+}

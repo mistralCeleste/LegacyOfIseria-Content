@@ -1,0 +1,21 @@
+{
+  "components": [
+    {
+      "set": {
+        "scale": { "x": 0.6, "y": 1, "z": 0.6 }
+      },
+      "items": [
+        {
+          "Name": "Bag",
+          "identifier": "ConnectorBag",
+          "Description": "Connector Bag"
+        },
+        {
+          "Name": "Infinite_Bag",
+          "identifier": "ConnectorResolvedBag",
+          "Description": "Resolved Connector Bag"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "fields":
+    {
+      "Name": "Custom_Model_Bag",
+      "identifier": "${Class}GoldChest",
+      "Description": "${Class} Gold Chest",
+      "scale": { "x": 0.4, "y": 0.4, "z": 0.4 },
+      "rotation": {"x": 0, "y": 270, "z": 0 },
+      "CustomMesh": {
+        "MeshURL": "../boxes/models/chest-gold-container.obj",
+        "NormalURL": "../boxes/images/chest-normal.png",
+        "DiffuseURL": "../boxes/images/chest-${Class}-diffuse.png",
+        "MaterialIndex": 3,
+        "TypeIndex": 6,
+        "SpecularIntensity": 0.2,
+        "SpecularSharpness": 2,
+        "FresnelStrength": 0.4
+      },
+      "bag": "${Class}HeroBox"
+    }
+}

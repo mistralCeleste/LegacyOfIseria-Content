@@ -1,0 +1,29 @@
+{
+  "components": [
+    {
+      "set": {
+        "Name": "Custom_Tile",
+        "scale": {
+          "x": 0.38,
+          "y": 1,
+          "z": 0.38
+        },
+        "Type": "0",
+        "back": "images/connector-resolved_back.jpg",
+        "CustomTile": {
+          "Type": 0,
+          "Thickness": 0.1,
+          "Stackable": true
+        }
+      },
+      "items": [
+        {
+          "identifier": "resolved",
+          "Description": "unlocked door or demolished wall",
+          "face": "images/connector-resolved_face.jpg",
+          "bag": "ConnectorResolvedBag"
+        }
+      ]
+    }
+  ]
+}

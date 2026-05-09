@@ -1,75 +1,14 @@
 {
-  "type": "CustomCard",
-  "shape": 0,
-  "scale": {
-    "x": 1,
-    "y": 1,
-    "z": 1
-  },
-  "sets": [
-    {
-      "identifier": "HRO-001A",
-      "name": "Vaerwyn",
-      "face": "images/HRO-001A-face.jpg",
-      "back": "images/HRO-001A-back.jpg",
-      "class": "Vanguard",
-      "bag": "VanguardHeroBox"
-    },
-    {
-      "identifier": "HRO-001B",
-      "name": "Brannok",
-      "face": "images/HRO-001B-face.jpg",
-      "back": "images/HRO-001B-back.jpg",
-      "class": "Vanguard",
-      "bag": "VanguardHeroBox"
-    },
-    {
-      "identifier": "HRO-002A",
-      "name": "Mirathis",
-      "face": "images/HRO-002A-face.jpg",
-      "back": "images/HRO-002A-back.jpg",
-      "class": "Sage",
-      "bag": "SageHeroBox"
-    },
-    {
-      "identifier": "HRO-002B",
-      "name": "Eryndel",
-      "face": "images/HRO-002B-face.jpg",
-      "back": "images/HRO-002B-back.jpg",
-      "class": "Sage",
-      "bag": "SageHeroBox"
-    },
-    {
-      "identifier": "HRO-003A",
-      "name": "Miranhwa",
-      "face": "images/HRO-003A-face.jpg",
-      "back": "images/HRO-003A-back.jpg",
-      "class": "Pathfinder",
-      "bag": "PathfinderHeroBox"
-    },
-    {
-      "identifier": "HRO-003B",
-      "name": "Haneulrim",
-      "face": "images/HRO-003B-face.jpg",
-      "back": "images/HRO-003B-back.jpg",
-      "class": "Pathfinder",
-      "bag": "PathfinderHeroBox"
-    },
-    {
-      "identifier": "HRO-004A",
-      "name": "Soraya",
-      "face": "images/HRO-004A-face.jpg",
-      "back": "images/HRO-004A-back.jpg",
-      "class": "Warblade",
-      "bag": "WarbladeHeroBox"
-    },
-    {
-      "identifier": "HRO-004B",
-      "name": "Ardeshir",
-      "face": "images/HRO-004B-face.jpg",
-      "back": "images/HRO-004B-back.jpg",
-      "class": "Warblade",
-      "bag": "WarbladeHeroBox"
-    }
+  "components": [
+      { "include": "boxes.json" }
+    , { "include": "chest-starter.json" }
+    , { "include": "chest-bronze.json" }
+    , { "include": "chest-silver.json" }
+    , { "include": "chest-gold.json" }
+    , { "include": "tableaus.json" }
+    , { "include": "heroes-cards.json" }
+    , { "include": "figs.json" }
+    , { "include": "markers-bag.json" }
+    , { "include": "markers.json" }
   ]
 }

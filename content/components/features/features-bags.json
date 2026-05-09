@@ -1,0 +1,32 @@
+{
+  "components": [
+    {
+      "set": {
+        "Name": "Bag",
+        "scale": {
+          "x": 0.6,
+          "y": 1,
+          "z": 0.6
+        }
+      },
+      "items": [
+        {
+          "identifier": "columnBag",
+          "Description": "column Bag"
+        },
+        {
+          "identifier": "crateBag",
+          "Description": "crate Bag"
+        },
+        {
+          "identifier": "chest-brownBag",
+          "Description": "chest-brown Bag"
+        },
+        {
+          "identifier": "chest-blueBag",
+          "Description": "chest-blue Bag"
+        }
+      ]
+    }
+  ]
+}

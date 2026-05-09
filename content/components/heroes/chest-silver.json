@@ -1,0 +1,216 @@
+{
+  "components": [
+    {
+      "items": [
+        {
+          "Name": "Custom_Model_Bag",
+          "identifier": "VanguardSilverChest",
+          "Description": "Vanguard Silver Chest",
+          "scale": {
+            "x": 0.4,
+            "y": 0.4,
+            "z": 0.4
+          },
+          "rotation": {
+            "x": 0,
+            "y": 270,
+            "z": 0
+          },
+          "CustomMesh": {
+            "MeshURL": "../boxes/models/chest-silver-container.obj",
+            "NormalURL": "../boxes/images/chest-normal.png",
+            "DiffuseURL": "../boxes/images/chest-Vanguard-diffuse.png",
+            "MaterialIndex": 3,
+            "TypeIndex": 6,
+            "SpecularIntensity": 0.2,
+            "SpecularSharpness": 2,
+            "FresnelStrength": 0.4
+          },
+          "bag": "VanguardHeroBox"
+        },
+        {
+          "Name": "Custom_Model_Bag",
+          "identifier": "VanguardSilverChest",
+          "Description": "Vanguard Silver Chest",
+          "scale": {
+            "x": 0.4,
+            "y": 0.4,
+            "z": 0.4
+          },
+          "rotation": {
+            "x": 0,
+            "y": 270,
+            "z": 0
+          },
+          "CustomMesh": {
+            "MeshURL": "../boxes/models/chest-silver-container.obj",
+            "NormalURL": "../boxes/images/chest-normal.png",
+            "DiffuseURL": "../boxes/images/chest-Vanguard-diffuse.png",
+            "MaterialIndex": 3,
+            "TypeIndex": 6,
+            "SpecularIntensity": 0.2,
+            "SpecularSharpness": 2,
+            "FresnelStrength": 0.4
+          },
+          "bag": "VanguardHeroBox"
+        },
+        {
+          "Name": "Custom_Model_Bag",
+          "identifier": "SageSilverChest",
+          "Description": "Sage Silver Chest",
+          "scale": {
+            "x": 0.4,
+            "y": 0.4,
+            "z": 0.4
+          },
+          "rotation": {
+            "x": 0,
+            "y": 270,
+            "z": 0
+          },
+          "CustomMesh": {
+            "MeshURL": "../boxes/models/chest-silver-container.obj",
+            "NormalURL": "../boxes/images/chest-normal.png",
+            "DiffuseURL": "../boxes/images/chest-Sage-diffuse.png",
+            "MaterialIndex": 3,
+            "TypeIndex": 6,
+            "SpecularIntensity": 0.2,
+            "SpecularSharpness": 2,
+            "FresnelStrength": 0.4
+          },
+          "bag": "SageHeroBox"
+        },
+        {
+          "Name": "Custom_Model_Bag",
+          "identifier": "SageSilverChest",
+          "Description": "Sage Silver Chest",
+          "scale": {
+            "x": 0.4,
+            "y": 0.4,
+            "z": 0.4
+          },
+          "rotation": {
+            "x": 0,
+            "y": 270,
+            "z": 0
+          },
+          "CustomMesh": {
+            "MeshURL": "../boxes/models/chest-silver-container.obj",
+            "NormalURL": "../boxes/images/chest-normal.png",
+            "DiffuseURL": "../boxes/images/chest-Sage-diffuse.png",
+            "MaterialIndex": 3,
+            "TypeIndex": 6,
+            "SpecularIntensity": 0.2,
+            "SpecularSharpness": 2,
+            "FresnelStrength": 0.4
+          },
+          "bag": "SageHeroBox"
+        },
+        {
+          "Name": "Custom_Model_Bag",
+          "identifier": "PathfinderSilverChest",
+          "Description": "Pathfinder Silver Chest",
+          "scale": {
+            "x": 0.4,
+            "y": 0.4,
+            "z": 0.4
+          },
+          "rotation": {
+            "x": 0,
+            "y": 270,
+            "z": 0
+          },
+          "CustomMesh": {
+            "MeshURL": "../boxes/models/chest-silver-container.obj",
+            "NormalURL": "../boxes/images/chest-normal.png",
+            "DiffuseURL": "../boxes/images/chest-Pathfinder-diffuse.png",
+            "MaterialIndex": 3,
+            "TypeIndex": 6,
+            "SpecularIntensity": 0.2,
+            "SpecularSharpness": 2,
+            "FresnelStrength": 0.4
+          },
+          "bag": "PathfinderHeroBox"
+        },
+        {
+          "Name": "Custom_Model_Bag",
+          "identifier": "PathfinderSilverChest",
+          "Description": "Pathfinder Silver Chest",
+          "scale": {
+            "x": 0.4,
+            "y": 0.4,
+            "z": 0.4
+          },
+          "rotation": {
+            "x": 0,
+            "y": 270,
+            "z": 0
+          },
+          "CustomMesh": {
+            "MeshURL": "../boxes/models/chest-silver-container.obj",
+            "NormalURL": "../boxes/images/chest-normal.png",
+            "DiffuseURL": "../boxes/images/chest-Pathfinder-diffuse.png",
+            "MaterialIndex": 3,
+            "TypeIndex": 6,
+            "SpecularIntensity": 0.2,
+            "SpecularSharpness": 2,
+            "FresnelStrength": 0.4
+          },
+          "bag": "PathfinderHeroBox"
+        },
+        {
+          "Name": "Custom_Model_Bag",
+          "identifier": "WarbladeSilverChest",
+          "Description": "Warblade Silver Chest",
+          "scale": {
+            "x": 0.4,
+            "y": 0.4,
+            "z": 0.4
+          },
+          "rotation": {
+            "x": 0,
+            "y": 270,
+            "z": 0
+          },
+          "CustomMesh": {
+            "MeshURL": "../boxes/models/chest-silver-container.obj",
+            "NormalURL": "../boxes/images/chest-normal.png",
+            "DiffuseURL": "../boxes/images/chest-Warblade-diffuse.png",
+            "MaterialIndex": 3,
+            "TypeIndex": 6,
+            "SpecularIntensity": 0.2,
+            "SpecularSharpness": 2,
+            "FresnelStrength": 0.4
+          },
+          "bag": "WarbladeHeroBox"
+        },
+        {
+          "Name": "Custom_Model_Bag",
+          "identifier": "WarbladeSilverChest",
+          "Description": "Warblade Silver Chest",
+          "scale": {
+            "x": 0.4,
+            "y": 0.4,
+            "z": 0.4
+          },
+          "rotation": {
+            "x": 0,
+            "y": 270,
+            "z": 0
+          },
+          "CustomMesh": {
+            "MeshURL": "../boxes/models/chest-silver-container.obj",
+            "NormalURL": "../boxes/images/chest-normal.png",
+            "DiffuseURL": "../boxes/images/chest-Warblade-diffuse.png",
+            "MaterialIndex": 3,
+            "TypeIndex": 6,
+            "SpecularIntensity": 0.2,
+            "SpecularSharpness": 2,
+            "FresnelStrength": 0.4
+          },
+          "bag": "WarbladeHeroBox"
+        }
+      ]
+    }
+  ]
+}

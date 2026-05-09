@@ -1,24 +1,29 @@
 {
-  "type": "Custom_Tile",
-  "shape": 0,
-  "Type": 4,
-  "scale": {
-    "x": 0.5,
-    "y": 1,
-    "z": 0.5
-  },
-  "sets": [
+  "components": [
     {
-      "identifier": "FOE-006A",
-      "name": "Kraken",
-      "face": "images/FOE-006A-face.jpg",
-      "back": "images/FOE-006A-back.jpg"
-    },
-    {
-      "identifier": "FOE-011A",
-      "name": "Giant Jelly",
-      "face": "images/FOE-011A-face.jpg",
-      "back": "images/FOE-011A-back.jpg"
+      "set": {
+        "Name": "Custom_Tile",
+        "Type": 4,
+        "scale": {
+          "x": 0.5,
+          "y": 0.2,
+          "z": 0.5
+        }
+      },
+      "items": [
+        {
+          "identifier": "FOE-006A",
+          "Description": "Kraken",
+          "face": "images/FOE-006A-face.jpg",
+          "back": "images/FOE-006A-back.jpg"
+        },
+        {
+          "identifier": "FOE-011A",
+          "Description": "Giant Jelly",
+          "face": "images/FOE-011A-face.jpg",
+          "back": "images/FOE-011A-back.jpg"
+        }
+      ]
     }
   ]
 }

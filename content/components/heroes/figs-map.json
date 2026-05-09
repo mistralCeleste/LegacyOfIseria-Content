@@ -1,0 +1,16 @@
+{
+  "set": {
+    "Name": "Custom_Model",
+    "scale": { "x": 0.77, "y": 0.77, "z": 0.77 }
+  },
+  "fields":
+  {  
+       "identifier": "${Figure}"
+    ,  "Description": "${Name}"
+    ,  "mesh": "models/${Class}-${Gender}.obj"
+    ,  "texture": "models/${Class}-${Gender}-diffuse.jpg"
+    ,  "material": { "specular": 0.05, "fresnel": 0.05 }
+    ,  "class": "${Class}"
+    ,  "bag": "${Class}HeroBox"
+  }
+}

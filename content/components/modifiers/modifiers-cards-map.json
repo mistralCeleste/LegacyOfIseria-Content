@@ -1,0 +1,14 @@
+{
+  "set": {
+    "Name": "CardCustom",
+    "scale": { "x": 1, "y": 1, "z": 1 },
+    "bag": "ModifiersBox"
+  },
+  "fields":
+  {  
+       "identifier": "${Full Id}"
+    ,  "Description": "${Name}"
+    ,  "face": "images/${Full Id}-face.jpg"
+    ,  "back": "images/${Full Id}-back.jpg"
+  }
+}

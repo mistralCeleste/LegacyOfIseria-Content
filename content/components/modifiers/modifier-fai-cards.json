@@ -1,0 +1,46 @@
+{
+  "components": [
+    {
+      "set": {
+        "Name": "CardCustom",
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "items": [
+        {
+          "identifier": "MOD-201A",
+          "Description": "Cowardly",
+          "face": "images/MOD-201A-face.jpg",
+          "back": "images/MOD-201A-back.jpg"
+        },
+        {
+          "identifier": "MOD-202A",
+          "Description": "Vampiric",
+          "face": "images/MOD-202A-face.jpg",
+          "back": "images/MOD-202A-back.jpg"
+        },
+        {
+          "identifier": "MOD-203A",
+          "Description": "Dignified",
+          "face": "images/MOD-203A-face.jpg",
+          "back": "images/MOD-203A-back.jpg"
+        },
+        {
+          "identifier": "MOD-204A",
+          "Description": "Necrotic",
+          "face": "images/MOD-204A-face.jpg",
+          "back": "images/MOD-204A-back.jpg"
+        },
+        {
+          "identifier": "MOD-205A",
+          "Description": "Necromancer",
+          "face": "images/MOD-205A-face.jpg",
+          "back": "images/MOD-205A-back.jpg"
+        }
+      ]
+    }
+  ]
+}

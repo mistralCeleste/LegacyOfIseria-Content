@@ -1,0 +1,154 @@
+{
+  "components": [
+    {
+      "set": {
+        "Name": "CardCustom",
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "items": [
+        {
+          "identifier": "MOD-001A",
+          "Description": "Carapace",
+          "face": "images/MOD-001A-face.jpg",
+          "back": "images/MOD-001A-back.jpg"
+        },
+        {
+          "identifier": "MOD-002A",
+          "Description": "Enfeeble",
+          "face": "images/MOD-002A-face.jpg",
+          "back": "images/MOD-002A-back.jpg"
+        },
+        {
+          "identifier": "MOD-003A",
+          "Description": "Daze",
+          "face": "images/MOD-003A-face.jpg",
+          "back": "images/MOD-003A-back.jpg"
+        },
+        {
+          "identifier": "MOD-004A",
+          "Description": "Fear",
+          "face": "images/MOD-004A-face.jpg",
+          "back": "images/MOD-004A-back.jpg"
+        },
+        {
+          "identifier": "MOD-005A",
+          "Description": "Gloom",
+          "face": "images/MOD-005A-face.jpg",
+          "back": "images/MOD-005A-back.jpg"
+        },
+        {
+          "identifier": "MOD-006A",
+          "Description": "Surprised",
+          "face": "images/MOD-006A-face.jpg",
+          "back": "images/MOD-006A-back.jpg"
+        },
+        {
+          "identifier": "MOD-007A",
+          "Description": "Blighted",
+          "face": "images/MOD-007A-face.jpg",
+          "back": "images/MOD-007A-back.jpg"
+        },
+        {
+          "identifier": "MOD-008A",
+          "Description": "Stalwart",
+          "face": "images/MOD-008A-face.jpg",
+          "back": "images/MOD-008A-back.jpg"
+        },
+        {
+          "identifier": "MOD-009A",
+          "Description": "Ethereal",
+          "face": "images/MOD-009A-face.jpg",
+          "back": "images/MOD-009A-back.jpg"
+        },
+        {
+          "identifier": "MOD-010A",
+          "Description": "Eagle Eye",
+          "face": "images/MOD-010A-face.jpg",
+          "back": "images/MOD-010A-back.jpg"
+        },
+        {
+          "identifier": "MOD-011A",
+          "Description": "Necrotic Decay",
+          "face": "images/MOD-011A-face.jpg",
+          "back": "images/MOD-011A-back.jpg"
+        },
+        {
+          "identifier": "MOD-012A",
+          "Description": "Bountiful",
+          "face": "images/MOD-012A-face.jpg",
+          "back": "images/MOD-012A-back.jpg"
+        },
+        {
+          "identifier": "MOD-013A",
+          "Description": "Fortified",
+          "face": "images/MOD-013A-face.jpg",
+          "back": "images/MOD-013A-back.jpg"
+        },
+        {
+          "identifier": "MOD-014A",
+          "Description": "Enlightened",
+          "face": "images/MOD-014A-face.jpg",
+          "back": "images/MOD-014A-back.jpg"
+        },
+        {
+          "identifier": "MOD-015A",
+          "Description": "Inspired",
+          "face": "images/MOD-015A-face.jpg",
+          "back": "images/MOD-015A-back.jpg"
+        },
+        {
+          "identifier": "MOD-016A",
+          "Description": "Adrenaline",
+          "face": "images/MOD-016A-face.jpg",
+          "back": "images/MOD-016A-back.jpg"
+        },
+        {
+          "identifier": "MOD-017A",
+          "Description": "Vantage Point",
+          "face": "images/MOD-017A-face.jpg",
+          "back": "images/MOD-017A-back.jpg"
+        },
+        {
+          "identifier": "MOD-018A",
+          "Description": "Suppression",
+          "face": "images/MOD-018A-face.jpg",
+          "back": "images/MOD-018A-back.jpg"
+        },
+        {
+          "identifier": "MOD-019A",
+          "Description": "Relentless",
+          "face": "images/MOD-019A-face.jpg",
+          "back": "images/MOD-019A-back.jpg"
+        },
+        {
+          "identifier": "MOD-020A",
+          "Description": "Adaptive",
+          "face": "images/MOD-020A-face.jpg",
+          "back": "images/MOD-020A-back.jpg"
+        },
+        {
+          "identifier": "MOD-021A",
+          "Description": "Shapeshifter",
+          "face": "images/MOD-021A-face.jpg",
+          "back": "images/MOD-021A-back.jpg"
+        },
+        {
+          "identifier": "MOD-022A",
+          "Description": "Vengeful",
+          "face": "images/MOD-022A-face.jpg",
+          "back": "images/MOD-022A-back.jpg"
+        },
+        {
+          "identifier": "MOD-023A",
+          "Description": "Suffocating",
+          "face": "images/MOD-023A-face.jpg",
+          "back": "images/MOD-023A-back.jpg"
+        }
+      ]
+    }
+  ]
+}

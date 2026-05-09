@@ -1,0 +1,13 @@
+{
+  "set": {
+      "Name": "Infinite",
+      "scale": { "x": 0.5, "y": 0.5, "z": 0.5 }
+  },
+  "fields":
+  {    
+    "identifier": "${Class}MarkerBag",
+    "Description": "${Class} Marker Bag",
+    "color": "${Color}",
+    "bag": "${Class}HeroBox"
+  }
+}

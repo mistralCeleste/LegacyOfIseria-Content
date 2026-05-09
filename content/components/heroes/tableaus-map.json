@@ -1,0 +1,14 @@
+{
+  "set": {
+    "Name": "Custom_Tile",
+    "scale": { "x": 2.2, "y": 0.2, "z": 2.2 }
+  },
+  "fields":
+  {  
+       "identifier": "${Class}Tableau"
+    ,  "Description": "${Class} Tableau"
+    ,  "face": "images/HeroTableau.jpg"
+    ,  "back": "images/HeroTableau.jpg"
+    ,  "bag": "${Class}HeroBox"
+  }
+}

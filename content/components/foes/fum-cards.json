@@ -1,0 +1,23 @@
+{
+  "components": [
+    {
+      "set": {
+        "Name": "CardCustom",
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        },
+        "bag": "FoesBox"
+      },
+      "items": [
+        {
+          "identifier": "FUM-001A",
+          "Description": "Chamber of Grime",
+          "face": "images/FUM-001A-face.jpg",
+          "back": "images/FUM-001A-back.jpg"
+        }
+      ]
+    }
+  ]
+}

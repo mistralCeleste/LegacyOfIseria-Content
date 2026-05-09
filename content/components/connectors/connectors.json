@@ -1,0 +1,7 @@
+{
+  "components": [
+      { "include": "connector-bags.json" }
+    , { "include": "connectors-tiles.json" }
+    , { "include": "connectors-resolved-tiles.json" }
+  ]
+}
