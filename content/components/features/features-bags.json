@@ -13,18 +13,22 @@
         {
           "identifier": "columnBag",
           "Description": "column Bag"
+          , "position": { "x": -1.30, "y": 1, "z": 8.17 }
         },
         {
           "identifier": "crateBag",
           "Description": "crate Bag"
+          , "position": { "x": -11.61, "y": 1, "z": 8.17 }
         },
         {
           "identifier": "chest-brownBag",
           "Description": "chest-brown Bag"
+          , "position": { "x": -8.16, "y": 1, "z": 8.17 }
         },
         {
           "identifier": "chest-blueBag",
           "Description": "chest-blue Bag"
+          , "position": { "x": -4.71, "y": 1, "z": 8.17 }
         }
       ]
     }

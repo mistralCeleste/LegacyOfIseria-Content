@@ -1,6 +1,7 @@
 {
   "set": {
     "Name": "Custom_Tile"
+    , "position": { "x": 13.76, "y": 1, "z": -4.3 }
     , "scale": { "x": 1.45, "y": 1, "z": 1.45 }
     ,  "Type": "0"
     , "CustomTile": {

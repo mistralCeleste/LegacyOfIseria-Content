@@ -17,18 +17,21 @@
           "identifier": "NPC",
           "Nickname": "NPC Booklet",
           "bundle": "assetbundles/npcbooklet.unity3d",
+          "position": { "x": 21.50, "y": 0.97, "z": 10.32 },
           "scale": { "x": 5.75, "y": 0.2, "z": 5.75 }
         },
         {
           "identifier": "LOC",
           "Nickname": "Location Booklet",
           "bundle": "assetbundles/locationbooklet.unity3d",
+          "position": { "x": -0.55, "y": 0.97, "z": 13.76 },
           "scale": { "x": 8.4, "y": 0.2, "z": 8.4 }
         },
         {
           "identifier": "EVT",
           "Nickname": "Events Booklet",
           "bundle": "assetbundles/eventsbooklet.unity3d",
+          "position": { "x": 13.33, "y": 0.96, "z": 15.05 },
           "scale": { "x": 5.75, "y": 0.2, "z": 5.75 }
         }
       ]

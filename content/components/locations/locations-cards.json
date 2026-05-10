@@ -3,15 +3,11 @@
     {
       "set": {
         "Name": "CardCustom",
+        "position": { "x": -3.15, "y": 3, "z": 16.77 },
         "scale": {
           "x": 1,
           "y": 1,
           "z": 1
-        },
-        "position": {
-          "x": 0,
-          "y": 3,
-          "z": 3
         },
         "script": "../../scripts/narrativeCardBehavior.lua"
       },

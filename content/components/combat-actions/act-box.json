@@ -3,27 +3,29 @@
     {
       "set": {
         "Name": "Custom_Model_Bag",
-                "scale": { "x": 0.4, "y": 0.4, "z": 0.4 },
-                "rotation": {"x": 0, "y": 270, "z": 0 },
-                "CustomMesh": {
-                    "MeshURL": "../boxes/models/CardBox-container.obj",
-                    "MaterialIndex": 3,
-                    "TypeIndex": 6,
-                    "SpecularIntensity": 0.2,
-                    "SpecularSharpness": 2,
-                    "FresnelStrength": 0.4
-                }
+        "scale": { "x": 0.4, "y": 0.4, "z": 0.4 },
+        "rotation": {"x": 0, "y": 270, "z": 0 },
+        "CustomMesh": {
+            "MeshURL": "../boxes/models/CardBox-container.obj",
+            "MaterialIndex": 3,
+            "TypeIndex": 6,
+            "SpecularIntensity": 0.2,
+            "SpecularSharpness": 2,
+            "FresnelStrength": 0.4
+        }
       },
       "items": [
         {
           "identifier": "ActBox",
+          "position": { "x": 26.66, "y": 1, "z": 0 },
           "Description": "Act Box",
           "texture": "../boxes/images/Box_ACT.jpg"
         },
         {
           "identifier": "ActInactiveBox",
-          "Description": "ACT Inactive Box",
-          "texture": "../boxes/images/Box_ACT-inactive.jpg"
+          "position": { "x": 26.66, "y": 1, "z": 1.72 },
+          "Description": "Act Inactive Box",
+          "texture": "../boxes/images/Box_ACT.jpg"
         }
       ]
     }

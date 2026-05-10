@@ -3,6 +3,8 @@
     {
       "set": {
         "Name": "Custom_Dice",
+        "position": { "x": -14.6, "y": 1, "z": 7.75 },
+        "spawnOffset": { "x": 0, "y": 0, "z": -1.75 },
         "scale": {
           "x": 0.85,
           "y": 0.85,
@@ -20,22 +22,6 @@
         },
         {
           "type": "Custom_Die",
-          "identifier": "VanguardWisdomDie",
-          "Description": "Vanguard Wisdom Die",
-          "faces": "images/fudge_die_faces.jpg",
-          "color": "#FFFEAF",
-          "bag": "VanguardWisdomDiceBag"
-        },
-        {
-          "type": "Custom_Die",
-          "identifier": "SageWisdomDie",
-          "Description": "Sage Wisdom Die",
-          "faces": "images/fudge_die_faces.jpg",
-          "color": "#D99CFF",
-          "bag": "SageWisdomDiceBag"
-        },
-        {
-          "type": "Custom_Die",
           "identifier": "SageWisdomDie",
           "Description": "Sage Wisdom Die",
           "faces": "images/fudge_die_faces.jpg",
@@ -49,22 +35,6 @@
           "faces": "images/fudge_die_faces.jpg",
           "color": "#9FD39D",
           "bag": "PathfinderWisdomDiceBag"
-        },
-        {
-          "type": "Custom_Die",
-          "identifier": "PathfinderWisdomDie",
-          "Description": "Pathfinder Wisdom Die",
-          "faces": "images/fudge_die_faces.jpg",
-          "color": "#9FD39D",
-          "bag": "PathfinderWisdomDiceBag"
-        },
-        {
-          "type": "Custom_Die",
-          "identifier": "WarbladeWisdomDie",
-          "Description": "Warblade Wisdom Die",
-          "faces": "images/fudge_die_faces.jpg",
-          "color": "#FCCFC2",
-          "bag": "WarbladeWisdomDiceBag"
         },
         {
           "type": "Custom_Die",

@@ -752,7 +752,7 @@ end
 
 
 local function expandTransformAliases(entry)
-    -- position → Transform
+    -- position → Transform    
     if entry.position then
         entry.Transform = entry.Transform or {}
         entry.Transform.posX = entry.position.x or entry.Transform.posX
@@ -952,12 +952,24 @@ function JsonAdapter.registerComponentSet(basePath, component)
     local template = deepCopy(TTS_ObjectData.base)
     deepMerge(template, TTS_ObjectData[componentType] or {})
 
-    for _, item in ipairs(component.items) do
+    local spawnOffset = component.spawnOffset or nil
+    local dx = spawnOffset and (spawnOffset.dx or 0) or 0
+    local dy = spawnOffset and (spawnOffset.dy or 0) or 0
+    local dz = spawnOffset and (spawnOffset.dz or 0) or 0
+
+    for index, item in ipairs(component.items) do
         local merged = mergeSetAndItem(component.set, item)
         local entry = deepCopy(template)
         deepMerge(entry, merged)
         resolveAllPaths(basePath, entry)
         expandAliases(entry)
+
+        if spawnOffset then
+            local count = index - 1
+            entry.Transform.posX = entry.Transform.posX + dx * count
+            entry.Transform.posY = entry.Transform.posY + dy * count
+            entry.Transform.posZ = entry.Transform.posZ + dz * count
+        end
 
         if entry.script then
             entry.script = resolvePath(basePath, entry.script)
@@ -969,7 +981,7 @@ function JsonAdapter.registerComponentSet(basePath, component)
 end
 
 
-function JsonAdapter.Component(entry)
+function JsonAdapter.spawnComponent(entry)
     local obj = spawnObjectData({
         data = entry,
         callback_function = function(obj)

@@ -3,15 +3,11 @@
     {
       "set": {
         "Name": "CardCustom",
+        "position": { "x": -1, "y": 1, "z": 13.33 },
         "scale": {
           "x": 1,
           "y": 1,
           "z": 1
-        },
-        "position": {
-          "x": 0,
-          "y": 3,
-          "z": -6
         },
         "script": "../../scripts/defaultCardBehavior.lua"
       },

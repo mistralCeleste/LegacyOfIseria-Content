@@ -1,6 +1,7 @@
 {
   "set": {
     "Name": "Custom_Tile"
+    , "position": { "x": 3, "y": 1, "z": 7.17 }
     , "scale": { "x": 0.38, "y": 1, "z": 0.38 }
     ,  "Type": "0"
     ,  "back": "images/connector_back.jpg"

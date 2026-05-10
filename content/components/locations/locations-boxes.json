@@ -33,11 +33,7 @@
                     "CustomMesh": {
                         "DiffuseURL": "../boxes/images/Box_Locations.jpg"
                     },
-                    "position": {
-                        "x": -3,
-                        "y": 3,
-                        "z": 3
-                    }
+                    "position": { "x": -2.15, "y": 1, "z": 16.77 }
                 },
                 {
                     "identifier": "LOCInactiveBox",
@@ -45,11 +41,7 @@
                     "CustomMesh": {
                         "DiffuseURL": "../boxes/images/Box_Locations-inactive.jpg"
                     },
-                    "position": {
-                        "x": 3,
-                        "y": 3,
-                        "z": 3
-                    }
+                    "position": { "x": -4.73, "y": 1, "z": 16.77 }
                 }
             ]
         }

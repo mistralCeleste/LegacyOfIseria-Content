@@ -3,6 +3,8 @@
     {
       "set": {
         "Name": "Infinite",
+        "position": { "x": -14.5, "y": 1, "z": 17 },
+        "spawnOffset": { "x": 0, "y": 0, "z": -1.5 },
         "scale": {
           "x": 0.5,
           "y": 0.5,
@@ -17,18 +19,6 @@
           "bag": "VanguardHeroBox"
         },
         {
-          "identifier": "VanguardMarkerBag",
-          "Description": "Vanguard Marker Bag",
-          "color": "#FFFEAF",
-          "bag": "VanguardHeroBox"
-        },
-        {
-          "identifier": "SageMarkerBag",
-          "Description": "Sage Marker Bag",
-          "color": "#D99CFF",
-          "bag": "SageHeroBox"
-        },
-        {
           "identifier": "SageMarkerBag",
           "Description": "Sage Marker Bag",
           "color": "#D99CFF",
@@ -39,18 +29,6 @@
           "Description": "Pathfinder Marker Bag",
           "color": "#9FD39D",
           "bag": "PathfinderHeroBox"
-        },
-        {
-          "identifier": "PathfinderMarkerBag",
-          "Description": "Pathfinder Marker Bag",
-          "color": "#9FD39D",
-          "bag": "PathfinderHeroBox"
-        },
-        {
-          "identifier": "WarbladeMarkerBag",
-          "Description": "Warblade Marker Bag",
-          "color": "#FCCFC2",
-          "bag": "WarbladeHeroBox"
         },
         {
           "identifier": "WarbladeMarkerBag",

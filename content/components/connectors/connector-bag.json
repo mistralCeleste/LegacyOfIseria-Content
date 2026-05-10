@@ -2,6 +2,7 @@
   "components": [
     {
       "set": {
+        "position": { "x": 2.12, "y": 1, "z": 8.17 },
         "scale": { "x": 0.6, "y": 1, "z": 0.6 }
       },
       "items": [

@@ -1,6 +1,8 @@
 {
   "set": {
       "Name": "Custom_Dice",
+      "position": { "x": -14.6, "y": 1, "z": 7.75 },
+      "spawnOffset": { "x": 0, "y": 0, "z": -1.75 },
       "scale": { "x": 0.85, "y": 0.85, "z": 0.85 }
   },
   "fields":

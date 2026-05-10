@@ -1,6 +1,7 @@
 {
   "set": {
     "Name": "CustomCard",
+    "position": { "x": -12.04, "y": 3, "z": 15.48 },
     "scale": { "x": 0.75, "y": 1, "z": 0.75 }
   },
   "items": [

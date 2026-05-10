@@ -9,9 +9,9 @@
           "z": 1
         },
         "position": {
-          "x": 0,
+          "x": 24,
           "y": 3,
-          "z": 6
+          "z": 10
         },
         "script": "../../scripts/narrativeCardBehavior.lua"
       },

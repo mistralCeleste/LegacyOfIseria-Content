@@ -9,11 +9,13 @@
       "items": [
         {
           "identifier": "MapsBox",
+          "position": { "x": -7.31, "y": 1, "z": 13.33 },
           "Description": "Maps Box",
           "texture": "../boxes/images/Box_Maps.jpg"
         },
         {
           "identifier": "MapsInactiveBox",
+          "position": { "x": -7.31, "y": 1, "z": 16.77 },
           "Description": "Maps Inactive Box",
           "texture": "../boxes/images/Box_Maps-inactive.jpg"
         },

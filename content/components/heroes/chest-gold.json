@@ -1,4 +1,8 @@
 {
+  "set": {
+        "position": { "x": -24.02, "y": 1, "z": 11.78 },
+        "spawnOffset": { "x": 0, "y": 0, "z": -9.5 }
+      },
   "components": [
     {
       "items": [
@@ -30,58 +34,6 @@
         },
         {
           "Name": "Custom_Model_Bag",
-          "identifier": "VanguardGoldChest",
-          "Description": "Vanguard Gold Chest",
-          "scale": {
-            "x": 0.4,
-            "y": 0.4,
-            "z": 0.4
-          },
-          "rotation": {
-            "x": 0,
-            "y": 270,
-            "z": 0
-          },
-          "CustomMesh": {
-            "MeshURL": "../boxes/models/chest-gold-container.obj",
-            "NormalURL": "../boxes/images/chest-normal.png",
-            "DiffuseURL": "../boxes/images/chest-Vanguard-diffuse.png",
-            "MaterialIndex": 3,
-            "TypeIndex": 6,
-            "SpecularIntensity": 0.2,
-            "SpecularSharpness": 2,
-            "FresnelStrength": 0.4
-          },
-          "bag": "VanguardHeroBox"
-        },
-        {
-          "Name": "Custom_Model_Bag",
-          "identifier": "SageGoldChest",
-          "Description": "Sage Gold Chest",
-          "scale": {
-            "x": 0.4,
-            "y": 0.4,
-            "z": 0.4
-          },
-          "rotation": {
-            "x": 0,
-            "y": 270,
-            "z": 0
-          },
-          "CustomMesh": {
-            "MeshURL": "../boxes/models/chest-gold-container.obj",
-            "NormalURL": "../boxes/images/chest-normal.png",
-            "DiffuseURL": "../boxes/images/chest-Sage-diffuse.png",
-            "MaterialIndex": 3,
-            "TypeIndex": 6,
-            "SpecularIntensity": 0.2,
-            "SpecularSharpness": 2,
-            "FresnelStrength": 0.4
-          },
-          "bag": "SageHeroBox"
-        },
-        {
-          "Name": "Custom_Model_Bag",
           "identifier": "SageGoldChest",
           "Description": "Sage Gold Chest",
           "scale": {
@@ -131,58 +83,6 @@
             "FresnelStrength": 0.4
           },
           "bag": "PathfinderHeroBox"
-        },
-        {
-          "Name": "Custom_Model_Bag",
-          "identifier": "PathfinderGoldChest",
-          "Description": "Pathfinder Gold Chest",
-          "scale": {
-            "x": 0.4,
-            "y": 0.4,
-            "z": 0.4
-          },
-          "rotation": {
-            "x": 0,
-            "y": 270,
-            "z": 0
-          },
-          "CustomMesh": {
-            "MeshURL": "../boxes/models/chest-gold-container.obj",
-            "NormalURL": "../boxes/images/chest-normal.png",
-            "DiffuseURL": "../boxes/images/chest-Pathfinder-diffuse.png",
-            "MaterialIndex": 3,
-            "TypeIndex": 6,
-            "SpecularIntensity": 0.2,
-            "SpecularSharpness": 2,
-            "FresnelStrength": 0.4
-          },
-          "bag": "PathfinderHeroBox"
-        },
-        {
-          "Name": "Custom_Model_Bag",
-          "identifier": "WarbladeGoldChest",
-          "Description": "Warblade Gold Chest",
-          "scale": {
-            "x": 0.4,
-            "y": 0.4,
-            "z": 0.4
-          },
-          "rotation": {
-            "x": 0,
-            "y": 270,
-            "z": 0
-          },
-          "CustomMesh": {
-            "MeshURL": "../boxes/models/chest-gold-container.obj",
-            "NormalURL": "../boxes/images/chest-normal.png",
-            "DiffuseURL": "../boxes/images/chest-Warblade-diffuse.png",
-            "MaterialIndex": 3,
-            "TypeIndex": 6,
-            "SpecularIntensity": 0.2,
-            "SpecularSharpness": 2,
-            "FresnelStrength": 0.4
-          },
-          "bag": "WarbladeHeroBox"
         },
         {
           "Name": "Custom_Model_Bag",

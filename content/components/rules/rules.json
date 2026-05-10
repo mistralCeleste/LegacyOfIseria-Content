@@ -5,12 +5,14 @@
     {
       "set": {
         "Name": "Custom_PDF",
+        "position": { "x": 24.77, "y": 0.96, "z": 15.96 },
+        "rotation": { "x": 0, "y": 180, "z": 0 },
         "scale": { "x": 1.1, "y": 1, "z": 1.1 }
       },
       "items": [
         {
           "CustomPDF": {
-            "PDFUrl": "https://steamusercontent-a.akamaihd.net/ugc/10041529484054724092/1276287A5364234E4F26FBD6440730897C6D8CF8/",
+            "PDFUrl": "Legacy-of-Iseria-Rules-Spread-Web.pdf",
             "PDFPassword": "",
             "PDFPage": 0,
             "PDFPageOffset": 0

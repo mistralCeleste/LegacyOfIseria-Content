@@ -2,7 +2,7 @@
   "set": {
     "Name": "CardCustom",
     "scale": { "x": 1, "y": 1, "z": 1 },
-    "position": { "x": 0, "y": 3, "z": 6 },
+    "position": { "x": 24, "y": 3, "z": 10 },
     "script": "../../scripts/narrativeCardBehavior.lua"
   },
   "fields":

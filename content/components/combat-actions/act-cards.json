@@ -3,6 +3,7 @@
     {
       "set": {
         "Name": "CardCustom",
+        "position": { "x": 23.65, "y": 1, "z": 2.15 },
         "scale": {
           "x": 1,
           "y": 1,
@@ -14,148 +15,143 @@
           "identifier": "ACT-001",
           "Description": "Tension",
           "face": "images/ACT-001-face.jpg",
-          "back": "images/ACT-001-back.jpg",
-          "bag": "ActBox"
+          "back": "images/ACT-001-back.jpg"
         },
         {
           "identifier": "ACT-002",
           "Description": "Coordinated Attack",
           "face": "images/ACT-002-face.jpg",
-          "back": "images/ACT-002-back.jpg",
-          "bag": "ActBox"
+          "back": "images/ACT-002-back.jpg"
         },
         {
           "identifier": "ACT-003",
           "Description": "Mob Rush",
           "face": "images/ACT-003-face.jpg",
-          "back": "images/ACT-003-back.jpg",
-          "bag": "ActBox"
+          "back": "images/ACT-003-back.jpg"
         },
         {
           "identifier": "ACT-004",
           "Description": "Brute Attack",
           "face": "images/ACT-004-face.jpg",
-          "back": "images/ACT-004-back.jpg",
-          "bag": "ActBox"
+          "back": "images/ACT-004-back.jpg"
         },
         {
           "identifier": "ACT-005",
           "Description": "Elites",
           "face": "images/ACT-005-face.jpg",
-          "back": "images/ACT-005-back.jpg",
-          "bag": "ActBox"
+          "back": "images/ACT-005-back.jpg"
         },
         {
           "identifier": "ACT-006",
           "Description": "Tension",
           "face": "images/ACT-006-face.jpg",
           "back": "images/ACT-006-back.jpg",
-          "bag": "ActInactiveBox"
+          "bag": "ActBox"
         },
         {
           "identifier": "ACT-007",
           "Description": "Mob Rush",
           "face": "images/ACT-007-face.jpg",
           "back": "images/ACT-007-back.jpg",
-          "bag": "ActInactiveBox"
+          "bag": "ActBox"
         },
         {
           "identifier": "ACT-008",
           "Description": "Brute Attack",
           "face": "images/ACT-008-face.jpg",
           "back": "images/ACT-008-back.jpg",
-          "bag": "ActInactiveBox"
+          "bag": "ActBox"
         },
         {
           "identifier": "ACT-009",
           "Description": "Elites",
           "face": "images/ACT-009-face.jpg",
           "back": "images/ACT-009-back.jpg",
-          "bag": "ActInactiveBox"
+          "bag": "ActBox"
         },
         {
           "identifier": "ACT-010",
           "Description": "Coordinated Attack",
           "face": "images/ACT-010-face.jpg",
           "back": "images/ACT-010-back.jpg",
-          "bag": "ActInactiveBox"
+          "bag": "ActBox"
         },
         {
           "identifier": "ACT-011",
           "Description": "Bosses Turn",
           "face": "images/ACT-011-face.jpg",
           "back": "images/ACT-011-back.jpg",
-          "bag": "ActInactiveBox"
+          "bag": "ActBox"
         },
         {
           "identifier": "ACT-012",
           "Description": "Bosses Turn",
           "face": "images/ACT-012-face.jpg",
           "back": "images/ACT-012-back.jpg",
-          "bag": "ActInactiveBox"
+          "bag": "ActBox"
         },
         {
           "identifier": "ACT-013",
           "Description": "Escalation",
           "face": "images/ACT-013-face.jpg",
           "back": "images/ACT-013-back.jpg",
-          "bag": "ActInactiveBox"
+          "bag": "ActBox"
         },
         {
           "identifier": "ACT-014",
           "Description": "Escalation",
           "face": "images/ACT-014-face.jpg",
           "back": "images/ACT-014-back.jpg",
-          "bag": "ActInactiveBox"
+          "bag": "ActBox"
         },
         {
           "identifier": "ACT-015",
           "Description": "Pause in the Battle",
           "face": "images/ACT-015-face.jpg",
           "back": "images/ACT-015-back.jpg",
-          "bag": "ActInactiveBox"
+          "bag": "ActBox"
         },
         {
           "identifier": "ACT-016",
           "Description": "Gain the upper hand",
           "face": "images/ACT-016-face.jpg",
           "back": "images/ACT-016-back.jpg",
-          "bag": "ActInactiveBox"
+          "bag": "ActBox"
         },
         {
           "identifier": "ACT-017",
           "Description": "An opening appears",
           "face": "images/ACT-017-face.jpg",
           "back": "images/ACT-017-back.jpg",
-          "bag": "ActInactiveBox"
+          "bag": "ActBox"
         },
         {
           "identifier": "ACT-018",
           "Description": "Impervious Darkness",
           "face": "images/ACT-018-face.jpg",
           "back": "images/ACT-018-back.jpg",
-          "bag": "ActInactiveBox"
+          "bag": "ActBox"
         },
         {
           "identifier": "ACT-019",
           "Description": "Shadowed Assassin",
           "face": "images/ACT-019-face.jpg",
           "back": "images/ACT-019-back.jpg",
-          "bag": "ActInactiveBox"
+          "bag": "ActBox"
         },
         {
           "identifier": "ACT-020",
           "Description": "Quake",
           "face": "images/ACT-020-face.jpg",
           "back": "images/ACT-020-back.jpg",
-          "bag": "ActInactiveBox"
+          "bag": "ActBox"
         },
         {
           "identifier": "ACT-021",
           "Description": "Quake",
           "face": "images/ACT-021-face.jpg",
           "back": "images/ACT-021-back.jpg",
-          "bag": "ActInactiveBox"
+          "bag": "ActBox"
         }
       ]
     }

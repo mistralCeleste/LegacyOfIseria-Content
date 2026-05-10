@@ -8,18 +8,17 @@
       },
       "items": [
         {
-          "identifier": "ItemsBox",
-          "position": { "x": -9.46, "y": 1, "z": 15.48 },
-          "Description": "Item Box",
+          "identifier": "EquipmentBox",
+          "position": { "x": -12.04, "y": 1, "z": 17.20 },
+          "Description": "Equipment Box",
           "texture": "../boxes/images/Box_Items.jpg"
         },
         {
-          "identifier": "ItemsInactiveBox",
-          "position": { "x": -9.46, "y": 1, "z": 17.20 },
-          "Description": "Item Inactive Box",
+          "identifier": "EquipmentInactiveBox",
+          "position": { "x": -12.04, "y": 1, "z": 15.48 },
+          "Description": "Equipment Inactive Box",
           "texture": "../boxes/images/Box_Items-inactive.jpg"
-        },
-        { "include": "items-cards.json" }
+        }
       ]
     }
   ]

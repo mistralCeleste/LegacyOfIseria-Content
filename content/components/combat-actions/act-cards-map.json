@@ -1,6 +1,7 @@
 {
   "set": {
     "Name": "CardCustom",
+    "position": { "x": 23.65, "y": 1, "z": 2.15 },
     "scale": { "x": 1, "y": 1, "z": 1 }
   },
   "fields": {  

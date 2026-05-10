@@ -27,7 +27,7 @@
                 {
                     "identifier": "ModifiersBox",
                     "texture": "../boxes/images/Box_Modifiers.jpg",
-                    "position": { "x": -3, "y": 3, "z": -6 }
+                    "position": { "x": 26.66, "y": 1, "z": -4.30 }
                 }
             ]
         }

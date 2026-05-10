@@ -4,6 +4,8 @@
       "set": {
         "Name": "Custom_Dice",
         "type": "Die_6",
+        "position": { "x": -14.6, "y": 1, "z": -1.75 },
+        "spawnOffset": { "x": 0, "y": 0, "z": -1.75 },
         "scale": {
           "x": 0.85,
           "y": 0.85,
@@ -18,18 +20,6 @@
           "color": "#FFFEAF"
         },
         {
-          "bag": "VanguardMightDiceBag",
-          "identifier": "VanguardMightDie",
-          "Description": "Vanguard Might Die",
-          "color": "#FFFEAF"
-        },
-        {
-          "bag": "SageMightDiceBag",
-          "identifier": "SageMightDie",
-          "Description": "Sage Might Die",
-          "color": "#D99CFF"
-        },
-        {
           "bag": "SageMightDiceBag",
           "identifier": "SageMightDie",
           "Description": "Sage Might Die",
@@ -40,18 +30,6 @@
           "identifier": "PathfinderMightDie",
           "Description": "Pathfinder Might Die",
           "color": "#9FD39D"
-        },
-        {
-          "bag": "PathfinderMightDiceBag",
-          "identifier": "PathfinderMightDie",
-          "Description": "Pathfinder Might Die",
-          "color": "#9FD39D"
-        },
-        {
-          "bag": "WarbladeMightDiceBag",
-          "identifier": "WarbladeMightDie",
-          "Description": "Warblade Might Die",
-          "color": "#FCCFC2"
         },
         {
           "bag": "WarbladeMightDiceBag",
