@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://schemas.local/loader/script-alias.schema.json",
+  "title": "Scriptalias",
+  "description": "Binds a Lua script to a component lifecycle event. Accepts a bare path string (shorthand) or a full descriptor object.",
+  "oneOf": [
+    {
+      "title": "PathShorthand",
+      "type": "string",
+      "description": "Short form: just the script path. The loader infers event=onLoad and no args.",
+      "minLength": 1,
+      "pattern": "^[^\\s].*\\.lua$"
+    },
+    {
+      "title": "ScriptDescriptor",
+      "type": "object",
+      "required": ["script"],
+      "additionalProperties": false,
+      "properties": {
+        "script": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Relative or absolute path to the Lua script file."
+        },
+        "event": {
+          "type": "string",
+          "description": "Lifecycle event that triggers this script.",
+          "enum": [
+            "onLoad",
+            "onSpawn",
+            "onDestroy",
+            "onCollide",
+            "onPickUp",
+            "onDrop",
+            "onTick",
+            "onStateChange",
+            "onButtonClick",
+            "onChat",
+            "onSave"
+          ],
+          "default": "onLoad"
+        },
+        "args": {
+          "description": "Arguments forwarded to the script as a key-value table. String values support {token} interpolation against the owning component's properties.",
+          "type": "object",
+          "additionalProperties": true
+        },
+        "priority": {
+          "type": "integer",
+          "default": 0,
+          "description": "Execution order when multiple scripts share the same event. Lower numbers run first."
+        },
+        "enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Whether this script binding is active."
+        },
+        "once": {
+          "type": "boolean",
+          "default": false,
+          "description": "When true, the script executes exactly once and then de-registers itself."
+        },
+        "timeout": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Maximum seconds the script may run before the loader forcefully terminates it."
+        }
+      }
+    }
+  ]
+}

@@ -4,7 +4,8 @@
       "set": {
         "Name": "Custom_Model_Bag",
         "mesh": "../boxes/models/CardBox-container.obj",
-        "scale": { "x": 0.4, "y": 0.4, "z": 0.4 }
+        "scale": { "x": 0.4, "y": 0.4, "z": 0.4 },
+        "script": "../../scripts/archiveContainerBehavior.lua"
       },
       "items": [
         {

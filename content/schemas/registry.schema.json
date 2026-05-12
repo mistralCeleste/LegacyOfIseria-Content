@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://schemas.local/loader/registry.schema.json",
+  "title": "Registry",
+  "description": "Root registry document. Accepted in two forms: a flat array of RegistryEntry objects, or a named-map object keyed by entry ID for O(1) lookups. The loader normalises both into the same internal map.",
+  "oneOf": [
+    {
+      "title": "ArrayForm",
+      "type": "array",
+      "description": "Ordered list of registry entries. Duplicate IDs are a loader error.",
+      "items": { "$ref": "registry-entry.schema.json" },
+      "minItems": 0
+    },
+    {
+      "title": "MapForm",
+      "type": "object",
+      "description": "Keyed map where each property name is the entry ID. The loader verifies that the key matches data.id.",
+      "additionalProperties": { "$ref": "registry-entry.schema.json" },
+      "minProperties": 0
+    },
+    {
+      "title": "EnvelopeForm",
+      "type": "object",
+      "description": "Envelope object allowing a version header, global defaults, and the entry list or map.",
+      "required": ["entries"],
+      "additionalProperties": false,
+      "properties": {
+        "schemaVersion": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
+          "description": "Version of the loader schema this file was authored against.",
+          "default": "1.0.0"
+        },
+        "namespace": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_\\-]+$",
+          "description": "Default namespace applied to all entries in this file that don't declare their own."
+        },
+        "defaults": {
+          "type": "object",
+          "additionalProperties": false,
+          "description": "Global defaults merged into every entry in this file at load time.",
+          "properties": {
+            "loadOrder":    { "type": "integer" },
+            "experimental": { "type": "boolean" },
+            "tags": {
+              "type": "array",
+              "items": { "type": "string" },
+              "uniqueItems": true
+            }
+          }
+        },
+        "entries": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": { "$ref": "registry-entry.schema.json" }
+            },
+            {
+              "type": "object",
+              "additionalProperties": { "$ref": "registry-entry.schema.json" }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

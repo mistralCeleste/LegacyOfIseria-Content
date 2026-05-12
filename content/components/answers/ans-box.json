@@ -22,7 +22,8 @@
                     "SpecularIntensity": 0.2,
                     "SpecularSharpness": 2,
                     "FresnelStrength": 0.4
-                }
+                },
+                "script": "../../scripts/archiveContainerBehavior.lua"
             },
             "items": [
                 {

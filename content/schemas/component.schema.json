@@ -1,0 +1,129 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://schemas.local/loader/component.schema.json",
+  "title": "Component",
+  "description": "A single spawnable game object definition, including its model, transform, physics, snap points, scripts, and arbitrary properties.",
+  "type": "object",
+  "required": ["id"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_\\-\\.]+$",
+      "description": "Stable, unique identifier for this component. Used as the lookup key in the registry."
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable display name."
+    },
+    "description": {
+      "type": "string",
+      "description": "Optional description shown in UI or debug output."
+    },
+    "version": {
+      "type": "string",
+      "description": "Semantic version string for schema evolution tracking.",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "model": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Asset path or GUID of the 3D model (mesh) to spawn."
+    },
+    "material": {
+      "type": "string",
+      "description": "Optional override material asset path."
+    },
+    "transform": {
+      "$ref": "transform.schema.json",
+      "description": "Initial transform applied when the component is spawned."
+    },
+    "spawnOffset": {
+      "$ref": "spawn-offset.schema.json",
+      "description": "Local-space offset composited at spawn time, after the stored transform."
+    },
+    "snappoints": {
+      "$ref": "snappoints.schema.json",
+      "description": "Snap point definitions — individual, grid, or mixed."
+    },
+    "scripts": {
+      "type": "array",
+      "description": "Script bindings evaluated at load/spawn time.",
+      "items": { "$ref": "script-shortcut.schema.json" }
+    },
+    "collider": {
+      "description": "Collision shape definition. String = named preset (e.g. 'box', 'sphere', 'mesh'); object = detailed config.",
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": ["box", "sphere", "capsule", "mesh", "convex", "none"]
+        },
+        {
+          "type": "object",
+          "required": ["type"],
+          "additionalProperties": false,
+          "properties": {
+            "type": { "type": "string", "enum": ["box","sphere","capsule","mesh","convex"] },
+            "size":   {
+              "oneOf": [
+                { "type": "number", "exclusiveMinimum": 0 },
+                { "type": "array", "items": { "type": "number" }, "minItems": 3, "maxItems": 3 }
+              ]
+            },
+            "center": {
+              "type": "array", "items": { "type": "number" }, "minItems": 3, "maxItems": 3
+            },
+            "isTrigger": { "type": "boolean", "default": false },
+            "layer": { "type": "string" }
+          }
+        }
+      ]
+    },
+    "physics": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Rigidbody physics configuration.",
+      "properties": {
+        "enabled":          { "type": "boolean", "default": true },
+        "mass":             { "type": "number", "exclusiveMinimum": 0, "default": 1 },
+        "drag":             { "type": "number", "minimum": 0, "default": 0 },
+        "angularDrag":      { "type": "number", "minimum": 0, "default": 0.05 },
+        "useGravity":       { "type": "boolean", "default": true },
+        "isKinematic":      { "type": "boolean", "default": false },
+        "freezePosition":   {
+          "type": "array", "items": { "type": "boolean" }, "minItems": 3, "maxItems": 3,
+          "description": "[x, y, z] freeze axes for position."
+        },
+        "freezeRotation":   {
+          "type": "array", "items": { "type": "boolean" }, "minItems": 3, "maxItems": 3,
+          "description": "[x, y, z] freeze axes for rotation."
+        }
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true,
+      "description": "Arbitrary string tags used for filtering, snap compatibility, or scripting."
+    },
+    "layer": {
+      "type": "string",
+      "description": "Rendering/collision layer name."
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": true,
+      "description": "Freeform key-value store forwarded to scripts as the component's property table."
+    },
+    "inherits": {
+      "type": "string",
+      "description": "ID of another component to inherit defaults from. Explicit fields override inherited values."
+    },
+    "enabled": {
+      "type": "boolean",
+      "default": true,
+      "description": "When false, the loader skips this component entirely."
+    }
+  }
+}

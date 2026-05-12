@@ -1,0 +1,137 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://schemas.local/loader/snappoints.schema.json",
+  "title": "Snappoints",
+  "description": "Snap-point definitions for a component. Accepts an array of individual snap points, a grid shortcut object, or a mixed array containing both.",
+  "$defs": {
+    "vector3": {
+      "oneOf": [
+        { "type": "array", "items": { "type": "number" }, "minItems": 3, "maxItems": 3 },
+        { "type": "object",
+          "properties": {
+            "x": { "type": "number", "default": 0 },
+            "y": { "type": "number", "default": 0 },
+            "z": { "type": "number", "default": 0 }
+          },
+          "additionalProperties": false }
+      ]
+    },
+    "snapPoint": {
+      "title": "SnapPoint",
+      "description": "A single explicitly-defined snap point.",
+      "type": "object",
+      "required": ["position"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Optional stable identifier for this snap point."
+        },
+        "position": {
+          "$ref": "#/$defs/vector3",
+          "description": "Local-space position of the snap point."
+        },
+        "rotation": {
+          "$ref": "#/$defs/vector3",
+          "description": "Local-space rotation of the snap point in degrees."
+        },
+        "tags": {
+          "type": "array",
+          "items": { "type": "string" },
+          "uniqueItems": true,
+          "description": "Filter tags (e.g. 'top', 'side', 'face') for snap compatibility rules."
+        },
+        "allowedTags": {
+          "type": "array",
+          "items": { "type": "string" },
+          "uniqueItems": true,
+          "description": "Only snap objects carrying at least one of these tags may connect here."
+        },
+        "enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Whether this snap point is active at spawn."
+        }
+      }
+    },
+    "gridShortcut": {
+      "title": "SnapGrid",
+      "description": "Procedurally generates a rectangular grid of snap points.",
+      "type": "object",
+      "required": ["grid"],
+      "additionalProperties": false,
+      "properties": {
+        "grid": {
+          "type": "object",
+          "required": ["rows", "cols"],
+          "additionalProperties": false,
+          "properties": {
+            "rows": {
+              "type": "integer",
+              "minimum": 1,
+              "description": "Number of rows (Z-axis steps)."
+            },
+            "cols": {
+              "type": "integer",
+              "minimum": 1,
+              "description": "Number of columns (X-axis steps)."
+            },
+            "spacing": {
+              "description": "Gap between adjacent snap points. Number = uniform; [x,z] = per-axis; [x,y,z] = full 3D step.",
+              "oneOf": [
+                { "type": "number", "exclusiveMinimum": 0 },
+                { "type": "array", "items": { "type": "number" }, "minItems": 2, "maxItems": 3 }
+              ],
+              "default": 1
+            },
+            "origin": {
+              "$ref": "#/$defs/vector3",
+              "description": "Local-space position of the grid's [0,0] corner. Defaults to [0,0,0]."
+            },
+            "rotation": {
+              "$ref": "#/$defs/vector3",
+              "description": "Rotation applied to every generated snap point."
+            },
+            "tags": {
+              "type": "array",
+              "items": { "type": "string" },
+              "uniqueItems": true,
+              "description": "Tags applied to every generated snap point."
+            },
+            "allowedTags": {
+              "type": "array",
+              "items": { "type": "string" },
+              "uniqueItems": true,
+              "description": "Snap-compatibility filter applied to every generated snap point."
+            },
+            "idPrefix": {
+              "type": "string",
+              "description": "If set, each generated snap point receives id '<idPrefix>_<row>_<col>'."
+            },
+            "centered": {
+              "type": "boolean",
+              "default": false,
+              "description": "When true, the grid is centered on the origin rather than starting from it."
+            }
+          }
+        }
+      }
+    }
+  },
+  "oneOf": [
+    {
+      "type": "array",
+      "description": "Mixed array of individual snap points and/or grid shortcuts.",
+      "items": {
+        "oneOf": [
+          { "$ref": "#/$defs/snapPoint" },
+          { "$ref": "#/$defs/gridShortcut" }
+        ]
+      }
+    },
+    {
+      "$ref": "#/$defs/gridShortcut",
+      "description": "Bare grid shortcut (expanded to an array by the loader)."
+    }
+  ]
+}

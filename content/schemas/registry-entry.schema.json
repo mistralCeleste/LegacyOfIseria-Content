@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://schemas.local/loader/registry-entry.schema.json",
+  "title": "RegistryEntry",
+  "description": "A single entry in the loader registry. Wraps either a Component, ComponentSet, or Item with a type discriminator and shared metadata.",
+  "type": "object",
+  "required": ["type", "data"],
+  "additionalProperties": false,
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": ["component", "componentSet", "item"],
+      "description": "Discriminator that tells the loader which schema to apply to 'data'."
+    },
+    "data": {
+      "description": "The payload — must match the schema for the declared type.",
+      "oneOf": [
+        { "$ref": "component.schema.json" },
+        { "$ref": "component-set.schema.json" },
+        { "$ref": "item.schema.json" }
+      ]
+    },
+    "source": {
+      "type": "string",
+      "description": "File path or URI from which this entry was loaded. Injected by the loader; omit in authored files."
+    },
+    "loadOrder": {
+      "type": "integer",
+      "default": 0,
+      "description": "Relative load order. Lower values load first. Entries with equal loadOrder are processed in declaration order."
+    },
+    "namespace": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_\\-]+$",
+      "description": "Optional namespace prefix. The loader exposes this entry as '<namespace>.<id>' when set."
+    },
+    "deprecated": {
+      "type": "boolean",
+      "default": false,
+      "description": "When true, the loader emits a deprecation warning on access but still loads the entry."
+    },
+    "deprecatedMessage": {
+      "type": "string",
+      "description": "Human-readable deprecation notice shown alongside the warning."
+    },
+    "experimental": {
+      "type": "boolean",
+      "default": false,
+      "description": "Marks the entry as experimental; the loader may gate this behind a feature flag."
+    }
+  },
+  "if": { "properties": { "type": { "const": "component" } } },
+  "then": { "properties": { "data": { "$ref": "component.schema.json" } } },
+  "else": {
+    "if": { "properties": { "type": { "const": "componentSet" } } },
+    "then": { "properties": { "data": { "$ref": "component-set.schema.json" } } },
+    "else": { "properties": { "data": { "$ref": "item.schema.json" } } }
+  }
+}

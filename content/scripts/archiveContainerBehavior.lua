@@ -21,7 +21,7 @@ SEARCH_TYPE_ALL = 'all'
 SEARCH_TYPE_FIRST = 'first'
 SEARCH_TYPE = SEARCH_TYPE_FIRST
 
-TRACK_DUNGEON_ITEMS = true
+TRACK_DUNGEON_ITEMS = false
 ENSURE_FACEDOWN_WHEN_DRAWN = true
 
 -----------------------------------------

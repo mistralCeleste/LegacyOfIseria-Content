@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://schemas.local/loader/transform.schema.json",
+  "title": "Transform",
+  "description": "3D transform with full alias expansion. The loader resolves position/pos/p, rotation/rot/r, and scale/s as equivalent keys. Only one alias per axis group should be present per object; the loader uses priority order (long → short) when multiple appear.",
+  "type": "object",
+  "additionalProperties": false,
+  "$defs": {
+    "vector3Array": {
+      "type": "array",
+      "description": "Compact [x, y, z] representation.",
+      "items": { "type": "number" },
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "vector3Object": {
+      "type": "object",
+      "description": "Named-component { x, y, z } representation.",
+      "properties": {
+        "x": { "type": "number", "default": 0 },
+        "y": { "type": "number", "default": 0 },
+        "z": { "type": "number", "default": 0 }
+      },
+      "additionalProperties": false
+    },
+    "vector3": {
+      "description": "3D vector — either [x,y,z] array or { x, y, z } object.",
+      "oneOf": [
+        { "$ref": "#/$defs/vector3Array" },
+        { "$ref": "#/$defs/vector3Object" }
+      ]
+    },
+    "scalarOrVector3": {
+      "description": "Scale value: uniform number, [x,y,z] array, or { x, y, z } object.",
+      "oneOf": [
+        { "type": "number", "exclusiveMinimum": 0 },
+        { "$ref": "#/$defs/vector3Array" },
+        { "$ref": "#/$defs/vector3Object" }
+      ]
+    }
+  },
+  "properties": {
+    "position": { "$ref": "#/$defs/vector3",        "description": "World-space translation. Aliases: pos, p." },
+    "pos":      { "$ref": "#/$defs/vector3",        "description": "Alias for position." },
+    "p":        { "$ref": "#/$defs/vector3",        "description": "Short alias for position." },
+    "rotation": { "$ref": "#/$defs/vector3",        "description": "Euler rotation in degrees, XYZ order. Aliases: rot, r." },
+    "rot":      { "$ref": "#/$defs/vector3",        "description": "Alias for rotation." },
+    "r":        { "$ref": "#/$defs/vector3",        "description": "Short alias for rotation." },
+    "scale":    { "$ref": "#/$defs/scalarOrVector3","description": "Uniform or per-axis scale. Alias: s." },
+    "s":        { "$ref": "#/$defs/scalarOrVector3","description": "Short alias for scale." }
+  }
+}

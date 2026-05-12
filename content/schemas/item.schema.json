@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://schemas.local/loader/item.schema.json",
+  "title": "Item",
+  "description": "A scene-level item: a placed instance of a component or component set with quantity, transform overrides, and per-instance properties.",
+  "type": "object",
+  "required": ["id"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_\\-\\.]+$",
+      "description": "Unique instance identifier for this item within its parent collection."
+    },
+    "name": {
+      "type": "string",
+      "description": "Optional display name override for this instance."
+    },
+    "component": {
+      "type": "string",
+      "description": "ID of the Component in the registry to instantiate. Mutually exclusive with 'componentSet'."
+    },
+    "componentSet": {
+      "type": "string",
+      "description": "ID of the ComponentSet in the registry to instantiate. Mutually exclusive with 'component'."
+    },
+    "quantity": {
+      "type": "integer",
+      "minimum": 1,
+      "default": 1,
+      "description": "How many copies to spawn. When > 1, spawnOffset.position is applied cumulatively unless 'quantityTransform' is specified."
+    },
+    "quantityTransform": {
+      "$ref": "transform.schema.json",
+      "description": "Incremental transform applied between each copy when quantity > 1 (e.g. stack offset)."
+    },
+    "transform": {
+      "$ref": "transform.schema.json",
+      "description": "Instance-level transform override, composed after the component's own transform."
+    },
+    "spawnOffset": {
+      "$ref": "spawn-offset.schema.json",
+      "description": "Instance-level spawn offset, overrides component/set-level spawnOffset."
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": true,
+      "description": "Per-instance property overrides merged on top of the component's property table."
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true,
+      "description": "Additional tags for this instance only."
+    },
+    "scripts": {
+      "type": "array",
+      "items": { "$ref": "script-shortcut.schema.json" },
+      "description": "Additional script bindings for this instance only."
+    },
+    "snapTo": {
+      "type": "object",
+      "description": "Optional: automatically snap this item to a snap point on another object at spawn.",
+      "required": ["targetId"],
+      "additionalProperties": false,
+      "properties": {
+        "targetId": {
+          "type": "string",
+          "description": "ID of the item or component to snap to."
+        },
+        "targetSnapId": {
+          "type": "string",
+          "description": "ID of the specific snap point on the target. Omit to use the first available."
+        },
+        "sourceSnapId": {
+          "type": "string",
+          "description": "ID of the snap point on this item to use for alignment."
+        }
+      }
+    },
+    "enabled": {
+      "type": "boolean",
+      "default": true,
+      "description": "When false, this item is defined but not spawned."
+    },
+    "group": {
+      "type": "string",
+      "description": "Logical group name for batch operations (select all, spawn all, destroy all)."
+    }
+  },
+  "oneOf": [
+    { "required": ["component"] },
+    { "required": ["componentSet"] }
+  ]
+}

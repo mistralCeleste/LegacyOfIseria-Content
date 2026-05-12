@@ -3,7 +3,8 @@
     {
       "set": {
         "position": { "x": -27.43, "y": 1, "z": 11.78 },
-        "spawnOffset": { "x": 0, "y": 0, "z": -9.5 }
+        "spawnOffset": { "x": 0, "y": 0, "z": -9.5 },
+        "script": "../../scripts/archiveContainerBehavior.lua"
       },
       "items": [
         {

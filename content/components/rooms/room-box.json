@@ -5,7 +5,8 @@
         "Name": "Custom_Model_Bag",
         "position": { "x": 12.90, "y": 1, "z": 6.02 },
         "spawnOffset": { "x": 0, "y": 0, "z": 5.16 },
-        "scale": { "x": 1, "y": 1, "z": 1 }
+        "scale": { "x": 1, "y": 1, "z": 1 },
+        "bag": "../../scripts/combatBagBehavior.lua"
       },
       "items": [
         {

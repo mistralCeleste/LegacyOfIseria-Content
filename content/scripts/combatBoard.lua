@@ -10,6 +10,7 @@
 -----------------------------------------
 
 function onLoad()
+    self.clearContextMenu()
     self.addContextMenuItem("Cleanup Dungeon", cleanupDungeon)
 end
 

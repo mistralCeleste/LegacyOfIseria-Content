@@ -1,0 +1,76 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://schemas.local/loader/spawn-offset.schema.json",
+  "title": "SpawnOffset",
+  "description": "Local-space offset applied at spawn time, after the component's own transform. Used to nudge or orient an object relative to its spawn anchor without modifying its stored transform.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "position": {
+      "description": "Translation offset in local space. Aliases: pos, p.",
+      "oneOf": [
+        { "type": "array", "items": { "type": "number" }, "minItems": 3, "maxItems": 3 },
+        { "type": "object",
+          "properties": {
+            "x": { "type": "number", "default": 0 },
+            "y": { "type": "number", "default": 0 },
+            "z": { "type": "number", "default": 0 }
+          },
+          "additionalProperties": false }
+      ]
+    },
+    "pos": { "$comment": "Alias for position." ,
+      "oneOf": [
+        { "type": "array", "items": { "type": "number" }, "minItems": 3, "maxItems": 3 },
+        { "type": "object",
+          "properties": {
+            "x": { "type": "number" }, "y": { "type": "number" }, "z": { "type": "number" }
+          }, "additionalProperties": false }
+      ]
+    },
+    "p": { "$comment": "Short alias for position.",
+      "oneOf": [
+        { "type": "array", "items": { "type": "number" }, "minItems": 3, "maxItems": 3 },
+        { "type": "object",
+          "properties": {
+            "x": { "type": "number" }, "y": { "type": "number" }, "z": { "type": "number" }
+          }, "additionalProperties": false }
+      ]
+    },
+    "rotation": {
+      "description": "Rotation offset in degrees, XYZ Euler order. Aliases: rot, r.",
+      "oneOf": [
+        { "type": "array", "items": { "type": "number" }, "minItems": 3, "maxItems": 3 },
+        { "type": "object",
+          "properties": {
+            "x": { "type": "number", "default": 0 },
+            "y": { "type": "number", "default": 0 },
+            "z": { "type": "number", "default": 0 }
+          }, "additionalProperties": false }
+      ]
+    },
+    "rot": { "$comment": "Alias for rotation.",
+      "oneOf": [
+        { "type": "array", "items": { "type": "number" }, "minItems": 3, "maxItems": 3 },
+        { "type": "object",
+          "properties": {
+            "x": { "type": "number" }, "y": { "type": "number" }, "z": { "type": "number" }
+          }, "additionalProperties": false }
+      ]
+    },
+    "r": { "$comment": "Short alias for rotation.",
+      "oneOf": [
+        { "type": "array", "items": { "type": "number" }, "minItems": 3, "maxItems": 3 },
+        { "type": "object",
+          "properties": {
+            "x": { "type": "number" }, "y": { "type": "number" }, "z": { "type": "number" }
+          }, "additionalProperties": false }
+      ]
+    },
+    "applyAfterTransform": {
+      "type": "boolean",
+      "default": true,
+      "description": "When true (default), this offset is composed after the component's own transform. Set false to apply in world space."
+    }
+  }
+}
