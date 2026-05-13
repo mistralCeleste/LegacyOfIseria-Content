@@ -1,0 +1,5 @@
+{
+  "components": [
+    { "include": "arc-cards.json" }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "components": [
+    {
+      "set": {
+        "Name": "CardCustom",
+        "position": {
+          "x": 26.65,
+          "y": 1,
+          "z": -6.88
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "items": [
+        {
+          "identifier": "ARC-001",
+          "Description": "Mob",
+          "face": "images/ARC-001-face.jpg",
+          "back": "images/ARC-001-back.jpg"
+        },
+        {
+          "identifier": "ARC-002",
+          "Description": "Brute",
+          "face": "images/ARC-002-face.jpg",
+          "back": "images/ARC-002-back.jpg"
+        },
+        {
+          "identifier": "ARC-003",
+          "Description": "Elite",
+          "face": "images/ARC-003-face.jpg",
+          "back": "images/ARC-003-back.jpg"
+        },
+        {
+          "identifier": "ARC-004",
+          "Description": "Boss",
+          "face": "images/ARC-004-face.jpg",
+          "back": "images/ARC-004-back.jpg"
+        },
+        {
+          "identifier": "ARC-005",
+          "Description": "Overlord",
+          "face": "images/ARC-005-face.jpg",
+          "back": "images/ARC-005-back.jpg"
+        }
+      ]
+    }
+  ]
+}
