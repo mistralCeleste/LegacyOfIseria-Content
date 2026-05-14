@@ -13,7 +13,8 @@
           "y": 3,
           "z": 10
         },
-        "script": "../../scripts/narrativeCardBehavior.lua"
+        "script": "../../scripts/narrativeCardBehavior.lua",
+        "booklet": "NPC"
       },
       "items": [
         {

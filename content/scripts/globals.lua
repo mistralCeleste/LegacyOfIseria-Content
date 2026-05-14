@@ -89,10 +89,43 @@ end
 
 
 local function isRelativePath(path)
-    return type(path) == "string"
-       and not path:match("^https?://")
-       and (path:match("%.png$") or path:match("%.jpg$") or path:match("%.jpeg$")
-         or path:match("%.obj$") or path:match("%.mtl$"))
+    if type(path) ~= "string" then
+        return false
+    end
+
+    -- Reject empty or whitespace-only strings
+    if path:match("^%s*$") then
+        return false
+    end
+
+    -- Reject URLs
+    if path:match("^https?://") then
+        return false
+    end
+
+    -- Reject absolute Windows paths
+    if path:match("^[A-Za-z]:[\\/]")
+       or path:match("^\\\\") then
+        return false
+    end
+
+    -- Reject absolute Unix paths
+    if path:match("^/") then
+        return false
+    end
+
+    -- Explicit relative prefixes
+    if path:match("^%./") or path:match("^%.%./") then
+        return true
+    end
+
+    -- Must contain a path separator to be considered a path
+    if path:match("[/\\]") then
+        return true
+    end
+
+    -- Otherwise it's just a string, not a path
+    return false
 end
 
 
@@ -528,6 +561,17 @@ TTS_ObjectData.base =
     }
 }
 
+TTS_ObjectData.Custom_Assetbundle = 
+{
+    CustomAssetbundle =  {
+        Name = "Custom_Assetbundle",
+        AssetbundleURL =  "",
+        AssetbundleSecondaryURL =  "",
+        MaterialIndex =  3,
+        TypeIndex =  0,
+        LoopingEffectIndex = 0
+    }
+}
 
 TTS_ObjectData.CardCustom =
 {
@@ -584,6 +628,34 @@ TTS_ObjectData.Custom_Model_Bag =
 }
 
 
+TTS_ObjectData.Custom_Tile =
+{
+    Name = "Custom_Tile",
+    CustomImage = {
+        ImageURL = "",
+        ImageSecondaryURL = "",
+        ImageScalar = 1,
+        WidthScale = 0,
+        CustomTile = {
+            Type = 0,
+            Thickness = 0.1,
+            Stackable = false,
+            Stretch = true
+        }
+    }
+}
+
+
+TTS_ObjectData.Custom_PDF = {
+    CustomPDF = {
+        PDFUrl = "",
+        PDFPassword = "",
+        PDFPage = 0,
+        PDFPageOffset = 0
+    }
+}
+
+
 local AliasMap = {
     CardCustom = {
         face = { path = {"CustomDeck", "1", "FaceURL"} },
@@ -597,6 +669,16 @@ local AliasMap = {
 
     Tile = {
         image = { path = {"CustomImage", "ImageURL"} }
+    },
+
+    Custom_Assetbundle = {
+        bundle = { path = {"CustomAssetbundle", "AssetbundleURL"} },
+        typeIndex = { path = {"CustomAssetbundle", "TypeIndex"} },
+        materialIndex = { path = {"CustomAssetbundle", "MaterialIndex"} },
+    },
+
+    Custom_PDF = {
+        pdf = { path = {"CustomPDF", "PDFUrl"} }
     },
 
     Custom_Tile = {
@@ -895,6 +977,34 @@ local function expandIncludesAsync(components, basePath, callback)
 end
 
 
+local function isValidLuaScript(text)
+    if type(text) ~= "string" then
+        return false
+    end
+
+    -- Empty or whitespace-only
+    if text:match("^%s*$") then
+        return false
+    end
+
+    -- HTML detection
+    if text:match("<!DOCTYPE") or
+       text:match("<html") or
+       text:match("<body") or
+       text:match("<script") then
+        return false
+    end
+
+    -- JSON detection (starts with { or [)
+    if text:match("^%s*[{%[]") then
+        return false
+    end
+
+    -- If it passed all filters, assume it's Lua
+    return true
+end
+
+
 function JsonAdapter.registerComponent(path, root)
     local basePath = getParentFolder(path)
 
@@ -907,7 +1017,13 @@ function JsonAdapter.registerComponent(path, root)
             if state == false then
                 WebRequest.get(url, function(req)
                     if not req.is_error then
-                        Registry._scripts[url] = req.text
+                        local text = req.text
+                        if isValidLuaScript(text) then
+                            Registry._scripts[url] = text
+                        else
+                            Registry._scripts[url] = ""
+                            Log.error("Invalid Lua script at " .. url)
+                        end
                     else
                         Registry._scripts[url] = ""
                         Log.error("Script load error: " .. url)
@@ -975,7 +1091,7 @@ function JsonAdapter.registerComponentSet(basePath, component)
             entry.script = resolvePath(basePath, entry.script)
             Registry.addScript(entry.script)
         end
-
+        Log.debug("JSON: " .. JSON.encode(entry))
         Registry.addComponent(entry)
     end
 end
@@ -999,10 +1115,13 @@ function JsonAdapter.spawnComponent(entry)
     obj.setLock(true)
     entry.guid = obj.getGUID()
 
-    if hasScript(entry.script) then
-        local scriptText = Registry.getScript(entry.script)
-        if scriptText then
+    if hasScript(entry.LuaScript) then
+        local scriptText = getRegistryItem("Script", entry.LuaScript)
+
+        if isValidLuaScript(scriptText) then
             obj.setLuaScript(scriptText)
+        else
+            Log.error("Skipping invalid script for " .. tostring(entry.identifier))
         end
     end
 
@@ -1041,5 +1160,3 @@ function JsonAdapter.spawnAllComponents()
         end
     end
 end
-
-

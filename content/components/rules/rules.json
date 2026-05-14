@@ -1,6 +1,4 @@
 {
-  "name": "Rules",
-
   "components": [
     {
       "set": {
@@ -11,12 +9,8 @@
       },
       "items": [
         {
-          "CustomPDF": {
-            "PDFUrl": "Legacy-of-Iseria-Rules-Spread-Web.pdf",
-            "PDFPassword": "",
-            "PDFPage": 0,
-            "PDFPageOffset": 0
-          }
+          "identifier": "Core Rulebook",
+          "pdf": "content/Legacy-of-Iseria-Rules-Spread-Web.pdf"
         }
       ]
     }

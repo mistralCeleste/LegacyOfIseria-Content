@@ -75,7 +75,7 @@ end
 
 function buildContextMenus()
     self.clearContextMenu()
-    self.addContextMenuItem("Open Book to " .. component.identifier, openBookFromMenu, false)
+    self.addContextMenuItem("Open Book " .. component.booklet, openBookFromMenu, false)
 end
 
 
@@ -100,7 +100,7 @@ end
 
 
 function openBook()
-    local book = findBookForCard(component.identifier)
+    local book = findBookObject(component.booklet)
     if not book then return end
     book.call("openPageToId", component.identifier)
 end
@@ -116,10 +116,12 @@ function findBookObject(name)
 end
 
 
-function findBookForCard(name)
-    local book_id = extractIdPrefix(name)
+function _oldfindBookForCard(name)
+    local book_id = component.booklet --or extractIdPrefix(name)
+    print("book id: " .. book_id)
     local book_guid = Global.call("getRegistryComponentGUID", book_id)
-    local book = getObjectFromGUID(book_guid) or findBookObject(book_id)
+    print("book guid: " .. book_guid)
+    local book = getObjectFromGUID(book_guid) --or findBookObject(book_id)
     warnIfInvalid(book, "Book " .. book_id .. " not found")
     return book
 end

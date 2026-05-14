@@ -1,11 +1,9 @@
 {
-  "name": "Booklets",
-
   "components": [
     {
       "set": {
         "Name": "Custom_Assetbundle",
-        "script": "../../scripts/bookletBehavior.lua",
+        "script": "scripts/bookletBehavior.lua",
         "rotation": {
           "x": 0,
           "y": 180,

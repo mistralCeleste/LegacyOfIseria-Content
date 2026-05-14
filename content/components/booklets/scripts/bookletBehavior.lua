@@ -14,22 +14,83 @@
 -- Configuration
 -----------------------------------------
 
-PAGE_INDEX = {}
+-- number of times to try loading the component information from the Global Registry
+local MAX_REGISTRY_TRIES = 5      -- how many times to try
+local REGISTRY_RETRY_DELAY = 2    -- frames between tries (30 = ~0.5 sec)
+local tries = 0
 
+PAGE_INDEX = {}
 MAX_TYPED_VALUE = 1000
 PADDING_LENGTH = 3
 
 
 -----------------------------------------
--- Event Handlers
+-- Component
+-----------------------------------------
+local id = nil
+local component = nil
+
+
+local function waitForObjectLoaded(obj, callback)
+    Wait.condition(
+        function()
+           Log.debug("loaded object: " .. component.identifier)
+            callback(obj)
+        end,
+        function()
+            local bundle = obj.AssetBundle
+            Log.debug("waiting for object: " .. component.identifier)
+            return bundle ~= nil and bundle.getTriggerEffects() ~= nil
+        end
+    )
+end
+
+
+local function tryLoadComponent()
+    tries = tries + 1
+    local json = Global.call("getRegistryComponentJSON", id)
+
+    if json then
+        component = JSON.decode(json)
+        waitForObjectLoaded(self, function(o)
+            onComponentLoaded(o)
+        end)
+        return
+    end
+
+    if tries < MAX_REGISTRY_TRIES then
+        Wait.frames(tryLoadEntry, REGISTRY_RETRY_DELAY)
+        return
+    end
+
+    Log.error("Unable to load from Global Registry component id: " .. id)
+end
+
+
+-----------------------------------------
+-- Events
 -----------------------------------------
 
 function onLoad()
+    id = self.getName()
     self.max_typed_number = MAX_TYPED_VALUE
-    buildPageIndex()
-    Global.call("registerBook", { name = self.getName(), guid = self.getGUID() })
+    tryLoadComponent()
 end
 
+
+function onComponentLoaded()
+    Log.debug("Book loaded:")
+
+    Wait.frames(function()
+        local effects = self.AssetBundle.getTriggerEffects()
+        buildPageIndex()
+    end, 10)
+end
+
+
+-----------------------------------------
+-- Event Handlers
+-----------------------------------------
 
 function onNumberTyped(player_color, number, alt)
     local hover_object = Player[player_color].getHoverObject()
@@ -49,13 +110,14 @@ function buildPageIndex()
     local effects = self.AssetBundle.getTriggerEffects()
 
     if not effects then
-        print("Book: No trigger effects found")
+        print("Book: No trigger effects found for booklet: " .. component.identifier)
         return
     end
 
     for _, effect in ipairs(effects) do
         if effect.name and effect.name ~= "" then
             PAGE_INDEX[effect.name] = effect.index   -- zero-based
+            Log.debug("Booklet: " .. component.identifier .. " add page: " .. effect.name .. " to index: " .. effect.index)
         end
     end
 end
@@ -74,7 +136,7 @@ function openPageToId(id)
     local index = PAGE_INDEX[id]
 
     if not index then
-        print("Cannot find " .. tostring(id) .. " in " .. self.getName())
+        print("Cannot find " .. tostring(id) .. " in " .. component.identifier)
         return
     end
 
@@ -116,3 +178,36 @@ function findFirstPageIndex(search)
     return nil
 end
 
+
+-----------------------------------------
+-- Logger
+-----------------------------------------
+Log =
+{
+    level = "DEBUG",
+    levels = { ERROR = 1, WARN = 2, INFO = 3, DEBUG = 4 }
+}
+
+local function shouldLog(requested)
+    return Log.levels[requested] <= Log.levels[Log.level]
+end
+
+
+function Log.error(msg)
+    if shouldLog("ERROR") then print("[ERROR] " .. msg) end
+end
+
+
+function Log.warn(msg)
+    if shouldLog("WARN") then print("[WARN] " .. msg) end
+end
+
+
+function Log.info(msg)
+    if shouldLog("INFO") then print("[INFO] " .. msg) end
+end
+
+
+function Log.debug(msg)
+    if shouldLog("DEBUG") then print("[DEBUG] " .. msg) end
+end
