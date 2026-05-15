@@ -11,15 +11,69 @@ triggerMap = {}
 MAX_TYPED_VALUE = 1000
 USE_PADDING = true
 
+-- number of times to try loading the component information from the Global Registry
+local MAX_REGISTRY_TRIES = 5      -- how many times to try
+local REGISTRY_RETRY_DELAY = 2    -- frames between tries (30 = ~0.5 sec)
+local tries = 0
+
+local id = nil
+local component = nil
+
+
+local function waitForObjectLoaded(obj, callback)
+    Wait.condition(
+        function()
+           Log.debug("loaded object: " .. component.identifier)
+            callback(obj)
+        end,
+        function()
+            local bundle = obj.AssetBundle
+            Log.debug("waiting for object: " .. component.identifier)
+            return bundle ~= nil and bundle.getTriggerEffects() ~= nil
+        end
+    )
+end
+
+
+local function tryLoadComponent()
+    tries = tries + 1
+    local json = Global.call("getRegistryComponentJSON", id)
+
+    if json then
+        component = JSON.decode(json)
+        waitForObjectLoaded(self, function(o)
+            onComponentLoaded(o)
+        end)
+        return
+    end
+
+    if tries < MAX_REGISTRY_TRIES then
+        Wait.frames(tryLoadComponent, REGISTRY_RETRY_DELAY)
+        return
+    end
+
+    Log.error("Unable to load from Global Registry component id: " .. id)
+end
+
+
 -----------------------------------------
 -- ON LOAD
 -----------------------------------------
 function onLoad()
+    id = self.getName()
     self.max_typed_number = MAX_TYPED_VALUE
-    cacheTriggerEffects()
     buildContextMenus()
     registerHotkeys()
+    tryLoadComponent()
 end
+
+
+function onComponentLoaded()
+    Wait.frames(function()
+        cacheTriggerEffects()
+    end, 10)
+end
+
 
 function cacheTriggerEffects()
     local effects = self.AssetBundle.getTriggerEffects()
@@ -125,3 +179,37 @@ function playTriggerEffect(dial, index)
         print("Missing trigger effect: " .. triggerName)
     end
 end
+
+-----------------------------------------
+-- Logger
+-----------------------------------------
+Log =
+{
+    level = "DEBUG",
+    levels = { ERROR = 1, WARN = 2, INFO = 3, DEBUG = 4 }
+}
+
+local function shouldLog(requested)
+    return Log.levels[requested] <= Log.levels[Log.level]
+end
+
+
+function Log.error(msg)
+    if shouldLog("ERROR") then print("[ERROR] " .. msg) end
+end
+
+
+function Log.warn(msg)
+    if shouldLog("WARN") then print("[WARN] " .. msg) end
+end
+
+
+function Log.info(msg)
+    if shouldLog("INFO") then print("[INFO] " .. msg) end
+end
+
+
+function Log.debug(msg)
+    if shouldLog("DEBUG") then print("[DEBUG] " .. msg) end
+end
+

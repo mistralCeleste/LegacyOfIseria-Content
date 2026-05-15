@@ -18,14 +18,6 @@
       },
       "items": [
         {
-          "identifier": "Entrance",
-          "Description": "Entrance",
-          "face": "images/SML-000A-face.jpg",
-          "back": "images/SML-000A-back.jpg",
-          "size": "1+",
-          "bag": "RoomsEntrance1+Box"
-        },
-        {
           "identifier": "",
           "Description": "Random",
           "face": "images/SML-001A-face.jpg",

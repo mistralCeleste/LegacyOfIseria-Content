@@ -409,13 +409,30 @@ function getRegistryComponentJSON(id)
     return nil
 end
 
+local function findComponentByName(name)
+    for _, object in ipairs(getAllObjects()) do
+        if object.getName() == name then
+            return object
+        end
+    end
+    return nil
+end
+
 
 function getRegistryComponentGUID(id)
     local entry = Registry.getComponent(id)
     if entry then
-        return entry.getGUID()
+        local obj = findComponentByName(entry.identifier)
+        if obj then
+            return obj.getGUID()
+        end
     end
     return nil
+end
+
+
+function hasMethod(tbl, methodName)
+    return type(tbl[methodName]) == "function"
 end
 
 
@@ -1077,8 +1094,8 @@ function JsonAdapter.registerComponentSet(basePath, component)
         local merged = mergeSetAndItem(component.set, item)
         local entry = deepCopy(template)
         deepMerge(entry, merged)
-        resolveAllPaths(basePath, entry)
         expandAliases(entry)
+        resolveAllPaths(basePath, entry)
 
         if spawnOffset then
             local count = index - 1
@@ -1088,7 +1105,6 @@ function JsonAdapter.registerComponentSet(basePath, component)
         end
 
         if entry.script then
-            entry.script = resolvePath(basePath, entry.script)
             Registry.addScript(entry.script)
         end
         Log.debug("JSON: " .. JSON.encode(entry))
@@ -1103,6 +1119,8 @@ function JsonAdapter.spawnComponent(entry)
         callback_function = function(obj)
             if entry.bag then
                 queueBagInsertion(entry.bag, entry)
+            else
+                obj.setLock(false)
             end
         end
     })
@@ -1115,8 +1133,8 @@ function JsonAdapter.spawnComponent(entry)
     obj.setLock(true)
     entry.guid = obj.getGUID()
 
-    if hasScript(entry.LuaScript) then
-        local scriptText = getRegistryItem("Script", entry.LuaScript)
+    if hasScript(entry.script) then
+        local scriptText = Registry.getScript(entry.script)
 
         if isValidLuaScript(scriptText) then
             obj.setLuaScript(scriptText)

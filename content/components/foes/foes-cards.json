@@ -3,7 +3,11 @@
     {
       "set": {
         "Name": "CardCustom",
-        "position": { "x": 26.66, "y": 1, "z": -3.5 },
+        "position": {
+          "x": 26.66,
+          "y": 1,
+          "z": -3.5
+        },
         "scale": {
           "x": 1,
           "y": 1,
@@ -12,8 +16,8 @@
         "snappoints": {
           "cols": 5,
           "rows": 5,
-          "gridX": 0.4,
-          "gridZ": 0.4
+          "gridX": 0.45,
+          "gridZ": 0.45
         },
         "bag": "FoesBox"
       },
@@ -281,15 +285,6 @@
           "back": "images/FOE-020A-back.jpg",
           "tags": [
             "Humanoid"
-          ]
-        },
-        {
-          "identifier": "FOE-021A",
-          "Description": "Test",
-          "face": "images/_test-snappoint.jpg",
-          "back": "images/_test-snappoint.jpg",
-          "tags": [
-            "Test"
           ]
         }
       ]

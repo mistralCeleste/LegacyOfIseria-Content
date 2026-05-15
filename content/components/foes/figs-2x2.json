@@ -3,6 +3,11 @@
     {
       "set": {
         "Name": "Custom_Tile",
+        "position": {
+          "x": 244.51,
+          "y": 1,
+          "z": -1.29
+        },
         "scale": {
           "x": 0.75,
           "y": 0.2,
@@ -17,8 +22,8 @@
             "Stackable": true,
             "Stretch": true
           }
-        }
-        , "bag": "FoesBox"
+        },
+        "bag": "FoesBox"
       },
       "items": [
         {

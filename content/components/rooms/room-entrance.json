@@ -20,8 +20,8 @@
         {
           "identifier": "Entrance",
           "Description": "Entrance",
-          "face": "images/SML-000A-face.jpg",
-          "back": "images/SML-000A-back.jpg",
+          "face": "images/SML-000-face.jpg",
+          "back": "images/SML-000-back.jpg",
           "size": "1+",
           "bag": "RoomsEntrance1+Box"
         }

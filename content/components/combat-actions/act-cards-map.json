@@ -3,12 +3,12 @@
     "Name": "CardCustom",
     "position": { "x": 23.65, "y": 1, "z": 2.15 },
     "scale": { "x": 1, "y": 1, "z": 1 }
+    ,  "back": "images/ACT-back.jpg"
   },
   "fields": {  
        "identifier": "${Id}" 
     ,  "Description": "${Name}" 
-    ,  "face": "images/${Id}-face.jpg" 
-    ,  "back": "images/${Id}-back.jpg"
+    ,  "face": "images/${Id}-face.jpg"
     , "bag" : "${Box}"
   }
 }

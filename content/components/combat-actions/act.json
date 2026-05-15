@@ -1,6 +1,6 @@
 {
   "components": [
-    { "include": "act-boxes.json" }
+    { "include": "act-box.json" }
     , { "include": "act-cards.json" }
   ]
 }

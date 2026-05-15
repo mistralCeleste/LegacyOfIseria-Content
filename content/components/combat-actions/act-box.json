@@ -18,7 +18,7 @@
       "items": [
         {
           "identifier": "ActBox",
-          "position": { "x": 26.66, "y": 1, "z": 0 },
+          "position": { "x": 26.66, "y": 1, "z": -0.52 },
           "Description": "Act Box",
           "texture": "../boxes/images/Box_ACT.jpg"
         },
@@ -26,7 +26,7 @@
           "identifier": "ActInactiveBox",
           "position": { "x": 26.66, "y": 1, "z": 1.72 },
           "Description": "Act Inactive Box",
-          "texture": "../boxes/images/Box_ACT.jpg"
+          "texture": "../boxes/images/Box_ACT-inactive.jpg"
         }
       ]
     }

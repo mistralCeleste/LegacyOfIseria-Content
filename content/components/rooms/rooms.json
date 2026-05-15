@@ -1,7 +1,7 @@
 {
   "components": [
-    { "include": "rooms-boxes.json" }
-    , { "include": "rooms-enterance.json" }
-    , { "include": "rooms-cards.json" }
+    { "include": "room-box.json" }
+    , { "include": "room-entrance.json" }
+    , { "include": "rooms-tiles.json" }
   ]
 }
