@@ -2,26 +2,26 @@
     "components": [
     {
       "set": {
-        "Name": "Custom_Model",
+        "Name": "Custom_Model_Bag",
         "mesh": "../boxes/models/CardBox-container.obj",
+        "position": { "x": -7.31, "y": 1, "z": 13.3 },
+        "spawnOffset": { "x": 0, "y": 0, "z": 2 },
         "scale": { "x": 0.4, "y": 0.4, "z": 0.4 },
-        "bag": "../../scripts/combatBagBehavior.lua"
+        "script": "../../scripts/combatBagBehavior.lua"
       },
       "items": [
         {
-          "identifier": "MapsBox",
-          "position": { "x": -7.31, "y": 1, "z": 13.33 },
+          "identifier": "MapsBox",  
           "Description": "Maps Box",
           "texture": "../boxes/images/Box_Maps.jpg"
         },
         {
           "identifier": "MapsInactiveBox",
-          "position": { "x": -7.31, "y": 1, "z": 16.77 },
           "Description": "Maps Inactive Box",
           "texture": "../boxes/images/Box_Maps-inactive.jpg"
-        },
-        { "include": "maps-cards.json" }
+        }
       ]
-    }
+    },
+    { "include": "maps-cards.json" }
   ]
 }

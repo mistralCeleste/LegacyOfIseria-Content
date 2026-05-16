@@ -1,7 +1,7 @@
 {
   "set": {
     "Name": "Custom_Tile",
-    "position": { "x": -19.35, "y": 1, "z": 15 },
+    "position": { "x": -31.35, "y": 1, "z": 6.355 },
     "spawnOffset": { "x": 0, "y": 0, "z": -10 },
     "scale": { "x": 2.2, "y": 0.2, "z": 2.2 }
   },

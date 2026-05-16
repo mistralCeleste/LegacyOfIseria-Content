@@ -22,7 +22,7 @@ SEARCH_TYPE_FIRST = 'first'
 SEARCH_TYPE = SEARCH_TYPE_FIRST
 
 TRACK_DUNGEON_ITEMS = false
-ENSURE_FACEDOWN_WHEN_DRAWN = true
+ENSURE_FACEDOWN_WHEN_DRAWN = false
 
 -----------------------------------------
 -- Event Handlers

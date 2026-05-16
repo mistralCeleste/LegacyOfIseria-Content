@@ -18,7 +18,7 @@
           "back": "images/MAP-001A-back.jpg",
           "rooms": "2",
           "connectors": "1",
-          "bag": "MapBox"
+          "bag": "MapsBox"
         },
         {
           "identifier": "MAP-001B",
@@ -27,7 +27,7 @@
           "back": "images/MAP-001B-back.jpg",
           "rooms": "7",
           "connectors": "5",
-          "bag": "MapInactiveBox"
+          "bag": "MapsInactiveBox"
         },
         {
           "identifier": "MAP-001C",
@@ -36,7 +36,7 @@
           "back": "images/MAP-001C-back.jpg",
           "rooms": "7",
           "connectors": "5",
-          "bag": "MapInactiveBox"
+          "bag": "MapsInactiveBox"
         },
         {
           "identifier": "MAP-001D",
@@ -45,7 +45,7 @@
           "back": "images/MAP-001D-back.jpg",
           "rooms": "9",
           "connectors": "6",
-          "bag": "MapInactiveBox"
+          "bag": "MapsInactiveBox"
         },
         {
           "identifier": "MAP-002A",
@@ -54,7 +54,7 @@
           "back": "images/MAP-002A-back.jpg",
           "rooms": "18",
           "connectors": "8",
-          "bag": "MapBox"
+          "bag": "MapsBox"
         },
         {
           "identifier": "MAP-003A",
@@ -63,7 +63,7 @@
           "back": "images/MAP-003A-back.jpg",
           "rooms": "17",
           "connectors": "11",
-          "bag": "MapBox"
+          "bag": "MapsBox"
         },
         {
           "identifier": "MAP-004A",
@@ -72,7 +72,7 @@
           "back": "images/MAP-004A-back.jpg",
           "rooms": "8",
           "connectors": "5",
-          "bag": "MapBox"
+          "bag": "MapsBox"
         },
         {
           "identifier": "MAP-005A",
@@ -81,7 +81,7 @@
           "back": "images/MAP-005A-back.jpg",
           "rooms": "27",
           "connectors": "18",
-          "bag": "MapBox"
+          "bag": "MapsBox"
         },
         {
           "identifier": "MAP-006A",
@@ -90,7 +90,7 @@
           "back": "images/MAP-006A-back.jpg",
           "rooms": "17",
           "connectors": "9",
-          "bag": "MapBox"
+          "bag": "MapsBox"
         },
         {
           "identifier": "MAP-007A",
@@ -99,7 +99,7 @@
           "back": "images/MAP-007A-back.jpg",
           "rooms": "17",
           "connectors": "9",
-          "bag": "MapBox"
+          "bag": "MapsBox"
         }
       ]
     }

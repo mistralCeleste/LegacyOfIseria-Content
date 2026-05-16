@@ -1,8 +1,11 @@
 {
   "set": {
     "Name": "Custom_Tile"
+    , "position": { "x": -3, "y": 1, "z": 8.17 }
+    , "rotation": { "x": 0, "y": 180, "z": 180 }
     , "scale": { "x": 0.38, "y": 1, "z": 0.38 }
-    ,  "Type": "0"
+    , "Grid": true
+    , "Snap": false
     , "CustomTile": {
         "Type": 0,
         "Thickness": 0.1,
@@ -11,10 +14,11 @@
   },
   "fields":
   {  
-       "identifier": "${Back}"
+       "identifier": "${Id}"
     ,  "Description": "${Back}"
     ,  "back": "images/${Back}_back.jpg"
     ,  "face": "images/${Type}-${Reward}_face.jpg"
+    , "quantity": "${Quantity}"
     ,  "bag": "${Back}Bag"
   }
 }

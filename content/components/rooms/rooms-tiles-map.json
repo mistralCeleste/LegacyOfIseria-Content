@@ -2,8 +2,9 @@
   "set": {
     "Name": "Custom_Tile"
     , "position": { "x": 13.76, "y": 1, "z": -4.3 }
-    , "scale": { "x": 1.45, "y": 1, "z": 1.45 }
-    ,  "Type": "0"
+    , "scale": { "x": 2.10, "y": 1, "z": 2.10 }
+    , "Grid": true
+    , "Snap": false
     , "CustomTile": {
         "Type": 0,
         "Thickness": 0.1,
@@ -12,7 +13,7 @@
   },
   "fields":
   {  
-       "identifier": "${Full Id}"
+       "identifier": "${FullIdRef}"
     ,  "Description": "${Name}"
     ,  "face": "images/${FullIdRef}-face.jpg"
     ,  "back": "images/${FullIdRef}-back.jpg"

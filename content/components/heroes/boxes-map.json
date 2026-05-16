@@ -13,7 +13,7 @@
       "rotation": {"x": 0, "y": 270, "z": 0 },
       "CustomMesh": {
         "MeshURL": "../boxes/models/CardBox-container.obj",
-        "DiffuseURL": "models/box-${Class}-diffuse.png",
+        "DiffuseURL": "../boxes/images/box-${Class}-diffuse.jpg",
         "MaterialIndex": 3,
         "TypeIndex": 6,
         "SpecularIntensity": 0.2,

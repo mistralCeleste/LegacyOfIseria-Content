@@ -3,7 +3,7 @@
     {
       "set": {
         "Name": "CardCustom",
-        "back": "images/DAY-back.jpg",
+        "back": "images/DAY_back.jpg",
         "scale": {
           "x": 1,
           "y": 1,

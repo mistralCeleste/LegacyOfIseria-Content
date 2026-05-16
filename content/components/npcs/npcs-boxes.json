@@ -34,7 +34,7 @@
                         "DiffuseURL": "../boxes/images/Box_NPCs.jpg"
                     },
                     "position": {
-                        "x": 27.09,
+                        "x": 27,
                         "y": 1,
                         "z": 9.03
                     }
@@ -46,7 +46,7 @@
                         "DiffuseURL": "../boxes/images/Box_NPCs-inactive.jpg"
                     },
                     "position": {
-                        "x": 27.09,
+                        "x": 27,
                         "y": 1,
                         "z": 11.61
                     }

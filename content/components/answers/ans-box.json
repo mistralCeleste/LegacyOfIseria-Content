@@ -32,8 +32,7 @@
                     "mesh": "../boxes/models/CardBox-container.obj",
                     "CustomMesh": {
                         "DiffuseURL": "../boxes/images/Box_Answers.jpg"
-                    },
-                    "position": { "x": -3, "y": 3, "z": -6 }
+                    }
                 }
             ]
         }

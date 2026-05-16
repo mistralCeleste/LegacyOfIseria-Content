@@ -4,12 +4,14 @@
       "set": {
         "Name": "Custom_Tile",
         "position": { "x": 3, "y": 1, "z": 7.17 },
+        "rotation": {"x": 0, "y": 180, "z": 180 },
         "scale": {
           "x": 0.38,
           "y": 1,
           "z": 0.38
         },
-        "Type": "0",
+        "Grid": true,
+        "Snap": false,
         "back": "images/connector_back.jpg",
         "CustomTile": {
           "Type": 0,
@@ -22,132 +24,28 @@
           "identifier": "barred",
           "Description": "barred",
           "face": "images/connector-barred_face.jpg",
+          "quantity": 4,
           "bag": "ConnectorBag"
         },
         {
           "identifier": "hall",
           "Description": "hall",
           "face": "images/connector-hall_face.jpg",
+          "quantity": 8,
           "bag": "ConnectorBag"
         },
         {
           "identifier": "locked",
           "Description": "locked",
           "face": "images/connector-locked_face.jpg",
+          "quantity": 4,
           "bag": "ConnectorBag"
         },
         {
           "identifier": "wall",
           "Description": "wall",
           "face": "images/connector-wall_face.jpg",
-          "bag": "ConnectorBag"
-        },
-        {
-          "identifier": "barred",
-          "Description": "barred",
-          "face": "images/connector-barred_face.jpg",
-          "bag": "ConnectorBag"
-        },
-        {
-          "identifier": "barred",
-          "Description": "barred",
-          "face": "images/connector-barred_face.jpg",
-          "bag": "ConnectorBag"
-        },
-        {
-          "identifier": "barred",
-          "Description": "barred",
-          "face": "images/connector-barred_face.jpg",
-          "bag": "ConnectorBag"
-        },
-        {
-          "identifier": "hall",
-          "Description": "hall",
-          "face": "images/connector-hall_face.jpg",
-          "bag": "ConnectorBag"
-        },
-        {
-          "identifier": "hall",
-          "Description": "hall",
-          "face": "images/connector-hall_face.jpg",
-          "bag": "ConnectorBag"
-        },
-        {
-          "identifier": "hall",
-          "Description": "hall",
-          "face": "images/connector-hall_face.jpg",
-          "bag": "ConnectorBag"
-        },
-        {
-          "identifier": "hall",
-          "Description": "hall",
-          "face": "images/connector-hall_face.jpg",
-          "bag": "ConnectorBag"
-        },
-        {
-          "identifier": "hall",
-          "Description": "hall",
-          "face": "images/connector-hall_face.jpg",
-          "bag": "ConnectorBag"
-        },
-        {
-          "identifier": "hall",
-          "Description": "hall",
-          "face": "images/connector-hall_face.jpg",
-          "bag": "ConnectorBag"
-        },
-        {
-          "identifier": "hall",
-          "Description": "hall",
-          "face": "images/connector-hall_face.jpg",
-          "bag": "ConnectorBag"
-        },
-        {
-          "identifier": "hall",
-          "Description": "hall",
-          "face": "images/connector-hall_face.jpg",
-          "bag": "ConnectorBag"
-        },
-        {
-          "identifier": "hall",
-          "Description": "hall",
-          "face": "images/connector-hall_face.jpg",
-          "bag": "ConnectorBag"
-        },
-        {
-          "identifier": "locked",
-          "Description": "locked",
-          "face": "images/connector-locked_face.jpg",
-          "bag": "ConnectorBag"
-        },
-        {
-          "identifier": "locked",
-          "Description": "locked",
-          "face": "images/connector-locked_face.jpg",
-          "bag": "ConnectorBag"
-        },
-        {
-          "identifier": "locked",
-          "Description": "locked",
-          "face": "images/connector-locked_face.jpg",
-          "bag": "ConnectorBag"
-        },
-        {
-          "identifier": "wall",
-          "Description": "wall",
-          "face": "images/connector-wall_face.jpg",
-          "bag": "ConnectorBag"
-        },
-        {
-          "identifier": "wall",
-          "Description": "wall",
-          "face": "images/connector-wall_face.jpg",
-          "bag": "ConnectorBag"
-        },
-        {
-          "identifier": "wall",
-          "Description": "wall",
-          "face": "images/connector-wall_face.jpg",
+          "quantity": 4,
           "bag": "ConnectorBag"
         }
       ]

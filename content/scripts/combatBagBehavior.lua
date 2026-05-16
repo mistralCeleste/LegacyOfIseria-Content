@@ -64,7 +64,6 @@ function onObjectLeaveContainer(container, object)
 
     if ENSURE_FACEDOWN_WHEN_DRAWN then
         if object.tag == "Card" or object.tag == "Tile" then
-print("facedown")
             ensureFaceDown(object)
         end
     end

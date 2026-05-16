@@ -1,0 +1,26 @@
+{
+    "components": [
+    {
+      "set": {
+        "Name": "Custom_Model_Bag",
+        "mesh": "../boxes/models/CardBox-container.obj",
+        "position": { "x": -4.73, "y": 1, "z": 13.33 },
+        "spawnOffset": { "x": 0, "y": 0, "z": 2 },
+        "scale": { "x": 0.4, "y": 0.4, "z": 0.4 },
+        "script": "../../scripts/archiveContainerBehavior.lua"
+      },
+      "items": [
+        {
+          "identifier": "KeysBox",
+          "Description": "Key Box",
+          "texture": "../boxes/images/Box_Keys.jpg"
+        },
+        {
+          "identifier": "KeysInactiveBox",
+          "Description": "Key Inactive Box",
+          "texture": "../boxes/images/Box_Keys-inactive.jpg"
+        }
+      ]
+    }
+  ]
+}

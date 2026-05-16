@@ -3,13 +3,9 @@
     {
       "set": {
         "Name": "BlockSquare",
-        "position": { "x": -13, "y": 1, "z": 13 },
-        "spawnOffset": { "x": 0, "y": 0, "z": -1 },
-        "scale": {
-          "x": 0.5,
-          "y": 0.5,
-          "z": 0.5
-        }
+        "position": { "x": -25.7, "y": 1, "z": 15 },
+        "spawnOffset": { "x": 0, "y": 0, "z": -10 },
+        "scale": { "x": 0.25, "y": 0.25, "z": 0.25 }
       },
       "items": [
         {

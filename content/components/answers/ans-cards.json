@@ -179,41 +179,6 @@
           "face": "images/ANS-024A-face.jpg",
           "back": "images/ANS-024A-back.jpg",
           "bag": "AnswerBox"
-        },
-        {
-          "identifier": "",
-          "name": "",
-          "face": "images/-face.jpg",
-          "back": "images/-back.jpg",
-          "bag": "AnswerBox"
-        },
-        {
-          "identifier": "",
-          "name": "",
-          "face": "images/-face.jpg",
-          "back": "images/-back.jpg",
-          "bag": "AnswerBox"
-        },
-        {
-          "identifier": "",
-          "name": "",
-          "face": "images/-face.jpg",
-          "back": "images/-back.jpg",
-          "bag": "AnswerBox"
-        },
-        {
-          "identifier": "",
-          "name": "",
-          "face": "images/-face.jpg",
-          "back": "images/-back.jpg",
-          "bag": "AnswerBox"
-        },
-        {
-          "identifier": "",
-          "name": "",
-          "face": "images/-face.jpg",
-          "back": "images/-back.jpg",
-          "bag": "AnswerBox"
         }
       ]
     }

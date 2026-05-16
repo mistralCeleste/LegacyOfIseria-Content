@@ -1,0 +1,68 @@
+{
+  "components": [
+    {
+      "set": {
+        "Name": "Infinite_Bag",
+        "position": { "x": -26.65, "y": 1, "z": 13.70 },
+        "spawnOffset": { "x": 0, "y": 0, "z": -10 },
+        "scale": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        }
+      },
+      "items": [
+        {
+          "identifier": "VanguardWisdomDiceBag",
+          "Description": "Vanguard Wisdom Dice Bag",
+          "color": "#FFFEAF"
+        },
+        {
+          "identifier": "SageWisdomDiceBag",
+          "Description": "Sage Wisdom Dice Bag",
+          "color": "#D99CFF"
+        },
+        {
+          "identifier": "PathfinderWisdomDiceBag",
+          "Description": "Pathfinder Wisdom Dice Bag",
+          "color": "#9FD39D"
+        },
+        {
+          "identifier": "WarbladeWisdomDiceBag",
+          "Description": "Warblade Wisdom Dice Bag",
+          "color": "#FCCFC2"
+        }
+      ]
+    },
+    {
+      "set": {
+        "Name": "Infinite_Bag",
+        "position": { "x": -26.65, "y": 1, "z": 12.20 },
+        "spawnOffset": { "x": 0, "y": 0, "z": -10 },
+        "scale": { "x": 0.5, "y": 0.5, "z": 0.5 }
+      },
+      "items": [
+        {
+          "identifier": "VanguardMightDiceBag",
+          "Description": "Vanguard Might Dice Bag",
+          "color": "#FFFEAF"
+        },
+        {
+          "identifier": "SageMightDiceBag",
+          "Description": "Sage Might Dice Bag",
+          "color": "#D99CFF"
+        },
+        {
+          "identifier": "PathfinderMightDiceBag",
+          "Description": "Pathfinder Might Dice Bag",
+          "color": "#9FD39D"
+        },
+        {
+          "identifier": "WarbladeMightDiceBag",
+          "Description": "Warblade Might Dice Bag",
+          "color": "#FCCFC2"
+        }
+      ]
+    }
+  ]
+}

@@ -4,12 +4,9 @@
       "set": {
         "Name": "Custom_Tile",
         "position": { "x": -5.16, "y": 1, "z": 10.32 },
-        "scale": {
-          "x": 0.73,
-          "y": 1,
-          "z": 0.73
-        },
-        "Type": "0",
+        "scale": { "x": 0.8, "y": 1, "z": 0.8 },
+        "Grid": false,
+        "Snap": false,
         "CustomTile": {
           "Type": 0,
           "Thickness": 0.1,
@@ -23,7 +20,7 @@
           "face": "images/SML-000-face.jpg",
           "back": "images/SML-000-back.jpg",
           "size": "1+",
-          "bag": "RoomsEntrance1+Box"
+          "lock": false
         }
       ]
     }

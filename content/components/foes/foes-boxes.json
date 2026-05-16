@@ -4,7 +4,7 @@
       "set": {
         "Name": "Custom_Model_Bag",
         "scale": { "x": 0.4, "y": 0.4, "z": 0.4 },
-        "bag": "../../scripts/combatBagBehavior.lua"
+        "script": "../../scripts/combatBagBehavior.lua"
       },
       "items": [
         {

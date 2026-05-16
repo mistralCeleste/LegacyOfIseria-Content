@@ -3,12 +3,8 @@
     {
       "set": {
         "Name": "CardCustom",
-        "position": { "x": -8.5, "y": 3, "z": -4.5 },
-        "scale": {
-          "x": 0.75,
-          "y": 1,
-          "z": 0.75
-        }
+        "position": { "x": -25, "y": 3, "z": 20 },
+        "scale": { "x": 0.75, "y": 1, "z": 0.75 }
       },
       "items": [
         {
@@ -206,7 +202,7 @@
           "attribute": "Might",
           "class": "Pathfinder",
           "rating": "Platinum",
-          "bag": "PathfinderPlatinumChest"
+          "bag": "PathfinderGoldChest"
         },
         {
           "identifier": "ABL-014A",
@@ -416,7 +412,7 @@
           "attribute": "Wisdom",
           "class": "Sage",
           "rating": "Platinum",
-          "bag": "SagePlatinumChest"
+          "bag": "SageGoldChest"
         },
         {
           "identifier": "ABL-027A",
@@ -617,7 +613,7 @@
           "attribute": "Valor",
           "class": "Vanguard",
           "rating": "Platinum",
-          "bag": "VanguardPlatinumChest"
+          "bag": "VanguardGoldChest"
         },
         {
           "identifier": "ABL-040A",
@@ -816,7 +812,7 @@
           "attribute": "Might",
           "class": "Warblade",
           "rating": "Platinum",
-          "bag": "WarbladePlatinumChest"
+          "bag": "WarbladeGoldChest"
         }
       ]
     }

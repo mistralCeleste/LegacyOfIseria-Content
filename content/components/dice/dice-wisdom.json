@@ -1,0 +1,94 @@
+{
+  "components": [
+    {
+      "set": {
+        "Name": "Custom_Dice",
+        "position": { "x": -24, "y": 1, "z": 14 },
+        "spawnOffset": { "x": 0, "y": 0, "z": -10 },
+        "scale": { "x": 0.85, "y": 0.85, "z": 0.85 },
+        "image": "images/fudge-dice-faces.jpg",
+        "CustomImage": {
+          "ImageScalar": 1,
+          "WidthScale": 0,
+          "CustomDice": { "Type": 1 }
+        },
+        "RotationValues": [
+    {
+      "Value": " ",
+      "Rotation": {
+        "x": -90,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "Value": "-",
+      "Rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "Value": "+",
+      "Rotation": {
+        "x": 0,
+        "y": 0,
+        "z": -90
+      }
+    },
+    {
+      "Value": "+",
+      "Rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 90
+      }
+    },
+    {
+      "Value": "-",
+      "Rotation": {
+        "x": 0,
+        "y": 0,
+        "z": -180
+      }
+    },
+    {
+      "Value": " ",
+      "Rotation": {
+        "x": 90,
+        "y": 0,
+        "z": 0
+      }
+    }
+  ]
+      },
+      "items": [
+        {
+          "identifier": "VanguardWisdomDie",
+          "Description": "Vanguard Wisdom Die",
+          "color": "#FFFEAF",
+          "bag": "VanguardWisdomDiceBag"
+        },
+        {
+          "identifier": "SageWisdomDie",
+          "Description": "Sage Wisdom Die",
+          "color": "#D99CFF",
+          "bag": "SageWisdomDiceBag"
+        },
+        {
+          "identifier": "PathfinderWisdomDie",
+          "Description": "Pathfinder Wisdom Die",
+          "color": "#9FD39D",
+          "bag": "PathfinderWisdomDiceBag"
+        },
+        {
+          "identifier": "WarbladeWisdomDie",
+          "Description": "Warblade Wisdom Die",
+          "color": "#FCCFC2",
+          "bag": "WarbladeWisdomDiceBag"
+        }
+      ]
+    }
+  ]
+}

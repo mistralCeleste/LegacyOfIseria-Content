@@ -4,6 +4,8 @@
       "set": {
         "position": { "x": -26.66, "y": 1, "z": 17.20 },
         "spawnOffset": { "x": 0, "y": 0, "z": -9.89 },
+        "rotation": { "x": 0, "y": 270, "z": 0 },
+        "scale": { "x": 0.4, "y": 0.4, "z": 0.4 },
         "script": "../../scripts/archiveContainerBehavior.lua"
       },
       "items": [
@@ -11,19 +13,9 @@
           "Name": "Custom_Model_Bag",
           "identifier": "VanguardHeroBox",
           "Description": "Vanguard Hero Box",
-          "scale": {
-            "x": 0.4,
-            "y": 0.4,
-            "z": 0.4
-          },
-          "rotation": {
-            "x": 0,
-            "y": 270,
-            "z": 0
-          },
           "CustomMesh": {
             "MeshURL": "../boxes/models/CardBox-container.obj",
-            "DiffuseURL": "models/box-Vanguard-diffuse.png",
+            "DiffuseURL": "../boxes/images/box-Vanguard-diffuse.jpg",
             "MaterialIndex": 3,
             "TypeIndex": 6,
             "SpecularIntensity": 0.2,
@@ -35,19 +27,9 @@
           "Name": "Custom_Model_Bag",
           "identifier": "SageHeroBox",
           "Description": "Sage Hero Box",
-          "scale": {
-            "x": 0.4,
-            "y": 0.4,
-            "z": 0.4
-          },
-          "rotation": {
-            "x": 0,
-            "y": 270,
-            "z": 0
-          },
           "CustomMesh": {
             "MeshURL": "../boxes/models/CardBox-container.obj",
-            "DiffuseURL": "models/box-Sage-diffuse.png",
+            "DiffuseURL": "../boxes/images/box-Sage-diffuse.jpg",
             "MaterialIndex": 3,
             "TypeIndex": 6,
             "SpecularIntensity": 0.2,
@@ -59,19 +41,9 @@
           "Name": "Custom_Model_Bag",
           "identifier": "PathfinderHeroBox",
           "Description": "Pathfinder Hero Box",
-          "scale": {
-            "x": 0.4,
-            "y": 0.4,
-            "z": 0.4
-          },
-          "rotation": {
-            "x": 0,
-            "y": 270,
-            "z": 0
-          },
           "CustomMesh": {
             "MeshURL": "../boxes/models/CardBox-container.obj",
-            "DiffuseURL": "models/box-Pathfinder-diffuse.png",
+            "DiffuseURL": "../boxes/images/box-Pathfinder-diffuse.jpg",
             "MaterialIndex": 3,
             "TypeIndex": 6,
             "SpecularIntensity": 0.2,
@@ -83,19 +55,9 @@
           "Name": "Custom_Model_Bag",
           "identifier": "WarbladeHeroBox",
           "Description": "Warblade Hero Box",
-          "scale": {
-            "x": 0.4,
-            "y": 0.4,
-            "z": 0.4
-          },
-          "rotation": {
-            "x": 0,
-            "y": 270,
-            "z": 0
-          },
           "CustomMesh": {
             "MeshURL": "../boxes/models/CardBox-container.obj",
-            "DiffuseURL": "models/box-Warblade-diffuse.png",
+            "DiffuseURL": "../boxes/images/box-Warblade-diffuse.jpg",
             "MaterialIndex": 3,
             "TypeIndex": 6,
             "SpecularIntensity": 0.2,

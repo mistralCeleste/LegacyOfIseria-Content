@@ -4,24 +4,25 @@
       "set": {
         "Name": "Custom_Model_Bag",
         "mesh": "../boxes/models/CardBox-container.obj",
+        "position": { "x": -10, "y": 1.5, "z": 19 },
+        "spawnOffset": { "x": -3, "y": 0, "z": 0 },
+        "rotation": { "x": -90, "y": 0, "z": 0 },
         "scale": { "x": 0.4, "y": 0.4, "z": 0.4 },
         "script": "../../scripts/archiveContainerBehavior.lua"
       },
       "items": [
         {
           "identifier": "ItemsBox",
-          "position": { "x": -9.46, "y": 1, "z": 15.48 },
           "Description": "Item Box",
           "texture": "../boxes/images/Box_Items.jpg"
         },
         {
           "identifier": "ItemsInactiveBox",
-          "position": { "x": -9.46, "y": 1, "z": 17.20 },
           "Description": "Item Inactive Box",
           "texture": "../boxes/images/Box_Items-inactive.jpg"
-        },
-        { "include": "items-cards.json" }
+        }
       ]
-    }
+    },
+    { "include": "items-cards.json" }
   ]
 }

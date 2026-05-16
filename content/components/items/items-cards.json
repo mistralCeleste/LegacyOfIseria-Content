@@ -3,32 +3,27 @@
     {
       "set": {
         "Name": "CardCustom",
-        "position": { "x": -9.46, "y": 3, "z": 15.48 },
-        "scale": {
-          "x": 0.75,
-          "y": 1,
-          "z": 0.75
-        }
+        "position": { "x": -10, "y": 3, "z": 22 },
+        "scale": { "x": 0.75, "y": 1, "z": 0.75 },
+        "back": "images/ITM-back.jpg"
       },
       "items": [
         {
           "identifier": "ITM-001A",
           "Description": "Fun-sized Health Potion",
           "face": "images/ITM-001A-face.jpg",
-          "back": "images/ITM-001A-back.jpg",
           "tags": [
             "Potion"
           ],
           "cost": "4",
           "type": "Consumable",
           "rating": "Bronze",
-          "box": "ItemsBox"
+          "bag": "ItemsBox"
         },
         {
           "identifier": "ITM-002A",
           "Description": "Rusty Key",
           "face": "images/ITM-002A-face.jpg",
-          "back": "images/ITM-002A-back.jpg",
           "tags": [
             "Key",
             "Tool"
@@ -36,13 +31,12 @@
           "cost": "4",
           "type": "Consumable",
           "rating": "Bronze",
-          "box": "ItemsBox"
+          "bag": "ItemsBox"
         },
         {
           "identifier": "ITM-003A",
           "Description": "Bomb",
           "face": "images/ITM-003A-face.jpg",
-          "back": "images/ITM-003A-back.jpg",
           "tags": [
             "Physical",
             "Explosive"
@@ -50,13 +44,12 @@
           "cost": "4",
           "type": "Consumable",
           "rating": "Bronze",
-          "box": "ItemsBox"
+          "bag": "ItemsBox"
         },
         {
           "identifier": "ITM-004A",
           "Description": "Compass",
           "face": "images/ITM-004A-face.jpg",
-          "back": "images/ITM-004A-back.jpg",
           "tags": [
             "Map",
             "Tool"
@@ -64,78 +57,72 @@
           "cost": "6",
           "type": "Consumable",
           "rating": "Bronze",
-          "box": "ItemsBox"
+          "bag": "ItemsBox"
         },
         {
           "identifier": "ITM-008A",
           "Description": "Equipment Voucher",
           "face": "images/ITM-008A-face.jpg",
-          "back": "images/ITM-008A-back.jpg",
           "tags": [
             "Voucher"
           ],
           "cost": "4",
           "type": "Consumable",
           "rating": "Bronze",
-          "box": "ItemsBox"
+          "bag": "ItemsBox"
         },
         {
           "identifier": "ITM-100A",
           "Description": "Health Potion",
           "face": "images/ITM-100A-face.jpg",
-          "back": "images/ITM-100A-back.jpg",
           "tags": [
             "Potion"
           ],
           "cost": "6",
           "type": "Consumable",
           "rating": "Silver",
-          "box": "ItemsInactiveBox"
+          "bag": "ItemsInactiveBox"
         },
         {
           "identifier": "ITM-101A",
           "Description": "Might Potion",
           "face": "images/ITM-101A-face.jpg",
-          "back": "images/ITM-101A-back.jpg",
           "tags": [
             "Potion"
           ],
           "cost": "6",
           "type": "Consumable",
           "rating": "Silver",
-          "box": "ItemsInactiveBox"
+          "bag": "ItemsInactiveBox"
         },
         {
           "identifier": "ITM-102A",
           "Description": "Wisdom Potion",
           "face": "images/ITM-102A-face.jpg",
-          "back": "images/ITM-102A-back.jpg",
           "tags": [
             "Potion"
           ],
           "cost": "6",
           "type": "Consumable",
           "rating": "Silver",
-          "box": "ItemsInactiveBox"
+          "bag": "ItemsInactiveBox"
         },
         {
           "identifier": "ITM-103A",
           "Description": "Valor Potion",
           "face": "images/ITM-103A-face.jpg",
-          "back": "images/ITM-103A-back.jpg",
           "tags": [
             "Potion"
           ],
           "cost": "6",
           "type": "Consumable",
           "rating": "Silver",
-          "box": "ItemsInactiveBox"
+          "bag": "ItemsInactiveBox"
         },
         {
           "identifier": "ITM-104A",
           "Description": "Skeleton Key",
           "face": "images/ITM-104A-face.jpg",
-          "back": "images/ITM-104A-back.jpg",
           "tags": [
             "Key",
             "Tool"
@@ -143,13 +130,12 @@
           "cost": "6",
           "type": "Consumable",
           "rating": "Silver",
-          "box": "ItemsInactiveBox"
+          "bag": "ItemsInactiveBox"
         },
         {
           "identifier": "ITM-105A",
           "Description": "Divination Monocle",
           "face": "images/ITM-105A-face.jpg",
-          "back": "images/ITM-105A-back.jpg",
           "tags": [
             "Arcane",
             "Tool"
@@ -157,26 +143,24 @@
           "cost": "2",
           "type": "Consumable",
           "rating": "Silver",
-          "box": "ItemsInactiveBox"
+          "bag": "ItemsInactiveBox"
         },
         {
           "identifier": "ITM-106A",
           "Description": "Bottle",
           "face": "images/ITM-106A-face.jpg",
-          "back": "images/ITM-106A-back.jpg",
           "tags": [
             "Container"
           ],
           "cost": "6",
           "type": "Durable",
           "rating": "Silver",
-          "box": "ItemsInactiveBox"
+          "bag": "ItemsInactiveBox"
         },
         {
           "identifier": "ITM-107A",
           "Description": "Map",
           "face": "images/ITM-107A-face.jpg",
-          "back": "images/ITM-107A-back.jpg",
           "tags": [
             "Map",
             "Tool"
@@ -184,46 +168,43 @@
           "cost": "8",
           "type": "Consumable",
           "rating": "Silver",
-          "box": "ItemsInactiveBox"
+          "bag": "ItemsInactiveBox"
         },
         {
           "identifier": "ITM-108A",
           "Description": "Equipment Voucher",
           "face": "images/ITM-108A-face.jpg",
-          "back": "images/ITM-108A-back.jpg",
           "tags": [
             "Voucher"
           ],
           "cost": "6",
           "type": "Consumable",
           "rating": "Silver",
-          "box": "ItemsInactiveBox"
+          "bag": "ItemsInactiveBox"
         },
         {
           "identifier": "ITM-200A",
           "Description": "Party-sized Health Potion",
           "face": "images/ITM-200A-face.jpg",
-          "back": "images/ITM-200A-back.jpg",
           "tags": [
             "Potion"
           ],
           "cost": "8",
           "type": "Consumable",
           "rating": "Gold",
-          "box": "ItemsInactiveBox"
+          "bag": "ItemsInactiveBox"
         },
         {
           "identifier": "ITM-208A",
           "Description": "Equipment Voucher",
           "face": "images/ITM-208A-face.jpg",
-          "back": "images/ITM-208A-back.jpg",
-          "tags": [
+           "tags": [
             "Voucher"
           ],
           "cost": "8",
           "type": "Consumable",
           "rating": "Gold",
-          "box": "ItemsInactiveBox"
+          "bag": "ItemsInactiveBox"
         }
       ]
     }

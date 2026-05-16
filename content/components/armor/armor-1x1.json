@@ -4,11 +4,9 @@
       "set": {
         "Name": "Custom_Tile",
         "position": { "x": -9, "y": 3, "z": -6 },
-        "scale": {
-          "x": 0.25,
-          "y": 0.1,
-          "z": 0.25
-        }
+        "scale": { "x": 0.4, "y": 0.1, "z": 0.4 },
+        "Grid": false,
+        "Snap": true
       },
       "items": [
         {
@@ -450,14 +448,16 @@
           "Description": "Vanguard Aegis",
           "face": "images/ARM-078A-face.jpg",
           "back": "images/ARM-078A-back.jpg",
-          "bag": "VanguardAbilityChest"
+          "type": 2,
+          "bag": "VanguardStarterChest"
         },
         {
           "identifier": "ARM-079A",
           "Description": "Vanguard Aegis",
           "face": "images/ARM-079A-face.jpg",
           "back": "images/ARM-079A-back.jpg",
-          "bag": "VanguardAbilityChest"
+          "type": 2,
+          "bag": "VanguardSilverChest"
         }
       ]
     }

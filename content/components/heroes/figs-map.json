@@ -3,7 +3,22 @@
     "Name": "Custom_Model",
     "position": { "x": -12, "y": 1, "z": 5 },
     "spawnOffset": { "x": 0, "y": 0, "z": -2 },
-    "scale": { "x": 0.77, "y": 0.77, "z": 0.77 }
+    "scale": { "x": 0.77, "y": 0.77, "z": 0.77 },
+    "CustomMesh": {
+      "ColliderURL": "models/hero-figurine-collider.obj",
+      "MaterialIndex": 0,
+      "TypeIndex": 1,
+      "CustomShader": {
+        "SpecularColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1
+        },
+        "SpecularIntensity": 0.05,
+        "SpecularSharpness": 2,
+        "FresnelStrength": 0
+      }
+    }
   },
   "fields":
   {  
@@ -11,6 +26,7 @@
     ,  "Description": "${Name}"
     ,  "mesh": "models/${Class}-${Gender}.obj"
     ,  "texture": "models/${Class}-${Gender}-diffuse.jpg"
+    ,  "normal": "models/${Class}-${Gender}-normal.jpg"
     ,  "material": { "specular": 0.05, "fresnel": 0.05 }
     ,  "class": "${Class}"
     ,  "bag": "${Class}HeroBox"

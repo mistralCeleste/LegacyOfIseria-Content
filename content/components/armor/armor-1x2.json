@@ -4,11 +4,9 @@
       "set": {
         "Name": "Custom_Tile",
         "position": { "x": -9, "y": 3, "z": -9 },
-        "scale": {
-          "x": 0.25,
-          "y": 0.1,
-          "z": 0.5
-        }
+        "scale": { "x": 0.75, "y": 0.1, "z": 0.8 },
+        "Grid": false,
+        "Snap": true
       },
       "items": [
         {

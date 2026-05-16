@@ -3,13 +3,18 @@
     {
       "set": {
         "Name": "Custom_Tile",
-        "position": { "x": 13.76, "y": 1, "z": -4.3 },
-        "scale": {
-          "x": 1.45,
+        "position": {
+          "x": 13.76,
           "y": 1,
-          "z": 1.45
+          "z": -4.3
         },
-        "Type": "0",
+        "scale": {
+          "x": 2.10,
+          "y": 1,
+          "z": 2.10
+        },
+        "Grid": true,
+        "Snap": false,
         "CustomTile": {
           "Type": 0,
           "Thickness": 0.1,
@@ -18,7 +23,7 @@
       },
       "items": [
         {
-          "identifier": "",
+          "identifier": "SML-001A",
           "Description": "Random",
           "face": "images/SML-001A-face.jpg",
           "back": "images/SML-001A-back.jpg",
@@ -26,7 +31,7 @@
           "bag": "RoomsRandom5+Box"
         },
         {
-          "identifier": "",
+          "identifier": "SML-002A",
           "Description": "Random",
           "face": "images/SML-002A-face.jpg",
           "back": "images/SML-002A-back.jpg",
@@ -34,7 +39,7 @@
           "bag": "RoomsRandom5+Box"
         },
         {
-          "identifier": "",
+          "identifier": "SML-003A",
           "Description": "Random",
           "face": "images/SML-003A-face.jpg",
           "back": "images/SML-003A-back.jpg",
@@ -42,7 +47,7 @@
           "bag": "RoomsRandom5+Box"
         },
         {
-          "identifier": "",
+          "identifier": "SML-004A",
           "Description": "Random",
           "face": "images/SML-004A-face.jpg",
           "back": "images/SML-004A-back.jpg",
@@ -50,7 +55,7 @@
           "bag": "RoomsRandom5+Box"
         },
         {
-          "identifier": "",
+          "identifier": "SML-005A",
           "Description": "Random",
           "face": "images/SML-005A-face.jpg",
           "back": "images/SML-005A-back.jpg",
@@ -58,7 +63,7 @@
           "bag": "RoomsRandom5+Box"
         },
         {
-          "identifier": "",
+          "identifier": "SML-006A",
           "Description": "Random",
           "face": "images/SML-006A-face.jpg",
           "back": "images/SML-006A-back.jpg",
@@ -66,7 +71,7 @@
           "bag": "RoomsRandom5+Box"
         },
         {
-          "identifier": "",
+          "identifier": "SML-007A",
           "Description": "Random",
           "face": "images/SML-007A-face.jpg",
           "back": "images/SML-007A-back.jpg",
@@ -74,7 +79,7 @@
           "bag": "RoomsRandom5+Box"
         },
         {
-          "identifier": "",
+          "identifier": "SML-008A",
           "Description": "Random",
           "face": "images/SML-008A-face.jpg",
           "back": "images/SML-008A-back.jpg",
@@ -82,7 +87,7 @@
           "bag": "RoomsRandom5+Box"
         },
         {
-          "identifier": "",
+          "identifier": "SML-009A",
           "Description": "Random",
           "face": "images/SML-009A-face.jpg",
           "back": "images/SML-009A-back.jpg",
@@ -90,7 +95,7 @@
           "bag": "RoomsRandom5+Box"
         },
         {
-          "identifier": "",
+          "identifier": "SML-010A",
           "Description": "Random",
           "face": "images/SML-010A-face.jpg",
           "back": "images/SML-010A-back.jpg",
@@ -98,7 +103,7 @@
           "bag": "RoomsRandom5+Box"
         },
         {
-          "identifier": "",
+          "identifier": "SML-011A",
           "Description": "Random",
           "face": "images/SML-011A-face.jpg",
           "back": "images/SML-011A-back.jpg",
@@ -106,7 +111,7 @@
           "bag": "RoomsRandom10+Box"
         },
         {
-          "identifier": "",
+          "identifier": "SML-012A",
           "Description": "Random",
           "face": "images/SML-012A-face.jpg",
           "back": "images/SML-012A-back.jpg",
@@ -114,7 +119,7 @@
           "bag": "RoomsRandom10+Box"
         },
         {
-          "identifier": "",
+          "identifier": "SML-013A",
           "Description": "Random",
           "face": "images/SML-013A-face.jpg",
           "back": "images/SML-013A-back.jpg",
@@ -122,7 +127,7 @@
           "bag": "RoomsRandom10+Box"
         },
         {
-          "identifier": "",
+          "identifier": "SML-014A",
           "Description": "Random",
           "face": "images/SML-014A-face.jpg",
           "back": "images/SML-014A-back.jpg",
@@ -130,7 +135,7 @@
           "bag": "RoomsRandom10+Box"
         },
         {
-          "identifier": "",
+          "identifier": "SML-015A",
           "Description": "Random",
           "face": "images/SML-015A-face.jpg",
           "back": "images/SML-015A-back.jpg",
@@ -138,7 +143,7 @@
           "bag": "RoomsRandom10+Box"
         },
         {
-          "identifier": "",
+          "identifier": "SML-016A",
           "Description": "Random",
           "face": "images/SML-016A-face.jpg",
           "back": "images/SML-016A-back.jpg",
@@ -146,7 +151,7 @@
           "bag": "RoomsRandom15+Box"
         },
         {
-          "identifier": "",
+          "identifier": "SML-017A",
           "Description": "Random",
           "face": "images/SML-017A-face.jpg",
           "back": "images/SML-017A-back.jpg",
@@ -154,7 +159,7 @@
           "bag": "RoomsRandom15+Box"
         },
         {
-          "identifier": "",
+          "identifier": "SML-018A",
           "Description": "Random",
           "face": "images/SML-018A-face.jpg",
           "back": "images/SML-018A-back.jpg",

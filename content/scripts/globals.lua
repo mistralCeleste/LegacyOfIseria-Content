@@ -16,6 +16,7 @@ function onLoad()
     Log.info("############### Loading content index ###############\n")
     local indexUrl = BASE_URL .. "content/index.json"
     JSONLoader.read(indexUrl)
+    setDungeonGrid()
 end
 
 
@@ -43,20 +44,20 @@ function registerDungeonObject(params)
     local origin = params.origin or nil
     local guid = object.getGUID()
     object.setVar(DUNGEON_BAG_NAME,  origin)
-    print("register dungeon object: " .. guid .. " from " .. origin .. " to bag " .. DUNGEON_BAG_NAME)
+    Log.debug("register dungeon object: " .. guid .. " from " .. origin .. " to bag " .. DUNGEON_BAG_NAME)
 end
 
 
 function unregisterDungeonObject(object)
     if object.getVar(DUNGEON_BAG_NAME) then
         object.setVar(DUNGEON_BAG_NAME, nil)
-        print("unregister dungeon object: " .. object.getGUID())
+        Log.debug("unregister dungeon object: " .. object.getGUID())
     end
 end
 
 
 function cleanupDungeon()
-    print("cleanup dungeon")
+    Log.info("cleanup dungeon")
 
     for _, object in ipairs(getAllObjects()) do
         removeDungeonObject(object)
@@ -65,7 +66,7 @@ end
 
 
 function removeDungeonObject(object)
-    print("remove object: " .. object.getGUID())
+    Log.debug("remove object: " .. object.getGUID())
     local origin = object.getVar(DUNGEON_BAG_NAME)
 
     if origin then
@@ -73,13 +74,21 @@ function removeDungeonObject(object)
         local bag = getObjectFromGUID(origin)
         if bag then
             bag.putObject(object)
-            print("put in bag: ", object.getGUID(), origin)
+            Log.debug("put in bag: ", object.getGUID(), origin)
         end
     else
         -- Clone or manually spawned → delete
         --destroyObject(object)
-        print("delete", object.getGUID())
+        Log.debug("delete", object.getGUID())
     end
+end
+
+
+function setDungeonGrid()
+    Grid.type = 1
+    Grid.snapping = 4
+    Grid.sizeX = 0.84
+    Grid.sizeY = 0.84
 end
 
 
@@ -189,7 +198,7 @@ local function loadComponent(path)
 
     WebRequest.get(url, function(request)
         if request.is_error then
-            print("Error loading component: " .. path .. " | " .. request.error)
+            log.error("Error loading component: " .. path .. " | " .. request.error)
         else
             local root = JSON.decode(request.text)
             JsonAdapter.registerComponent(path, root)
@@ -200,7 +209,7 @@ end
 
 local function loadComponentJson(request)
     if request.is_error then
-        print("Error: " .. request.error)
+        log.error("Error: " .. request.error)
         return
     end
 
@@ -222,11 +231,11 @@ function JSONLoader.read(url)
 end
 
 
-function checkRegisteringReady()
-    print("Registering: " .. LOADER.registering.progress .. "/" .. LOADER.registering.total)
+function checkRegisteringReady(path)
+    Log.info("Registered: " .. path .. " ... " .. LOADER.registering.progress .. "/" .. LOADER.registering.total)
     if LOADER.registering.progress >= LOADER.registering.total then
         LOADER.ready = true
-        print("All components registered.")
+        Log.info("All components registered.")
         onAllComponentsRegistered()
     end
 end
@@ -239,11 +248,10 @@ function onAllComponentsRegistered()
 end
 
 
-function checkBaggingReady()
-    Log.debug("Bagging: " .. LOADER.bagging.progress .. "/" .. LOADER.bagging.total)
+function checkBaggingReady(identifier)
+    Log.info("Bagged: " .. identifier .. " ... " .. LOADER.bagging.progress .. "/" .. LOADER.bagging.total)
 
     if LOADER.bagging.progress >= LOADER.bagging.total then
-        Log.info("Everything is inserted into bags.")
         onBaggingComplete()
     end
 end
@@ -268,7 +276,6 @@ function onBaggingComplete()
     LOADER.ready = true
 
     unlockAllBags()
-    Log.info("############### Loader READY ###############")
 end
 
 
@@ -297,7 +304,7 @@ local function queueBagInsertion(bagId, entry)
             if attempts > MAX_ATTEMPTS then
                 Log.error("Bag insertion FAILED for " .. identifier .. " after " .. MAX_ATTEMPTS .. " attempts.")
                 LOADER.bagging.progress = LOADER.bagging.progress + 1
-                checkBaggingReady()
+                checkBaggingReady(identifier)
                 return true   -- <‑‑ stops the callback permanently
             end
 
@@ -323,7 +330,7 @@ local function queueBagInsertion(bagId, entry)
 
                     b.putObject(c)
                     LOADER.bagging.progress = LOADER.bagging.progress + 1
-                    checkBaggingReady()
+                    checkBaggingReady(identifier)
 
                     Log.debug("Bagging complete for " .. identifier)
                 end, BAG_UNLOCK_DELAY)
@@ -349,7 +356,7 @@ end
 -----------------------------------------
 Log =
 {
-    level = "DEBUG",
+    level = "INFO",
     levels = { ERROR = 1, WARN = 2, INFO = 3, DEBUG = 4 }
 }
 
@@ -590,6 +597,17 @@ TTS_ObjectData.Custom_Assetbundle =
     }
 }
 
+TTS_ObjectData.Custom_Dice = {
+    CustomImage = {
+        ImageURL = "",
+        ImageScalar = 1,
+        WidthScale = 0,
+        CustomDice = {
+            Type = 1
+        }
+    }
+}
+
 TTS_ObjectData.CardCustom =
 {
     Name = "CardCustom",
@@ -620,7 +638,7 @@ TTS_ObjectData.Custom_Model =
         NormalURL = "",
         ColliderURL = "",
         Convex = true,
-        MaterialIndex = -1,
+        MaterialIndex = 0,
         TypeIndex = 0,
         CastShadows = true
     }
@@ -694,13 +712,18 @@ local AliasMap = {
         materialIndex = { path = {"CustomAssetbundle", "MaterialIndex"} },
     },
 
+    Custom_Dice = {
+        image = { path = {"CustomImage", "ImageURL"} }
+    },
+
     Custom_PDF = {
         pdf = { path = {"CustomPDF", "PDFUrl"} }
     },
 
     Custom_Tile = {
         face = { path = {"CustomImage", "ImageURL"} },
-        back = { path = {"CustomImage", "ImageSecondaryURL"} }
+        back = { path = {"CustomImage", "ImageSecondaryURL"} },
+        type = { path = {"CustomImage", "CustomTile", "Type"} }
     },
 
     Token = {
@@ -728,6 +751,7 @@ local AliasMap = {
         mesh = { path = {"CustomMesh", "MeshURL"} },
         collider = { path = {"CustomMesh", "ColliderURL"} },
         typeIndex = { path = {"CustomMesh", "TypeIndex"} },
+        materialIndex = { path = {"CustomMesh", "MaterialIndex"} },
     },
 
     Custom_Model_Bag = {
@@ -1052,7 +1076,7 @@ function JsonAdapter.registerComponent(path, root)
         Wait.condition(
             function()
                 LOADER.registering.progress = LOADER.registering.progress + 1
-                checkRegisteringReady()
+                checkRegisteringReady(path)
             end,
             function()
                 for _, text in pairs(Registry._scripts) do
@@ -1066,29 +1090,14 @@ end
 
 
 function JsonAdapter.registerComponentSet(basePath, component)
-    if not component.set then
-        Log.error("registerComponentSet: missing 'set' field: " .. JSON.encode(component))
-        return
-    end
-
-    if not component.set.Name then
-        Log.error("registerComponentSet: missing set.Name: " .. JSON.encode(component))
-        return
-    end
-
-    if not component.items then
-        Log.error("registerComponentSet: missing 'items' array: " .. JSON.encode(component))
-        return
-    end
-
     local componentType = component.set.Name
     local template = deepCopy(TTS_ObjectData.base)
     deepMerge(template, TTS_ObjectData[componentType] or {})
 
-    local spawnOffset = component.spawnOffset or nil
-    local dx = spawnOffset and (spawnOffset.dx or 0) or 0
-    local dy = spawnOffset and (spawnOffset.dy or 0) or 0
-    local dz = spawnOffset and (spawnOffset.dz or 0) or 0
+    local spawnOffset = component.set.spawnOffset or nil
+    local dx = spawnOffset and (spawnOffset.x or 0) or 0
+    local dy = spawnOffset and (spawnOffset.y or 0) or 0
+    local dz = spawnOffset and (spawnOffset.z or 0) or 0
 
     for index, item in ipairs(component.items) do
         local merged = mergeSetAndItem(component.set, item)
@@ -1098,17 +1107,39 @@ function JsonAdapter.registerComponentSet(basePath, component)
         resolveAllPaths(basePath, entry)
 
         if spawnOffset then
-            local count = index - 1
-            entry.Transform.posX = entry.Transform.posX + dx * count
-            entry.Transform.posY = entry.Transform.posY + dy * count
-            entry.Transform.posZ = entry.Transform.posZ + dz * count
+            local offsetCount = index - 1
+            entry.Transform.posX = entry.Transform.posX + dx * offsetCount
+            entry.Transform.posY = entry.Transform.posY + dy * offsetCount
+            entry.Transform.posZ = entry.Transform.posZ + dz * offsetCount
         end
 
         if entry.script then
             Registry.addScript(entry.script)
         end
+
+        if entry.bag then
+            LOADER.bagging.total = LOADER.bagging.total + 1
+        end
+
         Log.debug("JSON: " .. JSON.encode(entry))
         Registry.addComponent(entry)
+
+        if entry.quantity and tonumber(entry.quantity) > 1 then
+            local quantity = tonumber(entry.quantity) - 1
+
+            for quantityCount = 1, quantity do
+                local duplicate = deepCopy(entry)
+                duplicate.identifier = entry.identifier .. " (" .. quantityCount .. ")"
+                duplicate.Nickname = entry.Nickname .. " (" .. quantityCount .. ")"
+
+                if entry.bag then
+                    LOADER.bagging.total = LOADER.bagging.total + 1
+                end
+
+                Log.debug("JSON: " .. JSON.encode(duplicate))
+                Registry.addComponent(duplicate)
+            end
+        end
     end
 end
 
@@ -1120,7 +1151,11 @@ function JsonAdapter.spawnComponent(entry)
             if entry.bag then
                 queueBagInsertion(entry.bag, entry)
             else
-                obj.setLock(false)
+                if entry and entry.lock then
+                    obj.setLock(true)
+                else
+                    obj.setLock(false)
+                end
             end
         end
     })

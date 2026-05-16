@@ -1,8 +1,10 @@
 {
   "set": {
     "Name": "Bag"
-    , "scale": { "x": 0.6, "y": 1, "z": 0.6 },
-      "bag": "../../scripts/combatBagBehavior.lua"
+    , "position": { "x": -2.30, "y": 1, "z": 8.17 }
+    ,  "spawnOffset": { "x": -3.5, "y": 0, "z": 0 }
+    , "scale": { "x": 0.6, "y": 1, "z": 0.6 }
+    ,  "script": "../../scripts/combatBagBehavior.lua"
   },
   "fields":
   {  

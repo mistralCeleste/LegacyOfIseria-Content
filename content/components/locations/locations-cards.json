@@ -4,12 +4,14 @@
       "set": {
         "Name": "CardCustom",
         "position": { "x": -3.15, "y": 3, "z": 16.77 },
+        "rotation": { "x": 0, "y": 180, "z": 0 },
         "scale": {
           "x": 1,
           "y": 1,
           "z": 1
         },
-        "script": "../../scripts/narrativeCardBehavior.lua"
+        "script": "../../scripts/narrativeCardBehavior.lua",
+        "booklet": "LOC"
       },
       "items": [
         {
@@ -20,7 +22,7 @@
           "tags": [
             "Combat"
           ],
-          "bag": "LOCBox"
+          "bag": "LOCBox"          
         },
         {
           "identifier": "LOC-001A",

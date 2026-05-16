@@ -2,8 +2,10 @@
   "components": [
     {
       "set": {
-        "position": { "x": -27.43, "y": 1, "z": 11.78 },
-        "spawnOffset": { "x": 0, "y": 0, "z": -9.5 },
+        "position": { "x": -40, "y": 1, "z": 16 },
+        "spawnOffset": { "x": 0, "y": 0, "z": -10 },
+        "rotation": { "x": 0, "y": 180, "z": 0 },
+        "scale": { "x": 1, "y": 1, "z": 1 },
         "script": "../../scripts/archiveContainerBehavior.lua"
       },
       "items": [
@@ -11,105 +13,61 @@
           "Name": "Custom_Model_Bag",
           "identifier": "VanguardBronzeChest",
           "Description": "Vanguard Bronze Chest",
-          "scale": {
-            "x": 0.4,
-            "y": 0.4,
-            "z": 0.4
-          },
-          "rotation": {
-            "x": 0,
-            "y": 270,
-            "z": 0
-          },
           "CustomMesh": {
             "MeshURL": "../boxes/models/chest-bronze-container.obj",
-            "NormalURL": "../boxes/images/chest-normal.png",
-            "DiffuseURL": "../boxes/images/chest-Vanguard-diffuse.png",
+            "NormalURL": "../boxes/images/chest-normal.jpg",
+            "DiffuseURL": "../boxes/images/chest-Vanguard-diffuse.jpg",
             "MaterialIndex": 3,
             "TypeIndex": 6,
             "SpecularIntensity": 0.2,
             "SpecularSharpness": 2,
             "FresnelStrength": 0.4
-          },
-          "bag": "VanguardHeroBox"
+          }
         },
         {
           "Name": "Custom_Model_Bag",
           "identifier": "SageBronzeChest",
           "Description": "Sage Bronze Chest",
-          "scale": {
-            "x": 0.4,
-            "y": 0.4,
-            "z": 0.4
-          },
-          "rotation": {
-            "x": 0,
-            "y": 270,
-            "z": 0
-          },
           "CustomMesh": {
             "MeshURL": "../boxes/models/chest-bronze-container.obj",
-            "NormalURL": "../boxes/images/chest-normal.png",
-            "DiffuseURL": "../boxes/images/chest-Sage-diffuse.png",
+            "NormalURL": "../boxes/images/chest-normal.jpg",
+            "DiffuseURL": "../boxes/images/chest-Sage-diffuse.jpg",
             "MaterialIndex": 3,
             "TypeIndex": 6,
             "SpecularIntensity": 0.2,
             "SpecularSharpness": 2,
             "FresnelStrength": 0.4
-          },
-          "bag": "SageHeroBox"
+          }
         },
         {
           "Name": "Custom_Model_Bag",
           "identifier": "PathfinderBronzeChest",
           "Description": "Pathfinder Bronze Chest",
-          "scale": {
-            "x": 0.4,
-            "y": 0.4,
-            "z": 0.4
-          },
-          "rotation": {
-            "x": 0,
-            "y": 270,
-            "z": 0
-          },
           "CustomMesh": {
             "MeshURL": "../boxes/models/chest-bronze-container.obj",
-            "NormalURL": "../boxes/images/chest-normal.png",
-            "DiffuseURL": "../boxes/images/chest-Pathfinder-diffuse.png",
+            "NormalURL": "../boxes/images/chest-normal.jpg",
+            "DiffuseURL": "../boxes/images/chest-Pathfinder-diffuse.jpg",
             "MaterialIndex": 3,
             "TypeIndex": 6,
             "SpecularIntensity": 0.2,
             "SpecularSharpness": 2,
             "FresnelStrength": 0.4
-          },
-          "bag": "PathfinderHeroBox"
+          }
         },
         {
           "Name": "Custom_Model_Bag",
           "identifier": "WarbladeBronzeChest",
           "Description": "Warblade Bronze Chest",
-          "scale": {
-            "x": 0.4,
-            "y": 0.4,
-            "z": 0.4
-          },
-          "rotation": {
-            "x": 0,
-            "y": 270,
-            "z": 0
-          },
           "CustomMesh": {
             "MeshURL": "../boxes/models/chest-bronze-container.obj",
-            "NormalURL": "../boxes/images/chest-normal.png",
-            "DiffuseURL": "../boxes/images/chest-Warblade-diffuse.png",
+            "NormalURL": "../boxes/images/chest-normal.jpg",
+            "DiffuseURL": "../boxes/images/chest-Warblade-diffuse.jpg",
             "MaterialIndex": 3,
             "TypeIndex": 6,
             "SpecularIntensity": 0.2,
             "SpecularSharpness": 2,
             "FresnelStrength": 0.4
-          },
-          "bag": "WarbladeHeroBox"
+          }
         }
       ]
     }

@@ -3,7 +3,9 @@
   "components": [
     {
       "set": {
-        "Name": "Custom_Assetbundle"
+        "Name": "Custom_Assetbundle",
+        "Grid": false,
+        "Snap": false
       },
       "items": [
         {

@@ -1,0 +1,42 @@
+{
+  "components": [
+    {
+      "set": {
+        "Name": "Die_6",
+        "position": { "x": -24, "y": 1, "z": 12 },
+        "spawnOffset": { "x": 0, "y": 0, "z": -10 },
+        "scale": {
+          "x": 0.85,
+          "y": 0.85,
+          "z": 0.85
+        }
+      },
+      "items": [
+        {
+          "bag": "VanguardMightDiceBag",
+          "identifier": "VanguardMightDie",
+          "Description": "Vanguard Might Die",
+          "color": "#FFFEAF"
+        },
+        {
+          "bag": "SageMightDiceBag",
+          "identifier": "SageMightDie",
+          "Description": "Sage Might Die",
+          "color": "#D99CFF"
+        },
+        {
+          "bag": "PathfinderMightDiceBag",
+          "identifier": "PathfinderMightDie",
+          "Description": "Pathfinder Might Die",
+          "color": "#9FD39D"
+        },
+        {
+          "bag": "WarbladeMightDiceBag",
+          "identifier": "WarbladeMightDie",
+          "Description": "Warblade Might Die",
+          "color": "#FCCFC2"
+        }
+      ]
+    }
+  ]
+}
