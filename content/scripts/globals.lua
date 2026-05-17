@@ -6,7 +6,7 @@
 
 LOCAL_URL = "http://127.0.0.1:5500/"
 PROD_URL = "https://mistralCeleste.github.io/LegacyOfIseria-Content/"
-BASE_URL = PROD_URL
+BASE_URL = LOCAL_URL  -- default to local
 
 
 local hasUnpacked = false
@@ -83,6 +83,9 @@ function removeDungeonObject(object)
         -- Real dungeon item → return to bag
         local bag = getObjectFromGUID(origin)
         if bag then
+            if bag.type == "Infinite" then
+                destroyObject(object)
+            end
             bag.putObject(object)
             Log.debug("put in bag: ", object.getGUID(), origin)
         end
@@ -113,6 +116,11 @@ end
 
 function setProdEndpoint()
     BASE_URL = PROD_URL
+end
+
+
+local function isStringEmpty(text)
+    return text == nil or text:match("^%s*$")
 end
 
 
@@ -251,7 +259,7 @@ end
 
 
 function checkRegisteringReady(path)
-    Log.info("Registered: " .. path .. " ... " .. LOADER.registering.progress .. "/" .. LOADER.registering.total)
+    Log.debug("Registered: " .. path .. " ... " .. LOADER.registering.progress .. "/" .. LOADER.registering.total)
     if LOADER.registering.progress >= LOADER.registering.total then
         LOADER.ready = true
         Log.info("All components registered.")
@@ -268,7 +276,7 @@ end
 
 
 function checkBaggingReady(identifier)
-    Log.info("Bagged: " .. identifier .. " ... " .. LOADER.bagging.progress .. "/" .. LOADER.bagging.total)
+    Log.debug("Bagged: " .. identifier .. " ... " .. LOADER.bagging.progress .. "/" .. LOADER.bagging.total)
 
     if LOADER.bagging.progress >= LOADER.bagging.total then
         onBaggingComplete()
@@ -468,8 +476,8 @@ end
 
 
 function Registry.addComponent(component)
-    Registry.addItem(component.Name, component.Nickname,  component)
-    Log.debug("Registered " .. component.Name .. ": " .. component.Nickname .. "->" .. (component.bag or "None"))
+    Registry.addItem(component.Name, component.identifier,  component)
+    Log.debug("Registered " .. component.Name .. ": " .. component.identifier .. "->" .. (component.bag or "None"))
 end
 
 

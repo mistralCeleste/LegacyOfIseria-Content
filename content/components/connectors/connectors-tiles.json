@@ -22,28 +22,28 @@
       "items": [
         {
           "identifier": "barred",
-          "Description": "barred",
+          "Description": "connector",
           "face": "images/connector-barred_face.jpg",
           "quantity": 4,
           "bag": "ConnectorBag"
         },
         {
           "identifier": "hall",
-          "Description": "hall",
+          "Description": "connector",
           "face": "images/connector-hall_face.jpg",
           "quantity": 8,
           "bag": "ConnectorBag"
         },
         {
           "identifier": "locked",
-          "Description": "locked",
+          "Description": "connector",
           "face": "images/connector-locked_face.jpg",
           "quantity": 4,
           "bag": "ConnectorBag"
         },
         {
           "identifier": "wall",
-          "Description": "wall",
+          "Description": "connector",
           "face": "images/connector-wall_face.jpg",
           "quantity": 4,
           "bag": "ConnectorBag"

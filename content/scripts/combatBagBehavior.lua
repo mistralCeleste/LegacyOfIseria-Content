@@ -24,6 +24,7 @@ SEARCH_TYPE = SEARCH_TYPE_FIRST
 TRACK_DUNGEON_ITEMS = true
 ENSURE_FACEDOWN_WHEN_DRAWN = true
 SHUFFLE_ON_ADD = true
+HIDE_NAME = true
 
 -----------------------------------------
 -- Event Handlers
@@ -66,6 +67,10 @@ function onObjectLeaveContainer(container, object)
         if object.tag == "Card" or object.tag == "Tile" then
             ensureFaceDown(object)
         end
+    end
+
+    if HIDE_NAME then
+        object.setName(object.getDescription())
     end
 
     if TRACK_DUNGEON_ITEMS then
