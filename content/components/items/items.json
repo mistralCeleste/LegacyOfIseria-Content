@@ -19,7 +19,7 @@
         {
           "identifier": "ItemsInactiveBox",
           "Description": "Item Inactive Box",
-          "texture": "../boxes/images/Box_Items-inactive.jpg"
+          "texture": "../boxes/images/Box_Items-Inactive.jpg"
         }
       ]
     },

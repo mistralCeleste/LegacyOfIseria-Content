@@ -26,7 +26,7 @@ function onLoad()
 end
 
 
-function tryLoadEntry()
+function tryLoadComponent()
     tries = tries + 1
     local json = Global.call("getRegistryComponentJSON", id)
 
@@ -37,7 +37,7 @@ function tryLoadEntry()
     end
 
     if tries < MAX_REGISTRY_TRIES then
-        Wait.frames(tryLoadEntry, REGISTRY_RETRY_DELAY)
+        Wait.frames(tryLoadComponent, REGISTRY_RETRY_DELAY)
         return
     end
 

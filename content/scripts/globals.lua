@@ -4,16 +4,26 @@
 -- Configuration
 -----------------------------------------
 
-BASE_URL = "http://127.0.0.1:5500/"
---BASE_URL = "https://mistralCeleste.github.io/LegacyOfIseria-Content/"
+LOCAL_URL = "http://127.0.0.1:5500/"
+PROD_URL = "https://mistralCeleste.github.io/LegacyOfIseria-Content/"
+BASE_URL = LOCAL_URL  -- default to local
+
+
+local hasUnpacked = false
 
 
 -----------------------------------------
 -- Event Handlers
 -----------------------------------------
 
-function onLoad()
-    Log.info("############### Loading content index ###############\n")
+function unpackGame(title)
+    if hasUnpacked then
+        Log.info("Game has already been unpacked: " .. title)
+        return
+    end
+
+    hasUnpacked = true
+    Log.info("Unpacking game" .. title)
     local indexUrl = BASE_URL .. "content/index.json"
     JSONLoader.read(indexUrl)
     setDungeonGrid()
@@ -95,6 +105,15 @@ end
 --- ##############################################################################
 --- Content Loader
 --- ##############################################################################
+
+function setLocalEndpoint()
+    BASE_URL = LOCAL_URL
+end
+
+
+function setProdEndpoint()
+    BASE_URL = PROD_URL
+end
 
 
 local function isRelativePath(path)

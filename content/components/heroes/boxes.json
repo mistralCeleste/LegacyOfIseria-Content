@@ -15,7 +15,7 @@
           "Description": "Vanguard Hero Box",
           "CustomMesh": {
             "MeshURL": "../boxes/models/CardBox-container.obj",
-            "DiffuseURL": "../boxes/images/box-Vanguard-diffuse.jpg",
+            "DiffuseURL": "../boxes/images/Box-Vanguard-diffuse.jpg",
             "MaterialIndex": 3,
             "TypeIndex": 6,
             "SpecularIntensity": 0.2,
@@ -29,7 +29,7 @@
           "Description": "Sage Hero Box",
           "CustomMesh": {
             "MeshURL": "../boxes/models/CardBox-container.obj",
-            "DiffuseURL": "../boxes/images/box-Sage-diffuse.jpg",
+            "DiffuseURL": "../boxes/images/Box-Sage-diffuse.jpg",
             "MaterialIndex": 3,
             "TypeIndex": 6,
             "SpecularIntensity": 0.2,
@@ -43,7 +43,7 @@
           "Description": "Pathfinder Hero Box",
           "CustomMesh": {
             "MeshURL": "../boxes/models/CardBox-container.obj",
-            "DiffuseURL": "../boxes/images/box-Pathfinder-diffuse.jpg",
+            "DiffuseURL": "../boxes/images/Box-Pathfinder-diffuse.jpg",
             "MaterialIndex": 3,
             "TypeIndex": 6,
             "SpecularIntensity": 0.2,
@@ -57,7 +57,7 @@
           "Description": "Warblade Hero Box",
           "CustomMesh": {
             "MeshURL": "../boxes/models/CardBox-container.obj",
-            "DiffuseURL": "../boxes/images/box-Warblade-diffuse.jpg",
+            "DiffuseURL": "../boxes/images/Box-Warblade-diffuse.jpg",
             "MaterialIndex": 3,
             "TypeIndex": 6,
             "SpecularIntensity": 0.2,

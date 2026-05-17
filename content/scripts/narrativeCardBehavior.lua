@@ -39,7 +39,7 @@ local function tryLoadComponent()
     end
 
     if tries < MAX_REGISTRY_TRIES then
-        Wait.frames(tryLoadEntry, REGISTRY_RETRY_DELAY)
+        Wait.frames(tryLoadComponent, REGISTRY_RETRY_DELAY)
         return
     end
 

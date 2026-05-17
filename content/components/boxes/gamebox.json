@@ -1,0 +1,29 @@
+{
+    "components": [
+        {
+            "set": {
+                "Name": "Custom_Model",
+                "position": { "x": 38.6, "y": 1, "z": -22.6 },
+                "scale": { "x": 4, "y": 4, "z": 4 },
+                "rotation": { "x": 0, "y": 0, "z": 0},
+                "CustomMesh": {
+                    "MeshURL": "../boxes/models/GameBox-11x17x4.obj",
+                    "MaterialIndex": 3,
+                    "TypeIndex": 6,
+                    "SpecularIntensity": 0.2,
+                    "SpecularSharpness": 2,
+                    "FresnelStrength": 0.4
+                },
+                "script": "../../scripts/gamebox.lua"
+            },
+            "items": [
+                {
+                    "identifier": "GameBox",
+                    "CustomMesh": {
+                        "DiffuseURL": "../boxes/images/GameBox-11x17x4-diffuse.jpg"
+                    }
+                }
+            ]
+        }
+    ]
+}

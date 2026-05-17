@@ -30,18 +30,18 @@
         {
           "identifier": "FIG-H01A",
           "Description": "Vaerwyn",
-          "mesh": "models/Vanguard-female.obj",
-          "texture": "models/Vanguard-female-diffuse.jpg",
-          "normal": "models/Vanguard-female-normal.jpg",
+          "mesh": "models/vanguard-female.obj",
+          "texture": "models/vanguard-female-diffuse.jpg",
+          "normal": "models/vanguard-female-normal.jpg",
           "class": "Vanguard",
           "bag": "VanguardHeroBox"
         },
         {
           "identifier": "FIG-H01B",
           "Description": "Brannok",
-          "mesh": "models/Vanguard-male.obj",
-          "texture": "models/Vanguard-male-diffuse.jpg",
-          "normal": "models/Vanguard-male-normal.jpg",
+          "mesh": "models/vanguard-male.obj",
+          "texture": "models/vanguard-male-diffuse.jpg",
+          "normal": "models/vanguard-male-normal.jpg",
           "material": {
             "specular": 0.05,
             "fresnel": 0.05
@@ -52,9 +52,9 @@
         {
           "identifier": "FIG-H02A",
           "Description": "Mirathis",
-          "mesh": "models/Sage-female.obj",
-          "texture": "models/Sage-female-diffuse.jpg",
-          "normal": "models/Sage-female-normal.jpg",
+          "mesh": "models/sage-female.obj",
+          "texture": "models/sage-female-diffuse.jpg",
+          "normal": "models/sage-female-normal.jpg",
           "material": {
             "specular": 0.05,
             "fresnel": 0.05
@@ -65,9 +65,9 @@
         {
           "identifier": "FIG-H02B",
           "Description": "Eryndel",
-          "mesh": "models/Sage-male.obj",
-          "texture": "models/Sage-male-diffuse.jpg",
-          "normal": "models/Sage-male-normal.jpg",
+          "mesh": "models/sage-male.obj",
+          "texture": "models/sage-male-diffuse.jpg",
+          "normal": "models/sage-male-normal.jpg",
           "material": {
             "specular": 0.05,
             "fresnel": 0.05
@@ -78,9 +78,9 @@
         {
           "identifier": "FIG-H03A",
           "Description": "Miranhwa",
-          "mesh": "models/Pathfinder-female.obj",
-          "texture": "models/Pathfinder-female-diffuse.jpg",
-          "normal": "models/Pathfinder-female-normal.jpg",
+          "mesh": "models/pathfinder-female.obj",
+          "texture": "models/pathfinder-female-diffuse.jpg",
+          "normal": "models/pathfinder-female-normal.jpg",
           "material": {
             "specular": 0.05,
             "fresnel": 0.05
@@ -91,9 +91,9 @@
         {
           "identifier": "FIG-H03B",
           "Description": "Haneulrim",
-          "mesh": "models/Pathfinder-male.obj",
-          "texture": "models/Pathfinder-male-diffuse.jpg",
-          "normal": "models/Pathfinder-male-normal.jpg",
+          "mesh": "models/pathfinder-male.obj",
+          "texture": "models/pathfinder-male-diffuse.jpg",
+          "normal": "models/pathfinder-male-normal.jpg",
           "material": {
             "specular": 0.05,
             "fresnel": 0.05
@@ -104,9 +104,9 @@
         {
           "identifier": "FIG-H04A",
           "Description": "Soraya",
-          "mesh": "models/Warblade-female.obj",
-          "texture": "models/Warblade-female-diffuse.jpg",
-          "normal": "models/Warblade-female-normal.jpg",
+          "mesh": "models/warblade-female.obj",
+          "texture": "models/warblade-female-diffuse.jpg",
+          "normal": "models/warblade-female-normal.jpg",
           "material": {
             "specular": 0.05,
             "fresnel": 0.05
@@ -117,9 +117,9 @@
         {
           "identifier": "FIG-H04B",
           "Description": "Ardeshir",
-          "mesh": "models/Warblade-male.obj",
-          "texture": "models/Warblade-male-diffuse.jpg",
-          "normal": "models/Warblade-male-normal.jpg",
+          "mesh": "models/warblade-male.obj",
+          "texture": "models/warblade-male-diffuse.jpg",
+          "normal": "models/warblade-male-normal.jpg",
           "material": {
             "specular": 0.05,
             "fresnel": 0.05

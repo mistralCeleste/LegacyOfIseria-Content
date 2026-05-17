@@ -43,7 +43,7 @@
                     "identifier": "NPCInactiveBox",
                     "name": "NPC Inactive Box",
                     "CustomMesh": {
-                        "DiffuseURL": "../boxes/images/Box_NPCs-inactive.jpg"
+                        "DiffuseURL": "../boxes/images/Box_NPCs-Inactive.jpg"
                     },
                     "position": {
                         "x": 27,

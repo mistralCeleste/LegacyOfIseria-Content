@@ -19,7 +19,7 @@
         {
           "identifier": "EquipmentInactiveBox",
           "Description": "Equipment Inactive Box",
-          "texture": "../boxes/images/Box_Equipment-inactive.jpg"
+          "texture": "../boxes/images/Box_Equipment-Inactive.jpg"
         }
       ]
     }
