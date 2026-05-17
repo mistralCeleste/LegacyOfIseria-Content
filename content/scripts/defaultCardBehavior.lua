@@ -6,7 +6,7 @@
 -----------------------------------------
 
 local MAX_REGISTRY_TRIES = 5      -- how many times to try
-local REGISTRY_RETRY_DELAY = 2    -- frames between tries (30 = ~0.5 sec)
+local REGISTRY_RETRY_DELAY = 30    -- frames between tries (30 = ~0.5 sec)
 local tries = 0
 
 -----------------------------------------
@@ -22,7 +22,7 @@ local component = nil
 
 function onLoad()
     id = self.getName()
-    tryLoadEntry()
+    tryLoadComponent()
 end
 
 

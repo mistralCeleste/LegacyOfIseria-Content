@@ -13,7 +13,7 @@ USE_PADDING = false
 
 -- number of times to try loading the component information from the Global Registry
 local MAX_REGISTRY_TRIES = 5      -- how many times to try
-local REGISTRY_RETRY_DELAY = 2    -- frames between tries (30 = ~0.5 sec)
+local REGISTRY_RETRY_DELAY = 30    -- frames between tries (30 = ~0.5 sec)
 local tries = 0
 
 local id = nil
