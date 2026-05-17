@@ -2,6 +2,7 @@
   "set": {
     "Name": "CardCustom",
     "position": { "x": 26.7, "y": 1, "z": -6 },
+    "rotation": { "x": 0, "y": 270, "z": 0 },
     "scale": { "x": 1, "y": 1, "z": 1 }
   },
   "fields": {  

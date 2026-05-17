@@ -17,7 +17,7 @@
 
 local id = nil
 local title = "Legacy of Iseria: Base"
-local isProd = false
+local isProd = true
 
 -----------------------------------------
 -- Events

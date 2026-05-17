@@ -3,12 +3,11 @@
     {
       "set": {
         "Name": "CardCustom",
-        "position": { "x": 26.7, "y": 1, "z": -6 },
-        "scale": {
-          "x": 1,
-          "y": 1,
-          "z": 1
-        }
+        "position": { "x": 14.7, "y": 1, "z": -5.46 },
+        "spawnOffset": { "x": 5.04, "y": 0, "z": 0 },
+        "rotation": { "x": 0, "y": 270, "z": 0 },
+        "scale": { "x": 1, "y": 1, "z": 1 },
+        "lock": true
       },
       "items": [
         {

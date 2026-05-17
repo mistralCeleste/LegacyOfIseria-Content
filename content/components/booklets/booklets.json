@@ -25,7 +25,8 @@
           "Nickname": "Location Booklet",
           "bundle": "assetbundles/locationbooklet.unity3d",
           "position": { "x": -0.84, "y": 0.97, "z": 14.28 },
-          "scale": { "x": 8.4, "y": 0.2, "z": 8.4 }
+          "scale": { "x": 8.4, "y": 0.2, "z": 8.4 },
+          "lock": true
         },
         {
           "identifier": "EVT",

@@ -6,7 +6,7 @@
 
 LOCAL_URL = "http://127.0.0.1:5500/"
 PROD_URL = "https://mistralCeleste.github.io/LegacyOfIseria-Content/"
-BASE_URL = LOCAL_URL  -- default to local
+BASE_URL = PROD_URL
 
 
 local hasUnpacked = false
