@@ -185,7 +185,7 @@ end
 -----------------------------------------
 Log =
 {
-    level = "DEBUG",
+    level = "INFO",
     levels = { ERROR = 1, WARN = 2, INFO = 3, DEBUG = 4 }
 }
 
