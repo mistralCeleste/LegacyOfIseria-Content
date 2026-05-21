@@ -4,6 +4,7 @@
       "set": {
         "Name": "Custom_Assetbundle",
         "script": "scripts/bookletBehavior.lua",
+        "description": "You may hover over the booklet and type 3 numbers, like 001, the page with that id will open.",
         "rotation": {
           "x": 0,
           "y": 180,

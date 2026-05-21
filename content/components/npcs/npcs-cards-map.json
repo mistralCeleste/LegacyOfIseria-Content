@@ -3,15 +3,15 @@
     "Name": "CardCustom",
     "scale": { "x": 1, "y": 1, "z": 1 },
     "position": { "x": 24, "y": 3, "z": 10 },
-    "script": "../../scripts/narrativeCardBehavior.lua"
+    "script": "../../scripts/narrativeCardBehavior.lua",
+    "booklet": "NPC"
   },
   "fields":
   {  
        "identifier": "${Full Id}"
-    ,  "Description": "${Name}"
     ,  "face": "images/${Full Id}-face.jpg"
     ,  "back": "images/${Full Id}-back.jpg"
-    ,  "description": "${Description}"
+    ,  "description": "${Name}: ${Description}; Press tab or select 'Open Book' to reference the card in the book."
     , "bag": "${Box}"
   }
 }

@@ -13,7 +13,7 @@
       "items": [
         {  
             "identifier": "DungeonArea"
-          , "Description": "Dungeon Area"
+          , "Description": "Dungeon Area; Select 'Cleanup Dungeon' to return dungeon components to their boxes."
           , "face": "images/dungeon-area.jpg"
           , "back": "images/dungeon-area.jpg"
           , "lock": true

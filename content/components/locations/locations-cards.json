@@ -3,12 +3,15 @@
     {
       "set": {
         "Name": "CardCustom",
-        "position": { "x": -3.15, "y": 3, "z": 16.77 },
-        "rotation": { "x": 0, "y": 180, "z": 0 },
         "scale": {
           "x": 1,
           "y": 1,
           "z": 1
+        },
+        "position": {
+          "x": -3.15,
+          "y": 3,
+          "z": 16.77
         },
         "script": "../../scripts/narrativeCardBehavior.lua",
         "booklet": "LOC"
@@ -16,17 +19,17 @@
       "items": [
         {
           "identifier": "LOC-000A",
-          "Description": "Courier Camp",
+          "description": "Courier Camp; Press tab or select 'Open Book' to reference the card in the book.",
           "face": "images/LOC-000A-face.jpg",
           "back": "images/LOC-000A-back.jpg",
           "tags": [
             "Combat"
           ],
-          "bag": "LOCBox"          
+          "bag": "LOCBox"
         },
         {
           "identifier": "LOC-001A",
-          "Description": "Lyratha Peninsula",
+          "description": "Lyratha Peninsula; Press tab or select 'Open Book' to reference the card in the book.",
           "face": "images/LOC-001A-face.jpg",
           "back": "images/LOC-001A-back.jpg",
           "tags": [
@@ -36,7 +39,7 @@
         },
         {
           "identifier": "LOC-002A",
-          "Description": "Thalora",
+          "description": "Thalora; Press tab or select 'Open Book' to reference the card in the book.",
           "face": "images/LOC-002A-face.jpg",
           "back": "images/LOC-002A-back.jpg",
           "tags": [
@@ -46,7 +49,7 @@
         },
         {
           "identifier": "LOC-002B",
-          "Description": "Thalora",
+          "description": "Thalora; Press tab or select 'Open Book' to reference the card in the book.",
           "face": "images/LOC-002B-face.jpg",
           "back": "images/LOC-002B-back.jpg",
           "tags": [
@@ -56,7 +59,7 @@
         },
         {
           "identifier": "LOC-003A",
-          "Description": "Whirlpool Abyss",
+          "description": "Whirlpool Abyss; Press tab or select 'Open Book' to reference the card in the book.",
           "face": "images/LOC-003A-face.jpg",
           "back": "images/LOC-003A-back.jpg",
           "tags": [
@@ -66,7 +69,7 @@
         },
         {
           "identifier": "LOC-006A",
-          "Description": "Pinch-Oh Crossroads",
+          "description": "Pinch-Oh Crossroads; Press tab or select 'Open Book' to reference the card in the book.",
           "face": "images/LOC-006A-face.jpg",
           "back": "images/LOC-006A-back.jpg",
           "tags": [

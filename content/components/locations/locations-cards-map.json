@@ -9,7 +9,7 @@
   "fields":
   {  
       "identifier": "${Full Id}"
-    , "Description": "${Name}"
+    , "description": "${Name}; Press tab or select 'Open Book' to reference the card in the book."
     , "face": "images/${Full Id}-face.jpg"
     , "back": "images/${Full Id}-back.jpg"
     , "tags": { "split": "${Description}", "delimiter": "," }

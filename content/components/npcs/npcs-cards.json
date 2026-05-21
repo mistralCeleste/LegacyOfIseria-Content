@@ -19,98 +19,86 @@
       "items": [
         {
           "identifier": "NPC-001A",
-          "Description": "Melody",
           "face": "images/NPC-001A-face.jpg",
           "back": "images/NPC-001A-back.jpg",
-          "description": "Wandering Merfolk Lorekeeper",
+          "description": "Melody: Wandering Merfolk Lorekeeper; Press tab or select 'Open Book' to reference the card in the book.",
           "bag": "NPCBox"
         },
         {
           "identifier": "NPC-001B",
-          "Description": "Melody",
           "face": "images/NPC-001B-face.jpg",
           "back": "images/NPC-001B-back.jpg",
-          "description": "Wandering Merfolk Lorekeeper",
+          "description": "Melody: Wandering Merfolk Lorekeeper; Press tab or select 'Open Book' to reference the card in the book.",
           "bag": "NPCInactiveBox"
         },
         {
           "identifier": "NPC-001C",
-          "Description": "Melody",
           "face": "images/NPC-001C-face.jpg",
           "back": "images/NPC-001C-back.jpg",
-          "description": "Wandering Merfolk Lorekeeper",
+          "description": "Melody: Wandering Merfolk Lorekeeper; Press tab or select 'Open Book' to reference the card in the book.",
           "bag": "NPCInactiveBox"
         },
         {
           "identifier": "NPC-001D",
-          "Description": "Melody",
           "face": "images/NPC-001D-face.jpg",
           "back": "images/NPC-001D-back.jpg",
-          "description": "Wandering Merfolk Lorekeeper",
+          "description": "Melody: Wandering Merfolk Lorekeeper; Press tab or select 'Open Book' to reference the card in the book.",
           "bag": "NPCInactiveBox"
         },
         {
           "identifier": "NPC-002A",
-          "Description": "Princess Nerida",
           "face": "images/NPC-002A-face.jpg",
           "back": "images/NPC-002A-back.jpg",
-          "description": "Princess of the Merfolk",
+          "description": "Princess Nerida: Princess of the Merfolk; Press tab or select 'Open Book' to reference the card in the book.",
           "bag": "NPCBox"
         },
         {
           "identifier": "NPC-003A",
-          "Description": "Patty Chew",
           "face": "images/NPC-003A-face.jpg",
           "back": "images/NPC-003A-back.jpg",
-          "description": "Goblin Pastry Provocateur",
+          "description": "Patty Chew: Goblin Pastry Provocateur; Press tab or select 'Open Book' to reference the card in the book.",
           "bag": "NPCBox"
         },
         {
           "identifier": "NPC-003B",
-          "Description": "Patty Chew",
           "face": "images/NPC-003B-face.jpg",
           "back": "images/NPC-003B-back.jpg",
-          "description": "",
+          "description": "Patty Chew: ; Press tab or select 'Open Book' to reference the card in the book.",
           "bag": "NPCInactiveBox"
         },
         {
           "identifier": "NPC-004A",
-          "Description": "Scone Cold Stevia",
           "face": "images/NPC-004A-face.jpg",
           "back": "images/NPC-004A-back.jpg",
-          "description": "Stoic Scone-Slinger and Dessert Duelist",
+          "description": "Scone Cold Stevia: Stoic Scone-Slinger and Dessert Duelist; Press tab or select 'Open Book' to reference the card in the book.",
           "bag": "NPCBox"
         },
         {
           "identifier": "NPC-004B",
-          "Description": "Scone Cold Stevia",
           "face": "images/NPC-004B-face.jpg",
           "back": "images/NPC-004B-back.jpg",
-          "description": "",
+          "description": "Scone Cold Stevia: ; Press tab or select 'Open Book' to reference the card in the book.",
           "bag": "NPCInactiveBox"
         },
         {
           "identifier": "NPC-005A",
-          "Description": "Thistle",
           "face": "images/NPC-005A-face.jpg",
           "back": "images/NPC-005A-back.jpg",
-          "description": "Wandering Fortune Weaver",
+          "description": "Thistle: Wandering Fortune Weaver; Press tab or select 'Open Book' to reference the card in the book.",
           "bag": "NPCBox"
         },
         {
           "identifier": "NPC-006A",
-          "Description": "Chef Bobby Filet",
           "face": "images/NPC-006A-face.jpg",
           "back": "images/NPC-006A-back.jpg",
-          "description": "Competitive Chef",
+          "description": "Chef Bobby Filet: Competitive Chef; Press tab or select 'Open Book' to reference the card in the book.",
           "bag": "NPCBox"
         },
         {
           "identifier": "NPC-006B",
-          "Description": "Chef Bobby Filet",
           "face": "images/NPC-006B-face.jpg",
           "back": "images/NPC-006B-back.jpg",
-          "description": "Competitive Chef",
+          "description": "Chef Bobby Filet: Competitive Chef; Press tab or select 'Open Book' to reference the card in the book.",
           "bag": "NPCInactiveBox"
         }
       ]
