@@ -1,32 +1,7 @@
 {
-  "name": "Puzzles",
   "components": [
-    {
-      "set": {
-        "Name": "Custom_Assetbundle",
-        "Grid": false,
-        "Snap": false
-      },
-      "items": [
-        {
-          "identifier": "ThreatWheel",
-          "Description": "Threat Wheel",
-          "bundle": "assetbundles/threatwheel.unity3d",
-          "script": "scripts/threatWheelBehavior.lua",
-          "position": { "x": 13.76, "y": 1, "z": 0.5 },
-          "rotation": { "x": 0, "y": 180, "z": 0 },
-          "scale": { "x": 4.98, "y": 0.2, "z": 4.98 }
-        },
-        {
-          "identifier": "PUZ-001",
-          "Description": "Celestial Wheel",
-          "bundle": "assetbundles/celestialwheel.unity3d",
-          "script": "scripts/celestialWheelBehavior.lua",
-          "position": { "x": 16.76, "y": 1, "z": 9.15 },
-          "rotation": { "x": 0, "y": 180, "z": 0 },
-          "scale": { "x": 5, "y": 0.2, "z": 5 }
-        }
-      ]
-    }
+    { "include": "puzzle-boxes.json" }
+    , { "include": "puzzle-cards.json" }
+    , { "include": "puzzle-wheels.json" }
   ]
 }

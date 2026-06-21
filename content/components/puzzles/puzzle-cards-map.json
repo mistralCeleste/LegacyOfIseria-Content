@@ -1,0 +1,14 @@
+{
+  "set": {
+    "Name": "CardCustom",
+    "scale": { "x": 1, "y": 1, "z": 1 },
+    "position": { "x": 24, "y": 3, "z": 10 }
+  },
+  "fields":
+  {  
+       "identifier": "${Full Id}"
+    ,  "face": "images/${Full Id}_face.jpg"
+    ,  "back": "images/${Full Id}_back.jpg"
+    , "bag": "${Box}"
+  }
+}

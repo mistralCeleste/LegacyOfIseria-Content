@@ -28,6 +28,10 @@
         {
           "identifier": "chest-blueBag",
           "Description": "chest-blue Bag"
+        },
+        {
+          "identifier": "TriggerBag",
+          "Description": "Trigger Bag"
         }
       ]
     }

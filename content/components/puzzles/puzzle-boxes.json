@@ -1,0 +1,45 @@
+{
+    "name": "Puzzle Boxes"
+    , "description": "Boxes to store the Puzzle cards in."
+    , "components": [
+        {
+            "set": {
+                "Name": "Custom_Model_Bag",
+                "scale": {
+                    "x": 0.4,
+                    "y": 0.4,
+                    "z": 0.4
+                },
+                "rotation": {
+                    "x": 0,
+                    "y": 270,
+                    "z": 0
+                },
+                "CustomMesh": {
+                    "MeshURL": "../boxes/models/CardBox-container.obj",
+                    "NormalURL": "",
+                    "MaterialIndex": 3,
+                    "TypeIndex": 6,
+                    "SpecularIntensity": 0.2,
+                    "SpecularSharpness": 2,
+                    "FresnelStrength": 0.4
+                },
+                "script": "../../scripts/archiveContainerBehavior.lua"
+            },
+            "items": [
+                {
+                    "identifier": "PuzzleBox",
+                    "name": "Puzzle Box",
+                    "CustomMesh": {
+                        "DiffuseURL": "../boxes/images/Box_Puzzles.jpg"
+                    },
+                    "position": {
+                        "x": 27,
+                        "y": 1,
+                        "z": 9.03
+                    }
+                }
+            ]
+        }
+    ]
+}
