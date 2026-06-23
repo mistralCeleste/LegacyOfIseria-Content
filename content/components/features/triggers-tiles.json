@@ -4,7 +4,7 @@
       "set": {
         "Name": "Custom_Tile",
         "position": {
-          "x": -3,
+          "x": -16.5,
           "y": 1,
           "z": 8.17
         },
@@ -24,72 +24,57 @@
           "Type": 0,
           "Thickness": 0.1,
           "Stackable": true
-        }
+        },
+        "bag": "triggerBag"
       },
       "items": [
         {
           "identifier": "trigger-letter-A",
           "Description": "Trigger Letter",
           "back": "images/Trigger_letter_back.jpg",
-          "face": "images/Trigger_letter-A_face.jpg",
-          "quantity": "1",
-          "bag": "TriggerBag"
+          "face": "images/Trigger_letter-A_face.jpg"
         },
         {
           "identifier": "trigger-letter-B",
           "Description": "Trigger Letter",
           "back": "images/Trigger_letter_back.jpg",
-          "face": "images/Trigger_letter-B_face.jpg",
-          "quantity": "1",
-          "bag": "TriggerBag"
+          "face": "images/Trigger_letter-B_face.jpg"
         },
         {
           "identifier": "trigger-letter-C",
           "Description": "Trigger Letter",
           "back": "images/Trigger_letter_back.jpg",
-          "face": "images/Trigger_letter-C_face.jpg",
-          "quantity": "1",
-          "bag": "TriggerBag"
+          "face": "images/Trigger_letter-C_face.jpg"
         },
         {
           "identifier": "trigger-letter-D",
           "Description": "Trigger Letter",
           "back": "images/Trigger_letter_back.jpg",
-          "face": "images/Trigger_letter-D_face.jpg",
-          "quantity": "1",
-          "bag": "TriggerBag"
+          "face": "images/Trigger_letter-D_face.jpg"
         },
         {
           "identifier": "trigger-letter-E",
           "Description": "Trigger Letter",
           "back": "images/Trigger_letter_back.jpg",
-          "face": "images/Trigger_letter-E_face.jpg",
-          "quantity": "1",
-          "bag": "TriggerBag"
+          "face": "images/Trigger_letter-E_face.jpg"
         },
         {
           "identifier": "trigger-letter-F",
           "Description": "Trigger Letter",
           "back": "images/Trigger_letter_back.jpg",
-          "face": "images/Trigger_letter-F_face.jpg",
-          "quantity": "1",
-          "bag": "TriggerBag"
+          "face": "images/Trigger_letter-F_face.jpg"
         },
         {
           "identifier": "trigger-letter-G",
           "Description": "Trigger Letter",
           "back": "images/Trigger_letter_back.jpg",
-          "face": "images/Trigger_letter-G_face.jpg",
-          "quantity": "1",
-          "bag": "TriggerBag"
+          "face": "images/Trigger_letter-G_face.jpg"
         },
         {
           "identifier": "trigger-letter-H",
           "Description": "Trigger Letter",
           "back": "images/Trigger_letter_back.jpg",
-          "face": "images/Trigger_letter-H_face.jpg",
-          "quantity": "1",
-          "bag": "TriggerBag"
+          "face": "images/Trigger_letter-H_face.jpg"
         }
       ]
     }

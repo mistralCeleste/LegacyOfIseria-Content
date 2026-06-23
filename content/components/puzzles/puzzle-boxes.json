@@ -33,11 +33,7 @@
                     "CustomMesh": {
                         "DiffuseURL": "../boxes/images/Box_Puzzles.jpg"
                     },
-                    "position": {
-                        "x": 27,
-                        "y": 1,
-                        "z": 9.03
-                    }
+                    "position": { "x": -6.73, "y": 1, "z": 17.4 }
                 }
             ]
         }

@@ -8,36 +8,29 @@
           "y": 1,
           "z": 1
         },
-        "position": {
-          "x": 24,
-          "y": 3,
-          "z": 10
-        }
+        "position": { "x": -6.73, "y": 3, "z": 17.4 },
+        "bag": "PuzzleBox"
       },
       "items": [
         {
           "identifier": "PUZ-000A",
           "face": "images/PUZ-000A_face.jpg",
-          "back": "images/PUZ-000A_back.jpg",
-          "bag": "PuzzlesBox"
+          "back": "images/PUZ-000A_back.jpg"
         },
         {
           "identifier": "PUZ-001A",
           "face": "images/PUZ-001A_face.jpg",
-          "back": "images/PUZ-001A_back.jpg",
-          "bag": "PuzzlesBox"
+          "back": "images/PUZ-001A_back.jpg"
         },
         {
           "identifier": "PUZ-002A",
           "face": "images/PUZ-002A_face.jpg",
-          "back": "images/PUZ-002A_back.jpg",
-          "bag": "PuzzlesBox"
+          "back": "images/PUZ-002A_back.jpg"
         },
         {
           "identifier": "PUZ-003A",
           "face": "images/PUZ-003A_face.jpg",
-          "back": "images/PUZ-003A_back.jpg",
-          "bag": "PuzzlesBox"
+          "back": "images/PUZ-003A_back.jpg"
         }
       ]
     }

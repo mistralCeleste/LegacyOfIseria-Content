@@ -15,23 +15,28 @@
       "items": [
         {
           "identifier": "columnBag",
-          "Description": "column Bag"
+          "Description": "column Bag",
+          "color": "Grey"
         },
         {
           "identifier": "crateBag",
-          "Description": "crate Bag"
+          "Description": "crate Bag",
+          "color": "Yellow"
         },
         {
           "identifier": "chest-brownBag",
-          "Description": "chest-brown Bag"
+          "Description": "chest-brown Bag",
+          "color": "Brown"
         },
         {
           "identifier": "chest-blueBag",
-          "Description": "chest-blue Bag"
+          "Description": "chest-blue Bag",
+          "color": "Blue"
         },
         {
-          "identifier": "TriggerBag",
-          "Description": "Trigger Bag"
+          "identifier": "triggerBag",
+          "Description": "Trigger Bag",
+          "color": "White"
         }
       ]
     }

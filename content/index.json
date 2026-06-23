@@ -27,5 +27,6 @@
         , "components/items/items.json"
         , "components/weapons/weapons.json"
         , "components/armor/armor.json"
+        , "components/modifiers/modifiers.json"
     ]
 }

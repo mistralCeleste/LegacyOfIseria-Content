@@ -3,7 +3,9 @@
       "Name": "Custom_Dice",
       "position": { "x": -15.3, "y": 1, "z": 14 },
       "spawnOffset": { "x": 0, "y": 0, "z": -10 },       
-      "scale": { "x": 0.85, "y": 0.85, "z": 0.85 }
+      "scale": { "x": 0.85, "y": 0.85, "z": 0.85 },
+      "Grid": false,
+      "Snap": false
   },
   "fields":
     {

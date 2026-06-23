@@ -7,7 +7,10 @@
           "x": 1,
           "y": 1,
           "z": 1
-        }
+        },
+        "position": { "x": 29.66, "y": 3, "z": -4.30 },
+        "bag": "ModifiersBox",
+        "SidewaysCard": true
       },
       "items": [
         {

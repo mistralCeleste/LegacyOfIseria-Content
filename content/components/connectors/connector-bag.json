@@ -11,12 +11,14 @@
         {
           "Name": "Bag",
           "identifier": "ConnectorBag",
-          "Description": "Connector Bag"
+          "Description": "Connector Bag",
+          "color": "Green"
         },
         {
           "Name": "Infinite_Bag",
           "identifier": "ConnectorResolvedBag",
-          "Description": "Resolved Connector Bag"
+          "Description": "Resolved Connector Bag",
+          "color": "Green"
         }
       ]
     }

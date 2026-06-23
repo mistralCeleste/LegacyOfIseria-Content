@@ -1,9 +1,9 @@
 {
   "set": {
     "Name": "CardCustom",
-    "position": { "x": 25, "y": 1, "z": -0.86 },
     "scale": { "x": 1, "y": 1, "z": 1 },
-    "bag": "ModifiersBox"
+        "position": { "x": 26.66, "y": 3, "z": -4.30 },
+        "bag": "ModifiersBox"
   },
   "fields":
   {  

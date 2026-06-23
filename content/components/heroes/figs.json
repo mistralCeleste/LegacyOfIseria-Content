@@ -6,9 +6,9 @@
         "position": { "x": -12, "y": 1, "z": 5 },
         "spawnOffset": { "x": 0, "y": 0, "z": -2 },
         "scale": {
-          "x": 0.8,
-          "y": 0.8,
-          "z": 0.8
+          "x": 0.65,
+          "y": 0.65,
+          "z": 0.65
         },
         "CustomMesh": {
           "ColliderURL": "models/hero-figurine-collider.obj",

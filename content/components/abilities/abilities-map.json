@@ -2,7 +2,8 @@
   "set": {
     "Name": "CardCustom",
     "position": { "x": -25, "y": 3, "z": 20 },
-    "scale": { "x": 0.75, "y": 1, "z": 0.75 }
+    "scale": { "x": 0.75, "y": 1, "z": 0.75 },
+    "SidewaysCard": true
   },
   "fields":
   {  

@@ -3,7 +3,7 @@
     {
       "set": {
         "Name": "Custom_PDF",
-        "position": { "x": 24.77, "y": 0.96, "z": 15.96 },
+        "position": { "x": 30.66, "y": 0.96, "z": 16.38 },
         "rotation": { "x": 0, "y": 180, "z": 0 },
         "scale": { "x": 1.1, "y": 1, "z": 1.1 },
         "lock": false
