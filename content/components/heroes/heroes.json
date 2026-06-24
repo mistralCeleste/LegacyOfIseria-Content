@@ -10,5 +10,6 @@
     , { "include": "figs.json" }
     , { "include": "markers-bag.json" }
     , { "include": "markers.json" }
+    , { "include": "markers-damage.json" }
   ]
 }

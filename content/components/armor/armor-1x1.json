@@ -449,7 +449,8 @@
           "face": "images/ARM-078A-face.jpg",
           "back": "images/ARM-078A-back.jpg",
           "type": 2,
-          "bag": "VanguardStarterChest"
+          "bag": "VanguardStarterChest",
+          "Snap": false
         },
         {
           "identifier": "ARM-079A",
@@ -457,7 +458,8 @@
           "face": "images/ARM-079A-face.jpg",
           "back": "images/ARM-079A-back.jpg",
           "type": 2,
-          "bag": "VanguardSilverChest"
+          "bag": "VanguardSilverChest",
+          "Snap": false
         }
       ]
     }

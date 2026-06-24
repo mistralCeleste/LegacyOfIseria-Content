@@ -1,0 +1,77 @@
+{
+  "components": [
+    {
+      "set": {
+        "Name": "Infinite_Bag",
+        "position": { "x": -26.88, "y": 1, "z": 19.32 },
+        "spawnOffset": { "x": 0, "y": 0, "z": -10 },
+        "scale": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        }
+      },
+      "items": [
+        {
+          "identifier": "VanguardDamageTokenBag",
+          "Description": "Vanguard Damage Bag",
+          "color": "#FFFEAF"
+        },
+        {
+          "identifier": "SageDamageTokenBag",
+          "Description": "Sage Damage Bag",
+          "color": "#D99CFF"
+        },
+        {
+          "identifier": "PathfinderDamageTokenBag",
+          "Description": "Pathfinder Damage Bag",
+          "color": "#9FD39D"
+        },
+        {
+          "identifier": "WarbladeDamageTokenBag",
+          "Description": "Warblade Damage Bag",
+          "color": "#FCCFC2"
+        }
+      ]
+    },
+    {
+      "set": {
+        "Name":"Custom_Model",
+        "position": { "x": -25, "y": 1, "z": 19.32 },
+        "scale": { "x": 0.525, "y": 0.525, "z": 0.525 },
+        "spawnOffset": { "x": 0, "y": 0, "z": -10 },
+        "typeIndex": 5,
+        "materialIndex": 4,
+        "Grid": false,
+        "Snap": false,
+        "Description": "Damage Token",
+        "mesh": "../tokens/models/damage-token.obj",
+        "texture": "../tokens/images/damage-token.png",
+        "ColorDiffuse": {
+          "r": 1,
+          "g": 0,
+          "b": 0,
+          "a": 0.882352948
+        }
+      },
+      "items": [
+        {
+          "identifier": "VanguardDamageToken",
+          "bag": "VanguardDamageTokenBag"
+        },
+        {
+          "identifier": "SageDamageToken",
+          "bag": "SageDamageTokenBag"
+        },
+        {
+          "identifier": "PathfinderDamageToken",
+          "bag": "PathfinderDamageTokenBag"
+        },
+        {
+          "identifier": "WarbladeDamageToken",
+          "bag": "WarbladeDamageTokenBag"
+        }
+      ]
+    }
+  ]
+}
