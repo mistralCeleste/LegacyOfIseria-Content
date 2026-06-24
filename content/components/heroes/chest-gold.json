@@ -16,7 +16,7 @@
           "CustomMesh": {
             "MeshURL": "../boxes/models/chest-gold-container.obj",
             "NormalURL": "../boxes/images/chest-normal.jpg",
-            "DiffuseURL": "../boxes/images/chest-Vanguard-diffuse.jpg",
+            "DiffuseURL": "../boxes/images/chest-vanguard-diffuse.jpg",
             "MaterialIndex": 3,
             "TypeIndex": 6,
             "SpecularIntensity": 0.2,
@@ -31,7 +31,7 @@
           "CustomMesh": {
             "MeshURL": "../boxes/models/chest-gold-container.obj",
             "NormalURL": "../boxes/images/chest-normal.jpg",
-            "DiffuseURL": "../boxes/images/chest-Sage-diffuse.jpg",
+            "DiffuseURL": "../boxes/images/chest-sage-diffuse.jpg",
             "MaterialIndex": 3,
             "TypeIndex": 6,
             "SpecularIntensity": 0.2,
@@ -46,7 +46,7 @@
           "CustomMesh": {
             "MeshURL": "../boxes/models/chest-gold-container.obj",
             "NormalURL": "../boxes/images/chest-normal.jpg",
-            "DiffuseURL": "../boxes/images/chest-Pathfinder-diffuse.jpg",
+            "DiffuseURL": "../boxes/images/chest-pathfinder-diffuse.jpg",
             "MaterialIndex": 3,
             "TypeIndex": 6,
             "SpecularIntensity": 0.2,
@@ -61,7 +61,7 @@
           "CustomMesh": {
             "MeshURL": "../boxes/models/chest-gold-container.obj",
             "NormalURL": "../boxes/images/chest-normal.jpg",
-            "DiffuseURL": "../boxes/images/chest-Warblade-diffuse.jpg",
+            "DiffuseURL": "../boxes/images/chest-warblade-diffuse.jpg",
             "MaterialIndex": 3,
             "TypeIndex": 6,
             "SpecularIntensity": 0.2,
