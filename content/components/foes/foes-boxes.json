@@ -12,7 +12,7 @@
           "name": "Foes Box",
           "mesh": "../boxes/models/CardBox-container.obj",
           "texture": "../boxes/images/Box_Foes.jpg",
-          "position": { "x": 26.66, "y": 1, "z": -2.58 }
+          "position": { "x": 15.12, "y": 1, "z": 1.68 }
         }
       ]
     }

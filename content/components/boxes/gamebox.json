@@ -3,7 +3,7 @@
         {
             "set": {
                 "Name": "Custom_Model",
-                "position": { "x": 38.6, "y": 1, "z": -22.6 },
+                "position": { "x": 23.52, "y": 1, "z": -22.68 },
                 "scale": { "x": 4, "y": 4, "z": 4 },
                 "rotation": { "x": 0, "y": 0, "z": 0},
                 "CustomMesh": {

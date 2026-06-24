@@ -18,13 +18,13 @@
       "items": [
         {
           "identifier": "ActBox",
-          "position": { "x": 27, "y": 1, "z": -0.52 },
+          "position": { "x": 12.60, "y": 1, "z": -10.92 },
           "Description": "Act Box",
           "texture": "../boxes/images/Box_ACT.jpg"
         },
         {
           "identifier": "ActInactiveBox",
-          "position": { "x": 27, "y": 1, "z": 1.72 },
+          "position": { "x": 12.60, "y": 1, "z": -12.60 },
           "Description": "Act Inactive Box",
           "texture": "../boxes/images/Box_ACT-inactive.jpg"
         }

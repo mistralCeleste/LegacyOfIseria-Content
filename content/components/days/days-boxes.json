@@ -34,21 +34,21 @@
                         "DiffuseURL": "../boxes/images/Box_Days.jpg"
                     },
                     "position": {
-                        "x": 27,
+                        "x": -12.60,
                         "y": 1,
-                        "z": 3.68
+                        "z": 21
                     }
                 },
                 {
                     "identifier": "DaysInactiveBox",
                     "name": "Day Inactive Box",
                     "CustomMesh": {
-                        "DiffuseURL": "../boxes/images/Box_Days.jpg"
+                        "DiffuseURL": "../boxes/images/Box_Days-inactive.jpg"
                     },
                     "position": {
-                        "x": 27,
+                        "x": -12.60,
                         "y": 1,
-                        "z": 6.02
+                        "z": 19.32
                     }
                 }
             ]

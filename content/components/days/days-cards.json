@@ -9,10 +9,11 @@
           "y": 1,
           "z": 1
         },
-        "position": {
-          "x": 23.65,
-          "y": 1,
-          "z": 5.59
+        "position":
+        {
+            "x": -10.08,
+            "y": 1,
+            "z": 20.16
         },
         "script": "../../scripts/defaultCardBehavior.lua"
       },

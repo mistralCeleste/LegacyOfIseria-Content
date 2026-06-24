@@ -3,7 +3,7 @@
     {
       "set": {
         "Name": "Custom_Tile",
-        "position": { "x": -5.16, "y": 1, "z": 10.32 },
+        "position": { "x": -1.11, "y": 1, "z": -19.87 },
         "scale": { "x": 0.8, "y": 1, "z": 0.8 },
         "Grid": false,
         "Snap": false,

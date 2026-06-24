@@ -4,8 +4,8 @@
       "set": {
         "Name": "Custom_Model_Bag",
         "mesh": "../boxes/models/CardBox-container.obj",
-        "position": { "x": -7.31, "y": 1, "z": 13.3 },
-        "spawnOffset": { "x": 0, "y": 0, "z": 2 },
+        "position": { "x": 12.60, "y": 1, "z": 3.36 },
+        "spawnOffset": { "x": 2.52, "y": 0, "z": 0 },
         "scale": { "x": 0.4, "y": 0.4, "z": 0.4 },
         "script": "../../scripts/combatBagBehavior.lua"
       },

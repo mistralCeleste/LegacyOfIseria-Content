@@ -3,11 +3,7 @@
     {
       "set": {
         "Name": "CardCustom",
-        "position": {
-          "x": 26.66,
-          "y": 1,
-          "z": -3.5
-        },
+        "position": { "x": 15.12, "y": 3, "z": 1.68 },
         "scale": {
           "x": 1,
           "y": 1,

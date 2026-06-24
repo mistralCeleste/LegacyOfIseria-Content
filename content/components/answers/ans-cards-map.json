@@ -2,7 +2,7 @@
   "set": {
     "Name": "CardCustom",
     "scale": { "x": 1, "y": 1, "z": 1 },
-    "position": { "x": -1, "y": 1, "z": 13.33 },
+    "position": { "x": 9.66, "y": 3, "z": 7.98 },
     "script": "../../scripts/defaultCardBehavior.lua"
   },
   "fields":
