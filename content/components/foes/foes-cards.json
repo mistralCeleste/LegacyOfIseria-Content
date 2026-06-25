@@ -68,10 +68,10 @@
           ]
         },
         {
-          "identifier": "FOE-003A",
+          "identifier": "FOE-003C",
           "Description": "Batty",
-          "face": "images/FOE-003A-face.jpg",
-          "back": "images/FOE-003A-back.jpg",
+          "face": "images/FOE-003C-face.jpg",
+          "back": "images/FOE-003C-back.jpg",
           "tags": [
             "Beast",
             "Flying",
@@ -79,10 +79,10 @@
           ]
         },
         {
-          "identifier": "FOE-003B",
+          "identifier": "FOE-003D",
           "Description": "Batty",
-          "face": "images/FOE-003B-face.jpg",
-          "back": "images/FOE-003B-back.jpg",
+          "face": "images/FOE-003D-face.jpg",
+          "back": "images/FOE-003D-back.jpg",
           "tags": [
             "Beast",
             "Flying",

@@ -30,13 +30,8 @@
           "identifier": "FIG-001",
           "Description": "Croakshotter",
           "face": "images/FIG-001-face.jpg",
-          "back": "images/FIG-001-back.jpg"
-        },
-        {
-          "identifier": "FIG-001",
-          "Description": "Croakshotter",
-          "face": "images/FIG-001-face.jpg",
-          "back": "images/FIG-001-back.jpg"
+          "back": "images/FIG-001-back.jpg",
+          "quantity": 2
         },
         {
           "identifier": "FIG-002",
@@ -48,97 +43,57 @@
           "identifier": "FIG-003",
           "Description": "Batty",
           "face": "images/FIG-003-face.jpg",
-          "back": "images/FIG-003-back.jpg"
-        },
-        {
-          "identifier": "FIG-003",
-          "Description": "Batty",
-          "face": "images/FIG-003-face.jpg",
-          "back": "images/FIG-003-back.jpg"
-        },
-        {
-          "identifier": "FIG-003",
-          "Description": "Batty",
-          "face": "images/FIG-003-face.jpg",
-          "back": "images/FIG-003-back.jpg"
-        },
-        {
-          "identifier": "FIG-003",
-          "Description": "Batty",
-          "face": "images/FIG-003-face.jpg",
-          "back": "images/FIG-003-back.jpg"
+          "back": "images/FIG-003-back.jpg",
+          "quantity": 4
         },
         {
           "identifier": "FIG-004",
           "Description": "Wolf",
           "face": "images/FIG-004-face.jpg",
-          "back": "images/FIG-004-back.jpg"
-        },
-        {
-          "identifier": "FIG-004",
-          "Description": "Wolf",
-          "face": "images/FIG-004-face.jpg",
-          "back": "images/FIG-004-back.jpg"
+          "back": "images/FIG-004-back.jpg",
+          "quantity": 2
         },
         {
           "identifier": "FIG-005",
           "Description": "Roarrior",
           "face": "images/FIG-005-face.jpg",
-          "back": "images/FIG-005-back.jpg"
-        },
-        {
-          "identifier": "FIG-005",
-          "Description": "Roarrior",
-          "face": "images/FIG-005-face.jpg",
-          "back": "images/FIG-005-back.jpg"
+          "back": "images/FIG-005-back.jpg",
+          "quantity": 2
         },
         {
           "identifier": "FIG-007",
           "Description": "Tentacle",
           "face": "images/FIG-007-face.jpg",
-          "back": "images/FIG-007-back.jpg"
-        },
-        {
-          "identifier": "FIG-007",
-          "Description": "Tentacle",
-          "face": "images/FIG-007-face.jpg",
-          "back": "images/FIG-007-back.jpg"
+          "back": "images/FIG-007-back.jpg",
+          "quantity": 2
         },
         {
           "identifier": "FIG-008",
           "Description": "Tentacle",
           "face": "images/FIG-008-face.jpg",
-          "back": "images/FIG-008-back.jpg"
-        },
-        {
-          "identifier": "FIG-008",
-          "Description": "Tentacle",
-          "face": "images/FIG-008-face.jpg",
-          "back": "images/FIG-008-back.jpg"
+          "back": "images/FIG-008-back.jpg",
+          "quantity": 2
         },
         {
           "identifier": "FIG-009",
           "Description": "Jelly",
           "face": "images/FIG-009-face.jpg",
-          "back": "images/FIG-009-back.jpg"
-        },
-        {
-          "identifier": "FIG-010",
-          "Description": "Small Jelly",
-          "face": "images/FIG-010-face.jpg",
-          "back": "images/FIG-010-back.jpg"
+          "back": "images/FIG-009-back.jpg",
+          "quantity": 4
         },
         {
           "identifier": "FIG-012",
           "Description": "Boggy",
           "face": "images/FIG-012-face.jpg",
-          "back": "images/FIG-012-back.jpg"
+          "back": "images/FIG-012-back.jpg",
+          "quantity": 2
         },
         {
           "identifier": "FIG-013",
           "Description": "Pawladin",
           "face": "images/FIG-013-face.jpg",
-          "back": "images/FIG-013-back.jpg"
+          "back": "images/FIG-013-back.jpg",
+          "quantity": 2
         },
         {
           "identifier": "FIG-014",

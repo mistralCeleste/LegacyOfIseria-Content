@@ -96,7 +96,7 @@
           "Description": "crate",
           "back": "images/crate_back.jpg",
           "face": "images/Loot-Armor_face.jpg",
-          "quantity": "2",
+          "quantity": "1",
           "bag": "crateBag"
         },
         {
@@ -104,7 +104,7 @@
           "Description": "crate",
           "back": "images/crate_back.jpg",
           "face": "images/Loot-Weapon_face.jpg",
-          "quantity": "2",
+          "quantity": "1",
           "bag": "crateBag"
         },
         {
@@ -112,7 +112,7 @@
           "Description": "crate",
           "back": "images/crate_back.jpg",
           "face": "images/Loot-Item_face.jpg",
-          "quantity": "3",
+          "quantity": "4",
           "bag": "crateBag"
         },
         {
@@ -128,7 +128,7 @@
           "Description": "crate",
           "back": "images/crate_back.jpg",
           "face": "images/Loot-No_face.jpg",
-          "quantity": "5",
+          "quantity": "8",
           "bag": "crateBag"
         },
         {
