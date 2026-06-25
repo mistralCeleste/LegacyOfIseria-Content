@@ -120,7 +120,7 @@
           "Description": "crate",
           "back": "images/crate_back.jpg",
           "face": "images/Loot-Coin_face.jpg",
-          "quantity": "3",
+          "quantity": "6",
           "bag": "crateBag"
         },
         {
@@ -128,7 +128,7 @@
           "Description": "crate",
           "back": "images/crate_back.jpg",
           "face": "images/Loot-No_face.jpg",
-          "quantity": "4",
+          "quantity": "5",
           "bag": "crateBag"
         },
         {
@@ -144,7 +144,7 @@
           "Description": "chest-brown",
           "back": "images/chest-brown_back.jpg",
           "face": "images/Loot-Coin_face.jpg",
-          "quantity": "3",
+          "quantity": "4",
           "bag": "chest-brownBag"
         },
         {
@@ -152,7 +152,7 @@
           "Description": "chest-brown",
           "back": "images/chest-brown_back.jpg",
           "face": "images/Loot-Item_face.jpg",
-          "quantity": "5",
+          "quantity": "6",
           "bag": "chest-brownBag"
         },
         {
@@ -184,7 +184,7 @@
           "Description": "chest-brown",
           "back": "images/chest-brown_back.jpg",
           "face": "images/Loot-Equipment_face.jpg",
-          "quantity": "3",
+          "quantity": "2",
           "bag": "chest-brownBag"
         },
         {
@@ -200,7 +200,7 @@
           "Description": "chest-blue",
           "back": "images/chest-blue_back.jpg",
           "face": "images/Loot-Coin_face.jpg",
-          "quantity": "3",
+          "quantity": "4",
           "bag": "chest-blueBag"
         },
         {
@@ -208,7 +208,7 @@
           "Description": "chest-blue",
           "back": "images/chest-blue_back.jpg",
           "face": "images/Loot-Item_face.jpg",
-          "quantity": "2",
+          "quantity": "6",
           "bag": "chest-blueBag"
         },
         {
@@ -224,7 +224,7 @@
           "Description": "chest-blue",
           "back": "images/chest-blue_back.jpg",
           "face": "images/Loot-Equipment_face.jpg",
-          "quantity": "4",
+          "quantity": "3",
           "bag": "chest-blueBag"
         },
         {

@@ -87,7 +87,7 @@
             "Moon",
             "Time"
           ],
-          "bag": "DaysBox"
+          "bag": "DaysInactiveBox"
         },
         {
           "identifier": "DAY-009A",
@@ -97,7 +97,7 @@
             "Combat",
             "World"
           ],
-          "bag": "DaysBox"
+          "bag": "DaysInactiveBox"
         },
         {
           "identifier": "DAY-010A",
@@ -106,7 +106,7 @@
           "Tags": [
             "Mood"
           ],
-          "bag": "DaysBox"
+          "bag": "DaysInactiveBox"
         },
         {
           "identifier": "DAY-011A",
@@ -115,7 +115,7 @@
           "Tags": [
             "Mood"
           ],
-          "bag": "DaysBox"
+          "bag": "DaysInactiveBox"
         }
       ]
     }

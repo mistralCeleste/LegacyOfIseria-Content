@@ -1,0 +1,28 @@
+{
+  "components": [
+    {
+      "set": {
+        "Name": "BlockSquare",
+        "position": { "x": -28.98, "y": 1, "z": 13.44 },
+        "spawnOffset": { "x": 0, "y": 0, "z": -10 },
+        "scale": { "x": 0.25, "y": 0.25, "z": 0.25 },
+        "color": "#333333",
+        "quantity": 4
+      },
+      "items": [
+        {
+          "identifier": "VanguardStopMarker"
+        },
+        {
+          "identifier": "SageStopMarker"
+        },
+        {
+          "identifier": "PathfinderStopMarker"
+        },
+        {
+          "identifier": "WarbladeStopMarker"
+        }
+      ]
+    }
+  ]
+}

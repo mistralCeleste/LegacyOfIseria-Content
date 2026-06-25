@@ -18,6 +18,7 @@
           "cost": "4",
           "type": "Consumable",
           "rating": "Bronze",
+          "quantity": 8,
           "bag": "ItemsBox"
         },
         {
@@ -31,7 +32,8 @@
           "cost": "4",
           "type": "Consumable",
           "rating": "Bronze",
-          "bag": "ItemsBox"
+          "bag": "ItemsBox",
+          "quantity": 4
         },
         {
           "identifier": "ITM-003A",
@@ -44,7 +46,8 @@
           "cost": "4",
           "type": "Consumable",
           "rating": "Bronze",
-          "bag": "ItemsBox"
+          "bag": "ItemsBox",
+          "quantity": 4
         },
         {
           "identifier": "ITM-004A",
@@ -57,7 +60,8 @@
           "cost": "6",
           "type": "Consumable",
           "rating": "Bronze",
-          "bag": "ItemsBox"
+          "bag": "ItemsBox",
+          "quantity": 2
         },
         {
           "identifier": "ITM-008A",
@@ -69,7 +73,8 @@
           "cost": "4",
           "type": "Consumable",
           "rating": "Bronze",
-          "bag": "ItemsBox"
+          "bag": "ItemsBox",
+          "quantity": 2
         },
         {
           "identifier": "ITM-100A",
@@ -81,7 +86,8 @@
           "cost": "6",
           "type": "Consumable",
           "rating": "Silver",
-          "bag": "ItemsInactiveBox"
+          "bag": "ItemsInactiveBox",
+          "quantity": 6
         },
         {
           "identifier": "ITM-101A",
@@ -93,7 +99,8 @@
           "cost": "6",
           "type": "Consumable",
           "rating": "Silver",
-          "bag": "ItemsInactiveBox"
+          "bag": "ItemsInactiveBox",
+          "quantity": 4
         },
         {
           "identifier": "ITM-102A",
@@ -105,7 +112,8 @@
           "cost": "6",
           "type": "Consumable",
           "rating": "Silver",
-          "bag": "ItemsInactiveBox"
+          "bag": "ItemsInactiveBox",
+          "quantity": 4
         },
         {
           "identifier": "ITM-103A",
@@ -117,7 +125,8 @@
           "cost": "6",
           "type": "Consumable",
           "rating": "Silver",
-          "bag": "ItemsInactiveBox"
+          "bag": "ItemsInactiveBox",
+          "quantity": 4
         },
         {
           "identifier": "ITM-104A",
@@ -130,7 +139,8 @@
           "cost": "6",
           "type": "Consumable",
           "rating": "Silver",
-          "bag": "ItemsInactiveBox"
+          "bag": "ItemsInactiveBox",
+          "quantity": 6
         },
         {
           "identifier": "ITM-105A",
@@ -143,7 +153,8 @@
           "cost": "2",
           "type": "Consumable",
           "rating": "Silver",
-          "bag": "ItemsInactiveBox"
+          "bag": "ItemsInactiveBox",
+          "quantity": 2
         },
         {
           "identifier": "ITM-106A",
@@ -155,7 +166,8 @@
           "cost": "6",
           "type": "Durable",
           "rating": "Silver",
-          "bag": "ItemsInactiveBox"
+          "bag": "ItemsInactiveBox",
+          "quantity": 2
         },
         {
           "identifier": "ITM-107A",
@@ -168,7 +180,8 @@
           "cost": "8",
           "type": "Consumable",
           "rating": "Silver",
-          "bag": "ItemsInactiveBox"
+          "bag": "ItemsInactiveBox",
+          "quantity": 2
         },
         {
           "identifier": "ITM-108A",
@@ -180,7 +193,8 @@
           "cost": "6",
           "type": "Consumable",
           "rating": "Silver",
-          "bag": "ItemsInactiveBox"
+          "bag": "ItemsInactiveBox",
+          "quantity": 2
         },
         {
           "identifier": "ITM-200A",
@@ -192,7 +206,8 @@
           "cost": "8",
           "type": "Consumable",
           "rating": "Gold",
-          "bag": "ItemsInactiveBox"
+          "bag": "ItemsInactiveBox",
+          "quantity": 6
         },
         {
           "identifier": "ITM-208A",
@@ -204,7 +219,8 @@
           "cost": "8",
           "type": "Consumable",
           "rating": "Gold",
-          "bag": "ItemsInactiveBox"
+          "bag": "ItemsInactiveBox",
+          "quantity": 2
         }
       ]
     }

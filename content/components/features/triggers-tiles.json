@@ -75,6 +75,55 @@
           "Description": "Trigger Letter",
           "back": "images/Trigger_letter_back.jpg",
           "face": "images/Trigger_letter-H_face.jpg"
+        },
+        {
+          "identifier": "portal-blue",
+          "Description": "Portal Blue",
+          "back": "images/Portals-blue.jpg",
+          "face": "images/Portals-blue.jpg",
+          "quantity": 2
+        },
+        {
+          "identifier": "portal-green",
+          "Description": "Portal Green",
+          "back": "images/Portals-green.jpg",
+          "face": "images/Portals-green.jpg",
+          "quantity": 2
+        },
+        {
+          "identifier": "portal-orange",
+          "Description": "Portal Orange",
+          "back": "images/Portals-orange.jpg",
+          "face": "images/Portals-orange.jpg",
+          "quantity": 2
+        },
+        {
+          "identifier": "portal-purple",
+          "Description": "Portal Purple",
+          "back": "images/Portals-purple.jpg",
+          "face": "images/Portals-purple.jpg",
+          "quantity": 2
+        },
+        {
+          "identifier": "portal-red",
+          "Description": "Portal Red",
+          "back": "images/Portals-red.jpg",
+          "face": "images/Portals-red.jpg",
+          "quantity": 2
+        },
+        {
+          "identifier": "portal-white",
+          "Description": "Portal White",
+          "back": "images/Portals-white.jpg",
+          "face": "images/Portals-white.jpg",
+          "quantity": 2
+        },
+        {
+          "identifier": "portal-yellow",
+          "Description": "Portal Yellow",
+          "back": "images/Portals-yellow.jpg",
+          "face": "images/Portals-yellow.jpg",
+          "quantity": 2
         }
       ]
     }
