@@ -147,7 +147,7 @@
           "Description": "Warblade Pauldron",
           "face": "images/ARM-026A-face.jpg",
           "back": "images/ARM-026A-back.jpg",
-          "bag": "WarbladeStarterChest"
+          "bag": "WarbladeBronzeChest"
         },
         {
           "identifier": "ARM-027A",
@@ -161,14 +161,14 @@
           "Description": "Warblade Helm",
           "face": "images/ARM-028A-face.jpg",
           "back": "images/ARM-028A-back.jpg",
-          "bag": "WarbladeStarterChest"
+          "bag": "WarbladeBronzeChest"
         },
         {
           "identifier": "ARM-029A",
           "Description": "Battleborn Guard",
           "face": "images/ARM-029A-face.jpg",
           "back": "images/ARM-029A-back.jpg",
-          "bag": "WarbladeBronzeChest"
+          "bag": "WarbladeStarterChest"
         },
         {
           "identifier": "ARM-030A",
@@ -189,7 +189,7 @@
           "Description": "Battleborn Gauntlet",
           "face": "images/ARM-032A-face.jpg",
           "back": "images/ARM-032A-back.jpg",
-          "bag": "WarbladeBronzeChest"
+          "bag": "WarbladeStarterChest"
         },
         {
           "identifier": "ARM-033A",
@@ -350,7 +350,7 @@
           "Description": "Pathfinder Armplate",
           "face": "images/ARM-063A-face.jpg",
           "back": "images/ARM-063A-back.jpg",
-          "bag": "PathfinderStarterChest"
+          "bag": "PathfinderBronzeChest"
         },
         {
           "identifier": "ARM-064A",
@@ -364,7 +364,7 @@
           "Description": "Scout Pauldron",
           "face": "images/ARM-065A-face.jpg",
           "back": "images/ARM-065A-back.jpg",
-          "bag": "PathfinderBronzeChest"
+          "bag": "PathfinderStarterChest"
         },
         {
           "identifier": "ARM-066A",
